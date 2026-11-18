@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000004"
+                      name="РИХ_Дата">
+  <name>РИХ_Дата</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ работа с датами</value>
+  </synonym>
+  <comment>Модуль для задания task_15: границы периодов, универсальное время, ISO 8601.</comment>
+  <server>true</server>
+  <clientManagedApplication>true</clientManagedApplication>
+  <serverCall>true</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

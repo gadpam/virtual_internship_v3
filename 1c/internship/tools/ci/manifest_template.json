@@ -1,0 +1,50 @@
+{
+  "_comment": "Шаблон манифеста артефактов сборки (task_267). Заполняется конвейером release.yml: контрольные суммы и размеры считаются автоматически. Проверка — src/scripts/check_artifacts.py.",
+  "version": "0.0.0",
+  "builtAt": "1970-01-01T00:00:00Z",
+  "commit": "",
+  "branch": "",
+  "compatibilityMode": "8.3.24",
+  "configurationName": "RetailIntegrationHub",
+  "builtBy": "ci",
+  "artifacts": [
+    {
+      "file": "RetailIntegrationHub_0.0.0.cf",
+      "kind": "configuration",
+      "sizeBytes": 0,
+      "sha256": "",
+      "purpose": "основная конфигурация RIH"
+    },
+    {
+      "file": "RIH_ИнструментыРазработчика_0.0.0.epf",
+      "kind": "externalDataProcessor",
+      "sizeBytes": 0,
+      "sha256": "",
+      "purpose": "служебные обработки стенда"
+    }
+  ],
+  "updateHandlers": [
+    {
+      "name": "РИХ_ОбновлениеИнформационнойБазы",
+      "version": "0.0.0",
+      "required": true,
+      "notes": "миграция данных и пересчёт регистров при обновлении"
+    }
+  ],
+  "requirements": {
+    "platform": "8.3.24+",
+    "dbms": "MS SQL Server 2019+ / PostgreSQL 14+",
+    "bsp": "3.1.9+"
+  },
+  "rollback": {
+    "previousVersion": "",
+    "backupRequired": true,
+    "steps": [
+      "остановить регламентные задания и интеграции",
+      "восстановить базу из копии окна установки",
+      "загрузить предыдущую версию .cf",
+      "проверить дымовой прогон",
+      "включить регламентные задания"
+    ]
+  }
+}

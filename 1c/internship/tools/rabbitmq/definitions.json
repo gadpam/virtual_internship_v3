@@ -1,0 +1,194 @@
+{
+  "_comment": "Определения RabbitMQ для учебного стенда RIH (task_111, task_112). Все очереди объявляются durable, у основных настроена политика dead-letter: nack(requeue=false) уводит сообщение в *.dlq. Пароль пользователя подставляется из .env при старте контейнера.",
+  "rabbit_version": "3.13.0",
+  "users": [
+    {
+      "name": "rih",
+      "password": "CHANGE_ME_local_only",
+      "tags": ["management"]
+    }
+  ],
+  "vhosts": [
+    { "name": "/" }
+  ],
+  "permissions": [
+    {
+      "user": "rih",
+      "vhost": "/",
+      "configure": "^rih\\..*",
+      "write": "^rih\\..*",
+      "read": "^rih\\..*"
+    }
+  ],
+  "topic_permissions": [],
+  "parameters": [],
+  "global_parameters": [
+    { "name": "cluster_name", "value": "rih-stand" }
+  ],
+  "policies": [
+    {
+      "name": "rih-dlq",
+      "vhost": "/",
+      "pattern": "^rih\\..*\\.(in|out)$",
+      "definition": {
+        "x-dead-letter-exchange": "rih.dlx",
+        "x-dead-letter-routing-key": "dlq",
+        "max-length": 100000,
+        "overflow": "reject-publish",
+        "message-ttl": 86400000
+      },
+      "priority": 10,
+      "apply-to": "queues"
+    },
+    {
+      "name": "rih-dlq-retain",
+      "vhost": "/",
+      "pattern": "^rih\\..*\\.dlq$",
+      "definition": {
+        "max-length": 50000,
+        "overflow": "drop-head",
+        "message-ttl": 604800000
+      },
+      "priority": 20,
+      "apply-to": "queues"
+    }
+  ],
+  "queues": [
+    {
+      "name": "rih.orders.in",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": { "x-queue-type": "classic" }
+    },
+    {
+      "name": "rih.orders.in.dlq",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.orders.out",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.stock.out",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.prices.out",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.loyalty.out",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.events.cdc",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "rih.events",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.commands",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "rih.dlx",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "rih.commands",
+      "vhost": "/",
+      "destination": "rih.orders.in",
+      "destination_type": "queue",
+      "routing_key": "orders.in",
+      "arguments": {}
+    },
+    {
+      "source": "rih.events",
+      "vhost": "/",
+      "destination": "rih.orders.out",
+      "destination_type": "queue",
+      "routing_key": "orders.*",
+      "arguments": {}
+    },
+    {
+      "source": "rih.events",
+      "vhost": "/",
+      "destination": "rih.stock.out",
+      "destination_type": "queue",
+      "routing_key": "stock.changed",
+      "arguments": {}
+    },
+    {
+      "source": "rih.events",
+      "vhost": "/",
+      "destination": "rih.prices.out",
+      "destination_type": "queue",
+      "routing_key": "prices.changed",
+      "arguments": {}
+    },
+    {
+      "source": "rih.events",
+      "vhost": "/",
+      "destination": "rih.loyalty.out",
+      "destination_type": "queue",
+      "routing_key": "loyalty.*",
+      "arguments": {}
+    },
+    {
+      "source": "rih.events",
+      "vhost": "/",
+      "destination": "rih.events.cdc",
+      "destination_type": "queue",
+      "routing_key": "cdc.#",
+      "arguments": {}
+    },
+    {
+      "source": "rih.dlx",
+      "vhost": "/",
+      "destination": "rih.orders.in.dlq",
+      "destination_type": "queue",
+      "routing_key": "dlq",
+      "arguments": {}
+    }
+  ]
+}

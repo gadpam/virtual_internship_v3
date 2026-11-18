@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Образцы SOAP-запросов к mock-сервису банка (task_85, task_86, task_140).
+  Отправка: см. src/mock_bank_ws/README.md (пример с curl).
+-->
+<samples>
+
+  <sample id="GetRates" operation="GetRates" note="курсы валют на дату; используется в task_94">
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bank="http://rih.local/bank">
+      <soapenv:Header>
+        <bank:Authentication>
+          <bank:Login>bank_user</bank:Login>
+          <bank:Password>bank_password</bank:Password>
+        </bank:Authentication>
+      </soapenv:Header>
+      <soapenv:Body>
+        <bank:GetRates>
+          <bank:Date>2026-01-15</bank:Date>
+        </bank:GetRates>
+      </soapenv:Body>
+    </soapenv:Envelope>
+  </sample>
+
+  <sample id="GetStatement" operation="GetStatement" note="выписка за период">
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bank="http://rih.local/bank">
+      <soapenv:Header>
+        <bank:Authentication>
+          <bank:Login>bank_user</bank:Login>
+          <bank:Password>bank_password</bank:Password>
+        </bank:Authentication>
+      </soapenv:Header>
+      <soapenv:Body>
+        <bank:GetStatement>
+          <bank:DateFrom>2026-01-01</bank:DateFrom>
+          <bank:DateTo>2026-01-31</bank:DateTo>
+        </bank:GetStatement>
+      </soapenv:Body>
+    </soapenv:Envelope>
+  </sample>
+
+  <sample id="GetStatementInvalidPeriod" operation="GetStatement" note="инвертированный период: ожидаем SOAP Fault InvalidPeriod">
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bank="http://rih.local/bank">
+      <soapenv:Header>
+        <bank:Authentication>
+          <bank:Login>bank_user</bank:Login>
+          <bank:Password>bank_password</bank:Password>
+        </bank:Authentication>
+      </soapenv:Header>
+      <soapenv:Body>
+        <bank:GetStatement>
+          <bank:DateFrom>2026-03-01</bank:DateFrom>
+          <bank:DateTo>2026-01-01</bank:DateTo>
+        </bank:GetStatement>
+      </soapenv:Body>
+    </soapenv:Envelope>
+  </sample>
+
+  <sample id="SendPaymentOrder" operation="SendPaymentOrder" note="платёжное поручение из 1С; идемпотентность по ExternalId">
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bank="http://rih.local/bank">
+      <soapenv:Header>
+        <bank:Authentication>
+          <bank:Login>bank_user</bank:Login>
+          <bank:Password>bank_password</bank:Password>
+        </bank:Authentication>
+      </soapenv:Header>
+      <soapenv:Body>
+        <bank:SendPaymentOrder>
+          <bank:ExternalId>1С-ПлатёжноеПоручение-000123</bank:ExternalId>
+          <bank:DocNumber>000123</bank:DocNumber>
+          <bank:DocDate>2026-02-10</bank:DocDate>
+          <bank:Payer>ООО «Ритейл Групп»</bank:Payer>
+          <bank:Payee>УП «Молочный край»</bank:Payee>
+          <bank:Amount>1250.50</bank:Amount>
+          <bank:Currency>BYN</bank:Currency>
+          <bank:Purpose>Оплата по счёту №456</bank:Purpose>
+        </bank:SendPaymentOrder>
+      </soapenv:Body>
+    </soapenv:Envelope>
+  </sample>
+
+  <sample id="AuthFailed" operation="GetRates" note="неверный пароль: ожидаем SOAP Fault AuthFailed">
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bank="http://rih.local/bank">
+      <soapenv:Header>
+        <bank:Authentication>
+          <bank:Login>bank_user</bank:Login>
+          <bank:Password>wrong_password</bank:Password>
+        </bank:Authentication>
+      </soapenv:Header>
+      <soapenv:Body>
+        <bank:GetRates>
+          <bank:Date>2026-01-15</bank:Date>
+        </bank:GetRates>
+      </soapenv:Body>
+    </soapenv:Envelope>
+  </sample>
+
+</samples>

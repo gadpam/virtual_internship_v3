@@ -1,0 +1,103 @@
+# Конвейер безопасности (task_134, task_136, task_138, task_293).
+# Копируется в .github/workflows/security.yml.
+#
+# Проверяет: секреты в истории и в текущем дереве, зависимости Python на
+# известные уязвимости, права доступа к файлам, наличие .env в индексе.
+
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "30 3 * * 1"      # еженедельно: новые CVE в зависимостях
+
+jobs:
+  secrets:
+    name: "Секреты в репозитории"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Сканирование текущего дерева
+        run: |
+          set -o pipefail
+          found=0
+          # Реальные шаблоны утечек: ключи, пароли в открытом виде, токены
+          if grep -rInE "(AKIA[0-9A-Z]{16}|-----BEGIN (RSA|OPENSSH|EC) PRIVATE KEY-----|ghp_[A-Za-z0-9]{20,}|xox[baprs]-[A-Za-z0-9-]{10,})" . \
+               --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.venv-tools; then
+            echo "Найдены материалы, похожие на реальные секреты"; found=1
+          fi
+          if git ls-files | grep -E "(^|/)\.env$"; then
+            echo "Файл .env отслеживается Git — это утечка"; found=1
+          fi
+          exit $found
+
+      - name: Сканирование истории (учебная замена gitleaks)
+        run: |
+          # В промышленном CI: gitleaks detect --source . --redact --exit-code 1
+          # Учебная проверка: ключевые слова в добавленных строках последних 200 коммитов
+          git log -n 200 -p --unified=0 -- . | grep -E "^\+" \
+            | grep -iE "password\s*=\s*[\"'][^\"']{6,}" | grep -v "CHANGE_ME" || exit 0
+          echo "В истории найдены присвоения паролей — проверьте коммиты"; exit 1
+
+  dependencies:
+    name: "Уязвимости зависимостей"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        service: [ai_service, mock_shop_api, mock_loyalty_api, mock_tk_api, mock_bank_ws, mock_tracker_api, queue_consumer, metrics_exporter]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Установка зависимостей сервиса
+        working-directory: 1c/internship/src/${{ matrix.service }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Аудит установленных пакетов
+        working-directory: 1c/internship/src/${{ matrix.service }}
+        run: |
+          # В промышленном CI: pip-audit -r requirements.txt --strict
+          python -m pip install --quiet pip-audit || true
+          if python -m pip_audit --help >/dev/null 2>&1; then
+            python -m pip_audit -r requirements.txt || exit 1
+          else
+            echo "pip-audit недоступен: фиксируем версии и проверяем freeze вручную"
+            mkdir -p ../../build
+            python -m pip freeze > ../../build/${{ matrix.service }}-freeze.txt
+          fi
+
+  supply_chain:
+    name: "Целостность поставки"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Версии образов зафиксированы (нет latest)
+        run: |
+          if grep -rn "image:.*:latest" 1c/internship/tools/*.yml; then
+            echo "Образы с тегом latest нарушают воспроизводимость (task_265)"; exit 1
+          fi
+
+      - name: Права доступа к скриптам
+        run: |
+          find 1c/internship -type f \( -name "*.sh" -o -name "*.py" \) -perm -u+x -print | head -50
+          echo "исполняемые файлы перечислены — сверьте список с ожидаемым"
+
+      - name: Отсутствие бинарных артефактов в Git
+        run: |
+          if git ls-files 1c/internship/build | grep -E "\.(cf|epf|erf|cfe|bak)$"; then
+            echo "Бинарные артефакты не должны храниться в Git (task_265)"; exit 1
+          fi

@@ -1,0 +1,27 @@
+# Источники данных Grafana (task_271). Prometheus — основной; PostgreSQL — для
+# прямых запросов к витринам BI (task_205).
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    uid: rih-prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    jsonData:
+      timeInterval: 15s
+      httpMethod: POST
+
+  - name: RIH PostgreSQL
+    uid: rih-postgres
+    type: postgres
+    url: postgres:5432
+    database: rih
+    user: rih
+    secureJsonData:
+      password: ${POSTGRES_PASSWORD}
+    jsonData:
+      sslmode: disable
+      maxOpenConns: 5
+      timescaledb: false

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000001"
+                       name="RetailIntegrationHub"
+                       comment="Учебная конфигурация виртуальной стажировки 1С (RIH)">
+  <name>RetailIntegrationHub</name>
+  <synonym>
+    <key>ru</key>
+    <value>Интеграционный хаб ритейл-холдинга</value>
+  </synonym>
+  <comment>Конфигурация-интегратор: НСИ, складской учёт, интеграции, отчётность, AI, мобильность</comment>
+  <containedObjects class="mdclass:ScriptVariant" value="ru"/>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>
+    <value>PersonalComputer</value>
+    <value>MobileDevice</value>
+  </usePurposes>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <languages>
+    <value>Language.Русский</value>
+  </languages>
+  <compatibilityMode>8.3.24</compatibilityMode>
+  <subsystems>
+    <value>Subsystem.РИХ_ИнтеграционныйХаб</value>
+  </subsystems>
+  <commonModules>
+    <value>CommonModule.РИХ_ОбщегоНазначения</value>
+    <value>CommonModule.РИХ_Дата</value>
+  </commonModules>
+</mdclass:Configuration>

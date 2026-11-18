@@ -1,0 +1,5 @@
+file=prices_supplier_002_broken.csv
+rows=4
+bytes=685
+sha256=6c7a283b35afd01bd6944deb10915c6dc2d9b8bddf213ac6e6ca21585fa4e466
+created_at=2026-11-17T05:58:12Z

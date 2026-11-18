@@ -1,0 +1,146 @@
+# Тестовый стенд: минимум сервисов, быстрый подъём и полное обнуление после прогона.
+#
+#   docker compose -f docker-compose.test.yml up -d --wait
+#   cd ../tests && pytest -q          # или vanessa-runner для 1С-тестов
+#   docker compose -f docker-compose.test.yml down -v
+#
+# Задания: task_139 (стенды и данные), task_140 (контрактные), task_141 (интеграционные),
+# task_142 (e2e), task_143 (нагрузочные), task_266 (уровни тестов в CI).
+#
+# Особенности тестового стенда:
+#   * фиксированные пароли только для локального прогона — в CI они приходят из секретов;
+#   * сеть изолирована, порты наружу не публикуются, кроме nginx (удобно отлаживать руками);
+#   * volume'ы не сохраняются между прогонами: down -v очищает состояние.
+
+name: rih_test
+
+x-test-healthcheck: &test-healthcheck
+  interval: 5s
+  timeout: 3s
+  retries: 10
+  start_period: 10s
+
+services:
+  mock_shop_api:
+    build:
+      context: ../src/mock_shop_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_shop_api:test
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8020"]
+    environment:
+      MOCK_SHOP_API_KEY: ${MOCK_SHOP_API_KEY:-test-shop-key}
+    ports:
+      - "8020:8020"
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8020/health', timeout=2)"]
+    networks: [test_net]
+
+  mock_loyalty_api:
+    build:
+      context: ../src/mock_loyalty_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_loyalty_api:test
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8021"]
+    environment:
+      MOCK_LOYALTY_API_KEY: ${MOCK_LOYALTY_API_KEY:-test-loyalty-key}
+    ports:
+      - "8021:8021"
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8021/health', timeout=2)"]
+    networks: [test_net]
+
+  mock_tk_api:
+    build:
+      context: ../src/mock_tk_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_tk_api:test
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8022"]
+    environment:
+      MOCK_TK_API_KEY: ${MOCK_TK_API_KEY:-test-tk-key}
+      MOCK_TK_RATE_LIMIT: ${MOCK_TK_RATE_LIMIT:-10}
+    ports:
+      - "8022:8022"
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8022/health', timeout=2)"]
+    networks: [test_net]
+
+  mock_bank_ws:
+    build:
+      context: ../src/mock_bank_ws
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_bank_ws:test
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8023"]
+    environment:
+      MOCK_BANK_LOGIN: ${MOCK_BANK_LOGIN:-bank_user}
+      MOCK_BANK_PASSWORD: ${MOCK_BANK_PASSWORD:-bank_password}
+    ports:
+      - "8023:8023"
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8023/bank?wsdl', timeout=2)"]
+    networks: [test_net]
+
+  mock_tracker_api:
+    build:
+      context: ../src/mock_tracker_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_tracker_api:test
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8024"]
+    ports:
+      - "8024:8024"
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8024/health', timeout=2)"]
+    networks: [test_net]
+
+  ai_service:
+    build:
+      context: ../src/ai_service
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/ai_service:test
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8010"]
+    environment:
+      EMBEDDING_PROVIDER: mock
+      LLM_PROVIDER: mock
+      KNOWLEDGE_BASE_DIR: /data/knowledge_base
+    volumes:
+      - ../docs/knowledge_base:/data/knowledge_base:ro
+    ports:
+      - "8010:8010"
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8010/health', timeout=2)"]
+    networks: [test_net]
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-rih_test}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-rih_test_password}
+    volumes:
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+    networks: [test_net]
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: rih_test
+      POSTGRES_USER: rih_test
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-rih_test_password}
+    tmpfs:
+      - /var/lib/postgresql/data          # данные только на время прогона
+    healthcheck:
+      <<: *test-healthcheck
+      test: ["CMD-SHELL", "pg_isready -U rih_test -d rih_test"]
+    networks: [test_net]
+
+networks:
+  test_net:
+    driver: bridge

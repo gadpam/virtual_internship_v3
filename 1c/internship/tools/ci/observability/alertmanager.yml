@@ -1,0 +1,74 @@
+# Alertmanager: маршрутизация уведомлений и дежурство (task_273).
+#
+# Принципы:
+#   * page уходит в канал дежурного немедленно, ticket — в рабочий канал утром;
+#   * группировка по симптому, а не по экземпляру — иначе один инцидент даёт 40 сообщений;
+#   * подавление (inhibit): если недоступна вся 1С, алерты по конкретным партнёрам гасятся;
+#   * повторное напоминание через 4 часа, если алерт не закрыт.
+
+global:
+  resolve_timeout: 5m
+  smtp_smarthost: "smtp.example.local:587"
+  smtp_from: "alertmanager@rih.local"
+  smtp_auth_username: "CHANGE_ME_local_only"
+  smtp_auth_password: "CHANGE_ME_local_only"
+  slack_api_url: "https://hooks.slack.com/services/CHANGE_ME"
+
+route:
+  receiver: rih-duty
+  group_by: ["alertname", "system", "severity"]
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 4h
+  routes:
+    - matchers: [ 'severity="page"' ]
+      receiver: rih-duty-page
+      group_wait: 10s
+      repeat_interval: 1h
+    - matchers: [ 'severity="ticket"' ]
+      receiver: rih-tickets
+      repeat_interval: 12h
+    - matchers: [ 'alertname="Watchdog"' ]
+      receiver: "null"
+
+inhibit_rules:
+  # Если 1С целиком недоступна, нет смысла сыпать алертами по каждому партнёру
+  - source_matchers: [ 'alertname="RIHIntegrationDown"' ]
+    target_matchers: [ 'severity="ticket"' ]
+    equal: []
+  - source_matchers: [ 'alertname="RIHPartnerUnavailable"' ]
+    target_matchers: [ 'alertname="RIHLatencySLOBreach"' ]
+    equal: ["system"]
+
+receivers:
+  - name: "null"
+
+  - name: rih-duty-page
+    slack_configs:
+      - channel: "#rih-duty"
+        send_resolved: true
+        title: '[PAGE] {{ .GroupLabels.alertname }}'
+        text: >-
+          {{ range .Alerts }}*{{ .Annotations.summary }}*
+          {{ .Annotations.description }}
+          Runbook: {{ .Labels.runbook }}
+          Dashboard: {{ .Annotations.dashboard }}
+          Начался: {{ .StartsAt.Format "2006-01-02 15:04 MST" }}
+          {{ end }}
+    email_configs:
+      - to: "rih-duty@rih.local"
+        send_resolved: true
+
+  - name: rih-tickets
+    slack_configs:
+      - channel: "#rih-alerts"
+        send_resolved: true
+        title: '[TICKET] {{ .GroupLabels.alertname }}'
+        text: >-
+          {{ range .Alerts }}*{{ .Annotations.summary }}* — {{ .Annotations.description }}
+          {{ end }}
+
+  - name: rih-duty
+    slack_configs:
+      - channel: "#rih-alerts"
+        send_resolved: true

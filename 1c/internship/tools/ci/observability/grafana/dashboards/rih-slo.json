@@ -1,0 +1,215 @@
+{
+  "uid": "rih-slo",
+  "title": "RIH · SLO интеграций",
+  "tags": ["rih", "slo", "integrations"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "time": { "from": "now-6h", "to": "now" },
+  "annotations": {
+    "list": [
+      {
+        "name": "Релизы",
+        "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+        "enable": true,
+        "expr": "changes(rih_up[1m]) > 0",
+        "iconColor": "blue",
+        "titleFormat": "изменение доступности"
+      }
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "name": "system",
+        "label": "Система-партнёр",
+        "type": "query",
+        "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+        "query": "label_values(rih_integration_requests_total, system)",
+        "includeAll": true,
+        "multi": true,
+        "refresh": 2
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Доступность RIH (30 дней)",
+      "description": "SLI: доля времени, когда 1С отдаёт метрики. SLO 99.5% (task_271).",
+      "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "avg_over_time(rih_up{service=\"rih_1c\"}[30d]) * 100",
+          "legendFormat": "доступность, %"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red", "value": null },
+              { "color": "orange", "value": 99 },
+              { "color": "green", "value": 99.5 }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Error budget осталось",
+      "description": "При SLO 99.5% бюджет ошибок 0.5%. Сгорел бюджет — замораживаем рискованные релизы.",
+      "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 0 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "(1 - (1 - avg_over_time(rih_up{service=\"rih_1c\"}[30d])) / 0.005) * 100",
+          "legendFormat": "бюджет, %"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0,
+          "max": 100,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red", "value": null },
+              { "color": "orange", "value": 25 },
+              { "color": "green", "value": 60 }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "p95 длительности по системам (SLO 2 с)",
+      "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+      "gridPos": { "h": 9, "w": 12, "x": 12, "y": 0 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95, sum by (le, system) (rate(rih_integration_duration_seconds_bucket{system=~\"$system\"}[5m])))",
+          "legendFormat": "{{ system }} p95"
+        },
+        {
+          "refId": "B",
+          "expr": "histogram_quantile(0.99, sum by (le, system) (rate(rih_integration_duration_seconds_bucket{system=~\"$system\"}[5m])))",
+          "legendFormat": "{{ system }} p99"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "custom": { "drawStyle": "line", "fillOpacity": 10, "lineWidth": 2 },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 2 }
+            ]
+          }
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Доля ошибок по системам",
+      "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 9 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (system) (rate(rih_integration_requests_total{status!~\"2..|3..\"}[5m])) / clamp_min(sum by (system) (rate(rih_integration_requests_total[5m])), 0.0001)",
+          "legendFormat": "{{ system }}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "custom": { "drawStyle": "line", "fillOpacity": 10 },
+          "max": 1
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Глубина очередей (ready / DLQ)",
+      "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 9 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rih_queue_depth{state=\"ready\"}",
+          "legendFormat": "{{ queue }} ready"
+        },
+        {
+          "refId": "B",
+          "expr": "rih_queue_depth{state=\"dlq\"}",
+          "legendFormat": "{{ queue }} dlq"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "short", "custom": { "drawStyle": "line", "fillOpacity": 20 } },
+        "overrides": []
+      }
+    },
+    {
+      "id": 6,
+      "type": "table",
+      "title": "Отставание обменов от расписания",
+      "description": "SLA свежести данных (task_210, task_272): более 15 минут — алерт RIHExchangeLag.",
+      "datasource": { "type": "prometheus", "uid": "rih-prometheus" },
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 17 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rih_exchange_lag_seconds",
+          "format": "table",
+          "instant": true
+        }
+      ],
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": { "Time": true, "__name__": true, "instance": true, "job": true },
+            "renameByName": { "plan": "План обмена", "direction": "Направление", "Value": "Отставание, с" }
+          }
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 900 }
+            ]
+          },
+          "custom": { "cellOptions": { "type": "color-background" } }
+        },
+        "overrides": []
+      }
+    }
+  ]
+}

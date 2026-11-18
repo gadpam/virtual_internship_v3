@@ -1,0 +1,16 @@
+# task_229: окружение Python. Версии зафиксированы — не «разъезжайтесь» с командой.
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+httpx==0.28.1
+python-dotenv==1.0.1
+numpy==2.2.1
+pytest==8.3.4
+pytest-cov==6.0.0
+# Опционально (по мере заданий):
+# faiss-cpu==1.9.0.post1        # task_237: локальный векторный индекс
+# psycopg[binary]==3.2.3        # task_237: pgvector в вашем PostgreSQL
+# pgvector==0.3.6
+# rank-bm25==0.2.2              # task_239: гибридный поиск
+# tiktoken==0.8.0               # task_240: оценка токенов и стоимости

@@ -1,0 +1,42 @@
+{
+  "_comment": "Эталонный набор для оценки поиска (task_238). Дополняйте реальными вопросами пользователей. expected_documents — пути или идентификаторы документов корпуса.",
+  "version": "0.1.0",
+  "questions": [
+    {
+      "id": "q001",
+      "question": "Как оформить поступление товаров на склад?",
+      "expected_documents": ["internship/docs/knowledge_base/склад_поступление.md"],
+      "expected_sections": ["Порядок оформления"],
+      "difficulty": "base"
+    },
+    {
+      "id": "q002",
+      "question": "Что делать, если остатки не сходятся после перемещения?",
+      "expected_documents": ["internship/docs/knowledge_base/склад_перемещение.md"],
+      "expected_sections": ["Расхождения"],
+      "difficulty": "base"
+    },
+    {
+      "id": "q003",
+      "question": "Как подключить новый HTTP-сервис к обмену?",
+      "expected_documents": ["internship/docs/knowledge_base/интеграции_http.md"],
+      "expected_sections": [],
+      "difficulty": "technical"
+    },
+    {
+      "id": "q004",
+      "question": "Какой формат даты используется в интеграционных контрактах?",
+      "expected_documents": ["internship/docs/knowledge_base/интеграции_форматы.md"],
+      "expected_sections": ["Даты"],
+      "difficulty": "technical"
+    },
+    {
+      "id": "q005",
+      "question": "Кто владелец метрики «выручка» и как она считается?",
+      "expected_documents": ["internship/docs/knowledge_base/аналитика_метрики.md"],
+      "expected_sections": [],
+      "difficulty": "governance"
+    }
+  ],
+  "todo": "Довести набор до 30 вопросов: добавьте переформулировки, вопросы «между разделами» и вопросы с точными терминами (имена объектов 1С, коды ошибок)."
+}

@@ -1,0 +1,216 @@
+# Базовый учебный стенд RIH: mock-сервисы партнёров, PostgreSQL, RabbitMQ,
+# экспортёр метрик. Точка входа — nginx (единственный сервис с портами наружу).
+#
+# Запуск:  cp .env.example .env && docker compose up -d --wait
+# Задания: task_78 (mock-сервисы), task_111 (RabbitMQ), task_114 (мониторинг),
+#          task_133 (аутентификация сервисов), task_259 (Docker для стенда).
+
+name: ${COMPOSE_PROJECT_NAME:-rih}
+
+x-healthcheck-defaults: &healthcheck-defaults
+  interval: 10s
+  timeout: 5s
+  retries: 5
+  start_period: 15s
+
+services:
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: rih_nginx
+    restart: unless-stopped
+    ports:
+      - "${NGINX_HTTP_PORT:-8080}:80"
+      - "${NGINX_HTTPS_PORT:-8443}:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/proxy_common.inc:/etc/nginx/proxy_common.inc:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      mock_shop_api:
+        condition: service_healthy
+      mock_loyalty_api:
+        condition: service_healthy
+      mock_tk_api:
+        condition: service_healthy
+      mock_bank_ws:
+        condition: service_healthy
+      mock_tracker_api:
+        condition: service_healthy
+      ai_service:
+        condition: service_healthy
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "wget", "-qO-", "http://localhost/healthz"]
+    networks: [rih_net]
+
+  mock_shop_api:
+    build:
+      context: ../src/mock_shop_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_shop_api:1.0.0
+    container_name: rih_mock_shop
+    restart: unless-stopped
+    environment:
+      MOCK_SHOP_API_KEY: ${MOCK_SHOP_API_KEY:-mock-shop-key}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8020"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8020/health', timeout=3)"]
+    networks: [rih_net]
+
+  mock_loyalty_api:
+    build:
+      context: ../src/mock_loyalty_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_loyalty_api:1.0.0
+    container_name: rih_mock_loyalty
+    restart: unless-stopped
+    environment:
+      MOCK_LOYALTY_API_KEY: ${MOCK_LOYALTY_API_KEY:-mock-loyalty-key}
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8021"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8021/health', timeout=3)"]
+    networks: [rih_net]
+
+  mock_tk_api:
+    build:
+      context: ../src/mock_tk_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_tk_api:1.0.0
+    container_name: rih_mock_tk
+    restart: unless-stopped
+    environment:
+      MOCK_TK_API_KEY: ${MOCK_TK_API_KEY:-mock-tk-key}
+      MOCK_TK_RATE_LIMIT: ${MOCK_TK_RATE_LIMIT:-10}
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8022"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8022/health', timeout=3)"]
+    networks: [rih_net]
+
+  mock_bank_ws:
+    build:
+      context: ../src/mock_bank_ws
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_bank_ws:1.0.0
+    container_name: rih_mock_bank
+    restart: unless-stopped
+    environment:
+      MOCK_BANK_LOGIN: ${MOCK_BANK_LOGIN:-bank_user}
+      MOCK_BANK_PASSWORD: ${MOCK_BANK_PASSWORD:-bank_password}
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8023"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8023/bank?wsdl', timeout=3)"]
+    networks: [rih_net]
+
+  mock_tracker_api:
+    build:
+      context: ../src/mock_tracker_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_tracker_api:1.0.0
+    container_name: rih_mock_tracker
+    restart: unless-stopped
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8024"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8024/health', timeout=3)"]
+    networks: [rih_net]
+
+  ai_service:
+    build:
+      context: ../src/ai_service
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/ai_service:1.0.0
+    container_name: rih_ai_service
+    restart: unless-stopped
+    environment:
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-mock}
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      SEARCH_MIN_SCORE: ${SEARCH_MIN_SCORE:-0.35}
+      KNOWLEDGE_BASE_DIR: /data/knowledge_base
+    volumes:
+      - ../docs/knowledge_base:/data/knowledge_base:ro
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8010"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8010/health', timeout=3)"]
+    networks: [rih_net]
+
+  queue_consumer:
+    build:
+      context: ../src/queue_consumer
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/queue_consumer:1.0.0
+    container_name: rih_queue_consumer
+    restart: unless-stopped
+    environment:
+      AMQP_URL: ${AMQP_URL}
+      QUEUE_NAME: rih.orders.in
+      DLQ_NAME: rih.orders.in.dlq
+      RIH_HTTP_URL: ${RIH_HTTP_BASE:-http://host.docker.internal:8009/hs/rih/v1}/queue/incoming
+      MAX_RETRIES: 3
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks: [rih_net]
+
+  metrics_exporter:
+    build:
+      context: ../src/metrics_exporter
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/metrics_exporter:1.0.0
+    container_name: rih_metrics_exporter
+    restart: unless-stopped
+    environment:
+      RIH_METRICS_URL: ${RIH_HTTP_BASE:-http://host.docker.internal:8009/hs/rih/v1}/metrics
+      RIH_METRICS_USER: ${RIH_USER:-}
+      RIH_METRICS_PASSWORD: ${RIH_PASSWORD:-}
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8025"]
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8025/health', timeout=3)"]
+    networks: [rih_net]
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: rih_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-rih}
+      POSTGRES_USER: ${POSTGRES_USER:-rih}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?укажите POSTGRES_PASSWORD в .env}
+      TZ: ${TZ:-Europe/Minsk}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./sql/marts:/docker-entrypoint-initdb.d/marts:ro
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rih} -d ${POSTGRES_DB:-rih}"]
+    networks: [rih_net]
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: rih_rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-rih}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:?укажите RABBITMQ_DEFAULT_PASS в .env}
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+    healthcheck:
+      <<: *healthcheck-defaults
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+    networks: [rih_net]
+
+volumes:
+  pg_data:
+  rabbitmq_data:
+
+networks:
+  rih_net:
+    driver: bridge

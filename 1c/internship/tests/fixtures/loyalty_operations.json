@@ -1,0 +1,29 @@
+{
+  "_comment": "Операции программы лояльности для проверки идемпотентности и сторно (task_92, task_105, task_130).",
+  "accrue": {
+    "operation_id": "OP-ACCRUE-0001",
+    "card": "CARD-777",
+    "points": 15.5,
+    "reason": "Бонус за заказ SHOP-000001"
+  },
+  "redeem": {
+    "operation_id": "OP-REDEEM-0001",
+    "card": "CARD-777",
+    "points": 5.0,
+    "reason": "Списание за заказ SHOP-000002"
+  },
+  "insufficient_balance": {
+    "operation_id": "OP-REDEEM-TOOMUCH",
+    "card": "CARD-EMPTY",
+    "points": 99999.0,
+    "expected_status": 422,
+    "client_action": "не повторять, сообщить пользователю «недостаточно баллов»"
+  },
+  "reverse": {
+    "operation_id": "OP-ACCRUE-0001",
+    "expected": "баланс уменьшится на 15.5; повторное сторно вернёт 409"
+  },
+  "idempotency": {
+    "description": "два вызова accrue с одним operation_id дают один и тот же результат, второй ответ содержит duplicate=true, баланс меняется один раз"
+  }
+}
