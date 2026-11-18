@@ -12,8 +12,11 @@
 Запуск: python3 1c/tools/build_program.py
 """
 import os
+import re
 import sys
 import importlib.util
+
+import task_tiers
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, ".."))
@@ -32,13 +35,16 @@ SPRINT_TEMPLATE = """СПРИНТ {n} · {quarter} · {theme}
 {goal}
 
 РАМКИ
-Спринт = одна неделя = 6 заданий: task_{first} ... task_{last}.
+Спринт = одна неделя = {task_count} заданий: task_{first} ... task_{last}.
 Темп: 2 задания в начале недели, 2 в середине, 1 в пятницу, 1 в выходной
-+ рефлексия по всем заданиям недели.
++ code review спринта + рефлексия по всем заданиям недели.
+Оценка времени ниже — только на сами задания; code review и рефлексия
+в неё не входят (см. Roadmap.md, раздел про реальную нагрузку).
 
 ЗАДАНИЯ СПРИНТА
 {task_list}
-
+{minimum}
+{checkpoint}
 РЕЗУЛЬТАТЫ СПРИНТА (что должно появиться к выходным)
 {outcomes}
 
@@ -63,6 +69,7 @@ TASK_TEMPLATE = """ЗАДАНИЕ task_{num} · спринт {sprint} · {quarte
 {title}
 
 Оценка времени: {time}
+Уровень задания: {tier} — {tier_note}
 
 КОНТЕКСТ: зачем это нужно
 {context}
@@ -81,6 +88,8 @@ TASK_TEMPLATE = """ЗАДАНИЕ task_{num} · спринт {sprint} · {quarte
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).
+- Запишите фактические часы в рефлексию: план {time} против факта. Расхождение
+  больше чем в полтора раза — это данные для плана, а не повод себя ругать.
 - После выполнения обязательно заполнить internship/documentation/task_{num}_description.txt
   (шаблон: project/documentation/task_0_description_template.txt).
 - Общие критерии готовности: project/acceptance/DefinitionOfDone.txt
@@ -89,8 +98,29 @@ TASK_TEMPLATE = """ЗАДАНИЕ task_{num} · спринт {sprint} · {quarte
 
 CODE_REVIEW_TEMPLATE = """CODE REVIEW после спринта {sprint} ({quarter}: {theme})
 
+Оценка времени: {review_time}
+
 Это не задание про код. Это задание про качество и про то, как вы умеете
 объяснять и защищать свои решения.
+
+КТО ПРОВЕРЯЕТ (РОЛЬ РЕВЬЮЕРА)
+Ревьюер — не «начальник, который ставит оценку». Его задача: найти то, что вы
+не видите, и научить вас объяснять решения. Роли распределяются так:
+
+  Автор (вы).          Готовит дифф, описание решений и список спорных мест.
+                       Отвечает на замечания аргументами, а не эмоциями.
+  Основной ревьюер.    Ментор или ведущий разработчик потока. Смотрит архитектуру,
+                       стандарты, запросы, клиент-сервер, безопасность. Выносит
+                       вердикт: принято / принято с замечаниями / переделать.
+  Второй ревьюер.      Коллега из потока или вторая линия команды. Смотрит
+                       читаемость, имена, дубли, тесты, документацию. Его взгляд
+                       ценнее всего: он не знает, что вы «имели в виду».
+  Автоматика.          Валидация EDT, АПК/Sonar, юнит- и дымовые тесты. Запускается
+                       ДО человека: машинные замечания не должны тратить время ревьюера.
+
+Если второго ревьюера нет — проведите перекрёстное само-ревью: закройте код
+на 2 часа, вернитесь и читайте его как чужой, по чек-листу. Это слабее, чем
+живой человек, но лучше, чем ничего; отметьте в рефлексии, что ревью было самостоятельным.
 
 ЧТО СДЕЛАТЬ
 1. Соберите список того, что сделали за спринт: task_{first} ... task_{last}.
@@ -104,8 +134,12 @@ CODE_REVIEW_TEMPLATE = """CODE REVIEW после спринта {sprint} ({quart
    замечание | критичность (Critical/Major/Minor) | решение | срок.
 6. Закройте Critical и Major до старта следующего спринта. Minor — в backlog.
 7. Напишите ответ ревьюеру: что принято, что отклонено и почему (аргументы, не эмоции).
-8. Заполните рефлексию task_{last}_code_review_description.txt:
-   три главных вывода о своём коде за спринт.
+8. Сверьте оценку времени с фактом. Для каждого задания спринта запишите:
+   план (из YourTask.txt) | факт | причина расхождения. Это данные для
+   PersonalPlan.md, а не отчётность перед ментором.
+9. Заполните рефлексию task_{last}_code_review_description.txt:
+   три главных вывода о своём коде за спринт и одна причина главного
+   расхождения плана с фактом.
 
 ФОРМАТ ОТВЕТА РЕВЬЮЕРУ
   Замечание: ...
@@ -114,13 +148,15 @@ CODE_REVIEW_TEMPLATE = """CODE REVIEW после спринта {sprint} ({quart
   Что сделал: ... (коммит / задача в backlog с приоритетом)
 
 КРИТЕРИИ ЗАКРЫТИЯ CODE REVIEW
+- Основной ревьюер назвал вердикт вслух или письменно (не «ну вроде нормально»).
 - Нет открытых замечаний уровня Critical.
 - Автоматические проверки зелёные (или падения объяснены и заведены в backlog).
-- Таблица замечаний и ответ ревьюеру сохранены в internship/documentation/reviews/.
+- Таблица замечаний, ответ ревьюеру и таблица «план/факт по часам» сохранены
+  в internship/documentation/reviews/.
 - Рефлексия заполнена.
 
 ЗАЧЕМ ЭТО НУЖНО
-Код-ревью — самая быстрая форма обучения в профессии. За год вы пройдёте 52 ревью.
+Код-ревью — самая быстрая форма обучения в профессии. За год вы пройдёте 53 ревью.
 Разница между стажёром и Middle чаще всего не в знаниях синтаксиса, а в том,
 сколько раз его код разобрали чужие глаза.
 {footer}"""
@@ -176,6 +212,45 @@ def numbered(items):
                      for item in items)
 
 
+def minimum_block(tasks):
+    """Блок «минимальный контур спринта»: что закрываем всегда, что переносим."""
+    core = [t for t in tasks if task_tiers.tier_of(t["num"], t["title"]) == "ядро"]
+    extra = [t for t in tasks if task_tiers.tier_of(t["num"], t["title"]) == "расширение"]
+    reserve = [t for t in tasks if task_tiers.tier_of(t["num"], t["title"]) == "резерв"]
+
+    def fmt(group):
+        return ", ".join("task_%d" % t["num"] for t in group) if group else "—"
+
+    lines = ["МИНИМАЛЬНЫЙ КОНТУР СПРИНТА (что делать, если вы отстаёте)"]
+    lines.append("Ядро (закрывается всегда): %s." % fmt(core))
+    lines.append("Расширение (переносится на следующую неделю): %s." % fmt(extra))
+    lines.append("Резерв (при отставании не выполняется): %s." % fmt(reserve))
+    lines.append("Правило: сначала снимаете «резерв», потом переносите «расширение».")
+    lines.append("Ядро не сокращается — без него тема следующего спринта не пойдёт.")
+    lines.append("Перенос больше двух недель подряд — сигнал ментору, а не ваша вина.")
+    return "\n".join(lines) + "\n"
+
+
+def checkpoint_block(n):
+    """Контрольная точка середины квартала (спринты 6, 19, 32, 46)."""
+    cp = task_tiers.CHECKPOINTS.get(n)
+    if not cp:
+        return ""
+    head, lines = cp
+    return "\n".join([head] + lines) + "\n"
+
+
+def review_time(tasks):
+    """Оценка времени на code review спринта: 2 ч обычно, 3 ч на плотном спринте,
+    4 ч на milestone. Зависит от объёма заданий, которые надо разобрать."""
+    if len(tasks) >= 6 and tasks[0]["num"] in (67, 145, 223, 307):
+        return "4 ч"
+    total = sum(int(re.search(r"\d+", t["time"]).group()) for t in tasks)
+    if total >= 20:
+        return "3 ч"
+    return "2 ч"
+
+
 def build_sprint(sprint, tasks):
     n = sprint["n"]
     first, last = tasks[0]["num"], tasks[-1]["num"]
@@ -189,6 +264,9 @@ def build_sprint(sprint, tasks):
         goal=sprint["goal"],
         first=first,
         last=last,
+        task_count=len(tasks),
+        minimum=minimum_block(tasks),
+        checkpoint=checkpoint_block(n),
         task_list="\n".join("task_%d — %s (%s)" % (t["num"], t["title"], t["time"]) for t in tasks),
         outcomes=bullet_list(sprint["outcomes"]),
         links=links,
@@ -208,6 +286,8 @@ def build_tasks(sprint):
             theme=sprint["theme"],
             title=t["title"],
             time=t["time"],
+            tier=task_tiers.tier_of(t["num"], t["title"]),
+            tier_note=task_tiers.TIER_NOTE[task_tiers.tier_of(t["num"], t["title"])],
             context=t["context"].strip(),
             task=t["task"].strip(),
             dod=bullet_list(t["dod"]),
@@ -220,7 +300,7 @@ def build_tasks(sprint):
     first, last = sprint["tasks"][0]["num"], sprint["tasks"][-1]["num"]
     cr = CODE_REVIEW_TEMPLATE.format(
         sprint=n, quarter=sprint["quarter"], theme=sprint["theme"],
-        first=first, last=last, footer=FOOTER,
+        first=first, last=last, review_time=review_time(sprint["tasks"]), footer=FOOTER,
     )
     write_file(os.path.join(PROJECT, "sprint_%d" % n, "task_%d_code_review" % last, "CodeReviewTask.txt"), cr)
 
