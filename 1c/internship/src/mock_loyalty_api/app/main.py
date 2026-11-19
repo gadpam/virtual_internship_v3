@@ -3,6 +3,7 @@
 Ключевая особенность — идемпотентность по operationId и поддержка сторно.
 Состояние в памяти процесса: перезапуск контейнера очищает данные (удобно для тестов).
 """
+import asyncio
 import os
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
@@ -40,6 +41,33 @@ def _card(card: str) -> CardState:
     return CARDS[card]
 
 
+async def apply_fault(fault: Optional[str], header_fault: Optional[str]) -> None:
+    """Режимы сбоев стенда (как у магазина): X-Fault-Mode или ?fault=.
+
+    Нужны негативной ветке золотого пути (task_302) и контракту
+    partner_loyalty.md п.6: error500 -> операция уходит в очередь, не теряется.
+    """
+    mode = (header_fault or fault or "").lower().strip()
+    if not mode or mode == "ok":
+        return
+    if mode == "error500":
+        raise HTTPException(status_code=500, detail="mock: внутренняя ошибка лояльности")
+    if mode == "timeout":
+        await asyncio.sleep(35)
+        return
+    if mode == "slow":
+        await asyncio.sleep(4)
+        return
+    if mode == "rate429":
+        raise HTTPException(status_code=429, detail="mock: превышен лимит запросов",
+                            headers={"Retry-After": "5"})
+    if mode == "garbage":
+        raise HTTPException(status_code=200, detail="not-json-payload-{[[")
+    if mode == "duplicate":
+        return
+    raise HTTPException(status_code=400, detail=f"mock: неизвестный режим сбоя '{mode}'")
+
+
 def _check_key(x_api_key: Optional[str]) -> None:
     if not x_api_key:
         raise HTTPException(status_code=401, detail="не указан X-Api-Key")
@@ -53,15 +81,21 @@ def health() -> dict:
 
 
 @app.get("/api/v1/cards/{card}/balance")
-def balance(card: str, x_api_key: Optional[str] = Header(default=None)) -> dict:
+async def balance(card: str, fault: Optional[str] = None,
+                  x_api_key: Optional[str] = Header(default=None),
+                  x_fault_mode: Optional[str] = Header(default=None)) -> dict:
     _check_key(x_api_key)
+    await apply_fault(fault, x_fault_mode)
     state = _card(card)
     return {"card": state.card, "balance": state.balance, "operations": state.operations[-50:]}
 
 
 @app.post("/api/v1/accrue")
-def accrue(payload: Operation, x_api_key: Optional[str] = Header(default=None)) -> dict:
+async def accrue(payload: Operation, fault: Optional[str] = None,
+                 x_api_key: Optional[str] = Header(default=None),
+                 x_fault_mode: Optional[str] = Header(default=None)) -> dict:
     _check_key(x_api_key)
+    await apply_fault(fault, x_fault_mode)
     state = _card(payload.card)
 
     if payload.operation_id in OPERATIONS:
@@ -84,8 +118,11 @@ def accrue(payload: Operation, x_api_key: Optional[str] = Header(default=None)) 
 
 
 @app.post("/api/v1/redeem")
-def redeem(payload: Operation, x_api_key: Optional[str] = Header(default=None)) -> dict:
+async def redeem(payload: Operation, fault: Optional[str] = None,
+                 x_api_key: Optional[str] = Header(default=None),
+                 x_fault_mode: Optional[str] = Header(default=None)) -> dict:
     _check_key(x_api_key)
+    await apply_fault(fault, x_fault_mode)
     state = _card(payload.card)
 
     if payload.operation_id in OPERATIONS:
@@ -109,9 +146,12 @@ def redeem(payload: Operation, x_api_key: Optional[str] = Header(default=None)) 
 
 
 @app.post("/api/v1/reverse")
-def reverse(operation_id: str, x_api_key: Optional[str] = Header(default=None)) -> dict:
+async def reverse(operation_id: str, fault: Optional[str] = None,
+                  x_api_key: Optional[str] = Header(default=None),
+                  x_fault_mode: Optional[str] = Header(default=None)) -> dict:
     """Сторно операции (возврат чека). Идемпотентно-строгое: дважды не выполняется."""
     _check_key(x_api_key)
+    await apply_fault(fault, x_fault_mode)
     original = OPERATIONS.get(operation_id)
     if not original:
         raise HTTPException(status_code=404, detail=f"операция {operation_id} не найдена")

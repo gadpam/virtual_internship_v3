@@ -81,6 +81,19 @@ async def _apply_fault(mode: Optional[str]) -> None:
     raise HTTPException(status_code=400, detail=f"mock: неизвестный режим '{mode}'")
 
 
+@app.post("/__reset__")
+def reset_state(x_api_key: Optional[str] = Header(default=None)) -> dict:
+    """Сброс состояния для тестового стенда: окна rate limit и заявки.
+
+    Нужен интеграционным тестам (task_141): иначе тесты делят лимит
+    10/мин и влияют друг на друга порядком запуска.
+    """
+    _check_key(x_api_key)
+    _hits.clear()
+    SHIPMENTS.clear()
+    return {"status": "reset", "shipments": 0}
+
+
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok", "service": "mock_tk_api", "rate_limit_per_minute": RATE_LIMIT,

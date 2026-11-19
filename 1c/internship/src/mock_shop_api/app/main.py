@@ -241,9 +241,12 @@ async def change_status(
 @app.get("/api/v1/stock")
 async def stock(
     warehouse: Optional[str] = None,
+    fault: Optional[str] = None,
+    x_fault_mode: Optional[str] = Header(default=None),
     _key: str = Depends(check_api_key),
 ) -> dict:
     """Остатки, которые магазин ожидает получить из 1С (проверка выгрузки task_91)."""
+    await apply_fault(fault, x_fault_mode)
     started = time.perf_counter()
     rows = [
         {"sku": sku, "warehouse": warehouse or "РЦ-Минск", "quantity": round(random.uniform(0, 200), 2)}

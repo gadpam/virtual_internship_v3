@@ -95,6 +95,18 @@ def is_service_available(base: str) -> bool:
         return False
 
 
+@pytest.fixture(autouse=True)
+def _isolate_tk_state(request, tk: ServiceUrl):
+    """Интеграционные тесты не делят rate-limit окно ТК между собой."""
+    stand_markers = {"integration", "e2e", "golden_path", "load"}
+    if not stand_markers.intersection(m.name for m in request.node.iter_markers()) or httpx is None:
+        return
+    try:
+        httpx.post(f"{tk.base}/__reset__", headers={"X-Api-Key": tk.api_key}, timeout=2.0)
+    except Exception:  # noqa: BLE001 - стенд может быть недоступен, require_stand пропустит тест
+        pass
+
+
 @pytest.fixture
 def require_stand(shop: ServiceUrl):
     """Пропускает тест, если учебный стенд не поднят."""

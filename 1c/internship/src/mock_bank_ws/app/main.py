@@ -82,7 +82,7 @@ def _seed_payments(count: int = 40) -> None:
             "payee": "ОАО «Учебный Банк»",
             "amount": round(random.uniform(50.0, 25000.0), 2),
             "currency": "BYN",
-            "purpose": random.choice(purposes) % (index + 1) if "%d" in random.choice(purposes) else "Оплата по договору",
+            "purpose": (lambda p: p % (index + 1) if "%d" in p else p)(random.choice(purposes)),
             "status": random.choice(["accepted", "processing", "paid", "rejected"]),
         }
 
