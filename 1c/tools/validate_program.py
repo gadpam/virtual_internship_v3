@@ -252,8 +252,18 @@ def check_idempotent():
         ok("повторная сборка не меняет файлы (%d файлов)" % len(after))
 
 
+def check_artifact_map():
+    print("9. Актуальность карты артефактов")
+    r = subprocess.run([sys.executable, os.path.join(HERE, "build_artifact_map.py"), "--check"],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        fail("ArtifactMap.md устарела: перегенерируйте build_artifact_map.py")
+    else:
+        ok("ArtifactMap.md соответствует данным заданий")
+
+
 def check_tests():
-    print("9. Тесты AI-сервиса (pytest)")
+    print("10. Тесты AI-сервиса (pytest)")
     svc = os.path.join(INTERNSHIP, "src", "ai_service")
     r = subprocess.run([sys.executable, "-m", "pytest", "-q", "tests"],
                        capture_output=True, text=True, cwd=svc)
@@ -281,6 +291,7 @@ def main():
     check_resources(tasks)
     if not args.skip_idempotency:
         check_idempotent()
+    check_artifact_map()
     if args.tests:
         check_tests()
 
