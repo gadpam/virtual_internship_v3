@@ -186,6 +186,11 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
       - ./sql/marts:/docker-entrypoint-initdb.d/marts:ro
+    ports:
+      # Публикация на хост нужна серверу 1С (task_0: серверная база RIH_DEV)
+      # и локальным клиентам (psql/pgAdmin). Внутри сети rih_net сервисы ходят
+      # по имени postgres:5432 без этого порта.
+      - "${POSTGRES_PORT:-5432}:5432"
     healthcheck:
       <<: *healthcheck-defaults
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rih} -d ${POSTGRES_DB:-rih}"]

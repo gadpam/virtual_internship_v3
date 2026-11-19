@@ -29,6 +29,14 @@
 | Postmortem | `templates/PostmortemTemplate.md` | task_275 |
 | План релиза | `templates/ReleasePlanTemplate.md` | task_268 |
 | Инструкция для коллеги | `templates/HandoverTemplate.md` | task_264, task_305 |
+| RFC (предложение с вариантами) | `templates/RFC_Template.md` | task_216, task_276 |
+| Runbook дежурного | `templates/Runbook_Template.md` | task_196, task_272 |
+| Отчёт о нагрузочном тесте | `templates/LoadTestReport_Template.md` | task_143, task_201 |
+| План мощностей | `templates/CapacityPlan_Template.md` | task_202 |
+| Карточка метрики семантического слоя | `templates/MetricsDictionary_Template.md` | task_206 |
+
+Полный список артефактов года «задание → путь → есть/создаётся»:
+[`ArtifactMap.md`](ArtifactMap.md) (генерируется, не правится руками).
 
 ## Правила
 

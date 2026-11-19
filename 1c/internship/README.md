@@ -31,6 +31,8 @@
 3. Поднять стенд: `tools/README.md` → `docker compose up -d --wait`.
 4. Завести привычку: после каждого задания — `documentation/task_NNN_description.txt`
    и `documentation/reflections/task_NNN_reflection.md`.
+5. Перед заданием смотреть [`documentation/ArtifactMap.md`](documentation/ArtifactMap.md):
+   что уже есть в стенде, а что вы создаёте этим заданием и куда кладёте результат.
 
 ## Как устроен стенд
 

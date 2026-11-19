@@ -1,0 +1,50 @@
+# Валидация программы стажировки 1С и учебного стенда RIH.
+# Не путать с образцом конвейера для студенческого форка:
+# 1c/internship/tools/ci/github-actions/ci.yml — это учебный артефакт task_265/266.
+name: Validate program
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  program:
+    name: "Программа: данные, генерация, часы, ссылки"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Валидатор программы (py_compile, ссылки, теории, часы, идемпотентность)
+        run: python3 1c/tools/validate_program.py
+
+      - name: Линтер модулей 1С стартовой конфигурации
+        run: python3 1c/internship/src/scripts/lint_bsl.py 1c/internship/Configuration/src --fail-on warning
+
+  ai-service:
+    name: "AI-сервис: pytest"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Зависимости AI-сервиса
+        run: pip install -r 1c/internship/src/ai_service/requirements.txt
+
+      - name: Тесты AI-сервиса
+        working-directory: 1c/internship/src/ai_service
+        run: python -m pytest -q tests

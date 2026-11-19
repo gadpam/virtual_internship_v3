@@ -36,7 +36,7 @@ task_252 — Кейс AI в бизнес-процессе: измеримая п
 Опыт использования AI — интеграция сервисов; навыки делового общения; безопасность.
 
 МАТЕРИАЛЫ
-- internship/docs/api/ai_assistant.yaml
+- internship/docs/api/ai_service.md
 - project/acceptance/DefinitionOfDone.txt
 
 ПРАВИЛА СПРИНТА
