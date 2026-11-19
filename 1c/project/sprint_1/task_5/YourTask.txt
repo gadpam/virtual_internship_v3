@@ -15,9 +15,9 @@ Python встретится вам раньше, чем кажется: в Q2 в
 ЗАДАНИЕ: что сделать
 1. Проверьте окружение: python --version (нужен 3.11+), создайте виртуальное
    окружение и зафиксируйте вывод pip list. Запишите версии в VERSIONS.md.
-2. Напишите скрипт internship/src/scripts/first_python_check.py: он читает CSV
-   из internship/data/, считает строки и итоги по колонке количества и пишет
-   сводку в JSON-файл.
+2. Напишите скрипт internship/src/scripts/first_python_check.py: он читает
+   internship/data/sales_plan_sample.csv (разделитель `;`, колонка количества —
+   planned_quantity), считает строки и итоги и пишет сводку в JSON-файл.
 3. Добавьте HTTP-запрос стандартным urllib: получите ответ учебного сервиса
    (mock из docker compose или локальный python -m http.server) и запишите
    статус, один заголовок и тело ответа.

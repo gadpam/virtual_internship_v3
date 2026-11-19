@@ -31,7 +31,7 @@ SQL, Git, Docker и Python. Это не экзамен и не отбор: ср�
 
 ЗАДАНИЕ: что сделать
 1. Установите платформу 1С:Предприятие 8.3 (учебная версия подходит) и СУБД.
-   СУБД поднимите в Docker: `cd internship/tools && docker compose up -d db`.
+   СУБД поднимите в Docker: `cd internship/tools && docker compose up -d postgres`.
 2. Установите 1C:Enterprise Development Tools (EDT). Если EDT пока недоступен —
    работайте в Конфигураторе, но к task_13 вернитесь к EDT: Git-трек строится на нём.
 3. Соберите проект EDT из папки `internship/Configuration/` и создайте базу RIH_DEV.
