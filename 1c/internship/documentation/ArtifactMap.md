@@ -87,9 +87,9 @@
 | Задание | Артефакты (путь от `1c/`) |
 |---|---|
 | task_73. Карта интеграций RIH: кто с кем и зачем | `internship/documentation/architecture/integration_map.md` [создаётся] |
-| task_74. HTTP и REST: методы, статусы, идемпотентность | `internship/src/mock_shop_api/` [есть]<br>`internship/tools/api/` [создаётся] |
+| task_74. HTTP и REST: методы, статусы, идемпотентность | `internship/src/mock_shop_api/` [есть]<br>`internship/tools/api/` [есть] |
 | task_75. JSON и XML в 1С: штатные средства чтения и записи | `internship/Configuration/src/DataProcessors/` [есть] |
-| task_76. Postman/Bruno: коллекции, окружения, автопроверки | `internship/tools/api/README.md` [создаётся] |
+| task_76. Postman/Bruno: коллекции, окружения, автопроверки | `internship/tools/api/README.md` [есть] |
 | task_77. OpenAPI 3.x: контракт как источник истины | `internship/docs/api/openapi.yaml` [создаётся] |
 | task_78. Mock-сервисы: стабильный стенд вместо «партнёр опять упал» | `internship/src/mock_loyalty_api/` [есть]<br>`internship/src/mock_tk_api/` [есть] |
 | task_79. Первый HTTP-сервис в 1С: маршруты и публикация | `internship/tools/docker-compose.yml (nginx)` [создаётся] |

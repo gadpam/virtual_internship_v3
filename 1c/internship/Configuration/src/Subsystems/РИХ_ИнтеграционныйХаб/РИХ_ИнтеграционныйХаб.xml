@@ -14,4 +14,5 @@
   <includeHelpInContents>true</includeHelpInContents>
   <content>CommonModule.РИХ_ОбщегоНазначения</content>
   <content>CommonModule.РИХ_Дата</content>
+  <content>CommonModule.РИХ_HTTP1_Ответы</content>
 </mdclass:Subsystem>

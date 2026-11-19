@@ -26,5 +26,6 @@
   <commonModules>
     <value>CommonModule.РИХ_ОбщегоНазначения</value>
     <value>CommonModule.РИХ_Дата</value>
+    <value>CommonModule.РИХ_HTTP1_Ответы</value>
   </commonModules>
 </mdclass:Configuration>
