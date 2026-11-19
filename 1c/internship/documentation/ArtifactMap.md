@@ -198,7 +198,7 @@
 | task_177. Управленческие отчёты: KPI, динамика, план-факт | `internship/documentation/analytics/metrics_dictionary.md` [создаётся] |
 | task_178. Внешние отчёты и обработки: поставка без снятия поддержки | `internship/Configuration/src/ExternalReports/` [есть]<br>`internship/tools/ci/` [есть] |
 | task_179. Универсальные механизмы: допреквизиты, динамические списки, настройки | `Документация БСП: «Дополнительные реквизиты и сведения»` [создаётся] |
-| task_180. Требования к отчётности: интервью, прототип, приёмка | `internship/documentation/requirements/functional/` [создаётся] |
+| task_180. Требования к отчётности: интервью, прототип, приёмка | `internship/documentation/requirements/functional/` [есть] |
 | task_181. Как 1С хранит данные в СУБД: таблицы, поля, ссылки | `internship/tools/sql/explore/` [есть] |
 | task_182. T-SQL для анализа: соединения, окна, CTE, агрегаты | `internship/tools/sql/analysis/` [есть] |
 | task_183. Обработка данных скриптами: безопасно и воспроизводимо | `internship/tools/sql/maintenance/` [есть] |
