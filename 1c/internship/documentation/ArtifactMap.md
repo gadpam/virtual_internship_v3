@@ -145,7 +145,7 @@
 | task_129. Circuit breaker: не даём падающему партнёру убить нас | `internship/documentation/integrations/resilience.md` [создаётся] |
 | task_130. Компенсации и сторно: когда «отменить» нельзя | `internship/documentation/architecture/saga.md` [создаётся] |
 | task_131. Деградация: как работать, когда половина систем лежит | `internship/documentation/operations/degradation_matrix.md` [создаётся] |
-| task_132. Учение по сбою: ломаем стенд по сценарию и чиним | `internship/documentation/operations/postmortems/` [создаётся] |
+| task_132. Учение по сбою: ломаем стенд по сценарию и чиним | `internship/documentation/operations/postmortems/` [есть] |
 | task_133. Аутентификация сервисов: API-ключи, токены, OAuth2-подобный поток | `internship/docs/api/rih_http_services.md` [есть] |
 | task_134. Управление секретами: где хранить пароли и ключи | `internship/tools/ci/github-actions/security.yml` [есть] |
 | task_135. Персональные данные: минимизация, маскирование, хранение | `internship/documentation/security/pdn_registry.md` [создаётся] |
@@ -205,7 +205,7 @@
 | task_184. Сессии, блокировки и изоляция транзакций в СУБД | `internship/tools/sql/diagnostics/` [есть] |
 | task_185. Tempdb, журнал транзакций и почему база «растёт» | `internship/documentation/operations/sql_capacity.md` [создаётся] |
 | task_186. Внешние соединения и ODBC из 1С: когда оправданы | `internship/documentation/integrations/db_link.md` [создаётся] |
-| task_187. Чтение плана выполнения: что там искать | `internship/tools/sql/plans/` [создаётся] |
+| task_187. Чтение плана выполнения: что там искать | `internship/tools/sql/plans/` [есть] |
 | task_188. Индексы: что ускорить и за что заплатить | `internship/documentation/performance/index_task_188.md` [создаётся] |
 | task_189. Статистика и параметризация: почему план «прыгает» | `internship/tools/sql/diagnostics/` [есть] |
 | task_190. Тяжёлый запрос из жизни: разбор и оптимизация «отчёта директора» | `internship/documentation/performance/` [есть] |
@@ -222,7 +222,7 @@
 | task_201. Полный нагрузочный прогон: целевая и пиковая нагрузка | `internship/documentation/performance/load_q3.md` [создаётся] |
 | task_202. Capacity planning: что будет через год | `internship/documentation/operations/capacity_plan.md` [создаётся] |
 | task_203. Профили производительности: тонкая настройка платформы | `internship/documentation/operations/platform_params.md` [создаётся] |
-| task_204. Кейс «система легла»: расследование полного инцидента | `internship/documentation/operations/postmortems/` [создаётся] |
+| task_204. Кейс «система легла»: расследование полного инцидента | `internship/documentation/operations/postmortems/` [есть] |
 | task_205. Витрины в СУБД: схема, наполнение, инкрементальность | `internship/tools/sql/marts/` [есть] |
 | task_206. Семантический слой: одно определение метрики для всех | `internship/documentation/analytics/metrics_dictionary.md` [создаётся] |
 | task_207. Дашборды: три экрана для трёх ролей | `internship/tools/bi/dashboards/` [есть] |
@@ -297,8 +297,8 @@
 | task_271. SLI/SLO: что значит «система работает хорошо» | `internship/documentation/operations/slo.md` [создаётся] |
 | task_272. Алерты по симптомам: меньше шума, больше смысла | `internship/documentation/operations/runbooks/` [создаётся] |
 | task_273. Дежурство: роли, процедуры, коммуникации | `internship/documentation/operations/oncall.md` [создаётся] |
-| task_274. Расследование инцидентов: таймлайн, гипотезы, доказательства | `internship/documentation/operations/postmortems/` [создаётся] |
-| task_275. Postmortem-культура: разбор без виноватых | `internship/documentation/operations/postmortems/` [создаётся] |
+| task_274. Расследование инцидентов: таймлайн, гипотезы, доказательства | `internship/documentation/operations/postmortems/` [есть] |
+| task_275. Postmortem-культура: разбор без виноватых | `internship/documentation/operations/postmortems/` [есть] |
 | task_276. Улучшение надёжности: план на основе данных года | `internship/documentation/rfc/reliability_plan.md` [создаётся] |
 | task_277. ИТ-ландшафт холдинга: карта систем и потоков стоимости | `internship/documentation/architecture/landscape.md` [создаётся] |
 | task_278. Целевая архитектура: куда идём и почему | `internship/documentation/architecture/target_state.md` [создаётся] |
