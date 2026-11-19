@@ -65,8 +65,11 @@ JSON — json.JSONDecodeError, сеть и статусы >= 400 — urllib.erro
    (mock_shop_api из docker compose: GET http://localhost:8020/health — или
    локальный python -m http.server) и запишите статус, один заголовок и тело ответа.
 4. Добавьте обработку ошибок: нет файла, битый JSON, HTTP-ошибка. Ошибку 500
-   получите от mock в fault-режиме: параметр `?fault=error500` или заголовок
-   `X-Fault-Mode: error500`. Каждой ошибке - понятное сообщение и ненулевой код возврата.
+   получите от mock в fault-режиме на бизнес-эндпоинте: GET
+   http://localhost:8020/api/v1/products?fault=error500 с заголовком `X-Api-Key`
+   (ключ — MOCK_SHOP_API_KEY из .env.example; без ключа будет честный 401,
+   а /health fault-режим не поддерживает — он нужен healthcheck без сбоев).
+   Каждой ошибке - понятное сообщение и ненулевой код возврата.
 5. Запустите скрипт дважды подряд: результат одинаковый и воспроизводимый.
 
 РЕЗУЛЬТАТ (Definition of Done):
@@ -89,7 +92,7 @@ JSON — json.JSONDecodeError, сеть и статусы >= 400 — urllib.erro
 - Запишите фактические часы в рефлексию: план 2 ч против факта. Расхождение
   больше чем в полтора раза — это данные для плана, а не повод себя ругать.
 - После выполнения обязательно заполнить internship/documentation/task_5_description.txt
-  (шаблон: project/documentation/task_0_description_template.txt).
+  (шаблон: internship/documentation/templates/task_N_description.txt).
 - Общие критерии готовности: project/acceptance/DefinitionOfDone.txt
 
 #### Поддержка, вопросы и обратная связь по проекту:

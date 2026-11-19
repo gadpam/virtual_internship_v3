@@ -80,7 +80,7 @@ SLA без измерения — декларация: измерение — �
 - Запишите фактические часы в рефлексию: план 2 ч против факта. Расхождение
   больше чем в полтора раза — это данные для плана, а не повод себя ругать.
 - После выполнения обязательно заполнить internship/documentation/task_108_description.txt
-  (шаблон: project/documentation/task_0_description_template.txt).
+  (шаблон: internship/documentation/templates/task_N_description.txt).
 - Общие критерии готовности: project/acceptance/DefinitionOfDone.txt
 
 #### Поддержка, вопросы и обратная связь по проекту:
