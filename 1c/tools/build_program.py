@@ -72,8 +72,11 @@ TASK_TEMPLATE = """ЗАДАНИЕ task_{num} · спринт {sprint} · {quarte
 Оценка времени: {time}
 Уровень задания: {tier} — {tier_note}
 
-КОНТЕКСТ: зачем это нужно
+ЛЕГЕНДА И КОНТЕКСТ: ситуация и зачем это нужно
 {context}
+
+ТЕОРИЯ: что нужно знать перед выполнением
+{theory}
 
 ЗАДАНИЕ: что сделать
 {task}
@@ -290,6 +293,9 @@ def build_tasks(sprint):
             tier=task_tiers.tier_of(t["num"], t["title"]),
             tier_note=task_tiers.TIER_NOTE[task_tiers.tier_of(t["num"], t["title"])],
             context=t["context"].strip(),
+            theory=(t.get("theory") or "Теория к этому заданию ещё не выгружена в файл: "
+                    "разберите понятия из раздела «МАТЕРИАЛЫ И ССЫЛКИ» и зафиксируйте "
+                    "конспект в рефлексии.").strip(),
             task=t["task"].strip(),
             dod=bullet_list(t["dod"]),
             hints=bullet_list(t.get("hints", [])),
