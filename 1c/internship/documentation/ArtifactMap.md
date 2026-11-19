@@ -44,7 +44,7 @@
 | task_33. Отборы, группировки, сортировки и вычисляемые поля | `internship/documentation/queries/` [создаётся] |
 | task_34. Программное формирование отчёта и настройки пользователя | `internship/Configuration/src/Reports/ОстаткиТоваровПоСкладам/` [создаётся] |
 | task_35. Отчёт на внешних данных: объединяем регистры и внешние источники | `internship/data/` [есть] |
-| task_36. Производительность СКД: когда отчёт тормозит и что делать | `internship/documentation/performance/` [создаётся] |
+| task_36. Производительность СКД: когда отчёт тормозит и что делать | `internship/documentation/performance/` [есть] |
 | task_37. Управляемая форма документа: структура, команды, события | `internship/documentation/reports/` [есть] |
 | task_38. Валидация ввода и сообщения пользователю | `internship/Configuration/src/CommonModules/` [есть] |
 | task_39. Подсказки, быстрые действия и UX внутреннего инструмента | `ideas/architecture/POST_Ideas.txt` [создаётся] |
@@ -65,9 +65,9 @@
 | task_54. Код-ревью и статический анализ: закрываем долги Q1 | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_55. Массовая загрузка данных: 1 000 000 движений | `internship/tools/ (профили данных)` [создаётся] |
 | task_56. Замер производительности: методики и инструменты | `internship/documentation/performance/baseline_q1.md` [создаётся] |
-| task_57. Пакетная обработка: как не держать базу в транзакции час | `internship/documentation/performance/` [создаётся] |
+| task_57. Пакетная обработка: как не держать базу в транзакции час | `internship/documentation/performance/` [есть] |
 | task_58. Индексы СУБД: почему запрос медленный и что с этим делать | `internship/tools/sql/` [есть] |
-| task_59. Многопоточность в 1С: параллельные фоновые задания | `internship/documentation/performance/` [создаётся] |
+| task_59. Многопоточность в 1С: параллельные фоновые задания | `internship/documentation/performance/` [есть] |
 | task_60. Кеширование, повторные вызовы и «дорогие» справочные данные | `Стандарты: «Производительность»` [создаётся] |
 | task_61. Технологический журнал (ТЖР): настройка и чтение | `internship/tools/ (конфиг ТЖР)` [создаётся] |
 | task_62. АПК: анализ программы и консоли запросов как рабочий инструмент | `internship/documentation/quality/` [создаётся] |
@@ -127,12 +127,12 @@
 | task_111. Брокер сообщений: RabbitMQ и обмен событиями | `internship/src/queue_consumer/` [есть]<br>`internship/tools/docker-compose.yml` [есть] |
 | task_112. Порядок сообщений, дубли и согласованность | `internship/Configuration/src/Reports/РасхожденияОбмена/` [создаётся] |
 | task_113. Регламентные задания обмена: расписания, окна, приоритеты | `internship/documentation/operations/schedule_map.md` [создаётся] |
-| task_114. Мониторинг интеграций: дашборд, метрики, алерты | `internship/src/metrics_exporter/` [есть]<br>`internship/tools/docker-compose.yml (superset/grafana)` [создаётся] |
+| task_114. Мониторинг интеграций: дашборд, метрики, алерты | `internship/src/metrics_exporter/` [есть]<br>`internship/tools/docker-compose.yml; дашборд Superset — полный стенд docker-compose.full.yml (task_126)` [создаётся] |
 | task_115. Приёмник документов ЭДО: жёсткая схема и аудит | `internship/docs/edo/samples/` [есть] |
 | task_116. Маркировка и прослеживаемость: коды, агрегаты, выбытие | `internship/documentation/architecture/marking_model.md` [создаётся] |
 | task_117. Кассы и ОФД-подобные данные: поток продаж | `internship/documentation/performance/receipts_load.md` [создаётся] |
 | task_118. Банковские интеграции: выписки, платежи, статусы | `internship/data/bank_statement_sample.txt` [есть] |
-| task_119. Регламентные отраслевые отчёты: форма, проверка, отправка | `internship/documentation/compliance/` [создаётся] |
+| task_119. Регламентные отраслевые отчёты: форма, проверка, отправка | `internship/documentation/compliance/` [есть] |
 | task_120. Каталог интеграций: реестр, владельцы, статусы | `internship/documentation/integration_registry.md` [создаётся] |
 | task_121. OLTP vs OLAP: почему отчёт по оперативной базе — зло | `internship/documentation/adr/` [есть] |
 | task_122. Построение витрины: таблицы, измерения, факты | `internship/Configuration/src/AccumulationRegisters/` [есть] |
@@ -208,7 +208,7 @@
 | task_187. Чтение плана выполнения: что там искать | `internship/tools/sql/plans/` [создаётся] |
 | task_188. Индексы: что ускорить и за что заплатить | `internship/documentation/performance/index_task_188.md` [создаётся] |
 | task_189. Статистика и параметризация: почему план «прыгает» | `internship/tools/sql/diagnostics/` [есть] |
-| task_190. Тяжёлый запрос из жизни: разбор и оптимизация «отчёта директора» | `internship/documentation/performance/` [создаётся] |
+| task_190. Тяжёлый запрос из жизни: разбор и оптимизация «отчёта директора» | `internship/documentation/performance/` [есть] |
 | task_191. Кеширование, пул соединений и цена серверных вызовов | `internship/documentation/performance/client_server.md` [создаётся] |
 | task_192. Оптимизация проведения документов и регистров под нагрузкой | `internship/documentation/performance/posting_load.md` [создаётся] |
 | task_193. Резервное копирование: схема, расписание, проверка | `internship/tools/sql/backup/` [есть] |

@@ -2691,6 +2691,6 @@ Eventual consistency — модель, где состояние систем с
  hints=["Метрика «доля ошибок» без разбивки по типам бесполезна: 5% ошибок в курсах "
         "валют и 5% в заказах — разные катастрофы.",
         "Алерт должен содержать действие: куда смотреть, что делать, кому звонить."],
- resources=["internship/src/metrics_exporter/", "internship/tools/docker-compose.yml (superset/grafana)"]),
+ resources=["internship/src/metrics_exporter/", "internship/tools/docker-compose.yml; дашборд Superset — полный стенд docker-compose.full.yml (task_126)"]),
 ])
 ]
