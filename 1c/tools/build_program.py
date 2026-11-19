@@ -2,7 +2,8 @@
 """
 Генератор программы стажировки 1С.
 
-Читает данные по кварталам (q1_data_a.py, q1_data_b.py, q2_data.py, q3_data.py, q4_data.py)
+Читает данные по кварталам (файлы q*_data_*.py: q1_data_a … q4_data_d, 11 модулей;
+политика уровней заданий — task_tiers.py)
 и создаёт:
   1c/project/sprint_N/SprintOverview.txt
   1c/project/sprint_N/task_M/YourTask.txt
@@ -316,7 +317,7 @@ def build_content_file(sprints):
     lines.append("Для сравнения: Виртуальная Стажировка Java — 263 задания, 3-4 месяца.")
     lines.append("")
     lines.append("Файл собирается автоматически: python3 1c/tools/build_program.py")
-    lines.append("Данные программы: 1c/tools/q1_data_a.py, q1_data_b.py, q2_data.py, q3_data.py, q4_data.py")
+    lines.append("Данные программы: 1c/tools/q*_data_*.py (q1_data_a … q4_data_d) + 1c/tools/task_tiers.py")
     lines.append("")
     current_quarter = None
     quarter_titles = {

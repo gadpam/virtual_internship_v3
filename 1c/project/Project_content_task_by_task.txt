@@ -5,7 +5,7 @@
 Для сравнения: Виртуальная Стажировка Java — 263 задания, 3-4 месяца.
 
 Файл собирается автоматически: python3 1c/tools/build_program.py
-Данные программы: 1c/tools/q1_data_a.py, q1_data_b.py, q2_data.py, q3_data.py, q4_data.py
+Данные программы: 1c/tools/q*_data_*.py (q1_data_a … q4_data_d) + 1c/tools/task_tiers.py
 
 
 ==============================================================================
