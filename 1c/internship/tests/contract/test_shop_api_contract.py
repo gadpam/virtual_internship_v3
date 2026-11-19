@@ -11,8 +11,12 @@ import pytest
 
 pytestmark = [pytest.mark.contract, pytest.mark.usefixtures("require_stand")]
 
-PRODUCTS_REQUIRED_FIELDS = {"external_id", "sku", "name", "group", "price", "currency", "changed_at"}
-ORDER_REQUIRED_FIELDS = {"external_id", "status", "total", "lines", "received_at"}
+# Ответы партнера - camelCase (docs/api/partner_shop.md, единое правило task_82);
+# snake_case используется только в ТЕЛАХ запросов.
+PRODUCTS_REQUIRED_FIELDS = {"externalId", "sku", "name", "group", "price", "currency", "changedAt"}
+# POST /orders -> 201: {externalId, status, total, duplicate};
+# lines/receivedAt есть в OrderState ответа GET /orders, а не в ответе создания.
+ORDER_REQUIRED_FIELDS = {"externalId", "status", "total", "duplicate"}
 
 
 def test_health_is_open_and_reports_service_name(client, shop):

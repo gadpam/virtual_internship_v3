@@ -37,7 +37,7 @@ def test_order_is_created_with_expected_total(client, shop, shop_headers, case):
     # заказ виден в списке — значит, состояние сервиса согласовано с ответом
     listing = client.get(f"{shop.base}/api/v1/orders", headers=shop_headers,
                          params={"status": "new"}).json()
-    assert any(item["external_id"] == external_id for item in listing["items"])
+    assert any(item["externalId"] == external_id for item in listing["items"])
 
 
 def test_full_chain_order_to_loyalty_to_transport(client, shop, loyalty, tk, shop_headers):
