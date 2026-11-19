@@ -1,0 +1,102 @@
+# 6 алертов ПО СИМПТОМАМ (task_272).
+#
+# Правило курса: алерт должен описывать симптом, который видит пользователь или
+# бизнес, а не «процесс потребляет много памяти». На каждый алерт есть runbook —
+# иначе он шумит и его начинают игнорировать.
+#
+# severity: page (будим дежурного) | ticket (в трекер, утром разберём)
+
+groups:
+  - name: rih.availability
+    interval: 30s
+    rules:
+      - alert: RIHIntegrationDown
+        expr: rih_up{service="rih_1c"} == 0 or absent(rih_up)
+        for: 2m
+        labels:
+          severity: page
+          team: rih
+          runbook: docs/runbooks/RIHIntegrationDown.md
+        annotations:
+          summary: "1С не отдаёт метрики интеграций"
+          description: >-
+            Экспортёр не получает данные от RIH более 2 минут. Симптом: обмен с
+            партнёрами остановлен, заказы не загружаются. Первые шаги — в runbook.
+          dashboard: http://localhost:3000/d/rih-slo
+
+      - alert: RIHPartnerUnavailable
+        expr: >-
+          sum by (system) (rate(rih_errors_total{code=~"5..|TIMEOUT|UNAVAILABLE"}[5m]))
+            /
+          clamp_min(sum by (system) (rate(rih_integration_requests_total[5m])), 0.0001) > 0.2
+        for: 5m
+        labels:
+          severity: page
+          team: rih
+          runbook: docs/runbooks/RIHPartnerUnavailable.md
+        annotations:
+          summary: "Более 20% обращений к {{ $labels.system }} завершаются ошибкой"
+          description: >-
+            Доля ошибок по системе {{ $labels.system }} превысила 20% за 5 минут.
+            Проверьте circuit breaker, режимы сбоев mock-сервиса и статус партнёра.
+
+  - name: rih.latency
+    interval: 30s
+    rules:
+      - alert: RIHLatencySLOBreach
+        expr: >-
+          histogram_quantile(0.95,
+            sum by (le, system, operation) (rate(rih_integration_duration_seconds_bucket[10m]))
+          ) > 2
+        for: 10m
+        labels:
+          severity: ticket
+          team: rih
+          runbook: docs/runbooks/RIHLatencySLOBreach.md
+        annotations:
+          summary: "p95 интеграции {{ $labels.system }}/{{ $labels.operation }} выше 2 секунд"
+          description: >-
+            Нарушен SLO «95% обращений быстрее 2 секунд» (task_271). Проверьте
+            индексы СУБД, глубину очередей и план запроса отчёта.
+
+      - alert: RIHQueueBacklog
+        expr: rih_queue_depth{state="ready"} > 500
+        for: 5m
+        labels:
+          severity: page
+          team: rih
+          runbook: docs/runbooks/RIHQueueBacklog.md
+        annotations:
+          summary: "Очередь {{ $labels.queue }} накопила более 500 сообщений"
+          description: >-
+            Обработка не успевает за поступлением. Проверьте консьюмер
+            (rih_queue_consumer), ошибки в DLQ и блокировки в СУБД.
+
+      - alert: RIHDeadLetterGrowing
+        expr: increase(rih_queue_depth{state="dlq"}[15m]) > 10
+        for: 0m
+        labels:
+          severity: ticket
+          team: rih
+          runbook: docs/runbooks/RIHDeadLetterGrowing.md
+        annotations:
+          summary: "В мёртвую очередь попало более 10 сообщений за 15 минут"
+          description: >-
+            Сообщения отклоняются навсегда: требуется разбор причин и, возможно,
+            компенсация (сага, task_130). Создайте инцидент в трекере.
+
+  - name: rih.data
+    interval: 60s
+    rules:
+      - alert: RIHExchangeLag
+        expr: rih_exchange_lag_seconds > 900
+        for: 10m
+        labels:
+          severity: ticket
+          team: rih
+          runbook: docs/runbooks/RIHExchangeLag.md
+        annotations:
+          summary: "Обмен {{ $labels.plan }} ({{ $labels.direction }}) отстаёт более чем на 15 минут"
+          description: >-
+            Нарушен SLA свежести данных. Проверьте регламентное задание,
+            блокировки и размер сообщения.

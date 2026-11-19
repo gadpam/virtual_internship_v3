@@ -27,3 +27,35 @@
 *.iws
 *.iml
 *.ipr
+
+### Python (трек 1С и вспомогательные скрипты) ###
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+.pytest_cache/
+.coverage
+coverage.xml
+
+### Трек 1С: артефакты стенда (в Git не храним) ###
+# Каталог build/ существует в репозитории только как описание структуры:
+# сборки .cf/.epf, отчёты тестов, дампы метрик и выгрузки — локальные файлы.
+!1c/internship/build/
+1c/internship/build/*
+!1c/internship/build/README.md
+
+### Трек 1С: операционные зоны файлового обмена ###
+1c/internship/data/supplier_price/incoming/*
+1c/internship/data/supplier_price/archive/*
+1c/internship/data/supplier_price/errors/*
+1c/internship/data/supplier_price/quarantine/*
+!1c/internship/data/supplier_price/incoming/.gitkeep
+!1c/internship/data/supplier_price/archive/.gitkeep
+!1c/internship/data/supplier_price/errors/.gitkeep
+!1c/internship/data/supplier_price/quarantine/.gitkeep
+
+### Трек 1С: локальные секреты ###
+.env
+1c/internship/tools/nginx/certs/*.pem
+1c/internship/tools/nginx/certs/*.key
+1c/internship/tools/nginx/certs/*.crt

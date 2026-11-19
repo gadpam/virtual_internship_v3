@@ -1,0 +1,54 @@
+{
+  "_comment": "Матрица сбоев: режим mock-сервиса → ожидаемое поведение клиента 1С. Основа заданий task_127–132 (надёжность) и task_143 (нагрузочное тестирование). Режим передаётся заголовком X-Fault-Mode.",
+  "modes": [
+    {
+      "mode": "ok",
+      "http_status": 200,
+      "client_action": "обычная обработка",
+      "retry": false
+    },
+    {
+      "mode": "error500",
+      "http_status": 500,
+      "client_action": "экспоненциальная задержка с джиттером, до 3 повторов, затем очередь и инцидент",
+      "retry": true,
+      "circuit_breaker": "открывать после 5 ошибок за 30 секунд"
+    },
+    {
+      "mode": "timeout",
+      "http_status": null,
+      "client_action": "таймаут чтения 10 с, повтор как при 500; обязательно фиксировать в журнале (task_127)",
+      "retry": true
+    },
+    {
+      "mode": "slow",
+      "http_status": 200,
+      "client_action": "успех, но p95 растёт: деградация UX, показ прогресса, асинхронный вызов (task_131)",
+      "retry": false
+    },
+    {
+      "mode": "rate429",
+      "http_status": 429,
+      "client_action": "уважать Retry-After, уменьшить параллелизм, не считать ошибкой партнёра (task_93)",
+      "retry": true
+    },
+    {
+      "mode": "garbage",
+      "http_status": 502,
+      "client_action": "не падать на разборе: валидация схемы, понятная ошибка в журнале, контрактный тест (task_140)",
+      "retry": false
+    },
+    {
+      "mode": "duplicate",
+      "http_status": 200,
+      "client_action": "распознать дубль по idempotency key, не создавать второй документ (task_105)",
+      "retry": false
+    },
+    {
+      "mode": "label_failed",
+      "http_status": 503,
+      "client_action": "компенсация: заявка создана, этикетка будет получена позже (сага, task_130)",
+      "retry": true
+    }
+  ]
+}

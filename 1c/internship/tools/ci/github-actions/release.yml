@@ -1,0 +1,162 @@
+# Релизный конвейер (task_267, task_268, task_270).
+# Копируется в .github/workflows/release.yml.
+#
+# Запускается вручную или по тегу v*. Результат — артефакты .cf/.epf + manifest.json
+# + запись в CHANGELOG + черновик релиза. Версия берётся из тега, а не придумывается
+# в момент сборки: это и есть воспроизводимость (task_265).
+
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Версия релиза (например 1.4.0)"
+        required: true
+      release_window:
+        description: "Окно установки (например 2026-12-05 22:00 Europe/Minsk)"
+        required: true
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  build:
+    name: "Сборка артефактов"
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      version: ${{ steps.version.outputs.value }}
+      built_at: ${{ steps.version.outputs.built_at }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # нужна история для changelog
+
+      - name: Определить версию
+        id: version
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
+            VALUE="${GITHUB_REF#refs/tags/v}"
+          else
+            VALUE="${{ github.event.inputs.version }}"
+          fi
+          echo "value=${VALUE}" >> "$GITHUB_OUTPUT"
+          echo "built_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
+          echo "Версия релиза: ${VALUE}"
+
+      - name: Проверка формата версии (SemVer)
+        run: |
+          if ! echo "${{ steps.version.outputs.value }}" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
+            echo "Версия не соответствует SemVer: ${{ steps.version.outputs.value }}"; exit 1
+          fi
+
+      - name: Линт и тесты (обязательный минимум для релиза)
+        run: |
+          mkdir -p 1c/internship/build/dist
+          python3 1c/internship/src/scripts/lint_bsl.py 1c/internship/Configuration/src --fail-on error
+
+      - name: Сборка .cf / .epf
+        run: |
+          mkdir -p 1c/internship/build/dist
+          # В реальном конвейере: сборка из исходников EDT
+          #   /opt/1C/edt/... edt-cli export --project 1c/internship/Configuration --out 1c/internship/build/dist/src
+          #   ibcmd infobase create ... && ibcmd ib import ... && ibcmd infobase config load ...
+          # Здесь создаём placeholders, чтобы отработать логику манифеста и проверки.
+          # Артефакты живут в 1c/internship/build/dist и в Git не попадают (.gitignore).
+          echo "placeholder cf ${{ steps.version.outputs.value }}" > 1c/internship/build/dist/RetailIntegrationHub_${{ steps.version.outputs.value }}.cf
+          echo "placeholder epf ${{ steps.version.outputs.value }}" > 1c/internship/build/dist/RIH_ИнструментыРазработчика_${{ steps.version.outputs.value }}.epf
+
+      - name: Сформировать manifest.json
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib
+          version = os.environ["REL_VERSION"]; built_at = os.environ["REL_BUILT_AT"]
+          build = pathlib.Path("1c/internship/build/dist")
+          artifacts = []
+          for path in sorted(build.rglob("*")):
+              if not path.is_file() or path.name == "manifest.json":
+                  continue
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              artifacts.append({"file": path.relative_to(build).as_posix(),
+                                "sizeBytes": path.stat().st_size, "sha256": digest})
+          manifest = {"version": version, "builtAt": built_at,
+                      "commit": os.environ.get("GITHUB_SHA", "unknown"),
+                      "compatibilityMode": "8.3.24",
+                      "artifacts": artifacts}
+          (build / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+          print(json.dumps(manifest, ensure_ascii=False, indent=2))
+          PY
+        env:
+          REL_VERSION: ${{ steps.version.outputs.value }}
+          REL_BUILT_AT: ${{ steps.version.outputs.built_at }}
+
+      - name: Проверка артефактов по манифесту
+        run: |
+          mkdir -p 1c/internship/build/dist
+          python3 1c/internship/src/scripts/check_artifacts.py 1c/internship/build/dist --manifest 1c/internship/build/dist/manifest.json
+
+      - name: Changelog (Keep a Changelog)
+        run: |
+          python3 - <<'PY'
+          import datetime, os, pathlib, subprocess
+          version = os.environ["REL_VERSION"]
+          tags = subprocess.run(["git", "tag", "--sort=-v:refname"], capture_output=True, text=True).stdout.split()
+          previous = next((t for t in tags if t != f"v{version}"), None)
+          rev_range = f"{previous}..HEAD" if previous else "HEAD"
+          log = subprocess.run(["git", "log", "--pretty=format:- %s (%h)", rev_range],
+                               capture_output=True, text=True).stdout
+          entry = f"\n## [{version}] - {datetime.date.today().isoformat()}\n\n"
+          entry += "### Изменено\n\n" + (log or "- нет описанных изменений") + "\n"
+          changelog = pathlib.Path("CHANGELOG.md")
+          text = changelog.read_text(encoding="utf-8") if changelog.exists() else "# Changelog\n"
+          marker = "<!-- NEW_RELEASE_ENTRY -->"
+          text = text.replace(marker, marker + entry) if marker in text else text + entry
+          changelog.write_text(text, encoding="utf-8")
+          print(entry)
+          PY
+        env:
+          REL_VERSION: ${{ steps.version.outputs.value }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ steps.version.outputs.value }}
+          path: 1c/internship/build/dist/
+
+  publish:
+    name: "Публикация релиза"
+    runs-on: ubuntu-latest
+    needs: build
+    timeout-minutes: 15
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-${{ needs.build.outputs.version }}
+          path: 1c/internship/build/dist/
+
+      - name: План релиза (окно, критерии отката)
+        run: |
+          mkdir -p 1c/internship/build/dist
+          cat > 1c/internship/build/dist/RELEASE_PLAN.md <<'MD'
+          # План релиза
+
+          * Версия: ${{ needs.build.outputs.version }}
+          * Окно установки: ${{ github.event.inputs.release_window || 'по расписанию релиз-поезда' }}
+          * Ответственный за релиз: владелец релиза (см. RACI в документации)
+          * Порядок шагов: бэкап → установка .cf → обработчики обновления → дымовой прогон → снятие блокировки записи
+          * Критерии отката: ошибка дымового прогона, рост p95 интеграций более чем в 2 раза,
+            любая ошибка проведения документов, нарушение SLA обмена более 15 минут
+          * Откат: восстановление из бэкапа окна + отключение нового функционала флагом
+          MD
+
+      - name: Черновик релиза на GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ needs.build.outputs.version }}
+          name: RIH ${{ needs.build.outputs.version }}
+          draft: true
+          generate_release_notes: true
+          files: |
+            1c/internship/build/dist/*

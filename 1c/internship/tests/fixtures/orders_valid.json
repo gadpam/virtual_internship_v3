@@ -1,0 +1,34 @@
+{
+  "_comment": "Корректные заказы для контрактных и интеграционных тестов (task_140, task_141). external_id подставляется динамически в тесте — иначе повторный прогон упрётся в 409.",
+  "cases": [
+    {
+      "name": "обычный заказ",
+      "customer_ref": "cust-1001",
+      "lines": [{ "sku": "SKU-00001", "quantity": 2, "price": 12.5 }],
+      "expected_total": 25.0
+    },
+    {
+      "name": "весовой товар",
+      "customer_ref": "cust-1002",
+      "lines": [{ "sku": "SKU-00003", "quantity": 1.375, "price": 6.4 }],
+      "expected_total": 8.8
+    },
+    {
+      "name": "много позиций",
+      "customer_ref": "cust-1003",
+      "lines": [
+        { "sku": "SKU-00001", "quantity": 1, "price": 12.5 },
+        { "sku": "SKU-00002", "quantity": 3, "price": 2.1 },
+        { "sku": "SKU-00004", "quantity": 2, "price": 9.99 },
+        { "sku": "SKU-00005", "quantity": 6, "price": 1.75 }
+      ],
+      "expected_total": 49.28
+    },
+    {
+      "name": "крупная сумма (b2b)",
+      "customer_ref": "cust-2001",
+      "lines": [{ "sku": "SKU-00002", "quantity": 500, "price": 2.1 }],
+      "expected_total": 1050.0
+    }
+  ]
+}

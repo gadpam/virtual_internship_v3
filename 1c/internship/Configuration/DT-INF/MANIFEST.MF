@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ru.rih.configuration
+Bundle-Version: 0.1.0.qualifier
+Bundle-Name: Retail Integration Hub (RIH)
+Bundle-Vendor: Virtual Internship 1C
+DT-Product-Requirement: com._1c.g5.v8.dt;version="[2023.1.0,2026.0.0)"
+DT-Config-Requirement: 1C:Enterprise 8.3 (8.3.24+)

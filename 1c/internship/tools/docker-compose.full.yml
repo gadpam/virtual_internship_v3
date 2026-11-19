@@ -1,0 +1,290 @@
+# ПОЛНЫЙ СТЕНД года — 14 сервисов (задания task_262, task_302, task_303).
+#
+#   docker compose -f docker-compose.full.yml --env-file .env up -d --wait
+#   curl -s http://localhost:8080/healthz
+#
+# Состав: точка входа (nginx), 5 mock-сервисов партнёров, AI-сервис RAG,
+# консьюмер очереди, экспортёр метрик, PostgreSQL (+pgvector), RabbitMQ,
+# Prometheus, Grafana, Alertmanager, Superset.
+#
+# Это тот стенд, на котором прогоняется сквозной сценарий «день из жизни холдинга»
+# (task_302) и полный регресс (task_303).
+#
+# Важно: стенд требует ~6 ГБ ОЗУ. Если памяти меньше — поднимайте частично:
+#   docker compose -f docker-compose.full.yml up -d nginx mock_shop_api rabbitmq postgres
+
+name: rih_full
+
+x-healthcheck-defaults: &hc
+  interval: 15s
+  timeout: 5s
+  retries: 6
+  start_period: 30s
+
+services:
+  # ---------------------------------------------------------------- точка входа
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "${NGINX_HTTP_PORT:-8080}:80"
+      - "${NGINX_HTTPS_PORT:-8443}:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/proxy_common.inc:/etc/nginx/proxy_common.inc:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      mock_shop_api: { condition: service_healthy }
+      mock_loyalty_api: { condition: service_healthy }
+      mock_tk_api: { condition: service_healthy }
+      mock_bank_ws: { condition: service_healthy }
+      mock_tracker_api: { condition: service_healthy }
+      ai_service: { condition: service_healthy }
+      metrics_exporter: { condition: service_healthy }
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "wget", "-qO-", "http://localhost/healthz"]
+    networks: [rih_full_net]
+
+  # ------------------------------------------------------- партнёры (mock-сервисы)
+  mock_shop_api:
+    build:
+      context: ../src/mock_shop_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_shop_api:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8020"]
+    environment:
+      MOCK_SHOP_API_KEY: ${MOCK_SHOP_API_KEY:-mock-shop-key}
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8020/health', timeout=3)"]
+    networks: [rih_full_net]
+
+  mock_loyalty_api:
+    build:
+      context: ../src/mock_loyalty_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_loyalty_api:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8021"]
+    environment:
+      MOCK_LOYALTY_API_KEY: ${MOCK_LOYALTY_API_KEY:-mock-loyalty-key}
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8021/health', timeout=3)"]
+    networks: [rih_full_net]
+
+  mock_tk_api:
+    build:
+      context: ../src/mock_tk_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_tk_api:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8022"]
+    environment:
+      MOCK_TK_API_KEY: ${MOCK_TK_API_KEY:-mock-tk-key}
+      MOCK_TK_RATE_LIMIT: ${MOCK_TK_RATE_LIMIT:-10}
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8022/health', timeout=3)"]
+    networks: [rih_full_net]
+
+  mock_bank_ws:
+    build:
+      context: ../src/mock_bank_ws
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_bank_ws:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8023"]
+    environment:
+      MOCK_BANK_LOGIN: ${MOCK_BANK_LOGIN:-bank_user}
+      MOCK_BANK_PASSWORD: ${MOCK_BANK_PASSWORD:-bank_password}
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8023/bank?wsdl', timeout=3)"]
+    networks: [rih_full_net]
+
+  mock_tracker_api:
+    build:
+      context: ../src/mock_tracker_api
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/mock_tracker_api:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8024"]
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8024/health', timeout=3)"]
+    networks: [rih_full_net]
+
+  # ------------------------------------------------------------------ AI-сервис
+  ai_service:
+    build:
+      context: ../src/ai_service
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/ai_service:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8010"]
+    environment:
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-mock}
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      SEARCH_MIN_SCORE: ${SEARCH_MIN_SCORE:-0.35}
+      KNOWLEDGE_BASE_DIR: /data/knowledge_base
+      PGVECTOR_DSN: postgresql://${POSTGRES_USER:-rih}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-rih}
+    volumes:
+      - ../docs/knowledge_base:/data/knowledge_base:ro
+      - ai_index:/data/index
+    depends_on:
+      postgres: { condition: service_healthy }
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8010/health', timeout=3)"]
+    networks: [rih_full_net]
+
+  # --------------------------------------------------------------- очередь и метрики
+  queue_consumer:
+    build:
+      context: ../src/queue_consumer
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/queue_consumer:1.0.0
+    command: ["python", "-m", "app.main"]
+    environment:
+      AMQP_URL: amqp://${RABBITMQ_DEFAULT_USER:-rih}:${RABBITMQ_DEFAULT_PASS}@rabbitmq:5672/
+      QUEUE_NAME: rih.orders.in
+      DLQ_NAME: rih.orders.in.dlq
+      RIH_HTTP_URL: ${RIH_HTTP_BASE:-http://host.docker.internal:8009/hs/rih/v1}/queue/incoming
+      MAX_RETRIES: 3
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+    networks: [rih_full_net]
+
+  metrics_exporter:
+    build:
+      context: ../src/metrics_exporter
+      dockerfile: ../../tools/Dockerfile.python
+    image: rih/metrics_exporter:1.0.0
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8025"]
+    environment:
+      RIH_METRICS_URL: ${RIH_HTTP_BASE:-http://host.docker.internal:8009/hs/rih/v1}/metrics
+      RIH_METRICS_USER: ${RIH_USER:-}
+      RIH_METRICS_PASSWORD: ${RIH_PASSWORD:-}
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8025/health', timeout=3)"]
+    networks: [rih_full_net]
+
+  # -------------------------------------------------------------------- хранилища
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-rih}
+      POSTGRES_USER: ${POSTGRES_USER:-rih}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?укажите POSTGRES_PASSWORD в .env}
+      TZ: ${TZ:-Europe/Minsk}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./sql/marts:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      <<: *hc
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rih} -d ${POSTGRES_DB:-rih}"]
+    networks: [rih_full_net]
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-rih}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:?укажите RABBITMQ_DEFAULT_PASS в .env}
+    ports:
+      - "${RABBITMQ_MANAGEMENT_PORT:-15672}:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+    networks: [rih_full_net]
+
+  # ---------------------------------------------------------------- наблюдаемость
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    restart: unless-stopped
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=30d
+      - --storage.tsdb.path=/prometheus
+    volumes:
+      - ./ci/observability/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./ci/observability/alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "wget", "-qO-", "http://localhost:9090/-/healthy"]
+    networks: [rih_full_net]
+
+  alertmanager:
+    image: prom/alertmanager:v0.27.0
+    restart: unless-stopped
+    volumes:
+      - ./ci/observability/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    ports:
+      - "9093:9093"
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "wget", "-qO-", "http://localhost:9093/-/healthy"]
+    networks: [rih_full_net]
+
+  grafana:
+    image: grafana/grafana:11.3.1
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?укажите GRAFANA_ADMIN_PASSWORD в .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_INSTALL_PLUGINS: ""
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./ci/observability/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    depends_on:
+      prometheus: { condition: service_healthy }
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
+    networks: [rih_full_net]
+
+  # --------------------------------------------------------------------------- BI
+  superset:
+    image: apache/superset:4.1.1
+    restart: unless-stopped
+    environment:
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY:?укажите SUPERSET_SECRET_KEY в .env}
+      SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://${POSTGRES_USER:-rih}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-rih}
+    volumes:
+      - ./bi/superset:/app/docker/docker-init:ro
+      - superset_data:/app/superset_home
+    ports:
+      - "${SUPERSET_PORT:-8088}:8088"
+    depends_on:
+      postgres: { condition: service_healthy }
+    command: >
+      bash -c "superset db upgrade &&
+               superset init &&
+               superset run -h 0.0.0.0 -p 8088 --with-threads"
+    healthcheck:
+      <<: *hc
+      start_period: 90s
+      test: ["CMD", "curl", "-fsS", "http://localhost:8088/health"]
+    networks: [rih_full_net]
+
+volumes:
+  pg_data:
+  rabbitmq_data:
+  prometheus_data:
+  grafana_data:
+  superset_data:
+  ai_index:
+
+networks:
+  rih_full_net:
+    driver: bridge

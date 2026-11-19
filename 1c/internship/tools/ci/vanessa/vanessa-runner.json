@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/silverbulleters/vanessa-runner/develop/vanessa-runner-schema.json",
+  "_comment": "Настройки прогона vanessa-runner для учебного стенда RIH (task_53, task_302, task_303). Значения путей — относительно каталога internship/. Секретов здесь нет: подключение к базе берётся из переменных окружения CI.",
+  "vanessa": {
+    "path": "./tools/vanessa/features",
+    "reportpath": "./build/vanessa",
+    "features": "./tools/vanessa/features",
+    "pathvanessa": "./tools/vanessa/features",
+    "additionalapikey": "",
+    "dbconnection": "",
+    "reportallure": true,
+    "reportjunit": true,
+    "reportjson": true,
+    "screenshotpath": "./build/vanessa/screenshots",
+    "video": false,
+    "timeout": 600,
+    "exitcode": true,
+    "ordinaryapp": false,
+    "closeafterrun": true
+  },
+  "client": {
+    "publish": false,
+    "port": 8009,
+    "url": "http://localhost:8009/rih_test",
+    "user": "${RIH_USER}",
+    "password": "${RIH_PASSWORD}"
+  },
+  "ibconnection": {
+    "type": "File",
+    "path": "./build/ib_test",
+    "name": "rih_test"
+  },
+  "stages": [
+    { "name": "подготовка ИБ", "command": "ibcmd infobase create --db-folder=./build/ib_test" },
+    { "name": "загрузка конфигурации", "command": "ibcmd infobase config load --db-folder=./build/ib_test --file=./build/RetailIntegrationHub.cf" },
+    { "name": "прогон фич", "command": "oscript ./vanessa-runner.epf --settings ./tools/vanessa/vanessa-runner.json" },
+    { "name": "публикация отчётов", "command": "cp -r ./build/vanessa ./artifacts" }
+  ],
+  "failOn": {
+    "errors": true,
+    "brokenScenarios": true,
+    "timeout": true
+  }
+}

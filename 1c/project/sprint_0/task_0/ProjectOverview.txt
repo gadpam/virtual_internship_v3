@@ -1,0 +1,58 @@
+Описание проекта и технологий (Retail Integration Hub)
+
+Вы открываете репозиторий и видите сотни файлов. Пора привыкать: так выглядят
+реальные проекты. Дальше коротко о том, из чего состоит наш.
+
+Версионирование
+Все материалы и исходники живут в Git (GitHub). В папке project/ — материалы
+программы, их менять нельзя. В папке internship/ — ваша рабочая зона: проект
+1C:EDT, Python-сервисы, тесты, документация, backlog.
+
+Код 1С как текст
+Конфигурация хранится исходниками в папке internship/Configuration/ (структура
+проекта EDT: Configuration.xml, Catalogs/, Documents/, InformationRegisters/,
+AccumulationRegisters/, CommonModules/, Reports/, DataProcessors/, Roles/,
+Subsystems/). Код модулей — файлы Module.bsl. Это даёт нормальные диффы,
+возможность код-ревью и сборку в CI. Бинарные .cf/.cfu/.dt в Git не коммитим:
+они собираются в CI и публикуются как артефакты (см. internship/tools/ci/).
+
+Сборка и автоматизация
+- 1C:EDT — основной инструмент разработки;
+- vanessa-runner — сборка, публикация, дымовые тесты, сценарии (npm, Node.js 20);
+- vanessa-automation — приёмочные сценарии на языке шагов;
+- xUnitFor1C — юнит-тесты (папка internship/tests/unit/);
+- АПК / SonarQube — статический анализ;
+- GitHub Actions — CI: валидация, сборка .cf, тесты, отчёты.
+
+Данные
+СУБД поднимается в Docker (docker-compose в internship/tools/): PostgreSQL 15
+или MS SQL Server — на выбор. Для Q3 нужен MS SQL Server (работа с планами
+запросов, блокировками, T-SQL). Тестовые данные наполняются обработкой
+РИХ_ГенераторДанных (задание task_55): до 1 000 000 движений.
+
+Интеграции и внешние системы
+Внешние системы имитируются mock-сервисами на Python/FastAPI
+(internship/src/mock_shop_api, mock_loyalty_api, mock_tk_api). Это даёт
+стабильный стенд: внешний поставщик никогда не «лежит» в пятницу вечером.
+Реальные API по документации поставщика разбираются с task_97.
+
+AI-контур (Q4)
+internship/src/ai_service — сервис на FastAPI: загрузка регламентов, чанкование,
+эмбеддинги, векторный индекс (pgvector или FAISS), RAG-поиск, вызов LLM.
+Из 1С сервис вызывается через HTTP-соединение (общий модуль РИХ_AIКлиент).
+Секреты — только в .env, который в Git не попадает.
+
+Отчётность и BI
+Отчёты — СКД (internship/Configuration/Reports/). Для BI-контура (Q3) витрина
+выгружается в таблицу СУБД и поднимается в Apache Superset (docker-compose).
+
+Мобильность (Q4)
+Мобильная конфигурация — отдельный проект internship/Mobile/: своя модель данных,
+синхронизация с RIH через HTTP-сервис, офлайн-работа.
+
+Что читать первым
+1. 1c/README.md — правила игры;
+2. project/sprint_0/task_0/YourTask.txt — задание №0;
+3. project/Roadmap.md — где точки контроля;
+4. project/acceptance/DefinitionOfDone.txt — когда задание считается сделанным;
+5. project/Skills_matrix.md — как программа закрывает требования рынка.

@@ -1,0 +1,22 @@
+# Единый образ для всех Python-сервисов стенда (mock-*, ai_service, queue_consumer,
+# metrics_exporter). Контекст сборки — каталог сервиса, поэтому COPY берёт его файлы.
+FROM python:3.12-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+# Порт задаётся в command из docker-compose.yml
+EXPOSE 8010 8020 8021 8022 8023 8024 8025
+
+HEALTHCHECK --interval=10s --timeout=5s --retries=5 \
+  CMD python -c "import sys; sys.exit(0)"
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8020"]

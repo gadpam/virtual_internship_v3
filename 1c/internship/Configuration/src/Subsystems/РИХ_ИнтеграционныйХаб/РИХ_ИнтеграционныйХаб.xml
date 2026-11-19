@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                   uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000002"
+                   name="РИХ_ИнтеграционныйХаб">
+  <name>РИХ_ИнтеграционныйХаб</name>
+  <synonym>
+    <key>ru</key>
+    <value>Интеграционный хаб</value>
+  </synonym>
+  <comment>Корневая подсистема стартовой конфигурации. По ходу стажировки вы добавите
+подсистемы: РИХ_НСИ, РИХ_ТоварыИСклад, РИХ_Интеграции, РИХ_Отчётность, РИХ_Учёт,
+РИХ_Документооборот, РИХ_Аналитика, РИХ_AIАссистент, РИХ_МобильныеРабочиеМеста,
+РИХ_Администрирование (задания task_7, task_19, task_73).</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>CommonModule.РИХ_ОбщегоНазначения</content>
+  <content>CommonModule.РИХ_Дата</content>
+</mdclass:Subsystem>

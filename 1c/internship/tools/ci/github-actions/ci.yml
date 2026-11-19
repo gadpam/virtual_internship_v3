@@ -1,0 +1,221 @@
+# Основной конвейер CI учебного проекта RIH (task_265, task_266).
+# Копируется в .github/workflows/ci.yml при работе в своём форке.
+#
+# Уровни: L0 линт → L1 модульные → L2 контрактные → L3 интеграционные/e2e.
+# L0-L2 блокируют merge в main, L3 запускается при merge и по расписанию.
+
+name: CI
+
+on:
+  push:
+    branches: [main, "release/**"]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 2 * * *"        # ночной прогон: L3 + L4
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12"
+  EDT_COMPATIBILITY: "8.3.24"
+
+jobs:
+  # ------------------------------------------------------------------ L0: линт
+  lint:
+    name: "L0 · Линт и стандарт кодирования"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Линтер модулей 1С (Docs/CodingStandard.md)
+        run: |
+          mkdir -p 1c/internship/build
+          python3 1c/internship/src/scripts/lint_bsl.py \
+            1c/internship/Configuration/src \
+            --format json --fail-on error > 1c/internship/build/lint-bsl.json \
+            || { cat 1c/internship/build/lint-bsl.json; exit 1; }
+
+      - name: Проверка отсутствия секретов в репозитории
+        run: |
+          if grep -rInE "(password|secret|api[_-]?key)[[:space:]]*=[[:space:]]*['\"][^'\"]{8,}" \
+               1c/internship --include="*.yml" --include="*.yaml" --include="*.env" --include="*.py" \
+             | grep -v "CHANGE_ME" | grep -v "\.env\.example"; then
+            echo "Найдены потенциальные секреты в тексте — вынесите их в .env/секреты CI"; exit 1
+          fi
+
+      - name: Проверка отсутствия .env в индексе
+        run: |
+          if git ls-files | grep -E "(^|/)\.env$"; then echo ".env попал в Git — удалите и добавьте в .gitignore"; exit 1; fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lint-report
+          path: 1c/internship/build/lint-bsl.json
+          if-no-files-found: ignore
+
+  # ------------------------------------------------------- L1: модульные тесты
+  unit:
+    name: "L1 · Модульные тесты"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        module: [ai_service, queue_consumer, metrics_exporter]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Зависимости
+        run: |
+          cd 1c/internship/src/${{ matrix.module }}
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest==8.3.4 pytest-cov==6.0.0 pytest-asyncio==0.25.0
+
+      - name: Прогон тестов с покрытием
+        run: |
+          cd 1c/internship/src/${{ matrix.module }}
+          python -m pytest -q --cov=app --cov-report=term-missing --cov-report=xml \
+            --cov-fail-under=70 || exit 1
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-${{ matrix.module }}
+          path: 1c/internship/src/${{ matrix.module }}/coverage.xml
+          if-no-files-found: ignore
+
+  # ----------------------------------------------------- L2: контрактные тесты
+  contract:
+    name: "L2 · Контрактные тесты"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Поднять тестовый стенд
+        working-directory: 1c/internship/tools
+        env:
+          POSTGRES_PASSWORD: ci_local_password
+          RABBITMQ_DEFAULT_PASS: ci_local_password
+          SUPERSET_SECRET_KEY: ci_local_secret
+        run: docker compose -f docker-compose.test.yml up -d --wait
+
+      - name: Контрактные тесты (схемы и коды ответов партнёров)
+        working-directory: 1c/internship/tests
+        run: |
+          mkdir -p ../build
+          python -m pip install -r requirements.txt
+          python -m pytest -q contract --junitxml=../build/contract.xml
+
+      - name: Снять стенд
+        if: always()
+        working-directory: 1c/internship/tools
+        run: docker compose -f docker-compose.test.yml down -v
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: contract-report
+          path: 1c/internship/build/contract.xml
+          if-no-files-found: ignore
+
+  # ------------------------------------------- L3: интеграционные и e2e (vanessa)
+  integration:
+    name: "L3 · Интеграционные и сквозные сценарии"
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    needs: [unit, contract]
+    if: github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Поднять полный стенд
+        working-directory: 1c/internship/tools
+        env:
+          POSTGRES_PASSWORD: ci_local_password
+          RABBITMQ_DEFAULT_PASS: ci_local_password
+          SUPERSET_SECRET_KEY: ci_local_secret
+          GRAFANA_ADMIN_PASSWORD: ci_local_password
+        run: docker compose -f docker-compose.full.yml up -d --wait
+
+      - name: Наполнить стенд учебными данными
+        run: |
+          python3 -m pip install httpx
+          python3 1c/internship/src/scripts/seed_demo_data.py --products 200 --orders 30
+
+      - name: Прогон vanessa-runner (фичи)
+        working-directory: 1c/internship/tools/vanessa
+        run: |
+          # В реальном CI здесь вызов vanessa-runner через OneScript:
+          #   oscript ./vanessa-runner.epf --settings vanessa-runner.json
+          # Учебная замена: проверка наличия и структуры сценариев, чтобы
+          # конвейер не «зеленел» впустую.
+          python3 - <<'PY'
+          import json, pathlib, sys
+          root = pathlib.Path("features")
+          features = sorted(root.rglob("*.feature"))
+          if not features:
+              sys.exit("сценарии .feature не найдены: CI не должен быть зелёным без них")
+          problems = []
+          for feature in features:
+              text = feature.read_text(encoding="utf-8")
+              if "# language: ru" not in text:
+                  problems.append(f"{feature}: отсутствует '# language: ru'")
+              if "Сценарий" not in text:
+                  problems.append(f"{feature}: нет ни одного сценария")
+          for problem in problems:
+              print("ОШИБКА:", problem)
+          print(f"проверено сценариев: {len(features)}, замечаний: {len(problems)}")
+          sys.exit(1 if problems else 0)
+          PY
+
+      - name: Дымовой прогон интеграций
+        run: |
+          mkdir -p 1c/internship/build/load
+          python3 1c/internship/src/scripts/generate_load.py \
+            --url http://localhost:8080/shop/api/v1/products \
+            --header "X-Api-Key:mock-shop-key" --rps 5 --duration 20 --expect 200 \
+            --output 1c/internship/build/load/smoke-load.json
+
+      - name: Сводка латентности против SLO
+        run: |
+          python3 1c/internship/src/scripts/report_metrics.py \
+            1c/internship/build/load/smoke-load.json \
+            --slo-p95 2.0 --slo-availability 0.99 || exit 1
+
+      - name: Снять стенд
+        if: always()
+        working-directory: 1c/internship/tools
+        run: docker compose -f docker-compose.full.yml down -v
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-report
+          path: 1c/internship/build/
+          if-no-files-found: ignore

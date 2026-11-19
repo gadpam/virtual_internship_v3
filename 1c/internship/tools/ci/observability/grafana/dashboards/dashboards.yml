@@ -1,0 +1,15 @@
+# Provisioning дашбордов Grafana (task_271, task_114).
+# Файлы *.json в этом каталоге подхватываются автоматически при старте контейнера.
+apiVersion: 1
+
+providers:
+  - name: rih-dashboards
+    orgId: 1
+    folder: RIH
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards
+      foldersFromFilesStructure: false

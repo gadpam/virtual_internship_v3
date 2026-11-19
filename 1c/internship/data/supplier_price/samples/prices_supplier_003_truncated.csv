@@ -1,0 +1,4 @@
+sku;supplier_code;name;unit;price;currency;min_quantity;valid_from;valid_to;vat_rate
+SKU-00001;SUP003-MLK;Молоко 2,5% 1л;шт;2.11;BYN;24;2026-11-18;2026-12-18;10
+SKU-00002;SUP003-HLB;"Хлеб «Нарочанский», нарезка в упаковке
+SKU-00004;SUP003-KLB;Колбаса «Докторская»;кг;16.02;BYN;5;2026-11-18

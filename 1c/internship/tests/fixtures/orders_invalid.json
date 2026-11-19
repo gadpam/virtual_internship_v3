@@ -1,0 +1,35 @@
+{
+  "_comment": "Бракованные заказы: каждый случай описывает ожидаемый код ответа и причину. Клиент 1С обязан отличать постоянную ошибку (422 — не повторять) от временной (429/5xx — повторить). Задания task_127, task_128, task_140.",
+  "cases": [
+    {
+      "name": "отрицательное количество",
+      "payload": { "external_id": "BAD-QTY", "lines": [{ "sku": "SKU-00001", "quantity": -1, "price": 10.0 }] },
+      "expected_status": 422,
+      "client_action": "не повторять, создать инцидент с указанием поля"
+    },
+    {
+      "name": "пустой список позиций",
+      "payload": { "external_id": "BAD-EMPTY", "lines": [] },
+      "expected_status": 422,
+      "client_action": "не повторять"
+    },
+    {
+      "name": "нет external_id",
+      "payload": { "lines": [{ "sku": "SKU-00001", "quantity": 1, "price": 10.0 }] },
+      "expected_status": 422,
+      "client_action": "не повторять, ошибка на стороне отправителя"
+    },
+    {
+      "name": "цена строкой вместо числа",
+      "payload": { "external_id": "BAD-PRICE", "lines": [{ "sku": "SKU-00001", "quantity": 1, "price": "десять" }] },
+      "expected_status": 422,
+      "client_action": "не повторять"
+    },
+    {
+      "name": "неизвестный артикул",
+      "payload": { "external_id": "BAD-SKU", "lines": [{ "sku": "SKU-99999", "quantity": 1, "price": 10.0 }] },
+      "expected_status": 201,
+      "client_action": "принять, но пометить как «товар не найден в НСИ» — правило качества данных (task_212)"
+    }
+  ]
+}
