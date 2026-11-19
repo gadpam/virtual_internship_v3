@@ -2056,7 +2056,7 @@ Index (одна страница-точка входа) связывает сл�
         "иначе никто не прочитает.",
         "Инструкцию проверяют на живом человеке: если он не смог выполнить сценарий — "
         "переписывайте."],
- resources=["internship/documentation/architecture/adr/"]),
+ resources=["internship/documentation/adr/"]),
 ])
 ,
 dict(n=12, quarter="Q1", theme="MILESTONE Q1: code review, демо, защита, ретро",

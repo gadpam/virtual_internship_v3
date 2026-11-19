@@ -32,7 +32,7 @@ ADR-практика: решения, которые помнят через г�
 - Статусы важны: proposed / accepted / superseded by ADR-N. Иначе старые решения продолжают жить как актуальные.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/documentation/architecture/adr/
+- internship/documentation/adr/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).
