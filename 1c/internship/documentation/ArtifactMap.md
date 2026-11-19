@@ -77,7 +77,7 @@
 | task_66. Документация подсистемы: контракт, инструкция, ADR | `internship/documentation/adr/` [есть] |
 | task_67. Code review квартала: полный разбор вашего кода | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_68. Демо подсистемы: сценарий, данные, рассказ | `project/acceptance/DemoAndDefense.txt` [есть] |
-| task_69. Защита архитектуры Q1: схемы, ADR, неудобные вопросы | `internship/documentation/architecture/` [создаётся] |
+| task_69. Защита архитектуры Q1: схемы, ADR, неудобные вопросы | `internship/documentation/architecture/` [есть] |
 | task_70. Ретроспектива квартала: честный разбор | `internship/documentation/retro/` [создаётся] |
 | task_71. Портфолио: статья и публичный артефакт по итогам Q1 | `project/ideas/architecture/POST_Ideas.txt` [есть] |
 | task_72. План Q2: интеграции, контракты и подготовка стенда | `internship/src/mock_shop_api/` [есть]<br>`project/sprint_13/SprintOverview.txt` [есть] |
@@ -121,7 +121,7 @@
 | task_105. Идемпотентность и дубли в обменах | `internship/tests/integration/` [есть] |
 | task_106. Распределённая информационная база (РИБ) | `Документация: «Распределенная информационная база»` [создаётся] |
 | task_107. Отладка обменов: журнал, сообщения, типичные ошибки | `internship/Configuration/src/DataProcessors/РИХ_МониторингОбменов/` [создаётся] |
-| task_108. Документация обмена: регламент, SLA, ответственные | `internship/documentation/exchange/` [создаётся] |
+| task_108. Документация обмена: регламент, SLA, ответственные | `internship/documentation/exchange/` [есть] |
 | task_109. Синхронно или асинхронно: как выбрать и не ошибиться | `internship/documentation/adr/` [есть] |
 | task_110. Очередь сообщений в 1С: надёжная отложенная обработка | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [создаётся] |
 | task_111. Брокер сообщений: RabbitMQ и обмен событиями | `internship/src/queue_consumer/` [есть]<br>`internship/tools/docker-compose.yml` [есть] |
@@ -160,7 +160,7 @@
 | task_144. Тестовая пирамида интеграций и стратегия качества | `internship/documentation/testing_strategy.md` [создаётся] |
 | task_145. Code review интеграционного контура | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_146. Демо интеграций: живой обмен и управляемый сбой | `project/acceptance/DemoAndDefense.txt` [есть] |
-| task_147. Защита интеграционной архитектуры: контракты, SLA, надёжность | `internship/documentation/architecture/` [создаётся] |
+| task_147. Защита интеграционной архитектуры: контракты, SLA, надёжность | `internship/documentation/architecture/` [есть] |
 | task_148. Деловое общение: письмо партнёру, согласование контракта, эскалация | `internship/documentation/communication/templates.md` [создаётся] |
 | task_149. Ретроспектива Q2 и статья об интеграциях | `project/ideas/architecture/POST_Ideas.txt` [есть] |
 | task_150. План Q3: учёт, данные, СУБД, BI и тяжёлые запросы | `project/tools/Environment.md` [есть]<br>`project/sprint_26/SprintOverview.txt` [есть] |
@@ -243,7 +243,7 @@
 | task_222. Документация системы: как сделать знания общими | `internship/documentation/index.md` [создаётся] |
 | task_223. Code review квартала: учёт, данные, производительность | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_224. Демо учётного и аналитического контура | `project/acceptance/DemoAndDefense.txt` [есть] |
-| task_225. Защита данных и производительности: разговор на языке цифр | `internship/documentation/architecture/` [создаётся] |
+| task_225. Защита данных и производительности: разговор на языке цифр | `internship/documentation/architecture/` [есть] |
 | task_226. Деловое общение: разговор с бухгалтерией и ИТ-службой | `internship/documentation/communication/templates.md` [создаётся] |
 | task_227. Ретроспектива Q3 и сравнение трёх кварталов | `internship/documentation/retro/` [создаётся] |
 | task_228. План Q4: AI-контур, мобильность, эксплуатация и финал | `project/tools/Environment.md` [есть]<br>`project/sprint_39/SprintOverview.txt` [есть] |
@@ -308,14 +308,14 @@
 | task_282. Стоимость владения и обоснование инвестиций | `internship/documentation/architecture/business_case.md` [создаётся] |
 | task_283. Проектирование новой подсистемы: от требования до плана | `internship/documentation/architecture/new_subsystem.md` [создаётся] |
 | task_284. Реализация подсистемы: малые шаги в живой системе | `internship/tests/` [есть] |
-| task_285. Нетиповая доработка УТ: расширение вместо правки конфигурации | `internship/Configuration/src/Extensions/` [есть]<br>`internship/documentation/release/` [создаётся] |
-| task_286. Нетиповая доработка Розницы: кассовый контур и обмен с УТ | `internship/documentation/release/` [создаётся]<br>`internship/Configuration/src/Extensions/` [есть] |
-| task_287. Регресс после обновления типовой конфигурации: контур проверки доработок | `internship/documentation/release/` [создаётся]<br>`internship/documentation/architecture/dependencies.md` [создаётся] |
+| task_285. Нетиповая доработка УТ: расширение вместо правки конфигурации | `internship/Configuration/src/Extensions/` [есть]<br>`internship/documentation/release/` [есть] |
+| task_286. Нетиповая доработка Розницы: кассовый контур и обмен с УТ | `internship/documentation/release/` [есть]<br>`internship/Configuration/src/Extensions/` [есть] |
+| task_287. Регресс после обновления типовой конфигурации: контур проверки доработок | `internship/documentation/release/` [есть]<br>`internship/documentation/architecture/dependencies.md` [создаётся] |
 | task_288. Эволюция архитектуры: рефакторинг системы, а не модуля | `internship/documentation/refactoring/architecture_evolution.md` [создаётся] |
 | task_289. Политики безопасности RIH: от требований к правилам | `internship/documentation/security/policies.md` [создаётся] |
 | task_290. Управление доступами: выдача, пересмотр, отзыв | `internship/Configuration/src/Reports/ПраваПользователей/` [создаётся] |
 | task_291. Работа с ПДн: реестр, основания, сроки, защита | `internship/documentation/security/pdn_registry.md` [создаётся] |
-| task_292. Аудит нетиповых доработок: инвентаризация перед обновлением типовой конфигурации | `internship/documentation/compliance/audit_folder.md` [создаётся]<br>`internship/documentation/release/` [создаётся] |
+| task_292. Аудит нетиповых доработок: инвентаризация перед обновлением типовой конфигурации | `internship/documentation/compliance/audit_folder.md` [создаётся]<br>`internship/documentation/release/` [есть] |
 | task_293. Безопасность цепочки поставки: зависимости и артефакты | `internship/tools/ci/github-actions/security.yml` [есть] |
 | task_294. Инцидент безопасности: процедура и учебное расследование | `internship/documentation/security/incident_response.md` [создаётся] |
 | task_295. Портфолио: собрать год в то, что можно показать | `internship/documentation/portfolio/` [создаётся] |
