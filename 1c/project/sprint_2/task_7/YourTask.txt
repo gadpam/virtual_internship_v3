@@ -31,7 +31,7 @@ RIH спроектирован как набор подсистем с ясны�
 - Хорошее правило: модуль интеграций не знает про объекты учёта, он знает про контракты и вызовы. Доменную логику он не содержит.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/Subsystems/
+- internship/Configuration/src/Subsystems/
 - ideas/architecture/Laws_of_architecture.txt
 
 НАПОМИНАНИЕ

@@ -30,7 +30,7 @@
 - Расшифровка до документа — то, за что бухгалтеры любят отчёт. Не экономьте на ней.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/Reports/
+- internship/Configuration/src/Reports/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

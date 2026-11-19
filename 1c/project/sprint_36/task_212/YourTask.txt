@@ -31,7 +31,7 @@
 - Динамика важнее абсолютного значения: качество падает — значит процесс сломался, и это надо чинить, а не данные.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/InformationRegisters/КачествоДанных/
+- internship/Configuration/src/InformationRegisters/КачествоДанных/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

@@ -29,7 +29,7 @@
 - Не делайте карту маршрута «на все случаи»: лучше три простых процесса, чем один сложный.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/BusinessProcesses/
+- internship/Configuration/src/BusinessProcesses/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

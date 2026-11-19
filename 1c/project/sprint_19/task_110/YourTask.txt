@@ -30,7 +30,7 @@
 - Приоритеты нужны, чтобы срочное не стояло за 5000 несрочных. Но слишком много приоритетов — это хаос.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/InformationRegisters/ОчередьОбмена/
+- internship/Configuration/src/InformationRegisters/ОчередьОбмена/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

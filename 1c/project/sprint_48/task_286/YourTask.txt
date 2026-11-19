@@ -35,7 +35,7 @@
 
 МАТЕРИАЛЫ И ССЫЛКИ:
 - internship/documentation/release/
-- internship/Configuration/Extensions/
+- internship/Configuration/src/Extensions/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

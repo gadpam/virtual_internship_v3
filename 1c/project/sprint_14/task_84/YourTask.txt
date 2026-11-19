@@ -30,7 +30,7 @@
 - Хранить payload в базе удобно первые две недели. Потом база весит 200 ГБ.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/InformationRegisters/ЖурналИнтеграций/
+- internship/Configuration/src/InformationRegisters/ЖурналИнтеграций/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

@@ -29,8 +29,8 @@ CI/CD: GitHub Actions, сборка конфигурации, автопубли
 - Не храните секреты в коде: используйте GitHub Secrets.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/tools/ci/build.yml
-- internship/tools/ci/smoke.yml
+- internship/tools/ci/github-actions/ci.yml
+- internship/tools/ci/vanessa/vanessa-runner.json
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

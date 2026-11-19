@@ -31,7 +31,7 @@
 - Фиксируйте версии (lock). Плавающие версии — это непредсказуемая сборка через месяц.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/tools/ci/deps-scan.yml
+- internship/tools/ci/github-actions/security.yml
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

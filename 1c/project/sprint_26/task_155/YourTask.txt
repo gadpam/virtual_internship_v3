@@ -30,7 +30,7 @@
 - Держите список проверок закрытия как данные: их будут добавлять каждый год.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/DataProcessors/РИХ_ЗакрытиеПериода/
+- internship/Configuration/src/DataProcessors/РИХ_ЗакрытиеПериода/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

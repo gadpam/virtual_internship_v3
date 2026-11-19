@@ -31,7 +31,7 @@
 - Версии внешних отчётов тоже надо вести: пользователь может остаться на старой.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/ExternalReports/
+- internship/Configuration/src/ExternalReports/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

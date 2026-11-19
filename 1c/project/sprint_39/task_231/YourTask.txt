@@ -29,7 +29,7 @@ AI-контур написан на FastAPI: маршруты, схемы Pydant
 - Pydantic ловит ошибки на входе. Не пропускайте данные «как есть» в логику.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/src/ai_service/app/routes/
+- internship/src/ai_service/app/routes.py
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

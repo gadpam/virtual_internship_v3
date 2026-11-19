@@ -30,7 +30,7 @@
 - Локальная копия данных — это не «кэш, который может устареть», а источник для учёта. Разница в ответственности.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/InformationRegisters/КурсыВалют/
+- internship/Configuration/src/InformationRegisters/КурсыВалют/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

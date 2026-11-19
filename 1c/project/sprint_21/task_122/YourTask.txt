@@ -29,7 +29,7 @@
 - Сверка с оперативным отчётом обязательна: иначе через месяц никто не доверяет витрине.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/AccumulationRegisters/
+- internship/Configuration/src/AccumulationRegisters/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

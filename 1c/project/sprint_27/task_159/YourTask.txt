@@ -31,7 +31,7 @@
 - Некоторые механизмы в расширениях недоступны (например, часть событий). Проверяйте ограничения до проектирования.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/Extensions/
+- internship/Configuration/src/Extensions/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

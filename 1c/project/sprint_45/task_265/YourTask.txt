@@ -30,7 +30,8 @@
 - Манифест релиза спасает при расследовании «что именно мы выкатили».
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/tools/ci/build.yml
+- internship/tools/ci/github-actions/ci.yml
+- internship/tools/ci/github-actions/release.yml
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

@@ -13,8 +13,9 @@
 
 ЗАДАНИЕ: что сделать
 1. Запустите валидацию проекта в EDT и выпишите все ошибки и предупреждения.
-2. Запустите дымовые тесты (vanessa-runner или npm run smoke, см. tools/package.json).
-   Почините падения; если падение из-за окружения - опишите причину и заведите задачу.
+2. Запустите дымовые тесты vanessa-runner (конфигурация internship/tools/ci/vanessa/
+   vanessa-runner.json). Почините падения; если падение из-за окружения - опишите
+   причину и заведите задачу.
 3. Настройте АПК (или SonarQube локально в Docker) для проекта RIH.
 4. Выполните полный анализ. Выгрузите список замечаний в CSV/MD.
 5. Классифицируйте замечания: «Ошибка», «Важное», «Рекомендация». Возьмите топ-5
@@ -35,8 +36,8 @@
 
 МАТЕРИАЛЫ И ССЫЛКИ:
 - internship/tools/docker-compose.yml (сервис sonarqube)
-- internship/tools/ci/smoke.yml
-- internship/tools/package.json
+- internship/tools/ci/github-actions/ci.yml
+- internship/tools/ci/vanessa/vanessa-runner.json
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

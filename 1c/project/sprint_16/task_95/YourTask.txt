@@ -31,7 +31,7 @@
 - Лимит попыток обязателен: бесконечный ретрай «убитого» сообщения блокирует всю очередь.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/InformationRegisters/ОчередьОбмена/
+- internship/Configuration/src/InformationRegisters/ОчередьОбмена/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

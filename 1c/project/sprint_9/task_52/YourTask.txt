@@ -29,7 +29,8 @@
 - Тесты, которые зависят от «той самой номенклатуры в базе», ломаются на следующий день. Создавайте данные в тесте.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/tests/unit/README.md
+- internship/tests/README.md
+- internship/tests/unit/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

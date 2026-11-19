@@ -30,7 +30,7 @@
 - Локальный .env удобен, но должен быть в .gitignore и иметь шаблон .env.example без значений.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/tools/ci/secret-scan.yml
+- internship/tools/ci/github-actions/security.yml
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

@@ -33,7 +33,7 @@
 - Module.bsl — обычный текст, его можно открывать в любом редакторе, но правьте всё-таки через EDT, чтобы не потерять метаданные.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/CommonModules/РИХ_ОбщегоНазначения/Module.bsl
+- internship/Configuration/src/CommonModules/РИХ_ОбщегоНазначения/Module.bsl
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

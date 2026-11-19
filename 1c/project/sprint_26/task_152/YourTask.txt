@@ -29,7 +29,7 @@
 - Иерархия счетов удобна для отчётов, но усложняет запросы: проверьте, как вы получаете обороты по счёту верхнего уровня.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/ChartsOfAccounts/
+- internship/Configuration/src/ChartsOfAccounts/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

@@ -37,7 +37,7 @@
 - Не заимствуйте объект целиком ради одной подписки: чем меньше заимствований, тем дешевле переживается обновление типовой.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/Extensions/
+- internship/Configuration/src/Extensions/
 - internship/documentation/release/
 
 НАПОМИНАНИЕ

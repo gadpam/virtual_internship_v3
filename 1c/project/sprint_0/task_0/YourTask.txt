@@ -34,8 +34,8 @@ SQL, Git, Docker и Python. Это не экзамен и не отбор: ср�
    СУБД поднимите в Docker: `cd internship/tools && docker compose up -d db`.
 2. Установите 1C:Enterprise Development Tools (EDT). Если EDT пока недоступен —
    работайте в Конфигураторе, но к task_13 вернитесь к EDT: Git-трек строится на нём.
-3. Создайте базу RIH_DEV из файла `internship/Configuration/Rih.cf` (или соберите
-   проект EDT из папки `internship/Configuration/`).
+3. Соберите проект EDT из папки `internship/Configuration/` и создайте базу RIH_DEV.
+   Файла Rih.cf пока нет и не нужен: это артефакт сборки, он появится в task_1.
 4. Запустите базу под полными правами, откройте интерфейс и найдите подсистему
    «Интеграционный хаб». Она почти пустая — заполнять её будете вы весь год.
 5. Убедитесь, что Git видит репозиторий: `git status` в корне проекта.

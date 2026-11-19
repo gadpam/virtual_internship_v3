@@ -30,7 +30,7 @@
 - Версионирование внешних отчётов спасает, когда пользователь жалуется, что «раньше работало».
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/ExternalReports/
+- internship/Configuration/src/ExternalReports/
 - internship/tools/ci/
 
 НАПОМИНАНИЕ

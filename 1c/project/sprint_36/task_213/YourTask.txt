@@ -30,7 +30,7 @@
 - Обязательно сохраняйте, какой объект был основным: без этого отмена слияния невозможна.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/Configuration/DataProcessors/РИХ_ДедупликацияНСИ/
+- internship/Configuration/src/DataProcessors/РИХ_ДедупликацияНСИ/
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).

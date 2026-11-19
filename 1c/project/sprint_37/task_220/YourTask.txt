@@ -29,7 +29,7 @@
 - Quick wins важны для мотивации команды и доверия бизнеса: покажите, что работа над долгом даёт быстрый эффект.
 
 МАТЕРИАЛЫ И ССЫЛКИ:
-- internship/backlog/tech_debt.md
+- internship/backlog/tech_debt_register.md
 
 НАПОМИНАНИЕ
 - Работаем только в папке internship/ (папку project/ менять нельзя).
