@@ -169,7 +169,7 @@ jobs:
           python3 1c/internship/src/scripts/seed_demo_data.py --products 200 --orders 30
 
       - name: Прогон vanessa-runner (фичи)
-        working-directory: 1c/internship/tools/vanessa
+        working-directory: 1c/internship/tools/ci/vanessa
         run: |
           # В реальном CI здесь вызов vanessa-runner через OneScript:
           #   oscript ./vanessa-runner.epf --settings vanessa-runner.json

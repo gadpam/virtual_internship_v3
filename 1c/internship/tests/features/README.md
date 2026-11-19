@@ -12,7 +12,7 @@
 ## Прогон
 
 ```bash
-cd 1c/internship/tools/vanessa
+cd 1c/internship/tools/ci/vanessa
 oscript ./vanessa-runner.epf --settings vanessa-runner.json
 ```
 
