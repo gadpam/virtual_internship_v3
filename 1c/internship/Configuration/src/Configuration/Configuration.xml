@@ -56,6 +56,7 @@
     <value>CommonModule.РИХ_Банк</value>
     <value>CommonModule.РИХ_ОтраслевыеОтчёты</value>
     <value>CommonModule.РИХ_РеестрИнтеграций</value>
+    <value>CommonModule.РИХ_Витрины</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -89,6 +90,7 @@
     <value>ScheduledTask.ОтправкаОчередиОбмена</value>
     <value>ScheduledTask.ЗагрузкаКурсовВалют</value>
     <value>ScheduledTask.ВыгрузкаМагазинаДельта</value>
+    <value>ScheduledTask.ОбновлениеВитриныПродаж</value>
   </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
@@ -148,6 +150,7 @@
     <value>InformationRegister.ПлатежиВыписки</value>
     <value>InformationRegister.КвитанцииОператора</value>
     <value>InformationRegister.ИсторияРеестраИнтеграций</value>
+    <value>InformationRegister.ПродажиПоДням</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
