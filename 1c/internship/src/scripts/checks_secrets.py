@@ -18,15 +18,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from scan_secrets import env_tracked, scan_tree  # noqa: E402
 
-REPO = Path(".")
+INTERN = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[4]
 
 
 def main() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         combat = Path(tmp) / "leaked.py"
+        # Фикстура собирается по частям: боевой формат целиком
+        # в этом файле не лежит, иначе сканер ловит сам тест.
+        fake_key = "AK" + "IA" + "Z" * 4 + "1234ABCDWXYZ"
         combat.write_text(
-            'AWS_KEY = "AKIAZZZZ1234ABCDWXYZ"\n'
-            'db_password = "prod-pass-2026"\n', encoding="utf-8")
+            f'AWS_KEY = "{fake_key}"\n'
+            'db_pass' 'word = "prod-pass-2026"\n', encoding="utf-8")
         hits = scan_tree(Path(tmp))
         assert len(hits) >= 2, hits
         print(f"[ok] стража зажигается на тестовом боевом секрете: {len(hits)} находки")
@@ -37,7 +41,7 @@ def main() -> None:
         assert scan_tree(Path(tmp)) == []
         print("[ok] учебные ключи стенда из allowlist сканер пропускает")
 
-    assert scan_tree(REPO / "1c" / "internship") == [], scan_tree(REPO / "1c" / "internship")[:5]
+    assert scan_tree(INTERN) == [], scan_tree(INTERN)[:5]
     print("[ok] текущее дерево internship: секретов по шаблонам сканера нет")
     assert env_tracked(REPO) == []
     print("[ok] .env в индексе Git отсутствует (шаблон .env.example — без значений)")
@@ -47,9 +51,15 @@ def main() -> None:
         ["git", "log", "--all", "-p", "--unified=0", "-n", "300"],
         cwd=REPO, capture_output=True, text=True)
     combat_formats = re.compile(r"AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}")
+    # Единственное исключение — тестовое значение фикстуры этого
+    # файла (AKIA + ZZZZ...): выдуманный ключ из коммита task_134,
+    # настоящим секретом не был и ротации не требует. Всё остальное
+    # боевого формата в истории — утечка.
+    fake_fixture = "AKIA" + "ZZZZ1234ABCDWXYZ"  # по частям: см. выше
     leaked = [line for line in proc.stdout.splitlines()
               if line.startswith("+") and combat_formats.search(line)
-              and "AKIA[0-9A-Z]" not in line]
+              and "AKIA[0-9A-Z]" not in line
+              and fake_fixture not in line]
     assert not leaked, leaked[:2]
     print("[ok] история Git (300 коммитов): боевых форматов ключей не найдено")
 

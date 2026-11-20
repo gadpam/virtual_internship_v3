@@ -40,6 +40,13 @@ PATTERNS = [
 ALLOWLIST = [
     re.compile(r"mock-[a-z-]*-key"),
     re.compile(r"bank_user|bank_password"),
+    # Учебный пароль роли bi_reader локального стенда PostgreSQL:
+    # создаётся скриптом 070 только на стенде, боевая роль получает
+    # пароль из хранилища при создании (secrets_management.md).
+    re.compile(r"bi_reader_dev"),
+    # Учебный пароль локальной PostgreSQL стенда (пользователь rih):
+    # существует только в /tmp стенда, боевой контур — хранилище.
+    re.compile(r"rih_local_dev_only"),
     re.compile(r"CHANGE_ME|example|placeholder|заглушка", re.IGNORECASE),
 ]
 
