@@ -126,7 +126,7 @@
 | task_110. Очередь сообщений в 1С: надёжная отложенная обработка | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [есть] |
 | task_111. Брокер сообщений: RabbitMQ и обмен событиями | `internship/src/queue_consumer/` [есть]<br>`internship/tools/docker-compose.yml` [есть] |
 | task_112. Порядок сообщений, дубли и согласованность | `internship/Configuration/src/Reports/РасхожденияОбмена/` [создаётся] |
-| task_113. Регламентные задания обмена: расписания, окна, приоритеты | `internship/documentation/operations/schedule_map.md` [создаётся] |
+| task_113. Регламентные задания обмена: расписания, окна, приоритеты | `internship/documentation/operations/schedule_map.md` [есть] |
 | task_114. Мониторинг интеграций: дашборд, метрики, алерты | `internship/src/metrics_exporter/` [есть]<br>`internship/tools/docker-compose.yml; дашборд Superset — полный стенд docker-compose.full.yml (task_126)` [создаётся] |
 | task_115. Приёмник документов ЭДО: жёсткая схема и аудит | `internship/docs/edo/samples/` [есть] |
 | task_116. Маркировка и прослеживаемость: коды, агрегаты, выбытие | `internship/documentation/architecture/marking_model.md` [создаётся] |
