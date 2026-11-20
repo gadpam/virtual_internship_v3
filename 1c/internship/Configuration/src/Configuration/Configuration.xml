@@ -63,6 +63,7 @@
     <value>CommonModule.РИХ_Деградация</value>
     <value>CommonModule.РИХ_Токены</value>
     <value>CommonModule.РИХ_ПерсональныеДанные</value>
+    <value>CommonModule.РИХ_Аудит</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -165,6 +166,7 @@
     <value>InformationRegister.СостоянияПредохранителей</value>
     <value>InformationRegister.ОчередьКомпенсаций</value>
     <value>InformationRegister.ТокеныИнтеграций</value>
+    <value>InformationRegister.АудитДоступа</value>
     <value>InformationRegister.КлиентыИнтеграций</value>
   </informationRegisters>
   <exchangePlans>

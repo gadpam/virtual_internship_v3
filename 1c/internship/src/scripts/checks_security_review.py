@@ -67,7 +67,20 @@ def main() -> None:
     integrations = read(ROOT / "CommonModules/РИХ_Интеграции/Module.bsl")
     assert "ОчиститьТекстЖурнала" in integrations
     assert "УстановитьПараметр" in integrations
-    print("[ok] журнал санитизируется единой точкой; запросы параметризованы")
+    assert "ЧистыйАдрес" in integrations, "экранирование ПОДОБНО потеряно"
+    assert "orders.Количество() > ЛимитЭлементовПакета()" in integrations
+    tokens = read(ROOT / "CommonModules/РИХ_Токены/Module.bsl")
+    assert "ЧастотаВыдачиПревышена" in tokens
+    assert 'ЗаписатьСобытие(Пользователь, "secret_rotate"' in tokens
+    pdn = read(ROOT / "CommonModules/РИХ_ПерсональныеДанные/Module.bsl")
+    assert "РИХ_Аудит.ЗаписатьДоступКПДн" in pdn, "показ ПДн не подключён к аудиту"
+    assert '"pdn_erasure"' in pdn, "обезличивание не подключено к аудиту"
+    conf = read(ROOT / "Configuration/Configuration.xml")
+    for obj in ("CommonModule.РИХ_Аудит", "InformationRegister.АудитДоступа",
+                "Report.АудитДоступа", "Constant.РИХ_ПарольБанка"):
+        assert obj in conf, f"{obj} не зарегистрирован"
+    print("[ok] журнал санитизируется единой точкой; запросы параметризованы; "
+          "экранирование ПОДОБНО, лимит пачки и регистрации объектов на месте")
 
     assert scan_tree(Path(".")) == [], scan_tree(Path("."))[:3]
     print("[ok] секретов в дереве нет (сканер task_134)")
