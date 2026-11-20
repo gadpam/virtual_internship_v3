@@ -175,12 +175,12 @@
 | task_154. НДС, себестоимость и расчёты: где живут настоящие сложности | `internship/documentation/accounting/vat_and_cost.md` [есть] |
 | task_155. Закрытие периода: регламентная операция и её идемпотентность | `internship/Configuration/src/DataProcessors/РИХ_ЗакрытиеПериода/` [создаётся] |
 | task_156. Сверка RIH и бухгалтерской базы: расхождения и их причины | `internship/Configuration/src/Reports/СверкаУчёта/` [создаётся] |
-| task_157. Оборотно-сальдовая ведомость на СКД | `internship/Configuration/src/Reports/ОборотноСальдоваяВедомость/` [создаётся] |
+| task_157. Оборотно-сальдовая ведомость на СКД | `internship/Configuration/src/Reports/ОборотноСальдоваяВедомость/` [есть] |
 | task_158. Анализ счёта, карточка счёта, оборотка по аналитике | `internship/Configuration/src/Reports/` [есть] |
 | task_159. Доработка типовой конфигурации: расширения вместо правок | `internship/Configuration/src/Extensions/` [есть] |
 | task_160. Обмен RIH ↔ БП: документы, НСИ, правила, сверка | `internship/documentation/exchange/rih_bp.md` [есть] |
 | task_161. Внешние отчёты и обработки для БП: поставка без релиза | `internship/Configuration/src/ExternalReports/` [есть] |
-| task_162. Регламентированная отчётность: формы, проверки, сроки | `internship/documentation/compliance/reporting_map.md` [создаётся] |
+| task_162. Регламентированная отчётность: формы, проверки, сроки | `internship/documentation/compliance/reporting_map.md` [есть] |
 | task_163. Модель Документооборота: документы, процессы, задачи | `internship/documentation/docflow/processes.md` [создаётся] |
 | task_164. Процесс согласования: этапы, исполнители, сроки, эскалация | `internship/documentation/docflow/approval_process.md` [создаётся] |
 | task_165. Задачи и рабочие места: исполнитель, срок, результат | `internship/documentation/docflow/workspace.md` [создаётся] |
