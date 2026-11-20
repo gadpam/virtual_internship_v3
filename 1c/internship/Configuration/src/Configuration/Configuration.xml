@@ -103,6 +103,7 @@
     <value>DataProcessor.ПодборНоменклатурыПоСвойствам</value>
     <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
     <value>DataProcessor.РИХ_ЮнитТесты</value>
+    <value>DataProcessor.РИХ_МоиЗадачи</value>
     <value>DataProcessor.РИХ_ГенераторДанных</value>
     <value>DataProcessor.РИХ_ОператорОчередиОбмена</value>
     <value>DataProcessor.РИХ_МониторингОбменов</value>
