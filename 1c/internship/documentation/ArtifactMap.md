@@ -90,7 +90,7 @@
 | task_74. HTTP и REST: методы, статусы, идемпотентность | `internship/src/mock_shop_api/` [есть]<br>`internship/tools/api/` [есть] |
 | task_75. JSON и XML в 1С: штатные средства чтения и записи | `internship/Configuration/src/DataProcessors/` [есть] |
 | task_76. Postman/Bruno: коллекции, окружения, автопроверки | `internship/tools/api/README.md` [есть] |
-| task_77. OpenAPI 3.x: контракт как источник истины | `internship/docs/api/openapi.yaml` [создаётся] |
+| task_77. OpenAPI 3.x: контракт как источник истины | `internship/docs/api/openapi.yaml` [есть] |
 | task_78. Mock-сервисы: стабильный стенд вместо «партнёр опять упал» | `internship/src/mock_loyalty_api/` [есть]<br>`internship/src/mock_tk_api/` [есть] |
 | task_79. Первый HTTP-сервис в 1С: маршруты и публикация | `internship/tools/docker-compose.yml (nginx)` [создаётся] |
 | task_80. XDTO-модели и сериализация: структура вместо «строки на глаз» | `Документация: «XDTO»` [создаётся] |
@@ -153,7 +153,7 @@
 | task_137. Аудит доступа и изменений: кто что сделал и кто смотрел | `internship/Configuration/src/Reports/АудитДоступа/` [создаётся] |
 | task_138. Безопасная разработка: чек-лист и ревью безопасности | `internship/documentation/security/threat_models/` [создаётся] |
 | task_139. Тестовые стенды и воспроизводимые данные | `internship/tests/fixtures/` [есть]<br>`internship/tools/docker-compose.test.yml` [есть] |
-| task_140. Контрактные тесты: ловим изменения формата до прода | `internship/tests/contract/` [есть]<br>`internship/docs/api/openapi.yaml` [создаётся] |
+| task_140. Контрактные тесты: ловим изменения формата до прода | `internship/tests/contract/` [есть]<br>`internship/docs/api/openapi.yaml` [есть] |
 | task_141. Интеграционные тесты: реальные вызовы против mock | `internship/tests/integration/` [есть] |
 | task_142. Сквозной сценарий: от заказа до отчёта и витрины | `internship/tests/e2e/` [есть] |
 | task_143. Нагрузочное тестирование интеграций | `internship/tests/load/` [есть]<br>`internship/documentation/performance/load_q2.md` [создаётся] |
