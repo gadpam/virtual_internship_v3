@@ -148,10 +148,10 @@
 | task_132. Учение по сбою: ломаем стенд по сценарию и чиним | `internship/documentation/operations/postmortems/` [есть] |
 | task_133. Аутентификация сервисов: API-ключи, токены, OAuth2-подобный поток | `internship/docs/api/rih_http_services.md` [есть] |
 | task_134. Управление секретами: где хранить пароли и ключи | `internship/tools/ci/github-actions/security.yml` [есть] |
-| task_135. Персональные данные: минимизация, маскирование, хранение | `internship/documentation/security/pdn_registry.md` [создаётся] |
-| task_136. Защита от атак: валидация, лимиты, инъекции, DoS | `internship/documentation/security/pentest_q2.md` [создаётся] |
-| task_137. Аудит доступа и изменений: кто что сделал и кто смотрел | `internship/Configuration/src/Reports/АудитДоступа/` [создаётся] |
-| task_138. Безопасная разработка: чек-лист и ревью безопасности | `internship/documentation/security/threat_models/` [создаётся] |
+| task_135. Персональные данные: минимизация, маскирование, хранение | `internship/documentation/security/pdn_registry.md` [есть] |
+| task_136. Защита от атак: валидация, лимиты, инъекции, DoS | `internship/documentation/security/pentest_q2.md` [есть] |
+| task_137. Аудит доступа и изменений: кто что сделал и кто смотрел | `internship/Configuration/src/Reports/АудитДоступа/` [есть] |
+| task_138. Безопасная разработка: чек-лист и ревью безопасности | `internship/documentation/security/threat_models/` [есть] |
 | task_139. Тестовые стенды и воспроизводимые данные | `internship/tests/fixtures/` [есть]<br>`internship/tools/docker-compose.test.yml` [есть] |
 | task_140. Контрактные тесты: ловим изменения формата до прода | `internship/tests/contract/` [есть]<br>`internship/docs/api/openapi.yaml` [есть] |
 | task_141. Интеграционные тесты: реальные вызовы против mock | `internship/tests/integration/` [есть] |
@@ -314,7 +314,7 @@
 | task_288. Эволюция архитектуры: рефакторинг системы, а не модуля | `internship/documentation/refactoring/architecture_evolution.md` [создаётся] |
 | task_289. Политики безопасности RIH: от требований к правилам | `internship/documentation/security/policies.md` [создаётся] |
 | task_290. Управление доступами: выдача, пересмотр, отзыв | `internship/Configuration/src/Reports/ПраваПользователей/` [создаётся] |
-| task_291. Работа с ПДн: реестр, основания, сроки, защита | `internship/documentation/security/pdn_registry.md` [создаётся] |
+| task_291. Работа с ПДн: реестр, основания, сроки, защита | `internship/documentation/security/pdn_registry.md` [есть] |
 | task_292. Аудит нетиповых доработок: инвентаризация перед обновлением типовой конфигурации | `internship/documentation/compliance/audit_folder.md` [создаётся]<br>`internship/documentation/release/` [есть] |
 | task_293. Безопасность цепочки поставки: зависимости и артефакты | `internship/tools/ci/github-actions/security.yml` [есть] |
 | task_294. Инцидент безопасности: процедура и учебное расследование | `internship/documentation/security/incident_response.md` [создаётся] |
