@@ -60,6 +60,7 @@
     <value>CommonModule.РИХ_ПовторныеПопытки</value>
     <value>CommonModule.РИХ_Предохранители</value>
     <value>CommonModule.РИХ_Саги</value>
+    <value>CommonModule.РИХ_Деградация</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
