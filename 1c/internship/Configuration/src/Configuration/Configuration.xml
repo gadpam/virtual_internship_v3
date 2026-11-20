@@ -38,6 +38,7 @@
   </catalogs>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
+    <value>Document.ПеремещениеТоваров</value>
   </documents>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
