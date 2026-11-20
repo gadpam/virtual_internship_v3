@@ -149,6 +149,7 @@
     <value>Report.ОборотыПоАналитике</value>
     <value>Report.КонтрольИсполненияПроцессов</value>
     <value>Report.НагрузкаНаСогласующих</value>
+    <value>Report.АналитикаПроцессов</value>
     <value>Report.ЧтоНеОбменено</value>
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>
@@ -195,6 +196,7 @@
     <value>InformationRegister.ТокеныИнтеграций</value>
     <value>InformationRegister.АудитДоступа</value>
     <value>InformationRegister.СостоянияДоговоров</value>
+    <value>InformationRegister.МетрикиЭтаповПроцессов</value>
     <value>InformationRegister.КлиентыИнтеграций</value>
   </informationRegisters>
   <exchangePlans>

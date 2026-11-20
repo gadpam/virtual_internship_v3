@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000191"
+                name="АналитикаПроцессов">
+  <name>АналитикаПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аналитика процессов: сроки, узкие места, загрузка</value>
+  </synonym>
+  <comment>task_173: СКД по витрине МетрикиЭтаповПроцессов: группировки
+процесс -> этап -> роль, период. Медиана и p95 времени этапа,
+доля просрочек, возвраты, ожидание против работы. Вывод отчёта —
+предложение по маршруту цифрой, а не мнение о людях.</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

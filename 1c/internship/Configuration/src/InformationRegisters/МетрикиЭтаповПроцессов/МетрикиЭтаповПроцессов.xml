@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000190"
+                             name="МетрикиЭтаповПроцессов">
+  <name>МетрикиЭтаповПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Метрики этапов процессов (витрина аналитики)</value>
+  </synonym>
+  <comment>task_173: витрина аналитики процессов: строка этапа пишется
+при завершении задачи, отчёт живых задач не сканирует (правило
+task_121). Ожидание и работа хранятся отдельно: узкое место
+обычно в ожидании, а не в работе. Среднее врёт — отчёт смотрит
+медиану и p95.</comment>
+  <periodicity>Day</periodicity>
+  <dimensions>
+    <dimension name="ВидПроцесса">
+      <type>String(64)</type>
+    </dimension>
+    <dimension name="Этап">
+      <type>String(64)</type>
+    </dimension>
+    <dimension name="ИсполнительРоль">
+      <type>String(32)</type>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="ОжиданиеЧасов">
+      <type>Number(10,1)</type>
+    </resource>
+    <resource name="РаботаЧасов">
+      <type>Number(10,1)</type>
+    </resource>
+    <resource name="Возвратов">
+      <type>Number(8,0)</type>
+    </resource>
+    <resource name="Просрочено">
+      <type>Boolean</type>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>
