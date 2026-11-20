@@ -10,6 +10,7 @@
 | 1C:EDT | не установлен (аналогично платформе); работа по исходникам EDT в Git | Help → About |
 | PostgreSQL (в Docker) | 16.2 — локальный сервер вместо контейнера (демона Docker в окружении нет); образ стенда — pgvector/pgvector:pg16 | `docker compose images` |
 | Docker / Docker Compose | отсутствует в окружении; compose-файлы проверены статически (YAML) | `docker --version` |
+| Образы стенда (docker-compose.yml, task_4) | pgvector/pgvector:pg16; rabbitmq:3.13-management-alpine; nginx:1.27-alpine; rih/mock_*:1.0.0, rih/ai_service:1.0.0, rih/queue_consumer:1.0.0, rih/metrics_exporter:1.0.0 (сборки из `src/`) | `docker compose images` |
 | Python | 3.11.2 | `python --version` |
 | Git | 2.39.5 | `git --version` |
 | Node.js | 22.22.3 (для vanessa-runner, понадобится с Q2) | `node --version` |
