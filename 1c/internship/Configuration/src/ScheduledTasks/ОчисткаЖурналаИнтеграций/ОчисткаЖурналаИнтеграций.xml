@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledTask xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000078"
+                       name="ОчисткаЖурналаИнтеграций">
+  <name>ОчисткаЖурналаИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очистка журнала интеграций (90 дней)</value>
+  </synonym>
+  <comment>task_84: ночная очистка РС ЖурналИнтеграций старше 90 дней.
+Метод РИХ_Интеграции.ОчиститьЖурналИнтеграций вызывается платформой
+по расписанию; ручной запуск безопасен — удаляется только старое.</comment>
+  <methodName>РИХ_Интеграции.ОчиститьЖурналИнтеграций</methodName>
+  <schedule>ежедневно в 03:00</schedule>
+</mdclass:ScheduledTask>

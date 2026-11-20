@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000075"
+                             name="ЖурналИнтеграций">
+  <name>ЖурналИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал интеграций</value>
+  </synonym>
+  <comment>task_84: каждый вызов HTTP-контура одной строкой. Payload целиком
+здесь не хранится: тело больше 4 КБ уходит во внешнее хранилище файлов,
+в Контекст пишется ссылка/хеш — база не раздувается телами заказов.
+Секреты и ПДн в журнал не пишутся (политика task_50). Хранение 90 дней,
+очистка — регламентное задание ОчисткаЖурналаИнтеграций.</comment>
+  <periodicity>Second</periodicity>
+  <dimensions>
+    <dimension name="ИдентификаторВызова">
+      <type>UUID</type>
+    </dimension>
+    <dimension name="Сервис">
+      <type>String(32)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Операция">
+      <type>String(100)</type>
+    </attribute>
+    <attribute name="Направление">
+      <type>String(4)</type>
+    </attribute>
+    <attribute name="ВнешнийИдентификатор">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="Статус">
+      <type>Number(3,0)</type>
+    </attribute>
+    <attribute name="КодОшибки">
+      <type>String(16)</type>
+    </attribute>
+    <attribute name="ДлительностьМС">
+      <type>Number(12,0)</type>
+    </attribute>
+    <attribute name="Контекст">
+      <type>String(500)</type>
+      <comment>Короткий контекст или ссылка на внешний payload; без ключей и ПДн</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>
