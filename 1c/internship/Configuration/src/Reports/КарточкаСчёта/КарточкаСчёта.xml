@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000174"
+                name="КарточкаСчёта">
+  <name>КарточкаСчёта</name>
+  <synonym>
+    <key>ru</key>
+    <value>Карточка счёта</value>
+  </synonym>
+  <comment>task_158: хронология проводок с документом-основанием,
+корреспонденцией и нарастающим сальдо; расшифровка ячейки уходит
+в проведённый документ, а не в список документов. Нарастающее
+сальдо на объёме года считается окнами запроса, а не полем СКД
+«как получится» (сверка обоих способов — в проверках задания).</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

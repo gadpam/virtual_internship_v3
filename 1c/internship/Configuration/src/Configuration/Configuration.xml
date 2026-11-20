@@ -134,6 +134,9 @@
     <value>Report.АудитДоступа</value>
     <value>Report.РасхожденияМеждуУзлами</value>
     <value>Report.ОборотноСальдоваяВедомость</value>
+    <value>Report.АнализСчёта</value>
+    <value>Report.КарточкаСчёта</value>
+    <value>Report.ОборотыПоАналитике</value>
     <value>Report.ЧтоНеОбменено</value>
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>

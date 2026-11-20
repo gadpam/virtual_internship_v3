@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000173"
+                name="АнализСчёта">
+  <name>АнализСчёта</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ счёта</value>
+  </synonym>
+  <comment>task_158: обороты счёта в разрезе субконто с долями и итогами —
+«из чего сложился оборот». Общие настройки периода и организации
+с ОСВ и карточкой: три отчёта — одна правда тремя разрезами.</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

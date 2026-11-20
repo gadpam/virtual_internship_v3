@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000175"
+                name="ОборотыПоАналитике">
+  <name>ОборотыПоАналитике</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обороты по аналитике (склад x номенклатура)</value>
+  </synonym>
+  <comment>task_158: свод по двум измерениям поверх учёта (товарные
+счета: склад x номенклатура, количество и сумма). Пустое субконто
+в проводках делает аналитический отчёт ложью с правильными
+итогами — полнота субконто контролируется трансляцией task_153.</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>
