@@ -35,7 +35,16 @@
     <value>Catalog.Склады</value>
     <value>Catalog.НоменклатурныеГруппы</value>
     <value>Catalog.Контрагенты</value>
+    <value>Catalog.ЕдиницыИзмерения</value>
+    <value>Catalog.УпаковкиНоменклатуры</value>
+    <value>Catalog.ЗначенияСвойствНоменклатуры</value>
   </catalogs>
+  <chartsOfCharacteristicTypes>
+    <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>
+  </chartsOfCharacteristicTypes>
+  <dataProcessors>
+    <value>DataProcessor.ПодборНоменклатурыПоСвойствам</value>
+  </dataProcessors>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
     <value>Document.ПеремещениеТоваров</value>
@@ -43,6 +52,7 @@
   </documents>
   <enums>
     <value>Enum.ТипыЦен</value>
+    <value>Enum.ТипыСкладов</value>
   </enums>
   <reports>
     <value>Report.ИсторияИзмененияЦен</value>
@@ -54,6 +64,7 @@
     <value>InformationRegister.РИХ_ИсторияИзменений</value>
     <value>InformationRegister.СкладыПользователей</value>
     <value>InformationRegister.ЦеныНоменклатуры</value>
+    <value>InformationRegister.СоответствиеСвойствНоменклатуры</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>

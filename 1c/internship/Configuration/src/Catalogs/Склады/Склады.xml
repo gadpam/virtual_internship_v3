@@ -19,8 +19,17 @@
   <codeType>String</codeType>
   <attributes>
     <attribute name="ТипСклада">
-      <type>String(20)</type>
-      <comment>РЦ / Магазин / Транзит (строкой — сознательно до модели task_19)</comment>
+      <type>EnumRef.ТипыСкладов</type>
+      <comment>task_24: перечисление вместо строки; значения у заведённых
+      складов переносит временная обработка (строка -&gt; перечисление)</comment>
+    </attribute>
+    <attribute name="Адрес">
+      <type>String(250)</type>
+    </attribute>
+    <attribute name="РежимРаботы">
+      <type>String(100)</type>
+      <comment>Текст вида «Пн–Вс 08:00–22:00»; расписание по дням — отдельная
+      модель, если режим начнут использовать расчёты, а не только люди</comment>
     </attribute>
   </attributes>
 </mdclass:Catalog>

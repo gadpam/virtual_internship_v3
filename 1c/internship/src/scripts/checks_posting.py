@@ -93,6 +93,17 @@ def main() -> None:
     # упаковка 12 шт: движение в базовых единицах (task_24)
     packed = {"warehouse": "РЦ", "lines": [{"product": "Сок", "qty": D(2), "pack_coef": D(12)}]}
     check("упаковка x12 -> базовые", receipt_movements(packed)[0]["qty"], D(24))
+    # ещё 2 кейса пересчёта (минимум task_24 — три)
+    check(
+        "упаковка x6, 3 упаковки",
+        receipt_movements({"warehouse": "РЦ", "lines": [{"product": "Сок", "qty": D(3), "pack_coef": D(6)}]})[0]["qty"],
+        D(18),
+    )
+    check(
+        "без упаковки: базовая единица как есть",
+        receipt_movements({"warehouse": "РЦ", "lines": [{"product": "Сок", "qty": D(5)}]})[0]["qty"],
+        D(5),
+    )
 
 
 if __name__ == "__main__":
