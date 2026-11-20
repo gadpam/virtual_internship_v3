@@ -240,7 +240,7 @@
 | task_219. Рефакторинг крупного модуля: малые шаги, зелёные тесты | `internship/documentation/refactoring/` [создаётся] |
 | task_220. Реестр технического долга и работа с ним | `internship/backlog/tech_debt_register.md` [есть] |
 | task_221. Стандарты в существующем коде: как внедрить, не остановив разработку | `internship/documentation/quality/standards_rollout.md` [создаётся] |
-| task_222. Документация системы: как сделать знания общими | `internship/documentation/index.md` [создаётся] |
+| task_222. Документация системы: как сделать знания общими | `internship/documentation/index.md` [есть] |
 | task_223. Code review квартала: учёт, данные, производительность | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_224. Демо учётного и аналитического контура | `project/acceptance/DemoAndDefense.txt` [есть] |
 | task_225. Защита данных и производительности: разговор на языке цифр | `internship/documentation/architecture/` [есть] |
@@ -327,7 +327,7 @@
 | task_301. Интеграционная сборка: все контуры в одном стенде | `internship/tools/docker-compose.full.yml` [есть] |
 | task_302. Сквозной сценарий «день из жизни холдинга» | `internship/tests/golden_path/` [есть] |
 | task_303. Полный регресс-прогон и стабилизация системы | `internship/documentation/quality/annual_report.md` [создаётся] |
-| task_304. Единый комплект документации системы | `internship/documentation/index.md` [создаётся] |
+| task_304. Единый комплект документации системы | `internship/documentation/index.md` [есть] |
 | task_305. Передача системы: как бы вы ушли в отпуск на месяц | `internship/documentation/operations/handover.md` [создаётся] |
 | task_306. Итоги года в цифрах: отчёт о проделанной работе | `internship/documentation/annual_report.md` [создаётся] |
 | task_307. Финальное code review года | `internship/documentation/reviews/final_review.md` [создаётся] |
