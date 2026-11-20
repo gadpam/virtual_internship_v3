@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- task_61: конфигурация технологического журнала для стенда с платформой.
+     Файл кладётся в каталог conf кластера (logcfg.xml). В нашей среде
+     платформы нет: эквивалентную роль журнала выполняют замеры
+     РИХ_Профилирование и логи PostgreSQL (см. tzh_task_61.md). -->
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+  <log location="/var/log/1c/tzh" history="168">
+    <!-- вызовы и исключения: кто и что делал -->
+    <event>
+      <eq property="name" value="CALL"/>
+    </event>
+    <event>
+      <eq property="name" value="EXCP"/>
+    </event>
+    <!-- ожидания на блокировках дольше секунды -->
+    <event>
+      <eq property="name" value="TLOCK"/>
+      <gt property="duration" value="1000000"/>
+    </event>
+    <!-- запросы к PostgreSQL дольше секунды (для MSSQL — DBMSSQL) -->
+    <event>
+      <eq property="name" value="DBPOSTGRES"/>
+      <gt property="duration" value="1000000"/>
+    </event>
+    <property name="tplan"/>
+    <property name="tsql"/>
+    <property name="p:processName"/>
+    <property name="t:applicationName"/>
+    <property name="t:computerName"/>
+    <property name="t:sessionID"/>
+    <property name="t:userName"/>
+    <property name="t:connectID"/>
+    <property name="duration"/>
+    <property name="dbpid"/>
+  </log>
+</config>
