@@ -116,11 +116,11 @@
 | task_100. Миграция НСИ: 100 000 позиций без остановки работы | `internship/documentation/release/migration_plan.md` [есть] |
 | task_101. Регистрация изменений, подписки и контроль целостности обмена | `internship/Configuration/src/Reports/РасхожденияОбмена/` [создаётся] |
 | task_102. Конвертация данных 3.0: новый подход к правилам обмена | `Документация: «Конвертация данных 3.0»` [создаётся] |
-| task_103. КД 3.0: документы, регистры и обмен с типовой конфигурацией | `internship/documentation/exchange/rih_bp.md` [создаётся] |
-| task_104. Версии правил обмена и миграции контрактов | `internship/documentation/exchange/versioning.md` [создаётся] |
+| task_103. КД 3.0: документы, регистры и обмен с типовой конфигурацией | `internship/documentation/exchange/rih_bp.md` [есть] |
+| task_104. Версии правил обмена и миграции контрактов | `internship/documentation/exchange/versioning.md` [есть] |
 | task_105. Идемпотентность и дубли в обменах | `internship/tests/integration/` [есть] |
 | task_106. Распределённая информационная база (РИБ) | `Документация: «Распределенная информационная база»` [создаётся] |
-| task_107. Отладка обменов: журнал, сообщения, типичные ошибки | `internship/Configuration/src/DataProcessors/РИХ_МониторингОбменов/` [создаётся] |
+| task_107. Отладка обменов: журнал, сообщения, типичные ошибки | `internship/Configuration/src/DataProcessors/РИХ_МониторингОбменов/` [есть] |
 | task_108. Документация обмена: регламент, SLA, ответственные | `internship/documentation/exchange/` [есть] |
 | task_109. Синхронно или асинхронно: как выбрать и не ошибиться | `internship/documentation/adr/` [есть] |
 | task_110. Очередь сообщений в 1С: надёжная отложенная обработка | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [есть] |
@@ -178,7 +178,7 @@
 | task_157. Оборотно-сальдовая ведомость на СКД | `internship/Configuration/src/Reports/ОборотноСальдоваяВедомость/` [создаётся] |
 | task_158. Анализ счёта, карточка счёта, оборотка по аналитике | `internship/Configuration/src/Reports/` [есть] |
 | task_159. Доработка типовой конфигурации: расширения вместо правок | `internship/Configuration/src/Extensions/` [есть] |
-| task_160. Обмен RIH ↔ БП: документы, НСИ, правила, сверка | `internship/documentation/exchange/rih_bp.md` [создаётся] |
+| task_160. Обмен RIH ↔ БП: документы, НСИ, правила, сверка | `internship/documentation/exchange/rih_bp.md` [есть] |
 | task_161. Внешние отчёты и обработки для БП: поставка без релиза | `internship/Configuration/src/ExternalReports/` [есть] |
 | task_162. Регламентированная отчётность: формы, проверки, сроки | `internship/documentation/compliance/reporting_map.md` [создаётся] |
 | task_163. Модель Документооборота: документы, процессы, задачи | `internship/documentation/docflow/processes.md` [создаётся] |
