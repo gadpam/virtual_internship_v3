@@ -47,6 +47,7 @@
   </chartsOfCharacteristicTypes>
   <dataProcessors>
     <value>DataProcessor.ПодборНоменклатурыПоСвойствам</value>
+    <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
   </dataProcessors>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
