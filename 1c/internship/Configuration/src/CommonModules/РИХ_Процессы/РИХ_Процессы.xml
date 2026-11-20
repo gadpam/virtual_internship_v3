@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000187"
+                      name="РИХ_Процессы">
+  <name>РИХ_Процессы</name>
+  <synonym>
+    <key>ru</key>
+    <value>RIH подсистема процессов: запуск и переходы</value>
+  </synonym>
+  <comment>task_170: логика маршрута живёт в переходах (условия и
+действия), а не в формах: форма, знающая маршрут, ломается при
+его изменении. Завершение задачи проверяет результат и двигает
+экземпляр по карте; стоящий процесс находится по данным
+переходов, а не открытием конфигуратора.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

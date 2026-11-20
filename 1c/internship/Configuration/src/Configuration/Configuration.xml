@@ -67,7 +67,14 @@
     <value>CommonModule.РИХ_Бухгалтерия</value>
     <value>CommonModule.РИХ_БухгалтерскиеДвижения</value>
     <value>CommonModule.РИХ_ДокументооборотИнтеграция</value>
+    <value>CommonModule.РИХ_Процессы</value>
   </commonModules>
+  <businessProcesses>
+    <value>BusinessProcess.РИХ_РазборОшибкиИнтеграции</value>
+  </businessProcesses>
+  <tasks>
+    <value>Task.РИХ_ЗадачаПроцесса</value>
+  </tasks>
   <catalogs>
     <value>Catalog.Номенклатура</value>
     <value>Catalog.Склады</value>
