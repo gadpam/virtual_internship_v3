@@ -193,8 +193,8 @@
 | task_172. Рабочее место исполнителя процессов RIH | `internship/Configuration/src/DataProcessors/РИХ_МоиЗадачи/` [есть] |
 | task_173. Аналитика процессов: сроки, узкие места, загрузка | `internship/documentation/analytics/process_metrics.md` [есть] |
 | task_174. Интеграция процессов RIH с ДО и внешними трекерами | `internship/src/mock_tracker_api/` [есть] |
-| task_175. Кросс-системный отчёт: данные из RIH, БП и ДО | `internship/Configuration/src/Reports/ПортфельКонтрагента/` [создаётся] |
-| task_176. Регламентная отчётность по расписанию и рассылка | `internship/documentation/reports/scheduling.md` [создаётся] |
+| task_175. Кросс-системный отчёт: данные из RIH, БП и ДО | `internship/Configuration/src/Reports/ПортфельКонтрагента/` [есть] |
+| task_176. Регламентная отчётность по расписанию и рассылка | `internship/documentation/reports/scheduling.md` [есть] |
 | task_177. Управленческие отчёты: KPI, динамика, план-факт | `internship/documentation/analytics/metrics_dictionary.md` [есть] |
 | task_178. Внешние отчёты и обработки: поставка без снятия поддержки | `internship/Configuration/src/ExternalReports/` [есть]<br>`internship/tools/ci/` [есть] |
 | task_179. Универсальные механизмы: допреквизиты, динамические списки, настройки | `Документация БСП: «Дополнительные реквизиты и сведения»` [создаётся] |
