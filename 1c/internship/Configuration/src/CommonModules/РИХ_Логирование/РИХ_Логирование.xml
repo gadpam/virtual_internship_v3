@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000063"
+                      name="РИХ_Логирование">
+  <name>РИХ_Логирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ логирование</value>
+  </synonym>
+  <comment>task_50: единый формат событий RIH — JSON в комментарии записи
+журнала регистрации. Секреты и ПДн в лог не попадают (политика —
+CodingStandard §7): значения полей с ключами пароль/телефон/паспорт
+маскируются здесь, а не дисциплиной вызывающих.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>true</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

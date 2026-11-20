@@ -32,6 +32,7 @@
     <value>CommonModule.РИХ_Версионирование</value>
     <value>CommonModule.РИХ_Валидация</value>
     <value>CommonModule.РИХ_УчётТоваровДвижения</value>
+    <value>CommonModule.РИХ_Логирование</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
