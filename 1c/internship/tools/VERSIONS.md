@@ -5,12 +5,13 @@
 
 | Компонент | Версия | Где зафиксировано |
 |---|---|---|
-| Платформа 1С:Предприятие 8.3 | _заполнить в task_0_ | свойства проекта EDT |
-| 1C:EDT | _заполнить в task_0_ | Help → About |
-| PostgreSQL (в Docker) | _заполнить в task_4_ | `docker compose images` |
-| Docker / Docker Compose | _заполнить в task_4_ | `docker --version` |
-| Python | _заполнить в task_5_ | `python --version` |
-| Git | _заполнить в task_3_ | `git --version` |
+| Платформа 1С:Предприятие 8.3 | не установлена: в текущем окружении нет дистрибутива; контрольная точка — task_3/task_13 | свойства проекта EDT |
+| 1C:EDT | не установлен (аналогично платформе); работа по исходникам EDT в Git | Help → About |
+| PostgreSQL (в Docker) | 16.2 — локальный сервер вместо контейнера (демона Docker в окружении нет); образ стенда — pgvector/pgvector:pg16 | `docker compose images` |
+| Docker / Docker Compose | отсутствует в окружении; compose-файлы проверены статически (YAML) | `docker --version` |
+| Python | 3.11.2 | `python --version` |
+| Git | 2.39.5 | `git --version` |
+| Node.js | 22.22.3 (для vanessa-runner, понадобится с Q2) | `node --version` |
 
 Правила: минимальная версия платформы проекта фиксируется в свойствах EDT-проекта
 (task_3); версии образов Docker — в `docker-compose.yml` и `.env` (task_4);
