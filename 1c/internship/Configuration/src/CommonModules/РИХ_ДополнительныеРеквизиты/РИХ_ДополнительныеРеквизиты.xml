@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000203"
+                      name="РИХ_ДополнительныеРеквизиты">
+  <name>РИХ_ДополнительныеРеквизиты</name>
+  <synonym>
+    <key>ru</key>
+    <value>RIH дополнительные реквизиты: чтение и запись значений</value>
+  </synonym>
+  <comment>task_179: один вход механизма для форм, отчётов, подборов
+и обменов. Значение, невидимое в отчёте, — не подключённый
+механизм; чтение для внешних потребителей идёт тем же модулем,
+а не своими запросами по регистру.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

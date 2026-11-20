@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000202"
+                             name="ЗначенияДополнительныхРеквизитов">
+  <name>ЗначенияДополнительныхРеквизитов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Значения дополнительных реквизитов объектов</value>
+  </synonym>
+  <comment>task_179: значение всегда с владельцем-объектом измерением:
+строк «висящих в воздухе» без объекта механизм не создаёт.
+Читается модулем для форм, отчётов и обменов одним входом.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Объект">
+      <type>String(64)</type>
+      <comment>идентификатор объекта-владельца (ссылка строкой в учебной модели)</comment>
+    </dimension>
+    <dimension name="Реквизит">
+      <type>String(64)</type>
+      <comment>имя вида из ПВХ ДополнительныеРеквизиты</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Значение">
+      <type>String(256)</type>
+      <comment>значение текстом; тип и контроль — по виду реквизита ПВХ</comment>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>

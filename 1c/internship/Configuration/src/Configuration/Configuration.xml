@@ -69,6 +69,7 @@
     <value>CommonModule.РИХ_ДокументооборотИнтеграция</value>
     <value>CommonModule.РИХ_Процессы</value>
     <value>CommonModule.РИХ_РассылкаОтчётов</value>
+    <value>CommonModule.РИХ_ДополнительныеРеквизиты</value>
   </commonModules>
   <businessProcesses>
     <value>BusinessProcess.РИХ_РазборОшибкиИнтеграции</value>
@@ -94,6 +95,7 @@
   <chartsOfCharacteristicTypes>
     <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>
     <value>ChartOfCharacteristicTypes.РИХ_ВидыСубконто</value>
+    <value>ChartOfCharacteristicTypes.ДополнительныеРеквизиты</value>
   </chartsOfCharacteristicTypes>
   <chartsOfAccounts>
     <value>ChartOfAccounts.РИХ_ПланСчетов</value>
@@ -106,6 +108,7 @@
     <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
     <value>DataProcessor.РИХ_ЮнитТесты</value>
     <value>DataProcessor.РИХ_МоиЗадачи</value>
+    <value>DataProcessor.РИХ_НастройкиПользователей</value>
     <value>DataProcessor.РИХ_ГенераторДанных</value>
     <value>DataProcessor.РИХ_ОператорОчередиОбмена</value>
     <value>DataProcessor.РИХ_МониторингОбменов</value>
@@ -203,6 +206,7 @@
     <value>InformationRegister.СостоянияДоговоров</value>
     <value>InformationRegister.МетрикиЭтаповПроцессов</value>
     <value>InformationRegister.ЖурналРассылок</value>
+    <value>InformationRegister.ЗначенияДополнительныхРеквизитов</value>
     <value>InformationRegister.КлиентыИнтеграций</value>
   </informationRegisters>
   <exchangePlans>

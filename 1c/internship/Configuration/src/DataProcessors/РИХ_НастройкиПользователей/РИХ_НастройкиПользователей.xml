@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000204"
+                       name="РИХ_НастройкиПользователей">
+  <name>РИХ_НастройкиПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки пользователей: просмотр и сброс (административная)</value>
+  </synonym>
+  <comment>task_179: кто и какие настройки форм хранит, сброс
+пользователю одной кнопкой. «У меня всё пропало» лечится
+сбросом из этой формы, а не расследованием и правкой базы
+руками поддержки.</comment>
+</mdclass:DataProcessor>
