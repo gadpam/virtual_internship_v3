@@ -7,6 +7,10 @@
     <key>ru</key>
     <value>Товары и склад</value>
   </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Products and warehouse</value>
+  </synonym>
   <comment>task_19: подсистема складского контура по ER-схеме
 documentation/architecture/task_19_data_model.md. Объекты подсистемы —
 справочники НСИ склада, документы поступления/перемещения, регистры

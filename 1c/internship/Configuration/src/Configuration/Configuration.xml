@@ -18,6 +18,7 @@
   <defaultLanguage>Language.Русский</defaultLanguage>
   <languages>
     <value>Language.Русский</value>
+    <value>Language.Английский</value>
   </languages>
   <compatibilityMode>8.3.24</compatibilityMode>
   <subsystems>
@@ -70,6 +71,7 @@
     <value>InformationRegister.СоответствиеСвойствНоменклатуры</value>
     <value>InformationRegister.МинимальныеОстатки</value>
     <value>InformationRegister.ПланПродаж</value>
+    <value>InformationRegister.НаименованияНоменклатуры</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>

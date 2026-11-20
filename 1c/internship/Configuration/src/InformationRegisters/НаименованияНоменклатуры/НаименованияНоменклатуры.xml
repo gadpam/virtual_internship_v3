@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000054"
+                             name="НаименованияНоменклатуры">
+  <name>НаименованияНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Наименования номенклатуры по языкам</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Product names by language</value>
+  </synonym>
+  <comment>task_40, ADR в documentation/architecture/task_40_localization_adr.md:
+многоязычные наименования — регистр сведений (Номенклатура × Язык → текст),
+а не реквизиты НаименованиеEN/НаименованиеDE колонками: новый язык —
+данные, а не метаданные и перекомпиляция.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Номенклатура">
+      <type>CatalogRef.Номенклатура</type>
+    </dimension>
+    <dimension name="Язык">
+      <type>String(5)</type>
+      <comment>Код языка интерфейса: ru, en (ISO 639-1)</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Наименование">
+      <type>String(250)</type>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>
