@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:XDTOPackage xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                     uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000079"
+                     name="РИХ_Обмен_1">
+  <name>РИХ_Обмен_1</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ обмен XDTO 1</value>
+  </synonym>
+  <comment>task_80: XDTO-пакет контракта заказов (пространство имён
+http://rih.example/xdto/1). Типы повторяют схемы OpenAPI task_77:
+Продукт, Заказ, ПозицияЗаказа, ОтветОшибки. Изменение типов — только
+новой версией пакета (РИХ_Обмен_2), старая продолжает читаться.</comment>
+  <namespace>http://rih.example/xdto/1</namespace>
+  <objectTypes>
+    <objectType name="Продукт">
+      <properties>
+        <property name="Артикул" type="Строка"/>
+        <property name="Наименование" type="Строка"/>
+        <property name="Цена" type="Число(15,2)"/>
+      </properties>
+    </objectType>
+    <objectType name="ПозицияЗаказа">
+      <properties>
+        <property name="Артикул" type="Строка"/>
+        <property name="Количество" type="Число(15,3)"/>
+        <property name="Цена" type="Число(15,2)"/>
+      </properties>
+    </objectType>
+    <objectType name="Заказ">
+      <properties>
+        <property name="ВнешнийИдентификатор" type="Строка"/>
+        <property name="Позиции" type="ПозицияЗаказа" collection="true"/>
+      </properties>
+    </objectType>
+    <objectType name="ОтветОшибки">
+      <properties>
+        <property name="Код" type="Строка"/>
+        <property name="Сообщение" type="Строка"/>
+        <property name="Инцидент" type="Строка"/>
+      </properties>
+    </objectType>
+  </objectTypes>
+</mdclass:XDTOPackage>

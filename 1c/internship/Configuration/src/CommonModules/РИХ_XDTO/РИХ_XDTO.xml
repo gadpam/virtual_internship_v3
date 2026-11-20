@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000081"
+                      name="РИХ_XDTO">
+  <name>РИХ_XDTO</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ XDTO-сериализация обменов</value>
+  </synonym>
+  <comment>task_80: обмены с жёсткой схемой идут через XDTO-пакет РИХ_Обмен_1:
+тип проверяется фабрикой при чтении, битый входящий пакет падает
+на валидации, а не внутри бизнес-логики. Свободные REST-ответы остаются
+на РИХ_Форматы (структуры) — сравнение подходов в документации task_80.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
