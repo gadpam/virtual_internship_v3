@@ -47,6 +47,7 @@
     <value>CommonModule.РИХ_ЛояльностьКлиент</value>
     <value>CommonModule.РИХ_ТККлиент</value>
     <value>CommonModule.РИХ_КурсыВалют</value>
+    <value>CommonModule.РИХ_ОчередьОбмена</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -111,6 +112,7 @@
     <value>InformationRegister.МеткиСинхронизации</value>
     <value>InformationRegister.АудитОперацийЛояльности</value>
     <value>InformationRegister.КурсыВалют</value>
+    <value>InformationRegister.ОчередьОбмена</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
@@ -135,5 +137,7 @@
     <value>Constant.РИХ_КлючМагазина</value>
     <value>Constant.РИХ_КлючЛояльности</value>
     <value>Constant.РИХ_КлючТК</value>
+    <value>DataProcessor.РИХ_ОператорОчередиОбмена</value>
+    <value>ScheduledTask.ОтправкаОчередиОбмена</value>
   </webServices>
 </mdclass:Configuration>
