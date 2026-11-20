@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalReport xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                        uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000199"
+                        name="РИХ_ОстаткиНижеМинимума">
+  <name>РИХ_ОстаткиНижеМинимума</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки ниже минимума (внешний, версия 1.3)</value>
+  </synonym>
+  <comment>task_178: внешний отчёт критичных позиций по витрине
+остатков и минимумам task_30: источник метрики M-009 словаря.
+Проверяет предусловия (витрина, минимумы) и говорит человеку,
+чего не хватает, а не падает исключением (правило task_161).</comment>
+</mdclass:ExternalReport>

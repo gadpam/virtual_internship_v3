@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                        uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000200"
+                        name="РИХ_ПересчётВитриныЗаДень">
+  <name>РИХ_ПересчётВитриныЗаДень</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пересчёт витрины за день (внешняя, версия 1.1)</value>
+  </synonym>
+  <comment>task_178: внешняя обработка массовой операции: пересчёт
+одного дня витрины продаж после правок задним числом. Идемпотентна:
+пересчёт того же дня даёт те же цифры (механика task_123), объём
+дня ограничен — пересчёт квартала этой обработкой запрещён.</comment>
+</mdclass:ExternalDataProcessor>
