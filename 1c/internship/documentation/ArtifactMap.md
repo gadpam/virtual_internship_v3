@@ -181,10 +181,10 @@
 | task_160. Обмен RIH ↔ БП: документы, НСИ, правила, сверка | `internship/documentation/exchange/rih_bp.md` [есть] |
 | task_161. Внешние отчёты и обработки для БП: поставка без релиза | `internship/Configuration/src/ExternalReports/` [есть] |
 | task_162. Регламентированная отчётность: формы, проверки, сроки | `internship/documentation/compliance/reporting_map.md` [есть] |
-| task_163. Модель Документооборота: документы, процессы, задачи | `internship/documentation/docflow/processes.md` [создаётся] |
-| task_164. Процесс согласования: этапы, исполнители, сроки, эскалация | `internship/documentation/docflow/approval_process.md` [создаётся] |
-| task_165. Задачи и рабочие места: исполнитель, срок, результат | `internship/documentation/docflow/workspace.md` [создаётся] |
-| task_166. Интеграция ДО ↔ RIH: документы, состояния, задачи | `internship/documentation/docflow/integration_doh_rih.md` [создаётся] |
+| task_163. Модель Документооборота: документы, процессы, задачи | `internship/documentation/docflow/processes.md` [есть] |
+| task_164. Процесс согласования: этапы, исполнители, сроки, эскалация | `internship/documentation/docflow/approval_process.md` [есть] |
+| task_165. Задачи и рабочие места: исполнитель, срок, результат | `internship/documentation/docflow/workspace.md` [есть] |
+| task_166. Интеграция ДО ↔ RIH: документы, состояния, задачи | `internship/documentation/docflow/integration_doh_rih.md` [есть] |
 | task_167. Доработка ДО: дополнительные реквизиты, печатные формы, процессы | `internship/Configuration/src/Extensions/` [есть] |
 | task_168. Права, маршруты и контроль исполнения в ДО | `internship/Configuration/src/Reports/` [есть] |
 | task_169. Зачем свои процессы, если есть ДО: границы и ADR | `internship/documentation/adr/` [есть] |
