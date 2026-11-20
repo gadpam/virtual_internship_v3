@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledTask xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000113"
+                       name="ЗагрузкаКурсовВалют">
+  <name>ЗагрузкаКурсовВалют</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка курсов валют (утро, до открытия)</value>
+  </synonym>
+  <comment>task_94/113: курсы дня к 07:30, до первого проведения документов.
+При недоступности банка — fallback на последние известные курсы
+с предупреждением в журнале (политика РИХ_КурсыВалют).</comment>
+  <methodName>РИХ_КурсыВалют.ЗагрузитьКурсыНаСегодня</methodName>
+  <schedule>ежедневно в 07:30</schedule>
+</mdclass:ScheduledTask>

@@ -69,6 +69,8 @@
     <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
     <value>DataProcessor.РИХ_ЮнитТесты</value>
     <value>DataProcessor.РИХ_ГенераторДанных</value>
+    <value>DataProcessor.РИХ_ОператорОчередиОбмена</value>
+    <value>DataProcessor.РИХ_МониторингОбменов</value>
   </dataProcessors>
   <sequences>
     <value>Sequence.УчётТоваров</value>
@@ -77,6 +79,9 @@
     <value>ScheduledTask.ДвижениеГраницыУчётаТоваров</value>
     <value>ScheduledTask.ЗагрузкаПрайсаПоставщика</value>
     <value>ScheduledTask.ОчисткаЖурналаИнтеграций</value>
+    <value>ScheduledTask.ОтправкаОчередиОбмена</value>
+    <value>ScheduledTask.ЗагрузкаКурсовВалют</value>
+    <value>ScheduledTask.ВыгрузкаМагазинаДельта</value>
   </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
@@ -143,12 +148,11 @@
   </xdtoPackages>
   <webServices>
     <value>WebService.РИХ_ОбменSOAP</value>
+  </webServices>
+  <constants>
     <value>Constant.РИХ_КаталогДокументовЭДО</value>
     <value>Constant.РИХ_КлючМагазина</value>
     <value>Constant.РИХ_КлючЛояльности</value>
     <value>Constant.РИХ_КлючТК</value>
-    <value>DataProcessor.РИХ_ОператорОчередиОбмена</value>
-    <value>DataProcessor.РИХ_МониторингОбменов</value>
-    <value>ScheduledTask.ОтправкаОчередиОбмена</value>
-  </webServices>
+  </constants>
 </mdclass:Configuration>
