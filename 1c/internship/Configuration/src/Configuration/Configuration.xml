@@ -154,6 +154,7 @@
     <value>Report.НагрузкаНаСогласующих</value>
     <value>Report.АналитикаПроцессов</value>
     <value>Report.ПортфельКонтрагента</value>
+    <value>Report.KPIПанель</value>
     <value>Report.ЧтоНеОбменено</value>
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>
