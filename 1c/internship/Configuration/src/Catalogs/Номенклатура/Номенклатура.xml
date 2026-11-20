@@ -15,7 +15,42 @@
   <codeLength>9</codeLength>
   <descriptionLength>100</descriptionLength>
   <codeType>String</codeType>
+  <attributes>
+    <attribute name="Артикул">
+      <type>String(25)</type>
+      <index>true</index>
+      <comment>Индекс: поиск при вводе по части артикула (task_20)</comment>
+    </attribute>
+    <attribute name="НаименованиеПолное">
+      <type>String(250)</type>
+    </attribute>
+    <attribute name="Группа">
+      <type>CatalogRef.НоменклатурныеГруппы</type>
+      <comment>ADR-3 (task_19): группы — отдельный иерархический справочник;
+      элемент номенклатуры группой быть не может</comment>
+    </attribute>
+    <attribute name="ЕдиницаИзмерения">
+      <type>String(10)</type>
+      <comment>ВРЕМЕННО строка: справочник ЕдиницыИзмерения появится в task_24,
+      тогда тип заменяется на ссылку (обещание task_20)</comment>
+    </attribute>
+    <attribute name="Вес">
+      <type>Number(15,3)</type>
+    </attribute>
+    <attribute name="Объём">
+      <type>Number(15,3)</type>
+    </attribute>
+    <attribute name="ЭтоУслуга">
+      <type>Boolean</type>
+      <comment>Услуги не имеют остатков: проведение поступления их пропускает (task_21)</comment>
+    </attribute>
+    <attribute name="СтавкаНДС">
+      <type>Number(5,2)</type>
+      <comment>Ставка в процентах: 20 — это 20%, не 0.2 (правило task_16)</comment>
+    </attribute>
+  </attributes>
   <forms>
     <value>Catalog.Номенклатура.Form.ФормаЭлемента</value>
+    <value>Catalog.Номенклатура.Form.ФормаСписка</value>
   </forms>
 </mdclass:Catalog>

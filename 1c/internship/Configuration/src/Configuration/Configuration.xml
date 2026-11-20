@@ -33,6 +33,7 @@
   <catalogs>
     <value>Catalog.Номенклатура</value>
     <value>Catalog.Склады</value>
+    <value>Catalog.НоменклатурныеГруппы</value>
   </catalogs>
   <informationRegisters>
     <value>InformationRegister.РИХ_ИсторияИзменений</value>
