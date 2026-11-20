@@ -57,6 +57,7 @@
   <reports>
     <value>Report.ИсторияИзмененияЦен</value>
     <value>Report.ОстаткиТоваровПоСкладам</value>
+    <value>Report.ПланФактПоТоварам</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
@@ -67,6 +68,7 @@
     <value>InformationRegister.ЦеныНоменклатуры</value>
     <value>InformationRegister.СоответствиеСвойствНоменклатуры</value>
     <value>InformationRegister.МинимальныеОстатки</value>
+    <value>InformationRegister.ПланПродаж</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>

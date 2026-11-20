@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000051"
+                             name="ПланПродаж">
+  <name>ПланПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>План продаж</value>
+  </synonym>
+  <comment>task_35: план из внешнего CSV (data/sales_plan_sample.csv).
+Периодический по месяцу; магазин — строкой-кодом как в файле (сопоставление
+со складами — справочник соответствий позже), товар в регистре — ссылкой
+номенклатуры, сопоставление при загрузке по артикулу sku (РазобратьCsv task_17).</comment>
+  <periodicity>Month</periodicity>
+  <dimensions>
+    <dimension name="МагазинКод">
+      <type>String(10)</type>
+    </dimension>
+    <dimension name="Номенклатура">
+      <type>CatalogRef.Номенклатура</type>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="КоличествоПлан">
+      <type>Number(15,3)</type>
+    </resource>
+    <resource name="СуммаПлан">
+      <type>Number(15,2)</type>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>
