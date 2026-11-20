@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                  uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000034"
+                  name="ПоступлениеТоваров">
+  <name>ПоступлениеТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поступление товаров</value>
+  </synonym>
+  <comment>task_21: первый документ RIH. Проведение пишет приход
+в ТоварыНаСкладах одной транзакцией платформы: ошибка в любом месте
+откатывает всё, «наполовину проведённых» документов не бывает.</comment>
+  <attributes>
+    <attribute name="Склад">
+      <type>CatalogRef.Склады</type>
+    </attribute>
+    <attribute name="Поставщик">
+      <type>CatalogRef.Контрагенты</type>
+    </attribute>
+    <attribute name="Организация">
+      <type>String(100)</type>
+      <comment>ДОЛГ МОДЕЛИ: строкой до task_152 (справочник Организации
+      и план счетов); заменить тип на ссылку там же</comment>
+    </attribute>
+  </attributes>
+  <tabularSections>
+    <tabularSection name="Товары">
+      <attribute name="Номенклатура">
+        <type>CatalogRef.Номенклатура</type>
+      </attribute>
+      <attribute name="Упаковка">
+        <type>CatalogRef.УпаковкиНоменклатуры</type>
+        <comment>task_24: пустая упаковка = базовая единица</comment>
+      </attribute>
+      <attribute name="Количество">
+        <type>Number(15,3)</type>
+      </attribute>
+      <attribute name="КоличествоБазовое">
+        <type>Number(15,3)</type>
+        <comment>Количество × коэффициент упаковки; движения — только в базовых (task_24)</comment>
+      </attribute>
+      <attribute name="Цена">
+        <type>Number(15,2)</type>
+      </attribute>
+      <attribute name="Сумма">
+        <type>Number(15,2)</type>
+      </attribute>
+    </tabularSection>
+  </tabularSections>
+  <forms>
+    <value>Document.ПоступлениеТоваров.Form.ФормаДокумента</value>
+  </forms>
+  <posting>true</posting>
+</mdclass:Document>

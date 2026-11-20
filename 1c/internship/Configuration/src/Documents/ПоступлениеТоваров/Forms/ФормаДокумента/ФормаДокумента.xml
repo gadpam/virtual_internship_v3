@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000046"
+                      name="ФормаДокумента">
+  <name>ФормаДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поступление товаров</value>
+  </synonym>
+  <comment>task_21: сумма строки пересчитывается на клиенте при изменении
+количества/цены (отзывчивость); истину пересчитает сервер ПередЗаписью.</comment>
+  <formType>Managed</formType>
+  <attributes>
+    <attribute name="Объект" type="DocumentObject.ПоступлениеТоваров" mainAttribute="true"/>
+  </attributes>
+  <items>
+    <item name="Склад" dataPath="Объект.Склад" type="FormField"/>
+    <item name="Поставщик" dataPath="Объект.Поставщик" type="FormField"/>
+    <item name="Товары" dataPath="Объект.Товары" type="FormTable"/>
+  </items>
+</mdclass:DocumentForm>

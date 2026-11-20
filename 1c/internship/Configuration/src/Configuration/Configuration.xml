@@ -34,7 +34,14 @@
     <value>Catalog.Номенклатура</value>
     <value>Catalog.Склады</value>
     <value>Catalog.НоменклатурныеГруппы</value>
+    <value>Catalog.Контрагенты</value>
   </catalogs>
+  <documents>
+    <value>Document.ПоступлениеТоваров</value>
+  </documents>
+  <accumulationRegisters>
+    <value>AccumulationRegister.ТоварыНаСкладах</value>
+  </accumulationRegisters>
   <informationRegisters>
     <value>InformationRegister.РИХ_ИсторияИзменений</value>
     <value>InformationRegister.СкладыПользователей</value>
