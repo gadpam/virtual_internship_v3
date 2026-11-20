@@ -87,6 +87,7 @@
     <value>Catalog.Интеграции</value>
     <value>Catalog.Организации</value>
     <value>Catalog.ПравилаТрансляции</value>
+    <value>Catalog.ПравилаSLA</value>
   </catalogs>
   <chartsOfCharacteristicTypes>
     <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>
