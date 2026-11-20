@@ -97,7 +97,7 @@
 | task_81. Авторизация и безопасность HTTP-сервиса | `project/acceptance/CodeReviewChecklist.txt (раздел «Безопасность»)` [создаётся] |
 | task_82. Версионирование API и единый формат ошибок | `internship/docs/api/error_format.md` [есть] |
 | task_83. POST/PUT/DELETE: приём заказов от онлайн-магазина | `internship/tests/features/` [есть] |
-| task_84. Логирование вызовов сервиса и журнал интеграций | `internship/Configuration/src/InformationRegisters/ЖурналИнтеграций/` [создаётся] |
+| task_84. Логирование вызовов сервиса и журнал интеграций | `internship/Configuration/src/InformationRegisters/ЖурналИнтеграций/` [есть] |
 | task_85. Web-сервис (SOAP) в 1С: публикация и WSDL | `Документация: «Web-сервисы»` [создаётся] |
 | task_86. Потребление внешнего SOAP-сервиса: WS-ссылки и прокси | `internship/src/mock_bank_ws/` [есть] |
 | task_87. OData: стандартный REST-доступ к данным 1С | `Документация: «Интерфейс OData»` [создаётся] |
