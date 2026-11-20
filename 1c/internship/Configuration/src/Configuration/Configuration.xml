@@ -65,6 +65,7 @@
     <value>InformationRegister.СкладыПользователей</value>
     <value>InformationRegister.ЦеныНоменклатуры</value>
     <value>InformationRegister.СоответствиеСвойствНоменклатуры</value>
+    <value>InformationRegister.МинимальныеОстатки</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
