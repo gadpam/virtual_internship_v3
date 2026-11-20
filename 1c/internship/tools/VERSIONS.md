@@ -14,6 +14,7 @@
 | Python | 3.11.2 | `python --version` |
 | Git | 2.39.5 | `git --version` |
 | Node.js | 22.22.3 (для vanessa-runner, понадобится с Q2) | `node --version` |
+| Python venv скриптов (task_5) | `src/scripts/.venv` (в Git не попадает): pip 23.0.1, setuptools 66.1.1; скрипты — только стандартная библиотека | `src/scripts/.venv/bin/pip list` |
 
 Правила: минимальная версия платформы проекта фиксируется в свойствах EDT-проекта
 (task_3); версии образов Docker — в `docker-compose.yml` и `.env` (task_4);
