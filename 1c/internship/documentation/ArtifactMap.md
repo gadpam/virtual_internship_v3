@@ -129,11 +129,11 @@
 | task_113. Регламентные задания обмена: расписания, окна, приоритеты | `internship/documentation/operations/schedule_map.md` [есть] |
 | task_114. Мониторинг интеграций: дашборд, метрики, алерты | `internship/src/metrics_exporter/` [есть]<br>`internship/tools/docker-compose.yml; дашборд Superset — полный стенд docker-compose.full.yml (task_126)` [создаётся] |
 | task_115. Приёмник документов ЭДО: жёсткая схема и аудит | `internship/docs/edo/samples/` [есть] |
-| task_116. Маркировка и прослеживаемость: коды, агрегаты, выбытие | `internship/documentation/architecture/marking_model.md` [создаётся] |
-| task_117. Кассы и ОФД-подобные данные: поток продаж | `internship/documentation/performance/receipts_load.md` [создаётся] |
+| task_116. Маркировка и прослеживаемость: коды, агрегаты, выбытие | `internship/documentation/architecture/marking_model.md` [есть] |
+| task_117. Кассы и ОФД-подобные данные: поток продаж | `internship/documentation/performance/receipts_load.md` [есть] |
 | task_118. Банковские интеграции: выписки, платежи, статусы | `internship/data/bank_statement_sample.txt` [есть] |
 | task_119. Регламентные отраслевые отчёты: форма, проверка, отправка | `internship/documentation/compliance/` [есть] |
-| task_120. Каталог интеграций: реестр, владельцы, статусы | `internship/documentation/integration_registry.md` [создаётся] |
+| task_120. Каталог интеграций: реестр, владельцы, статусы | `internship/documentation/integration_registry.md` [есть] |
 | task_121. OLTP vs OLAP: почему отчёт по оперативной базе — зло | `internship/documentation/adr/` [есть] |
 | task_122. Построение витрины: таблицы, измерения, факты | `internship/Configuration/src/AccumulationRegisters/` [есть] |
 | task_123. CDC: как получать только изменения | `internship/documentation/integrations/cdc.md` [создаётся] |
@@ -304,7 +304,7 @@
 | task_278. Целевая архитектура: куда идём и почему | `internship/documentation/architecture/target_state.md` [создаётся] |
 | task_279. Технический roadmap: последовательность и стоимость | `internship/documentation/architecture/roadmap.md` [создаётся] |
 | task_280. ADR-практика: решения, которые помнят через год | `internship/documentation/adr/` [есть] |
-| task_281. Границы и контракты: как системы договариваются | `internship/documentation/integration_registry.md` [создаётся] |
+| task_281. Границы и контракты: как системы договариваются | `internship/documentation/integration_registry.md` [есть] |
 | task_282. Стоимость владения и обоснование инвестиций | `internship/documentation/architecture/business_case.md` [создаётся] |
 | task_283. Проектирование новой подсистемы: от требования до плана | `internship/documentation/architecture/new_subsystem.md` [создаётся] |
 | task_284. Реализация подсистемы: малые шаги в живой системе | `internship/tests/` [есть] |
