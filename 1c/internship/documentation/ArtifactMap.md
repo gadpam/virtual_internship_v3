@@ -203,8 +203,8 @@
 | task_182. T-SQL для анализа: соединения, окна, CTE, агрегаты | `internship/tools/sql/analysis/` [есть] |
 | task_183. Обработка данных скриптами: безопасно и воспроизводимо | `internship/tools/sql/maintenance/` [есть] |
 | task_184. Сессии, блокировки и изоляция транзакций в СУБД | `internship/tools/sql/diagnostics/` [есть] |
-| task_185. Tempdb, журнал транзакций и почему база «растёт» | `internship/documentation/operations/sql_capacity.md` [создаётся] |
-| task_186. Внешние соединения и ODBC из 1С: когда оправданы | `internship/documentation/integrations/db_link.md` [создаётся] |
+| task_185. Tempdb, журнал транзакций и почему база «растёт» | `internship/documentation/operations/sql_capacity.md` [есть] |
+| task_186. Внешние соединения и ODBC из 1С: когда оправданы | `internship/documentation/integrations/db_link.md` [есть] |
 | task_187. Чтение плана выполнения: что там искать | `internship/tools/sql/plans/` [есть] |
 | task_188. Индексы: что ускорить и за что заплатить | `internship/documentation/performance/index_task_188.md` [создаётся] |
 | task_189. Статистика и параметризация: почему план «прыгает» | `internship/tools/sql/diagnostics/` [есть] |
