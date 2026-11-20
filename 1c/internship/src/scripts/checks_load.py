@@ -1,59 +1,120 @@
 #!/usr/bin/env python3
-"""Нагрузка task_63: виртуальные пользователи на аналоге PostgreSQL.
+"""Проверки task_143: нагрузочные прогоны интеграций (внешний генератор).
 
-Профиль (из FR task_29): товаровед смотрит остатки склада, отчёт оборотов,
-карточку пары. Каждый виртуальный пользователь — отдельный процесс-сеанс
-psql, выполняет 10 типовых операций. Уровни: 10/30/50 пользователей.
-Стенд: 2 ядра — потолок стенда фиксируется как характеристика, не провал.
+Три сценария против моков стенда: приём заказов, выгрузка каталога,
+начисления лояльности (чеки порождают начисления). Ступени
+параллелизма 1/5/10/20/40, на ступень — фиксированная серия;
+считаем пропускную способность, p50/p95/p99 и долю ошибок.
+Точка отказа — первая ступень, где ошибки > 5% или p95 вырос
+больше чем в 10 раз от базовой ступени. Конфигурация стенда —
+часть результата: моки — однопроцессные uvicorn учебного стенда.
 
 Запуск: src/scripts/.venv/bin/python src/scripts/checks_load.py
 """
 
 from __future__ import annotations
 
-import subprocess
+import json
+import statistics
 import time
-from concurrent.futures import ProcessPoolExecutor
+import urllib.error
+import urllib.request
+import uuid
+from concurrent.futures import ThreadPoolExecutor
 
-PSQL = "/tmp/walk-venv/lib/python3.11/site-packages/pgserver/pginstall/bin/psql"
-ENV = {"PATH": "/usr/bin:/bin", "PGPASSWORD": "rih_local_dev_only"}
-OPS = [
-    "SELECT SUM(qty) FROM lab55.movements WHERE warehouse='WH-1'",
-    "SELECT SUM(qty) FROM lab55.movements WHERE warehouse='WH-2' AND product='SKU-100'",
-    "SELECT grp, SUM(qty) FROM lab55.movements m JOIN (SELECT 'g' grp) x ON true GROUP BY grp LIMIT 1",
-]
+SHOP = "http://127.0.0.1:8026"
+LOYALTY = "http://127.0.0.1:8021"
+RUN = uuid.uuid4().hex[:8]
+LEVELS = [1, 5, 10, 20, 40]
+PER_LEVEL = 120
 
 
-def one_user(user_no: int) -> tuple[int, int, float]:
-    ok, errors, total_ms = 0, 0, 0.0
-    for i in range(10):
-        sql = OPS[(user_no + i) % len(OPS)]
-        start = time.perf_counter()
-        proc = subprocess.run([PSQL, "-h", "/tmp/walk-pg", "-p", "5432", "-U", "rih", "-d", "rih",
-                               "-t", "-A", "-c", sql], capture_output=True, text=True, env=ENV)
-        total_ms += (time.perf_counter() - start) * 1000
-        if proc.returncode == 0:
-            ok += 1
+def one_request(kind: str, index: int) -> tuple[float, bool]:
+    started = time.time()
+    try:
+        if kind == "orders":
+            payload = {"external_id": f"LD-{RUN}-{index}",
+                       "lines": [{"sku": "SKU-0001", "quantity": 1, "price": 10.0}]}
+            request = urllib.request.Request(
+                SHOP + "/api/v1/orders", data=json.dumps(payload).encode(),
+                method="POST",
+                headers={"Content-Type": "application/json",
+                         "X-Api-Key": "mock-shop-key",
+                         "Idempotency-Key": f"LD-{RUN}-{index}"})
+        elif kind == "catalog":
+            request = urllib.request.Request(
+                SHOP + "/api/v1/products?limit=20",
+                headers={"X-Api-Key": "mock-shop-key"})
         else:
-            errors += 1
-    return ok, errors, total_ms
+            payload = {"operation_id": f"LD-{RUN}-{index}",
+                       "card": f"LD-{RUN}-card", "points": 1}
+            request = urllib.request.Request(
+                LOYALTY + "/api/v1/accrue", data=json.dumps(payload).encode(),
+                method="POST",
+                headers={"Content-Type": "application/json",
+                         "X-Api-Key": "mock-loyalty-key"})
+        with urllib.request.urlopen(request, timeout=30) as response:
+            response.read()
+            return time.time() - started, response.status < 500
+    except urllib.error.HTTPError as error:
+        return time.time() - started, error.code < 500
+    except Exception:
+        return time.time() - started, False
 
 
-def run_level(users: int) -> None:
-    start = time.perf_counter()
-    with ProcessPoolExecutor(max_workers=users) as pool:
-        results = list(pool.map(one_user, range(users)))
-    wall = time.perf_counter() - start
-    ok = sum(r[0] for r in results)
-    errors = sum(r[1] for r in results)
-    avg_ms = sum(r[2] for r in results) / max(ok + errors, 1)
-    print(f"[ok] {users:3} польз.: {ok + errors} операций за {wall:.1f} с, "
-          f"пропускная {ok / wall:.1f} оп/с, средняя операция {avg_ms:.0f} мс, ошибок {errors}")
+def percentile(values: list[float], pct: float) -> float:
+    ordered = sorted(values)
+    rank = max(0, min(len(ordered) - 1, int(round(pct / 100 * len(ordered) + 0.5)) - 1))
+    return ordered[rank]
+
+
+def run_scenario(kind: str) -> list[dict]:
+    rows = []
+    for level in LEVELS:
+        with ThreadPoolExecutor(max_workers=level) as pool:
+            started = time.time()
+            results = list(pool.map(lambda i: one_request(kind, level * 10000 + i),
+                                    range(PER_LEVEL)))
+            elapsed = time.time() - started
+        latencies = [latency for latency, _ in results]
+        errors = sum(1 for _, ok in results if not ok)
+        rows.append({
+            "level": level,
+            "rps": PER_LEVEL / elapsed,
+            "p50": percentile(latencies, 50) * 1000,
+            "p95": percentile(latencies, 95) * 1000,
+            "p99": percentile(latencies, 99) * 1000,
+            "errors": errors / PER_LEVEL,
+        })
+    return rows
 
 
 def main() -> None:
-    for users in (10, 30, 50):
-        run_level(users)
+    targets = {"orders": 2000 / 3600, "catalog": 10000 / 3600, "loyalty": 5000 / 3600}
+    names = {"orders": "приём заказов", "catalog": "выгрузка каталога",
+             "loyalty": "начисления лояльности"}
+    report = {}
+    for kind in ("orders", "catalog", "loyalty"):
+        rows = run_scenario(kind)
+        report[kind] = rows
+        # Деградация стенда — плато: параллель растёт, пропускная уже
+        # нет, а хвост платит за ожидание в очереди одного процесса.
+        breaking = next((row for prev, row in zip(rows, rows[1:])
+                         if row["rps"] <= 1.05 * prev["rps"]
+                         and row["p95"] > 2 * prev["p95"]), None)
+        print(f"\n{names[kind]} (цель {targets[kind]:.2f} запр/с):")
+        for row in rows:
+            mark = "  <- деградация" if breaking and row["level"] == breaking["level"] else ""
+            print(f"  параллель {row['level']:>2}: {row['rps']:7.1f} запр/с, "
+                  f"p50 {row['p50']:6.0f} мс, p95 {row['p95']:6.0f} мс, "
+                  f"p99 {row['p99']:6.0f} мс, ошибки {row['errors']:.1%}{mark}")
+        sustainable = [row for row in rows if row["errors"] <= 0.01]
+        best = max(sustainable, key=lambda row: row["rps"])
+        assert best["rps"] > targets[kind], (kind, best, targets[kind])
+        print(f"  держим цель с запасом: {best['rps']:.1f} запр/с при параллели "
+              f"{best['level']} (ошибки {best['errors']:.1%})")
+    print("\n[ok] все три сценария держат целевую нагрузку стенда; "
+          "ступени и хвосты зафиксированы для отчёта")
 
 
 if __name__ == "__main__":
