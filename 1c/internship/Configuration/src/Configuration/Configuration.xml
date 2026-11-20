@@ -33,6 +33,7 @@
     <value>CommonModule.РИХ_Валидация</value>
     <value>CommonModule.РИХ_УчётТоваровДвижения</value>
     <value>CommonModule.РИХ_Логирование</value>
+    <value>CommonModule.РИХ_Профилирование</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -85,6 +86,7 @@
     <value>InformationRegister.ПланПродаж</value>
     <value>InformationRegister.НаименованияНоменклатуры</value>
     <value>InformationRegister.ЖурналОбменов</value>
+    <value>InformationRegister.ЗамерыПроизводительности</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>

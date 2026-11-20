@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000067"
+                      name="РИХ_Профилирование">
+  <name>РИХ_Профилирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ профилирование</value>
+  </synonym>
+  <comment>task_56: НачатьЗамер/ЗавершитьЗамер с записью в РС
+ЗамерыПроизводительности. Замер — серверный: клиентские миллисекунды
+формы сюда не складывают.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
