@@ -53,7 +53,7 @@ class OrderLine(_CamelModel):
 class OrderIn(_CamelModel):
     external_id: str = Field(..., description="Идентификатор заказа на стороне магазина")
     customer_ref: Optional[str] = Field(None, description="Ссылка на клиента (маскируется в 1С)")
-    lines: List[OrderLine]
+    lines: List[OrderLine] = Field(..., min_length=1, description="Хотя бы одна строка (контракт task_77)")
     created_at: Optional[datetime] = None
 
 
@@ -105,6 +105,19 @@ async def apply_fault(fault: Optional[str], header_fault: Optional[str]) -> None
         return
     if mode == "slow":
         await asyncio.sleep(4)
+        return
+    if mode == "flaky":
+        # task_78: случайные сбои с заданной вероятностью (MOCK_FLAKY_P, по умолчанию 0.5)
+        if random.random() < float(os.getenv("MOCK_FLAKY_P", "0.5")):
+            raise HTTPException(status_code=500, detail="mock: случайный сбой (flaky)")
+        return
+    if mode.startswith("delay:"):
+        # task_78: настраиваемая задержка, например X-Fault-Mode: delay:1200 (мс, потолок 30 с)
+        try:
+            delay_ms = min(int(mode.split(":", 1)[1]), 30000)
+        except ValueError:
+            raise HTTPException(status_code=400, detail="mock: задержка задаётся числом миллисекунд")
+        await asyncio.sleep(delay_ms / 1000)
         return
     if mode == "rate429":
         raise HTTPException(
