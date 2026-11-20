@@ -197,5 +197,7 @@
     <value>Constant.РИХ_КлючМагазина</value>
     <value>Constant.РИХ_КлючЛояльности</value>
     <value>Constant.РИХ_КлючТК</value>
+    <value>Constant.РИХ_ЛогинБанка</value>
+    <value>Constant.РИХ_ПарольБанка</value>
   </constants>
 </mdclass:Configuration>

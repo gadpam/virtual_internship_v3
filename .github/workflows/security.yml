@@ -1,0 +1,30 @@
+# Стража секретов (task_134). Активирован из шаблона
+# 1c/internship/tools/ci/github-actions/security.yml: проверяет
+# дерево и .env в индексе до слияния. Полный шаблон конвейера
+# безопасности (зависимости, поставка) живёт в tools/ci и
+# подключается по мере готовности сервисов (task_293).
+name: Security
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  secrets:
+    name: "Секреты в репозитории"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Сканер секретов (шаблоны + .env в индексе)
+        run: python3 1c/internship/src/scripts/scan_secrets.py 1c/internship
