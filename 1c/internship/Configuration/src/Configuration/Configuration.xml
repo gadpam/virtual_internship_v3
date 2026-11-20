@@ -133,6 +133,7 @@
     <value>Report.ЖурналИнтеграцийОтчёт</value>
     <value>Report.АудитДоступа</value>
     <value>Report.РасхожденияМеждуУзлами</value>
+    <value>Report.ОборотноСальдоваяВедомость</value>
     <value>Report.ЧтоНеОбменено</value>
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>
