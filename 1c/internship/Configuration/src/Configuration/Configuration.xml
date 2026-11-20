@@ -66,6 +66,7 @@
     <value>CommonModule.РИХ_Аудит</value>
     <value>CommonModule.РИХ_Бухгалтерия</value>
     <value>CommonModule.РИХ_БухгалтерскиеДвижения</value>
+    <value>CommonModule.РИХ_ДокументооборотИнтеграция</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -182,6 +183,7 @@
     <value>InformationRegister.ОчередьКомпенсаций</value>
     <value>InformationRegister.ТокеныИнтеграций</value>
     <value>InformationRegister.АудитДоступа</value>
+    <value>InformationRegister.СостоянияДоговоров</value>
     <value>InformationRegister.КлиентыИнтеграций</value>
   </informationRegisters>
   <exchangePlans>

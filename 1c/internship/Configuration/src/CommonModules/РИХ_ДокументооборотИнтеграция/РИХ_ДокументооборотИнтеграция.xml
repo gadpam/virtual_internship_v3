@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000179"
+                      name="РИХ_ДокументооборотИнтеграция">
+  <name>РИХ_ДокументооборотИнтеграция</name>
+  <synonym>
+    <key>ru</key>
+    <value>RIH интеграция с документооборотом: состояния и контроль</value>
+  </synonym>
+  <comment>task_166: RIH создаёт документ на согласование и принимает
+состояние/резолюцию событиями с идемпотентностью; операции по
+несогласованному договору запрещены, аварийный обход — только
+с обоснованием и следом в аудите (task_137).</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
