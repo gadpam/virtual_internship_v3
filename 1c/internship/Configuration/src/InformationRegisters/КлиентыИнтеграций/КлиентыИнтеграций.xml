@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000157"
+                             name="КлиентыИнтеграций">
+  <name>КлиентыИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Интеграционные клиенты и их секреты</value>
+  </synonym>
+  <comment>task_133/134: клиенты потока client_credentials. Секреты —
+только SHA-256 хэши. Ротация без простоя: предыдущий секрет живёт
+в окне grace, пока клиент не переключится на новый.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Клиент">
+      <type>String(32)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Роль">
+      <type>String(32)</type>
+    </attribute>
+    <attribute name="Активен">
+      <type>Boolean</type>
+    </attribute>
+    <attribute name="ХешСекрета">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="ХешПредыдущегоСекрета">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="ПредыдущийСекретДо">
+      <type>Date</type>
+      <comment>Конец окна grace ротации</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

@@ -67,5 +67,13 @@
         </method>
       </methods>
     </urlTemplate>
+    <urlTemplate name="token">
+      <template>/api/v1/token</template>
+      <methods>
+        <method name="POST">
+          <handler>ВыдатьТокенКлиенту</handler>
+        </method>
+      </methods>
+    </urlTemplate>
   </urlTemplates>
 </mdclass:HTTPService>

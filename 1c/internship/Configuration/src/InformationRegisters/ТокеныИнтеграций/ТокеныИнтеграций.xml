@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000156"
+                             name="ТокеныИнтеграций">
+  <name>ТокеныИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Токены интеграционных клиентов</value>
+  </synonym>
+  <comment>task_133: выданные токены доступа. Сам токен в базе не
+хранится — только его SHA-256 хеш измерением: утечка базы не даёт
+готовых токенов. Токен показывается клиенту один раз при выдаче.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ХешТокена">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Клиент">
+      <type>String(32)</type>
+      <comment>shop / loyalty / tk: токен привязан к клиенту, украденный не «от любого»</comment>
+    </attribute>
+    <attribute name="Роль">
+      <type>String(32)</type>
+      <comment>Права токена минимальны по операциям (task_81)</comment>
+    </attribute>
+    <attribute name="Выдан">
+      <type>Date</type>
+    </attribute>
+    <attribute name="Истекает">
+      <type>Date</type>
+    </attribute>
+    <attribute name="Отозван">
+      <type>Boolean</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

@@ -61,6 +61,7 @@
     <value>CommonModule.РИХ_Предохранители</value>
     <value>CommonModule.РИХ_Саги</value>
     <value>CommonModule.РИХ_Деградация</value>
+    <value>CommonModule.РИХ_Токены</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -160,6 +161,9 @@
     <value>InformationRegister.ПродажиПоДням</value>
     <value>InformationRegister.ОчередьПересчётаВитрины</value>
     <value>InformationRegister.СостоянияПредохранителей</value>
+    <value>InformationRegister.ОчередьКомпенсаций</value>
+    <value>InformationRegister.ТокеныИнтеграций</value>
+    <value>InformationRegister.КлиентыИнтеграций</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
