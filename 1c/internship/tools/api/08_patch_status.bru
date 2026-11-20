@@ -1,0 +1,20 @@
+meta {
+  name: patch order status
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/orders/demo-order-1/status?status=shipped
+  body: none
+  auth: none
+}
+
+headers {
+  X-Api-Key: {{apiKey}}
+}
+
+assert {
+  res.status: eq 200
+  res.body.status: eq shipped
+}

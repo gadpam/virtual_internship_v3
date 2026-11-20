@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000180"
+                             name="СостоянияДоговоров">
+  <name>СостоянияДоговоров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния согласования договоров (интеграция с документооборотом)</value>
+  </synonym>
+  <comment>task_166: последнее принятое состояние договора из
+документооборота и идентификатор события, его принесшего.
+Повтор события тем же ключом состояние не двигает: проверка
+ключа до применения — идемпотентность приёма (task_105).</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ДоговорИД">
+      <type>String(64)</type>
+      <comment>внешний идентификатор договора (contract_id контракта)</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Состояние">
+      <type>String(32)</type>
+      <comment>состояние RIH по таблице соответствия, не код чужой системы</comment>
+    </resource>
+    <resource name="Резолюция">
+      <type>String(256)</type>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="ИДСобытия">
+      <type>String(64)</type>
+      <comment>последнее принятое событие: повтор с этим ключом игнорируется</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

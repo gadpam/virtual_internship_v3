@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000080"
+                             name="КлючиДоступаИнтеграций">
+  <name>КлючиДоступаИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ключи доступа интеграций</value>
+  </synonym>
+  <comment>task_81: доступ внешних систем к HTTP-сервису. Хранится только
+SHA-256 хеш ключа (Base64): утечка базы не даёт рабочего ключа, ротация —
+новой записью с Активен=Ложь у старой. Сам ключ выдаётся партнёру один
+раз вне системы и в репозиторий/журналы не попадает (task_134).</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Сервис">
+      <type>String(32)</type>
+    </dimension>
+    <dimension name="ХешКлюча">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Активен">
+      <type>Boolean</type>
+    </attribute>
+    <attribute name="Описание">
+      <type>String(150)</type>
+      <comment>Кому выдан ключ и когда ротировать; не сам ключ</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

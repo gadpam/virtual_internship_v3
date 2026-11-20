@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000047"
+                name="ИсторияИзмененияЦен">
+  <name>ИсторияИзмененияЦен</name>
+  <synonym>
+    <key>ru</key>
+    <value>История изменения цен</value>
+  </synonym>
+  <comment>task_23: история цены — это сам периодический регистр
+ЦеныНоменклатуры, отдельный журнал версий не нужен: Период, Регистратор
+(кто и когда документом), Цена. Запрос отчёта — выборка из регистра
+с отбором по Номенклатуре/Складу/ТипуЦены, сортировка по Периоду.</comment>
+  <mainDataCompositionSchema>DataCompositionSchema.ИсторияИзмененияЦен</mainDataCompositionSchema>
+</mdclass:Report>

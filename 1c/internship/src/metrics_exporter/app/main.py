@@ -104,6 +104,18 @@ def build_text(payload: Dict[str, object], alive: bool) -> str:
     ]
     lines += gauge("rih_exchange_lag_seconds", "Отставание обменов от расписания, секунды", lags)
 
+    breaker_states = {"Closed": 0, "Open": 1, "HalfOpen": 2}
+    breakers = [
+        ({"circuit": str(item.get("circuit", "unknown"))},
+         float(breaker_states.get(str(item.get("state", "Closed")), 0)))
+        for item in payload.get("breakers", []) or []
+    ]
+    lines += gauge(
+        "rih_circuit_breaker_state",
+        "Состояние предохранителей: 0=Closed, 1=Open, 2=HalfOpen (task_129)",
+        breakers,
+    )
+
     lines += gauge(
         "rih_up",
         "Доступность источников метрик (1 = жив)",

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                   uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000030"
+                   name="РИХ_ТоварыИСклад">
+  <name>РИХ_ТоварыИСклад</name>
+  <synonym>
+    <key>ru</key>
+    <value>Товары и склад</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Products and warehouse</value>
+  </synonym>
+  <comment>task_19: подсистема складского контура по ER-схеме
+documentation/architecture/task_19_data_model.md. Объекты подсистемы —
+справочники НСИ склада, документы поступления/перемещения, регистры
+остатков и цен. Подчинена корневому хабу (командный интерфейс строится
+платформой при импорте в EDT).</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>Catalog.Номенклатура</content>
+  <content>Catalog.НоменклатурныеГруппы</content>
+  <content>Catalog.ЕдиницыИзмерения</content>
+  <content>Catalog.УпаковкиНоменклатуры</content>
+  <content>Catalog.Контрагенты</content>
+  <content>Catalog.Склады</content>
+  <content>Document.ПоступлениеТоваров</content>
+  <content>Document.ПеремещениеТоваров</content>
+  <content>Document.УстановкаЦен</content>
+  <content>AccumulationRegister.ТоварыНаСкладах</content>
+  <content>InformationRegister.ЦеныНоменклатуры</content>
+  <content>ChartOfCharacteristicTypes.СвойстваНоменклатуры</content>
+  <content>Catalog.ЗначенияСвойствНоменклатуры</content>
+  <content>InformationRegister.СоответствиеСвойствНоменклатуры</content>
+</mdclass:Subsystem>

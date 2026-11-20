@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                     uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000087"
+                     name="РИХ_ЭДО">
+  <name>РИХ_ЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ приёмник ЭДО</value>
+  </synonym>
+  <comment>task_90: заглушка-приёмник документов ЭДО от оператора. Принимает
+XML УПД/счёта-фактуры, проверяет подпись-заглушку (в боевом контуре —
+криптопровайдер и проверка УКЭП, task_115), сохраняет документ
+и пишет вызов в ЖурналИнтеграций. Дубли по ИдДокумента оператора
+отсекаются до сохранения: повторная доставка — норма сети, а не ошибка.</comment>
+  <rootURL>edo</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates>
+    <urlTemplate name="Документы">
+      <methods>
+        <method name="POST" handler="ДокументыPOST"/>
+      </methods>
+    </urlTemplate>
+  </urlTemplates>
+</mdclass:HTTPService>

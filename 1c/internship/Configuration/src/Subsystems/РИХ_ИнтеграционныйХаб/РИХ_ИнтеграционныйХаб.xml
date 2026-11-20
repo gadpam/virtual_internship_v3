@@ -14,4 +14,9 @@
   <includeHelpInContents>true</includeHelpInContents>
   <content>CommonModule.РИХ_ОбщегоНазначения</content>
   <content>CommonModule.РИХ_Дата</content>
+  <content>CommonModule.РИХ_HTTP1_Ответы</content>
+  <content>CommonModule.РИХ_Версионирование</content>
+  <content>Catalog.Номенклатура</content>
+  <content>InformationRegister.РИХ_ИсторияИзменений</content>
+  <content>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</content>
 </mdclass:Subsystem>

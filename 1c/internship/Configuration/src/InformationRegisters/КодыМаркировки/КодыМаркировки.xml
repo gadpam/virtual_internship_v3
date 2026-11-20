@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000120"
+                             name="КодыМаркировки">
+  <name>КодыМаркировки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коды маркировки</value>
+  </synonym>
+  <comment>task_116: поэкземплярный учёт маркированных товаров. Периодичность
+по секундам сохраняет биографию переходов; текущее состояние читается
+срезом последних. Родительский агрегат не считается единицей количества.
+Все переходы выполняет только РИХ_Маркировка: документы не проверяют
+статусы каждый по-своему.</comment>
+  <periodicity>Second</periodicity>
+  <dimensions>
+    <dimension name="Код">
+      <type>String(150)</type>
+      <comment>Код единицы товара или агрегата</comment>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Номенклатура">
+      <type>CatalogRef.Номенклатура</type>
+    </attribute>
+    <attribute name="Статус">
+      <type>String(24)</type>
+      <comment>Принят, ВНаличии, Перемещён, Выбыл, Возвращён</comment>
+    </attribute>
+    <attribute name="ДокументИсточник">
+      <type>String(128)</type>
+      <comment>Канонический идентификатор документа перехода: ТипОбъекта:GUID</comment>
+    </attribute>
+    <attribute name="ТекущийСклад">
+      <type>CatalogRef.Склады</type>
+    </attribute>
+    <attribute name="РодительскийКод">
+      <type>String(150)</type>
+      <comment>Код агрегата для единицы; пусто у самостоятельной единицы и агрегата</comment>
+    </attribute>
+    <attribute name="ТипКода">
+      <type>String(16)</type>
+      <comment>Единица или Агрегат</comment>
+    </attribute>
+    <attribute name="ПричинаВыбытия">
+      <type>String(24)</type>
+      <comment>Продажа, Списание или иная причина статуса Выбыл</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

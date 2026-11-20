@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "RIH mock_shop_api (task_74/76)",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}

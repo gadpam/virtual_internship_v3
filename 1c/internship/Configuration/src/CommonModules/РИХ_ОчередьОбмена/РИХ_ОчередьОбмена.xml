@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000098"
+                      name="РИХ_ОчередьОбмена">
+  <name>РИХ_ОчередьОбмена</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ очередь исходящего обмена</value>
+  </synonym>
+  <comment>task_95: постановка и отправка outbox. Лимит попыток — 5,
+пауза между ними растёт экспоненциально (1, 2, 4, 8, 16 минут):
+партнёр, который лёг, не получает шторм повторов. Действия оператора
+(повторить, отклонить, исправить тело) — отдельные экспортные методы,
+форма их только вызывает.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

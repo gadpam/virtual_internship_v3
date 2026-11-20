@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+              uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000036"
+              name="ТипыЦен">
+  <name>ТипыЦен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы цен</value>
+  </synonym>
+  <comment>task_23: вид цены — измерение регистра цен. Перечисление,
+а не строка: «Розничная» и «розничная» строкой — две разные цены для отчёта.</comment>
+  <enumValues>
+    <value name="Закупочная"/>
+    <value name="Оптовая"/>
+    <value name="Розничная"/>
+  </enumValues>
+</mdclass:Enum>

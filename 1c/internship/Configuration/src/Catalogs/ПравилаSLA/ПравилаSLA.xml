@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000188"
+                 name="ПравилаSLA">
+  <name>ПравилаSLA</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила SLA процессов</value>
+  </synonym>
+  <comment>task_171: сроки — данные, не код: вид процесса, этап, срок
+в рабочих днях от старта этапа, напоминание за N часов, цепочка
+эскалации с пределом (последний уровень — владелец процесса,
+а не генеральный директор). Бизнес меняет сроки настройкой,
+как правила трансляции task_153.</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="ВидПроцесса">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="Этап">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="СрокРабочихДней">
+      <type>Number(5,1)</type>
+    </attribute>
+    <attribute name="НапоминаниеЗаЧасов">
+      <type>Number(5,0)</type>
+    </attribute>
+    <attribute name="ПределЭскалации">
+      <type>String(64)</type>
+      <comment>роль последнего уровня: дальше цепочка не растёт</comment>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000130"
+                             name="ПлатежиВыписки">
+  <name>ПлатежиВыписки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Платежи выписки банка</value>
+  </synonym>
+  <comment>task_118: применённые платежи выписки. КлючПлатежа собран из
+реквизитов платежа банка (вид, номер, дата, сумма, счёт плательщика):
+повторная загрузка того же файла находит ключи и не создаёт вторых
+платежей. СтатусСопоставления показывает качество загрузки: доля
+«автоматически» — метрика, «ручной разбор» — утренний список бухгалтера.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="КлючПлатежа">
+      <type>String(160)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Направление">
+      <type>String(16)</type>
+      <comment>Поступление или Списание</comment>
+    </attribute>
+    <attribute name="НомерДокумента">
+      <type>String(16)</type>
+    </attribute>
+    <attribute name="ДатаПлатежа">
+      <type>Date</type>
+    </attribute>
+    <attribute name="Сумма">
+      <type>Number(15,2)</type>
+    </attribute>
+    <attribute name="Контрагент">
+      <type>String(150)</type>
+    </attribute>
+    <attribute name="ИННКонтрагента">
+      <type>String(12)</type>
+    </attribute>
+    <attribute name="Назначение">
+      <type>String(500)</type>
+    </attribute>
+    <attribute name="ТипОснования">
+      <type>String(16)</type>
+    </attribute>
+    <attribute name="НомерОснования">
+      <type>String(32)</type>
+    </attribute>
+    <attribute name="СтатусСопоставления">
+      <type>String(16)</type>
+      <comment>автоматически или ручной разбор</comment>
+    </attribute>
+    <attribute name="ХешФайла">
+      <type>String(64)</type>
+      <comment>SHA-256 файла выписки, из которого платёж применён</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

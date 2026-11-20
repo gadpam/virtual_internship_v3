@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000119"
+                             name="КарантинЭДО">
+  <name>КарантинЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Карантин документов ЭДО</value>
+  </synonym>
+  <comment>task_115: документы, не прошедшие приёмку, не теряются и не
+создаются частично: они лежат здесь с причиной, понятной оператору
+(схема, контрагент, номенклатура, подпись). Разбор карантина —
+ручное действие с повторной обработкой, а не редактирование базы.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ИдДокумента">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Причина">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="СсылкаНаОригинал">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="МоментПомещения">
+      <type>Date</type>
+    </attribute>
+    <attribute name="СтатусРазбора">
+      <type>String(16)</type>
+      <comment>ждёт, разобран, отклонён</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

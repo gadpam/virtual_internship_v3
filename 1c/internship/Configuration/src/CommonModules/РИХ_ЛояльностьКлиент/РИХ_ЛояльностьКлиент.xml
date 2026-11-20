@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000091"
+                      name="РИХ_ЛояльностьКлиент">
+  <name>РИХ_ЛояльностьКлиент</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ клиент программы лояльности</value>
+  </synonym>
+  <comment>task_92: баланс, начисление, списание, сторно (контракт
+partner_loyalty.md). Каждая операция получает operationId до вызова
+и пишется в РС АудитОперацийЛояльности при любом исходе; недоступность
+сервиса — отдельный исход: операция уходит в очередь task_95,
+а не теряется и не выдумывает баланс.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

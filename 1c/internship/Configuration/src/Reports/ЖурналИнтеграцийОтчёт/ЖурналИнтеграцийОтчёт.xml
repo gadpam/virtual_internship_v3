@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000077"
+                name="ЖурналИнтеграцийОтчёт">
+  <name>ЖурналИнтеграцийОтчёт</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал интеграций (отчёт)</value>
+  </synonym>
+  <comment>task_84: СКД по РС ЖурналИнтеграций: отборы по сервису, операции,
+статусу и периоду; расшифровка строки — до Контекста со ссылкой на
+внешний payload. Вопросы отчёта: «что падало у магазина за ночь»,
+«какие вызовы дольше секунды», «когда последний успешный обмен ТК».</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

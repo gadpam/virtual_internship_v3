@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                  uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000159"
+                  name="РИХ_ЛогинБанка">
+  <name>РИХ_ЛогинБанка</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ логин банковского шлюза (контур)</value>
+  </synonym>
+  <comment>task_134: логин шлюза банка — настройка контура из
+безопасного хранилища, а не литерал в коде клиента. Значение живёт
+в информационной базе, в репозиторий не попадает.</comment>
+  <type>String(64)</type>
+</mdclass:Constant>

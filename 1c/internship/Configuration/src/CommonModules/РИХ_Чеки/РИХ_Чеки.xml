@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000128"
+                      name="РИХ_Чеки">
+  <name>РИХ_Чеки</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ чеки и продажи касс</value>
+  </synonym>
+  <comment>task_117: приём пакета чеков одной точкой: валидация сумм и
+товаров, идемпотентность по (ФН, номер чека), возвраты по ссылке на
+исходный чек, карантин с причиной. Транспорт (РИХ_Кассы) сюда не
+протекает: модуль получает разобранную структуру пакета.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000121"
+                      name="РИХ_Маркировка">
+  <name>РИХ_Маркировка</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ маркировка и прослеживаемость</value>
+  </synonym>
+  <comment>task_116: единственное место переходов статусов кодов маркировки.
+Приёмка, перемещение, выбытие, возврат и агрегаты не проверяют состояния
+по отдельности в документах: все они вызывают этот модуль, поэтому
+выбывший код нельзя продать повторно из-за забытой проверки в одном виде
+документов.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

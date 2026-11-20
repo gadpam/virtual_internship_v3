@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000010"
+                 name="Номенклатура">
+  <name>Номенклатура</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номенклатура</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Products</value>
+  </synonym>
+  <comment>task_8: минимальная структура (только стандартные Код и Наименование).
+Носитель учебного версионирования (регистр РИХ_ИсторияИзменений).
+Полная модель номенклатуры — task_20: здесь объект нужен, чтобы механизм
+истории проверялся на живом справочнике, а не в вакууме.</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="Артикул">
+      <type>String(25)</type>
+      <index>true</index>
+      <comment>Индекс: поиск при вводе по части артикула (task_20)</comment>
+    </attribute>
+    <attribute name="НаименованиеПолное">
+      <type>String(250)</type>
+    </attribute>
+    <attribute name="Группа">
+      <type>CatalogRef.НоменклатурныеГруппы</type>
+      <comment>ADR-3 (task_19): группы — отдельный иерархический справочник;
+      элемент номенклатуры группой быть не может</comment>
+    </attribute>
+    <attribute name="ЕдиницаИзмерения">
+      <type>CatalogRef.ЕдиницыИзмерения</type>
+      <comment>task_24: тип заменён со строки на ссылку (обещание task_20 закрыто);
+      значения у существующих позиций заполняет обработка загрузки в ИБ</comment>
+    </attribute>
+    <attribute name="Вес">
+      <type>Number(15,3)</type>
+    </attribute>
+    <attribute name="Объём">
+      <type>Number(15,3)</type>
+    </attribute>
+    <attribute name="ЭтоУслуга">
+      <type>Boolean</type>
+      <comment>Услуги не имеют остатков: проведение поступления их пропускает (task_21)</comment>
+    </attribute>
+    <attribute name="СтавкаНДС">
+      <type>Number(5,2)</type>
+      <comment>Ставка в процентах: 20 — это 20%, не 0.2 (правило task_16)</comment>
+    </attribute>
+  </attributes>
+  <forms>
+    <value>Catalog.Номенклатура.Form.ФормаЭлемента</value>
+    <value>Catalog.Номенклатура.Form.ФормаСписка</value>
+  </forms>
+</mdclass:Catalog>

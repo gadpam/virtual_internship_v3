@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000095"
+                 name="Валюты">
+  <name>Валюты</name>
+  <synonym>
+    <key>ru</key>
+    <value>валюты</value>
+  </synonym>
+  <comment>task_94: валюты учёта; код — ISO 4217 (USD, EUR, BYN...).
+Курс к базовой валюте не хранится в справочнике: курс — факт на дату,
+его место — РС КурсыВалют, а не реквизит, который «кто-то обновил».</comment>
+  <codeLength>3</codeLength>
+  <descriptionLength>32</descriptionLength>
+</mdclass:Catalog>

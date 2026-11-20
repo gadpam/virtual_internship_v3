@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                           uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000062"
+                           name="ЗапретПеремещенияМеждуОднотипными">
+  <name>ЗапретПеремещенияМеждуОднотипными</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запрет перемещения между однотипными складами (расширение)</value>
+  </synonym>
+  <comment>task_48: подписка расширения, основная конфигурация не тронута.
+Источник — документ ПеремещениеТоваров, событие Перед записью,
+обработчик — Module.bsl этого каталога расширении.</comment>
+  <source>Document.ПеремещениеТоваров</source>
+  <event>ПередЗаписью</event>
+  <handler>ЗапретПеремещенияМеждуОднотипнымиПередЗаписью</handler>
+</mdclass:EventSubscription>

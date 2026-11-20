@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000152"
+                             name="СостоянияПредохранителей">
+  <name>СостоянияПредохранителей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния предохранителей (circuit breaker)</value>
+  </synonym>
+  <comment>task_129: состояние circuit breaker по контурам интеграций.
+Живёт между сеансами, поэтому регистр, а не переменные модуля:
+открытый breaker виден всем сеансам и мониторингу одновременно.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Контур">
+      <type>String(32)</type>
+      <comment>loyalty / tk / shop / bank</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Состояние">
+      <type>String(16)</type>
+      <comment>Closed / Open / HalfOpen</comment>
+    </resource>
+    <resource name="ОшибокПодряд">
+      <type>Number(6,0)</type>
+    </resource>
+    <resource name="ВызововВсего">
+      <type>Number(12,0)</type>
+    </resource>
+    <resource name="ОшибокВсего">
+      <type>Number(12,0)</type>
+    </resource>
+    <resource name="ОткрытВ">
+      <type>Date</type>
+    </resource>
+    <resource name="МоментПробы">
+      <type>Date</type>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>

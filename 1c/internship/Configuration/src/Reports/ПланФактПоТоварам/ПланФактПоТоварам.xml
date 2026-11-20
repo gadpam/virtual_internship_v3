@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000052"
+                name="ПланФактПоТоварам">
+  <name>ПланФактПоТоварам</name>
+  <synonym>
+    <key>ru</key>
+    <value>План-факт по товарам</value>
+  </synonym>
+  <comment>task_35: два набора данных и связь по (Номенклатура, Период):
+факт — обороты поступлений (регистра продаж в RIH нет до Q2, честное
+ограничение), план — РС ПланПродаж. Связь наборов — полным внешним
+соединением по ключу: строка живёт, если есть хотя бы одна сторона.
+Вычисляемые: Отклонение = Факт − План; Выполнение% = Факт/План×100
+(при плане 0 — пусто, не деление на ноль). Условное оформление:
+выполнение &lt; 80% — красный.</comment>
+  <mainDataCompositionSchema>DataCompositionSchema.ПланФактПоТоварам</mainDataCompositionSchema>
+</mdclass:Report>

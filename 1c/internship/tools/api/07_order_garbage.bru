@@ -1,0 +1,25 @@
+meta {
+  name: order without lines -> 422
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/v1/orders
+  body: json
+  auth: none
+}
+
+headers {
+  X-Api-Key: {{apiKey}}
+}
+
+body:json {
+  {
+    "external_id": "demo-broken"
+  }
+}
+
+assert {
+  res.status: eq 422
+}

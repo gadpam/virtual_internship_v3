@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExchangePlan xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000104"
+                      name="РИХ_Обмены">
+  <name>РИХ_Обмены</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ обмены между узлами</value>
+  </synonym>
+  <comment>task_97: распределённый контур RIH ↔ БП, RIH ↔ ДО, RIH ↔ филиал.
+Master НСИ — центральный узел; состав и фильтры — по таблице
+documentation/architecture/exchange_topology.md. Регистрация изменений
+автоматическая: объект едет, потому что изменился, а не потому что
+кто-то не забыл его отметить.</comment>
+  <distributed>true</distributed>
+  <content>
+    <value>Catalog.Номенклатура</value>
+    <value>Catalog.Склады</value>
+    <value>Catalog.Контрагенты</value>
+    <value>Catalog.Валюты</value>
+    <value>Document.ПоступлениеТоваров</value>
+    <value>Document.ЗаказКлиента</value>
+    <value>AccumulationRegister.ТоварыНаСкладах</value>
+  </content>
+</mdclass:ExchangePlan>

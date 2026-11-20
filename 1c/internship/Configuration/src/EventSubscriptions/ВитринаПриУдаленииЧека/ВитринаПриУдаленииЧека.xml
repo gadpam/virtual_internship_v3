@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                           uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000146"
+                           name="ВитринаПриУдаленииЧека">
+  <name>ВитринаПриУдаленииЧека</name>
+  <synonym>
+    <key>ru</key>
+    <value>Витрина: удаление чека в очередь пересчёта</value>
+  </synonym>
+  <comment>task_123: tombstone удалений. Перед физическим удалением чека
+его день успевает попасть в очередь пересчёта: потребитель пересчитает
+день и призрака в витрине не останется. Без этой подписки удаление
+невидимо для любой дельты по построению.</comment>
+  <source>Document.Чек</source>
+  <event>ПередУдалением</event>
+  <handler>CommonModule.РИХ_Витрины.ЗафиксироватьУдалениеЧека</handler>
+</mdclass:EventSubscription>

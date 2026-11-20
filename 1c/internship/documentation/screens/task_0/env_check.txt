@@ -1,0 +1,41 @@
+task_0 · проверка окружения (текстовый аналог скриншотов: в текущем
+окружении нет GUI и платформы 1С, поэтому вместо снимков экрана —
+выводы команд; дата 2026-11-17)
+
+$ git --version
+git version 2.39.5
+
+$ python3 --version; node --version
+Python 3.11.2
+v22.22.3
+
+$ docker --version
+(команда не найдена: Docker в окружении отсутствует — compose-файлы
+стенда проверены статически, СУБД поднята локально, см. ниже)
+
+$ git status (корень репозитория)
+рабочее дерево чистое, ветка arena/53d17bf5-virtual-internship-v3
+
+$ psql -U postgres -c "\l" (локальный PostgreSQL 16.2 вместо контейнера)
+ postgres, template0, template1, rih (владелец rih)
+
+$ psql -U rih -d rih -c "SELECT current_user"
+ БД rih доступна, пользователь rih
+
+$ python internship/src/scripts/lint_bsl.py internship/Configuration
+ проверено файлов: 4, замечаний: 0
+
+$ grep подсистемы в Configuration/src/Subsystems/
+ РИХ_ИнтеграционныйХаб — найдена (почти пустая: заполняется весь год)
+
+Компоновка стенда (статическая проверка YAML трёх compose-файлов):
+ docker-compose.yml       — 11 сервисов
+ docker-compose.test.yml  —  8 сервисов
+ docker-compose.full.yml  — 15 сервисов
+
+НЕ ВЫПОЛНЕНО в этом окружении (нет дистрибутива и лицензий):
+ - установка платформы 1С 8.3 и 1C:EDT;
+ - создание ИБ RIH_DEV и открытие интерфейса под полными правами;
+ - docker compose ps (нет демона Docker).
+Контрольная точка возврата: task_3. Вариант базы зафиксирован
+в PersonalPlan.md: серверная на PostgreSQL — обязателен к task_55.

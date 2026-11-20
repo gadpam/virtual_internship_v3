@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+              uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000044"
+              name="ТипыСкладов">
+  <name>ТипыСкладов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы складов</value>
+  </synonym>
+  <comment>task_24: тип склада становится перечислением (был строкой
+с task_9: «РЦ»/«Магазин»/«Транзит» строкой — опечатка в одном значении
+делала склад невидимым для запросов). Значения старых складов переносит
+временная обработка (вне репозитория, в ИБ при появлении платформы).</comment>
+  <enumValues>
+    <value name="РаспределительныйЦентр"/>
+    <value name="Магазин"/>
+    <value name="Транзитный"/>
+  </enumValues>
+</mdclass:Enum>

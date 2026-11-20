@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledTask xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000143"
+                       name="ОбновлениеВитриныПродаж">
+  <name>ОбновлениеВитриныПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление витрины продаж (ночь, итог дня к 06:00)</value>
+  </synonym>
+  <comment>task_122/ADR-0008: ночной пересчёт закрытого дня в витрину
+ПродажиПоДням полной перезаписью дня; итог дня доступен к 06:00.
+Интрадей-свежесть даёт часовая CDC-дельта (task_123), а не это задание.</comment>
+  <methodName>РИХ_Витрины.ОбновитьВитринуПродажЗаВчера</methodName>
+  <schedule>ежедневно в 02:00</schedule>
+</mdclass:ScheduledTask>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                           uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000182"
+                           name="КонтрольСтартаПроцессаОплаты">
+  <name>КонтрольСтартаПроцессаОплаты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль старта процесса оплаты (расширение ДО)</value>
+  </synonym>
+  <comment>task_167: расширение документооборота: при старте процесса
+согласования оплаты проверяет основание (договор согласован, счёт
+приложен) до создания задач. Основа не тронута; проверено
+обновлением учебной копии по критерию task_159.</comment>
+  <source>Document.ЗаявкаНаОплату</source>
+  <event>ПередЗаписью</event>
+  <handler>КонтрольСтартаПроцессаПередЗаписью</handler>
+</mdclass:EventSubscription>

@@ -81,7 +81,7 @@ UX-замер: время до первого ответа 6,5 с, но этап
 - Запишите фактические часы в рефлексию: план 4 ч против факта. Расхождение
   больше чем в полтора раза — это данные для плана, а не повод себя ругать.
 - После выполнения обязательно заполнить internship/documentation/task_247_description.txt
-  (шаблон: project/documentation/task_0_description_template.txt).
+  (шаблон: internship/documentation/templates/task_N_description.txt).
 - Общие критерии готовности: project/acceptance/DefinitionOfDone.txt
 
 #### Поддержка, вопросы и обратная связь по проекту:

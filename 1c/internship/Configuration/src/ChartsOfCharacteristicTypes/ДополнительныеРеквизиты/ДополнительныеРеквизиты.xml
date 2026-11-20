@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCharacteristicTypes xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000201"
+                 name="ДополнительныеРеквизиты">
+  <name>ДополнительныеРеквизиты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дополнительные реквизиты (свой механизм RIH)</value>
+  </synonym>
+  <comment>task_179: в RIH нет БСП — механизм свой: виды реквизитов
+по владельцам-объектам, значения — РС ЗначенияДополнительных
+Реквизитов. Подключение общими процедурами модуля, а не правкой
+каждой формы. Реквизит, по которому постоянно строят отчёты
+и обмены, заслуживает настоящего реквизита объекта: допреквизит
+не становится вечным костылём учёта.</comment>
+  <type>String(128), Number(15,2), Boolean, Date, CatalogRef.Контрагенты, CatalogRef.Номенклатура</type>
+</mdclass:ChartOfCharacteristicTypes>

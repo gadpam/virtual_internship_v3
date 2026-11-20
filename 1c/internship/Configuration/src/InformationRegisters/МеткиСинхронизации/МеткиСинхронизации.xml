@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000090"
+                             name="МеткиСинхронизации">
+  <name>МеткиСинхронизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Метки синхронизации (дельта выгрузок)</value>
+  </synonym>
+  <comment>task_91: водяной знак дельты по каждому типу данных и партнёру.
+Метка сдвигается только после подтверждённой выгрузки; при частичном
+успехе остаётся на месте, отклонённые позиции видны в журнале и уедут
+повторно — PUT магазина идемпотентен, поэтому повтор безопасен.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Система">
+      <type>String(32)</type>
+      <comment>shop, tk, loyalty...</comment>
+    </dimension>
+    <dimension name="ТипДанных">
+      <type>String(32)</type>
+      <comment>products, stock, prices...</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="МеткаИзменений">
+      <type>Date</type>
+      <comment>changed_at последней подтверждённой выгрузки</comment>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="ПоследнийЗапуск">
+      <type>Date</type>
+    </attribute>
+    <attribute name="ПоследнийРезультат">
+      <type>String(200)</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

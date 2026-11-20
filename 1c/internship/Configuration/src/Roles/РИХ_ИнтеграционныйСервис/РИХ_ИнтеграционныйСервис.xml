@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+              uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000024"
+              name="РИХ_ИнтеграционныйСервис">
+  <name>РИХ_ИнтеграционныйСервис</name>
+  <synonym>
+    <key>ru</key>
+    <value>Интеграционный сервис (RIH)</value>
+  </synonym>
+  <comment>task_9: техническая роль интеграций. Чтение справочников без RLS
+(сервису нужны все склады), запись в учётные объекты не выдаётся:
+компрометация сервиса не должна давать запись в базу. «Полные права»
+техническому пользователю — запрещённый паттерн (см. матрицу прав).</comment>
+  <rights>
+    <right object="Configuration.RetailIntegrationHub" name="ThinClient" value="true"/>
+    <right object="Configuration.RetailIntegrationHub" name="WebClient" value="true"/>
+    <right object="Configuration.RetailIntegrationHub" name="ExternalConnection" value="true"/>
+    <right object="Catalog.Склады" name="Read" value="true"/>
+    <right object="Catalog.Склады" name="View" value="true"/>
+    <right object="Catalog.Номенклатура" name="Read" value="true"/>
+    <right object="Catalog.Номенклатура" name="View" value="true"/>
+  </rights>
+</mdclass:Role>

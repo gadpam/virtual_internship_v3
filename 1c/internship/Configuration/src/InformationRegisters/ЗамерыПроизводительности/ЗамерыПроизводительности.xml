@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000066"
+                             name="ЗамерыПроизводительности">
+  <name>ЗамерыПроизводительности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Замеры производительности</value>
+  </synonym>
+  <comment>task_56: сюда РИХ_Профилирование пишет длительности операций.
+Базлайн — медиана 5 прогонов: медиана не боится одного выброса (антивирус,
+соседний процесс), среднее — боится. Сравнение «стало хуже» делается
+против медианы базлайна, а не против вчерашнего одного замера.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Момент">
+      <type>Date</type>
+    </dimension>
+    <dimension name="Операция">
+      <type>String(100)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="ДлительностьМС">
+      <type>Number(12,1)</type>
+    </attribute>
+    <attribute name="Контекст">
+      <type>String(250)</type>
+      <comment>Объём данных и условия прогона: без контекста число не воспроизводимо</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Task xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+              uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000186"
+              name="РИХ_ЗадачаПроцесса">
+  <name>РИХ_ЗадачаПроцесса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Задача процесса RIH</value>
+  </synonym>
+  <comment>task_170: работа роли со сроком и результатом. Исполнитель —
+роль, а не фамилия: отпуск не останавливает процесс (делегирование
+task_171). Завершение задачи двигает экземпляр условием перехода
+карты; выполненная задача без результата не закрывает этап.</comment>
+  <addressing>РольИсполнителя</addressing>
+  <attributes>
+    <attribute name="РольИсполнителя">
+      <type>String(32)</type>
+      <comment>дежурный | интегратор | владелец сервиса</comment>
+    </attribute>
+    <attribute name="СрокЧасов">
+      <type>Number(6,1)</type>
+    </attribute>
+    <attribute name="Результат">
+      <type>String(256)</type>
+      <comment>что сделано: причина, исправление, ссылка на коммит/повтор обмена</comment>
+    </attribute>
+  </attributes>
+</mdclass:Task>

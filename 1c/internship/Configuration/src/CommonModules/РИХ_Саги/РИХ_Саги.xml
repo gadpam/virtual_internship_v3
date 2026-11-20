@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000153"
+                      name="РИХ_Саги">
+  <name>РИХ_Саги</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ саги и компенсации</value>
+  </synonym>
+  <comment>task_130: распределённая операция «заказ» — резерв,
+оплата баллами, доставка; у шага компенсация, сбой запускает
+компенсации в обратном порядке. Неудавшаяся компенсация — очередь
+ОчередьКомпенсаций и алерт оператору (RIH-COMP-FAILED).</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

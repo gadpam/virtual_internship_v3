@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000126"
+                             name="КарантинЧеков">
+  <name>КарантинЧеков</name>
+  <synonym>
+    <key>ru</key>
+    <value>Карантин чеков</value>
+  </synonym>
+  <comment>task_117: чеки, не прошедшие валидацию приёма (сумма, товар,
+исходный чек возврата, повтор с другим содержимым). Пакет не отклоняется
+целиком из-за одного чека: хорошие принимаются, плохой лежит здесь
+с причиной для разбора в тот же день — сверка дня по нему и найдётся.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="КлючЧека">
+      <type>String(40)</type>
+      <comment>ФН:НомерЧека</comment>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Причина">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="ТелоЧека">
+      <type>String</type>
+      <comment>JSON чека как пришёл с кассы — для разбора и повторной обработки</comment>
+    </attribute>
+    <attribute name="МоментПомещения">
+      <type>Date</type>
+    </attribute>
+    <attribute name="СтатусРазбора">
+      <type>String(16)</type>
+      <comment>ждёт, разобран, отклонён</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

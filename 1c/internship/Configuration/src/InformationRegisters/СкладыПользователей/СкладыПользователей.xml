@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000021"
+                             name="СкладыПользователей">
+  <name>СкладыПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Склады пользователей</value>
+  </synonym>
+  <comment>task_9: закрепление складов за пользователями. Сам факт записи означает
+«доступ разрешён»; отсутствие записи — склада для пользователя не существует
+(RLS роли РИХ_Кладовщик). Имя пользователя — строка имени ИБ: должно совпадать
+с ИмяПользователя() символ в символ, RLS расхождений не прощает.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Пользователь">
+      <type>String(100)</type>
+      <comment>Имя пользователя информационной базы</comment>
+    </dimension>
+    <dimension name="Склад">
+      <type>CatalogRef.Склады</type>
+    </dimension>
+  </dimensions>
+</mdclass:InformationRegister>

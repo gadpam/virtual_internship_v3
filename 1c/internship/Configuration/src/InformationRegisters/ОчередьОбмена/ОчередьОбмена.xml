@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000097"
+                             name="ОчередьОбмена">
+  <name>ОчередьОбмена</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь исходящих сообщений обмена</value>
+  </synonym>
+  <comment>task_95: исходящий outbox контура. Сообщение сначала пишется
+сюда внутри транзакции бизнес-операции, отправка — отдельным заданием:
+падение партнёра не откатывает продажи, а копит очередь. Статусы:
+Новая, Отправляется, Отправлена, Ошибка (исчерпаны попытки — человек),
+Отложена (ждёт своего времени повтора).</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ИдСообщения">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Система">
+      <type>String(32)</type>
+    </attribute>
+    <attribute name="Операция">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="ТелоСообщения">
+      <type>String</type>
+      <comment>JSON тела; большие payload — ссылкой, как в журнале (task_84)</comment>
+    </attribute>
+    <attribute name="КлючИдемпотентности">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="Статус">
+      <type>String(16)</type>
+    </attribute>
+    <attribute name="Попыток">
+      <type>Number(5,0)</type>
+    </attribute>
+    <attribute name="СледующаяПопытка">
+      <type>Date</type>
+    </attribute>
+    <attribute name="ПоследняяОшибка">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="Приоритет">
+      <type>Number(2,0)</type>
+      <comment>task_110: 0 — обычный, 1 — высокий (деньги и заказы выше каталога)</comment>
+    </attribute>
+    <attribute name="ТипСообщения">
+      <type>String(32)</type>
+      <comment>task_110: тип определяет обработчик: order, loyalty, catalog...</comment>
+    </attribute>
+    <attribute name="ПлановаяДата">
+      <type>Date</type>
+      <comment>task_110: не отправлять раньше этого момента (ночные пакеты)</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

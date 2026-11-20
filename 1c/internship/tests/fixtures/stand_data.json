@@ -1,0 +1,6912 @@
+{
+ "base_date": "2026-01-15",
+ "orders": [
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0001",
+   "lines": [
+    {
+     "price": 195.99,
+     "quantity": 3,
+     "sku": "SKU-0005"
+    },
+    {
+     "price": 232.99,
+     "quantity": 4,
+     "sku": "SKU-0006"
+    }
+   ],
+   "total": 1519.93,
+   "warehouse": "WH-02"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0002",
+   "lines": [
+    {
+     "price": 306.99,
+     "quantity": 4,
+     "sku": "SKU-0008"
+    },
+    {
+     "price": 343.99,
+     "quantity": 5,
+     "sku": "SKU-0009"
+    },
+    {
+     "price": 380.99,
+     "quantity": 1,
+     "sku": "SKU-0010"
+    }
+   ],
+   "total": 3328.9,
+   "warehouse": "WH-03"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0003",
+   "lines": [
+    {
+     "price": 417.99,
+     "quantity": 5,
+     "sku": "SKU-0011"
+    }
+   ],
+   "total": 2089.95,
+   "warehouse": "WH-04"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0004",
+   "lines": [
+    {
+     "price": 528.99,
+     "quantity": 1,
+     "sku": "SKU-0014"
+    },
+    {
+     "price": 565.99,
+     "quantity": 2,
+     "sku": "SKU-0015"
+    }
+   ],
+   "total": 1660.97,
+   "warehouse": "WH-05"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0005",
+   "lines": [
+    {
+     "price": 639.99,
+     "quantity": 2,
+     "sku": "SKU-0017"
+    },
+    {
+     "price": 676.99,
+     "quantity": 3,
+     "sku": "SKU-0018"
+    },
+    {
+     "price": 713.99,
+     "quantity": 4,
+     "sku": "SKU-0019"
+    }
+   ],
+   "total": 6166.91,
+   "warehouse": "WH-06"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0006",
+   "lines": [
+    {
+     "price": 750.99,
+     "quantity": 3,
+     "sku": "SKU-0020"
+    }
+   ],
+   "total": 2252.97,
+   "warehouse": "WH-07"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0007",
+   "lines": [
+    {
+     "price": 861.99,
+     "quantity": 4,
+     "sku": "SKU-0023"
+    },
+    {
+     "price": 898.99,
+     "quantity": 5,
+     "sku": "SKU-0024"
+    }
+   ],
+   "total": 7942.91,
+   "warehouse": "WH-08"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0008",
+   "lines": [
+    {
+     "price": 972.99,
+     "quantity": 5,
+     "sku": "SKU-0026"
+    },
+    {
+     "price": 19.99,
+     "quantity": 1,
+     "sku": "SKU-0027"
+    },
+    {
+     "price": 56.99,
+     "quantity": 2,
+     "sku": "SKU-0028"
+    }
+   ],
+   "total": 4998.92,
+   "warehouse": "WH-09"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0009",
+   "lines": [
+    {
+     "price": 93.99,
+     "quantity": 1,
+     "sku": "SKU-0029"
+    }
+   ],
+   "total": 93.99,
+   "warehouse": "WH-10"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0010",
+   "lines": [
+    {
+     "price": 204.99,
+     "quantity": 2,
+     "sku": "SKU-0032"
+    },
+    {
+     "price": 241.99,
+     "quantity": 3,
+     "sku": "SKU-0033"
+    }
+   ],
+   "total": 1135.95,
+   "warehouse": "WH-11"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0011",
+   "lines": [
+    {
+     "price": 315.99,
+     "quantity": 3,
+     "sku": "SKU-0035"
+    },
+    {
+     "price": 352.99,
+     "quantity": 4,
+     "sku": "SKU-0036"
+    },
+    {
+     "price": 389.99,
+     "quantity": 5,
+     "sku": "SKU-0037"
+    }
+   ],
+   "total": 4309.88,
+   "warehouse": "WH-12"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0012",
+   "lines": [
+    {
+     "price": 426.99,
+     "quantity": 4,
+     "sku": "SKU-0038"
+    }
+   ],
+   "total": 1707.96,
+   "warehouse": "WH-13"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0013",
+   "lines": [
+    {
+     "price": 537.99,
+     "quantity": 5,
+     "sku": "SKU-0041"
+    },
+    {
+     "price": 574.99,
+     "quantity": 1,
+     "sku": "SKU-0042"
+    }
+   ],
+   "total": 3264.94,
+   "warehouse": "WH-14"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0014",
+   "lines": [
+    {
+     "price": 648.99,
+     "quantity": 1,
+     "sku": "SKU-0044"
+    },
+    {
+     "price": 685.99,
+     "quantity": 2,
+     "sku": "SKU-0045"
+    },
+    {
+     "price": 722.99,
+     "quantity": 3,
+     "sku": "SKU-0046"
+    }
+   ],
+   "total": 4189.94,
+   "warehouse": "WH-15"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0015",
+   "lines": [
+    {
+     "price": 759.99,
+     "quantity": 2,
+     "sku": "SKU-0047"
+    }
+   ],
+   "total": 1519.98,
+   "warehouse": "WH-16"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0016",
+   "lines": [
+    {
+     "price": 870.99,
+     "quantity": 3,
+     "sku": "SKU-0050"
+    },
+    {
+     "price": 907.99,
+     "quantity": 4,
+     "sku": "SKU-0051"
+    }
+   ],
+   "total": 6244.93,
+   "warehouse": "WH-17"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0017",
+   "lines": [
+    {
+     "price": 981.99,
+     "quantity": 4,
+     "sku": "SKU-0053"
+    },
+    {
+     "price": 28.99,
+     "quantity": 5,
+     "sku": "SKU-0054"
+    },
+    {
+     "price": 65.99,
+     "quantity": 1,
+     "sku": "SKU-0055"
+    }
+   ],
+   "total": 4138.9,
+   "warehouse": "WH-18"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0018",
+   "lines": [
+    {
+     "price": 102.99,
+     "quantity": 5,
+     "sku": "SKU-0056"
+    }
+   ],
+   "total": 514.95,
+   "warehouse": "WH-19"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0019",
+   "lines": [
+    {
+     "price": 213.99,
+     "quantity": 1,
+     "sku": "SKU-0059"
+    },
+    {
+     "price": 250.99,
+     "quantity": 2,
+     "sku": "SKU-0060"
+    }
+   ],
+   "total": 715.97,
+   "warehouse": "WH-20"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0020",
+   "lines": [
+    {
+     "price": 324.99,
+     "quantity": 2,
+     "sku": "SKU-0062"
+    },
+    {
+     "price": 361.99,
+     "quantity": 3,
+     "sku": "SKU-0063"
+    },
+    {
+     "price": 398.99,
+     "quantity": 4,
+     "sku": "SKU-0064"
+    }
+   ],
+   "total": 3331.91,
+   "warehouse": "WH-01"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0021",
+   "lines": [
+    {
+     "price": 435.99,
+     "quantity": 3,
+     "sku": "SKU-0065"
+    }
+   ],
+   "total": 1307.97,
+   "warehouse": "WH-02"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0022",
+   "lines": [
+    {
+     "price": 546.99,
+     "quantity": 4,
+     "sku": "SKU-0068"
+    },
+    {
+     "price": 583.99,
+     "quantity": 5,
+     "sku": "SKU-0069"
+    }
+   ],
+   "total": 5107.91,
+   "warehouse": "WH-03"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0023",
+   "lines": [
+    {
+     "price": 657.99,
+     "quantity": 5,
+     "sku": "SKU-0071"
+    },
+    {
+     "price": 694.99,
+     "quantity": 1,
+     "sku": "SKU-0072"
+    },
+    {
+     "price": 731.99,
+     "quantity": 2,
+     "sku": "SKU-0073"
+    }
+   ],
+   "total": 5448.92,
+   "warehouse": "WH-04"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0024",
+   "lines": [
+    {
+     "price": 768.99,
+     "quantity": 1,
+     "sku": "SKU-0074"
+    }
+   ],
+   "total": 768.99,
+   "warehouse": "WH-05"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0025",
+   "lines": [
+    {
+     "price": 879.99,
+     "quantity": 2,
+     "sku": "SKU-0077"
+    },
+    {
+     "price": 916.99,
+     "quantity": 3,
+     "sku": "SKU-0078"
+    }
+   ],
+   "total": 4510.95,
+   "warehouse": "WH-06"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0026",
+   "lines": [
+    {
+     "price": 990.99,
+     "quantity": 3,
+     "sku": "SKU-0080"
+    },
+    {
+     "price": 37.99,
+     "quantity": 4,
+     "sku": "SKU-0081"
+    },
+    {
+     "price": 74.99,
+     "quantity": 5,
+     "sku": "SKU-0082"
+    }
+   ],
+   "total": 3499.88,
+   "warehouse": "WH-07"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0027",
+   "lines": [
+    {
+     "price": 111.99,
+     "quantity": 4,
+     "sku": "SKU-0083"
+    }
+   ],
+   "total": 447.96,
+   "warehouse": "WH-08"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0028",
+   "lines": [
+    {
+     "price": 222.99,
+     "quantity": 5,
+     "sku": "SKU-0086"
+    },
+    {
+     "price": 259.99,
+     "quantity": 1,
+     "sku": "SKU-0087"
+    }
+   ],
+   "total": 1374.94,
+   "warehouse": "WH-09"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0029",
+   "lines": [
+    {
+     "price": 333.99,
+     "quantity": 1,
+     "sku": "SKU-0089"
+    },
+    {
+     "price": 370.99,
+     "quantity": 2,
+     "sku": "SKU-0090"
+    },
+    {
+     "price": 407.99,
+     "quantity": 3,
+     "sku": "SKU-0091"
+    }
+   ],
+   "total": 2299.94,
+   "warehouse": "WH-10"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0030",
+   "lines": [
+    {
+     "price": 444.99,
+     "quantity": 2,
+     "sku": "SKU-0092"
+    }
+   ],
+   "total": 889.98,
+   "warehouse": "WH-11"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0031",
+   "lines": [
+    {
+     "price": 555.99,
+     "quantity": 3,
+     "sku": "SKU-0095"
+    },
+    {
+     "price": 592.99,
+     "quantity": 4,
+     "sku": "SKU-0096"
+    }
+   ],
+   "total": 4039.93,
+   "warehouse": "WH-12"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0032",
+   "lines": [
+    {
+     "price": 666.99,
+     "quantity": 4,
+     "sku": "SKU-0098"
+    },
+    {
+     "price": 703.99,
+     "quantity": 5,
+     "sku": "SKU-0099"
+    },
+    {
+     "price": 740.99,
+     "quantity": 1,
+     "sku": "SKU-0100"
+    }
+   ],
+   "total": 6928.9,
+   "warehouse": "WH-13"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0033",
+   "lines": [
+    {
+     "price": 777.99,
+     "quantity": 5,
+     "sku": "SKU-0101"
+    }
+   ],
+   "total": 3889.95,
+   "warehouse": "WH-14"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0034",
+   "lines": [
+    {
+     "price": 888.99,
+     "quantity": 1,
+     "sku": "SKU-0104"
+    },
+    {
+     "price": 925.99,
+     "quantity": 2,
+     "sku": "SKU-0105"
+    }
+   ],
+   "total": 2740.97,
+   "warehouse": "WH-15"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0035",
+   "lines": [
+    {
+     "price": 999.99,
+     "quantity": 2,
+     "sku": "SKU-0107"
+    },
+    {
+     "price": 46.99,
+     "quantity": 3,
+     "sku": "SKU-0108"
+    },
+    {
+     "price": 83.99,
+     "quantity": 4,
+     "sku": "SKU-0109"
+    }
+   ],
+   "total": 2476.91,
+   "warehouse": "WH-16"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0036",
+   "lines": [
+    {
+     "price": 120.99,
+     "quantity": 3,
+     "sku": "SKU-0110"
+    }
+   ],
+   "total": 362.97,
+   "warehouse": "WH-17"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0037",
+   "lines": [
+    {
+     "price": 231.99,
+     "quantity": 4,
+     "sku": "SKU-0113"
+    },
+    {
+     "price": 268.99,
+     "quantity": 5,
+     "sku": "SKU-0114"
+    }
+   ],
+   "total": 2272.91,
+   "warehouse": "WH-18"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0038",
+   "lines": [
+    {
+     "price": 342.99,
+     "quantity": 5,
+     "sku": "SKU-0116"
+    },
+    {
+     "price": 379.99,
+     "quantity": 1,
+     "sku": "SKU-0117"
+    },
+    {
+     "price": 416.99,
+     "quantity": 2,
+     "sku": "SKU-0118"
+    }
+   ],
+   "total": 2928.92,
+   "warehouse": "WH-19"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0039",
+   "lines": [
+    {
+     "price": 453.99,
+     "quantity": 1,
+     "sku": "SKU-0119"
+    }
+   ],
+   "total": 453.99,
+   "warehouse": "WH-20"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0040",
+   "lines": [
+    {
+     "price": 564.99,
+     "quantity": 2,
+     "sku": "SKU-0122"
+    },
+    {
+     "price": 601.99,
+     "quantity": 3,
+     "sku": "SKU-0123"
+    }
+   ],
+   "total": 2935.95,
+   "warehouse": "WH-01"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0041",
+   "lines": [
+    {
+     "price": 675.99,
+     "quantity": 3,
+     "sku": "SKU-0125"
+    },
+    {
+     "price": 712.99,
+     "quantity": 4,
+     "sku": "SKU-0126"
+    },
+    {
+     "price": 749.99,
+     "quantity": 5,
+     "sku": "SKU-0127"
+    }
+   ],
+   "total": 8629.88,
+   "warehouse": "WH-02"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0042",
+   "lines": [
+    {
+     "price": 786.99,
+     "quantity": 4,
+     "sku": "SKU-0128"
+    }
+   ],
+   "total": 3147.96,
+   "warehouse": "WH-03"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0043",
+   "lines": [
+    {
+     "price": 897.99,
+     "quantity": 5,
+     "sku": "SKU-0131"
+    },
+    {
+     "price": 934.99,
+     "quantity": 1,
+     "sku": "SKU-0132"
+    }
+   ],
+   "total": 5424.94,
+   "warehouse": "WH-04"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0044",
+   "lines": [
+    {
+     "price": 18.99,
+     "quantity": 1,
+     "sku": "SKU-0134"
+    },
+    {
+     "price": 55.99,
+     "quantity": 2,
+     "sku": "SKU-0135"
+    },
+    {
+     "price": 92.99,
+     "quantity": 3,
+     "sku": "SKU-0136"
+    }
+   ],
+   "total": 409.94,
+   "warehouse": "WH-05"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0045",
+   "lines": [
+    {
+     "price": 129.99,
+     "quantity": 2,
+     "sku": "SKU-0137"
+    }
+   ],
+   "total": 259.98,
+   "warehouse": "WH-06"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0046",
+   "lines": [
+    {
+     "price": 240.99,
+     "quantity": 3,
+     "sku": "SKU-0140"
+    },
+    {
+     "price": 277.99,
+     "quantity": 4,
+     "sku": "SKU-0141"
+    }
+   ],
+   "total": 1834.93,
+   "warehouse": "WH-07"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0047",
+   "lines": [
+    {
+     "price": 351.99,
+     "quantity": 4,
+     "sku": "SKU-0143"
+    },
+    {
+     "price": 388.99,
+     "quantity": 5,
+     "sku": "SKU-0144"
+    },
+    {
+     "price": 425.99,
+     "quantity": 1,
+     "sku": "SKU-0145"
+    }
+   ],
+   "total": 3778.9,
+   "warehouse": "WH-08"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0048",
+   "lines": [
+    {
+     "price": 462.99,
+     "quantity": 5,
+     "sku": "SKU-0146"
+    }
+   ],
+   "total": 2314.95,
+   "warehouse": "WH-09"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0049",
+   "lines": [
+    {
+     "price": 573.99,
+     "quantity": 1,
+     "sku": "SKU-0149"
+    },
+    {
+     "price": 610.99,
+     "quantity": 2,
+     "sku": "SKU-0150"
+    }
+   ],
+   "total": 1795.97,
+   "warehouse": "WH-10"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0050",
+   "lines": [
+    {
+     "price": 684.99,
+     "quantity": 2,
+     "sku": "SKU-0152"
+    },
+    {
+     "price": 721.99,
+     "quantity": 3,
+     "sku": "SKU-0153"
+    },
+    {
+     "price": 758.99,
+     "quantity": 4,
+     "sku": "SKU-0154"
+    }
+   ],
+   "total": 6571.91,
+   "warehouse": "WH-11"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0051",
+   "lines": [
+    {
+     "price": 795.99,
+     "quantity": 3,
+     "sku": "SKU-0155"
+    }
+   ],
+   "total": 2387.97,
+   "warehouse": "WH-12"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0052",
+   "lines": [
+    {
+     "price": 906.99,
+     "quantity": 4,
+     "sku": "SKU-0158"
+    },
+    {
+     "price": 943.99,
+     "quantity": 5,
+     "sku": "SKU-0159"
+    }
+   ],
+   "total": 8347.91,
+   "warehouse": "WH-13"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0053",
+   "lines": [
+    {
+     "price": 27.99,
+     "quantity": 5,
+     "sku": "SKU-0161"
+    },
+    {
+     "price": 64.99,
+     "quantity": 1,
+     "sku": "SKU-0162"
+    },
+    {
+     "price": 101.99,
+     "quantity": 2,
+     "sku": "SKU-0163"
+    }
+   ],
+   "total": 408.92,
+   "warehouse": "WH-14"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0054",
+   "lines": [
+    {
+     "price": 138.99,
+     "quantity": 1,
+     "sku": "SKU-0164"
+    }
+   ],
+   "total": 138.99,
+   "warehouse": "WH-15"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0055",
+   "lines": [
+    {
+     "price": 249.99,
+     "quantity": 2,
+     "sku": "SKU-0167"
+    },
+    {
+     "price": 286.99,
+     "quantity": 3,
+     "sku": "SKU-0168"
+    }
+   ],
+   "total": 1360.95,
+   "warehouse": "WH-16"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0056",
+   "lines": [
+    {
+     "price": 360.99,
+     "quantity": 3,
+     "sku": "SKU-0170"
+    },
+    {
+     "price": 397.99,
+     "quantity": 4,
+     "sku": "SKU-0171"
+    },
+    {
+     "price": 434.99,
+     "quantity": 5,
+     "sku": "SKU-0172"
+    }
+   ],
+   "total": 4849.88,
+   "warehouse": "WH-17"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0057",
+   "lines": [
+    {
+     "price": 471.99,
+     "quantity": 4,
+     "sku": "SKU-0173"
+    }
+   ],
+   "total": 1887.96,
+   "warehouse": "WH-18"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0058",
+   "lines": [
+    {
+     "price": 582.99,
+     "quantity": 5,
+     "sku": "SKU-0176"
+    },
+    {
+     "price": 619.99,
+     "quantity": 1,
+     "sku": "SKU-0177"
+    }
+   ],
+   "total": 3534.94,
+   "warehouse": "WH-19"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0059",
+   "lines": [
+    {
+     "price": 693.99,
+     "quantity": 1,
+     "sku": "SKU-0179"
+    },
+    {
+     "price": 730.99,
+     "quantity": 2,
+     "sku": "SKU-0180"
+    },
+    {
+     "price": 767.99,
+     "quantity": 3,
+     "sku": "SKU-0181"
+    }
+   ],
+   "total": 4459.94,
+   "warehouse": "WH-20"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0060",
+   "lines": [
+    {
+     "price": 804.99,
+     "quantity": 2,
+     "sku": "SKU-0182"
+    }
+   ],
+   "total": 1609.98,
+   "warehouse": "WH-01"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0061",
+   "lines": [
+    {
+     "price": 915.99,
+     "quantity": 3,
+     "sku": "SKU-0185"
+    },
+    {
+     "price": 952.99,
+     "quantity": 4,
+     "sku": "SKU-0186"
+    }
+   ],
+   "total": 6559.93,
+   "warehouse": "WH-02"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0062",
+   "lines": [
+    {
+     "price": 36.99,
+     "quantity": 4,
+     "sku": "SKU-0188"
+    },
+    {
+     "price": 73.99,
+     "quantity": 5,
+     "sku": "SKU-0189"
+    },
+    {
+     "price": 110.99,
+     "quantity": 1,
+     "sku": "SKU-0190"
+    }
+   ],
+   "total": 628.9,
+   "warehouse": "WH-03"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0063",
+   "lines": [
+    {
+     "price": 147.99,
+     "quantity": 5,
+     "sku": "SKU-0191"
+    }
+   ],
+   "total": 739.95,
+   "warehouse": "WH-04"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0064",
+   "lines": [
+    {
+     "price": 258.99,
+     "quantity": 1,
+     "sku": "SKU-0194"
+    },
+    {
+     "price": 295.99,
+     "quantity": 2,
+     "sku": "SKU-0195"
+    }
+   ],
+   "total": 850.97,
+   "warehouse": "WH-05"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0065",
+   "lines": [
+    {
+     "price": 369.99,
+     "quantity": 2,
+     "sku": "SKU-0197"
+    },
+    {
+     "price": 406.99,
+     "quantity": 3,
+     "sku": "SKU-0198"
+    },
+    {
+     "price": 443.99,
+     "quantity": 4,
+     "sku": "SKU-0199"
+    }
+   ],
+   "total": 3736.91,
+   "warehouse": "WH-06"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0066",
+   "lines": [
+    {
+     "price": 480.99,
+     "quantity": 3,
+     "sku": "SKU-0200"
+    }
+   ],
+   "total": 1442.97,
+   "warehouse": "WH-07"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0067",
+   "lines": [
+    {
+     "price": 591.99,
+     "quantity": 4,
+     "sku": "SKU-0203"
+    },
+    {
+     "price": 628.99,
+     "quantity": 5,
+     "sku": "SKU-0204"
+    }
+   ],
+   "total": 5512.91,
+   "warehouse": "WH-08"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0068",
+   "lines": [
+    {
+     "price": 702.99,
+     "quantity": 5,
+     "sku": "SKU-0206"
+    },
+    {
+     "price": 739.99,
+     "quantity": 1,
+     "sku": "SKU-0207"
+    },
+    {
+     "price": 776.99,
+     "quantity": 2,
+     "sku": "SKU-0208"
+    }
+   ],
+   "total": 5808.92,
+   "warehouse": "WH-09"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0069",
+   "lines": [
+    {
+     "price": 813.99,
+     "quantity": 1,
+     "sku": "SKU-0209"
+    }
+   ],
+   "total": 813.99,
+   "warehouse": "WH-10"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0070",
+   "lines": [
+    {
+     "price": 924.99,
+     "quantity": 2,
+     "sku": "SKU-0212"
+    },
+    {
+     "price": 961.99,
+     "quantity": 3,
+     "sku": "SKU-0213"
+    }
+   ],
+   "total": 4735.95,
+   "warehouse": "WH-11"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0071",
+   "lines": [
+    {
+     "price": 45.99,
+     "quantity": 3,
+     "sku": "SKU-0215"
+    },
+    {
+     "price": 82.99,
+     "quantity": 4,
+     "sku": "SKU-0216"
+    },
+    {
+     "price": 119.99,
+     "quantity": 5,
+     "sku": "SKU-0217"
+    }
+   ],
+   "total": 1069.88,
+   "warehouse": "WH-12"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0072",
+   "lines": [
+    {
+     "price": 156.99,
+     "quantity": 4,
+     "sku": "SKU-0218"
+    }
+   ],
+   "total": 627.96,
+   "warehouse": "WH-13"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0073",
+   "lines": [
+    {
+     "price": 267.99,
+     "quantity": 5,
+     "sku": "SKU-0221"
+    },
+    {
+     "price": 304.99,
+     "quantity": 1,
+     "sku": "SKU-0222"
+    }
+   ],
+   "total": 1644.94,
+   "warehouse": "WH-14"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0074",
+   "lines": [
+    {
+     "price": 378.99,
+     "quantity": 1,
+     "sku": "SKU-0224"
+    },
+    {
+     "price": 415.99,
+     "quantity": 2,
+     "sku": "SKU-0225"
+    },
+    {
+     "price": 452.99,
+     "quantity": 3,
+     "sku": "SKU-0226"
+    }
+   ],
+   "total": 2569.94,
+   "warehouse": "WH-15"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0075",
+   "lines": [
+    {
+     "price": 489.99,
+     "quantity": 2,
+     "sku": "SKU-0227"
+    }
+   ],
+   "total": 979.98,
+   "warehouse": "WH-16"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0076",
+   "lines": [
+    {
+     "price": 600.99,
+     "quantity": 3,
+     "sku": "SKU-0230"
+    },
+    {
+     "price": 637.99,
+     "quantity": 4,
+     "sku": "SKU-0231"
+    }
+   ],
+   "total": 4354.93,
+   "warehouse": "WH-17"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0077",
+   "lines": [
+    {
+     "price": 711.99,
+     "quantity": 4,
+     "sku": "SKU-0233"
+    },
+    {
+     "price": 748.99,
+     "quantity": 5,
+     "sku": "SKU-0234"
+    },
+    {
+     "price": 785.99,
+     "quantity": 1,
+     "sku": "SKU-0235"
+    }
+   ],
+   "total": 7378.9,
+   "warehouse": "WH-18"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0078",
+   "lines": [
+    {
+     "price": 822.99,
+     "quantity": 5,
+     "sku": "SKU-0236"
+    }
+   ],
+   "total": 4114.95,
+   "warehouse": "WH-19"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0079",
+   "lines": [
+    {
+     "price": 933.99,
+     "quantity": 1,
+     "sku": "SKU-0239"
+    },
+    {
+     "price": 970.99,
+     "quantity": 2,
+     "sku": "SKU-0240"
+    }
+   ],
+   "total": 2875.97,
+   "warehouse": "WH-20"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0080",
+   "lines": [
+    {
+     "price": 54.99,
+     "quantity": 2,
+     "sku": "SKU-0242"
+    },
+    {
+     "price": 91.99,
+     "quantity": 3,
+     "sku": "SKU-0243"
+    },
+    {
+     "price": 128.99,
+     "quantity": 4,
+     "sku": "SKU-0244"
+    }
+   ],
+   "total": 901.91,
+   "warehouse": "WH-01"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0081",
+   "lines": [
+    {
+     "price": 165.99,
+     "quantity": 3,
+     "sku": "SKU-0245"
+    }
+   ],
+   "total": 497.97,
+   "warehouse": "WH-02"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0082",
+   "lines": [
+    {
+     "price": 276.99,
+     "quantity": 4,
+     "sku": "SKU-0248"
+    },
+    {
+     "price": 313.99,
+     "quantity": 5,
+     "sku": "SKU-0249"
+    }
+   ],
+   "total": 2677.91,
+   "warehouse": "WH-03"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0083",
+   "lines": [
+    {
+     "price": 387.99,
+     "quantity": 5,
+     "sku": "SKU-0251"
+    },
+    {
+     "price": 424.99,
+     "quantity": 1,
+     "sku": "SKU-0252"
+    },
+    {
+     "price": 461.99,
+     "quantity": 2,
+     "sku": "SKU-0253"
+    }
+   ],
+   "total": 3288.92,
+   "warehouse": "WH-04"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0084",
+   "lines": [
+    {
+     "price": 498.99,
+     "quantity": 1,
+     "sku": "SKU-0254"
+    }
+   ],
+   "total": 498.99,
+   "warehouse": "WH-05"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0085",
+   "lines": [
+    {
+     "price": 609.99,
+     "quantity": 2,
+     "sku": "SKU-0257"
+    },
+    {
+     "price": 646.99,
+     "quantity": 3,
+     "sku": "SKU-0258"
+    }
+   ],
+   "total": 3160.95,
+   "warehouse": "WH-06"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0086",
+   "lines": [
+    {
+     "price": 720.99,
+     "quantity": 3,
+     "sku": "SKU-0260"
+    },
+    {
+     "price": 757.99,
+     "quantity": 4,
+     "sku": "SKU-0261"
+    },
+    {
+     "price": 794.99,
+     "quantity": 5,
+     "sku": "SKU-0262"
+    }
+   ],
+   "total": 9169.88,
+   "warehouse": "WH-07"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0087",
+   "lines": [
+    {
+     "price": 831.99,
+     "quantity": 4,
+     "sku": "SKU-0263"
+    }
+   ],
+   "total": 3327.96,
+   "warehouse": "WH-08"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0088",
+   "lines": [
+    {
+     "price": 942.99,
+     "quantity": 5,
+     "sku": "SKU-0266"
+    },
+    {
+     "price": 979.99,
+     "quantity": 1,
+     "sku": "SKU-0267"
+    }
+   ],
+   "total": 5694.94,
+   "warehouse": "WH-09"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0089",
+   "lines": [
+    {
+     "price": 63.99,
+     "quantity": 1,
+     "sku": "SKU-0269"
+    },
+    {
+     "price": 100.99,
+     "quantity": 2,
+     "sku": "SKU-0270"
+    },
+    {
+     "price": 137.99,
+     "quantity": 3,
+     "sku": "SKU-0271"
+    }
+   ],
+   "total": 679.94,
+   "warehouse": "WH-10"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0090",
+   "lines": [
+    {
+     "price": 174.99,
+     "quantity": 2,
+     "sku": "SKU-0272"
+    }
+   ],
+   "total": 349.98,
+   "warehouse": "WH-11"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0091",
+   "lines": [
+    {
+     "price": 285.99,
+     "quantity": 3,
+     "sku": "SKU-0275"
+    },
+    {
+     "price": 322.99,
+     "quantity": 4,
+     "sku": "SKU-0276"
+    }
+   ],
+   "total": 2149.93,
+   "warehouse": "WH-12"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0092",
+   "lines": [
+    {
+     "price": 396.99,
+     "quantity": 4,
+     "sku": "SKU-0278"
+    },
+    {
+     "price": 433.99,
+     "quantity": 5,
+     "sku": "SKU-0279"
+    },
+    {
+     "price": 470.99,
+     "quantity": 1,
+     "sku": "SKU-0280"
+    }
+   ],
+   "total": 4228.9,
+   "warehouse": "WH-13"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0093",
+   "lines": [
+    {
+     "price": 507.99,
+     "quantity": 5,
+     "sku": "SKU-0281"
+    }
+   ],
+   "total": 2539.95,
+   "warehouse": "WH-14"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0094",
+   "lines": [
+    {
+     "price": 618.99,
+     "quantity": 1,
+     "sku": "SKU-0284"
+    },
+    {
+     "price": 655.99,
+     "quantity": 2,
+     "sku": "SKU-0285"
+    }
+   ],
+   "total": 1930.97,
+   "warehouse": "WH-15"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0095",
+   "lines": [
+    {
+     "price": 729.99,
+     "quantity": 2,
+     "sku": "SKU-0287"
+    },
+    {
+     "price": 766.99,
+     "quantity": 3,
+     "sku": "SKU-0288"
+    },
+    {
+     "price": 803.99,
+     "quantity": 4,
+     "sku": "SKU-0289"
+    }
+   ],
+   "total": 6976.91,
+   "warehouse": "WH-16"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0096",
+   "lines": [
+    {
+     "price": 840.99,
+     "quantity": 3,
+     "sku": "SKU-0290"
+    }
+   ],
+   "total": 2522.97,
+   "warehouse": "WH-17"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0097",
+   "lines": [
+    {
+     "price": 951.99,
+     "quantity": 4,
+     "sku": "SKU-0293"
+    },
+    {
+     "price": 988.99,
+     "quantity": 5,
+     "sku": "SKU-0294"
+    }
+   ],
+   "total": 8752.91,
+   "warehouse": "WH-18"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0098",
+   "lines": [
+    {
+     "price": 72.99,
+     "quantity": 5,
+     "sku": "SKU-0296"
+    },
+    {
+     "price": 109.99,
+     "quantity": 1,
+     "sku": "SKU-0297"
+    },
+    {
+     "price": 146.99,
+     "quantity": 2,
+     "sku": "SKU-0298"
+    }
+   ],
+   "total": 768.92,
+   "warehouse": "WH-19"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0099",
+   "lines": [
+    {
+     "price": 183.99,
+     "quantity": 1,
+     "sku": "SKU-0299"
+    }
+   ],
+   "total": 183.99,
+   "warehouse": "WH-20"
+  },
+  {
+   "date": "2026-01-15",
+   "external_id": "ORD-0100",
+   "lines": [
+    {
+     "price": 294.99,
+     "quantity": 2,
+     "sku": "SKU-0302"
+    },
+    {
+     "price": 331.99,
+     "quantity": 3,
+     "sku": "SKU-0303"
+    }
+   ],
+   "total": 1585.95,
+   "warehouse": "WH-01"
+  }
+ ],
+ "products": [
+  {
+   "name": "Товар стенда 0001",
+   "price": 47.99,
+   "sku": "SKU-0001"
+  },
+  {
+   "name": "Товар стенда 0002",
+   "price": 84.99,
+   "sku": "SKU-0002"
+  },
+  {
+   "name": "Товар стенда 0003",
+   "price": 121.99,
+   "sku": "SKU-0003"
+  },
+  {
+   "name": "Товар стенда 0004",
+   "price": 158.99,
+   "sku": "SKU-0004"
+  },
+  {
+   "name": "Товар стенда 0005",
+   "price": 195.99,
+   "sku": "SKU-0005"
+  },
+  {
+   "name": "Товар стенда 0006",
+   "price": 232.99,
+   "sku": "SKU-0006"
+  },
+  {
+   "name": "Товар стенда 0007",
+   "price": 269.99,
+   "sku": "SKU-0007"
+  },
+  {
+   "name": "Товар стенда 0008",
+   "price": 306.99,
+   "sku": "SKU-0008"
+  },
+  {
+   "name": "Товар стенда 0009",
+   "price": 343.99,
+   "sku": "SKU-0009"
+  },
+  {
+   "name": "Товар стенда 0010",
+   "price": 380.99,
+   "sku": "SKU-0010"
+  },
+  {
+   "name": "Товар стенда 0011",
+   "price": 417.99,
+   "sku": "SKU-0011"
+  },
+  {
+   "name": "Товар стенда 0012",
+   "price": 454.99,
+   "sku": "SKU-0012"
+  },
+  {
+   "name": "Товар стенда 0013",
+   "price": 491.99,
+   "sku": "SKU-0013"
+  },
+  {
+   "name": "Товар стенда 0014",
+   "price": 528.99,
+   "sku": "SKU-0014"
+  },
+  {
+   "name": "Товар стенда 0015",
+   "price": 565.99,
+   "sku": "SKU-0015"
+  },
+  {
+   "name": "Товар стенда 0016",
+   "price": 602.99,
+   "sku": "SKU-0016"
+  },
+  {
+   "name": "Товар стенда 0017",
+   "price": 639.99,
+   "sku": "SKU-0017"
+  },
+  {
+   "name": "Товар стенда 0018",
+   "price": 676.99,
+   "sku": "SKU-0018"
+  },
+  {
+   "name": "Товар стенда 0019",
+   "price": 713.99,
+   "sku": "SKU-0019"
+  },
+  {
+   "name": "Товар стенда 0020",
+   "price": 750.99,
+   "sku": "SKU-0020"
+  },
+  {
+   "name": "Товар стенда 0021",
+   "price": 787.99,
+   "sku": "SKU-0021"
+  },
+  {
+   "name": "Товар стенда 0022",
+   "price": 824.99,
+   "sku": "SKU-0022"
+  },
+  {
+   "name": "Товар стенда 0023",
+   "price": 861.99,
+   "sku": "SKU-0023"
+  },
+  {
+   "name": "Товар стенда 0024",
+   "price": 898.99,
+   "sku": "SKU-0024"
+  },
+  {
+   "name": "Товар стенда 0025",
+   "price": 935.99,
+   "sku": "SKU-0025"
+  },
+  {
+   "name": "Товар стенда 0026",
+   "price": 972.99,
+   "sku": "SKU-0026"
+  },
+  {
+   "name": "Товар стенда 0027",
+   "price": 19.99,
+   "sku": "SKU-0027"
+  },
+  {
+   "name": "Товар стенда 0028",
+   "price": 56.99,
+   "sku": "SKU-0028"
+  },
+  {
+   "name": "Товар стенда 0029",
+   "price": 93.99,
+   "sku": "SKU-0029"
+  },
+  {
+   "name": "Товар стенда 0030",
+   "price": 130.99,
+   "sku": "SKU-0030"
+  },
+  {
+   "name": "Товар стенда 0031",
+   "price": 167.99,
+   "sku": "SKU-0031"
+  },
+  {
+   "name": "Товар стенда 0032",
+   "price": 204.99,
+   "sku": "SKU-0032"
+  },
+  {
+   "name": "Товар стенда 0033",
+   "price": 241.99,
+   "sku": "SKU-0033"
+  },
+  {
+   "name": "Товар стенда 0034",
+   "price": 278.99,
+   "sku": "SKU-0034"
+  },
+  {
+   "name": "Товар стенда 0035",
+   "price": 315.99,
+   "sku": "SKU-0035"
+  },
+  {
+   "name": "Товар стенда 0036",
+   "price": 352.99,
+   "sku": "SKU-0036"
+  },
+  {
+   "name": "Товар стенда 0037",
+   "price": 389.99,
+   "sku": "SKU-0037"
+  },
+  {
+   "name": "Товар стенда 0038",
+   "price": 426.99,
+   "sku": "SKU-0038"
+  },
+  {
+   "name": "Товар стенда 0039",
+   "price": 463.99,
+   "sku": "SKU-0039"
+  },
+  {
+   "name": "Товар стенда 0040",
+   "price": 500.99,
+   "sku": "SKU-0040"
+  },
+  {
+   "name": "Товар стенда 0041",
+   "price": 537.99,
+   "sku": "SKU-0041"
+  },
+  {
+   "name": "Товар стенда 0042",
+   "price": 574.99,
+   "sku": "SKU-0042"
+  },
+  {
+   "name": "Товар стенда 0043",
+   "price": 611.99,
+   "sku": "SKU-0043"
+  },
+  {
+   "name": "Товар стенда 0044",
+   "price": 648.99,
+   "sku": "SKU-0044"
+  },
+  {
+   "name": "Товар стенда 0045",
+   "price": 685.99,
+   "sku": "SKU-0045"
+  },
+  {
+   "name": "Товар стенда 0046",
+   "price": 722.99,
+   "sku": "SKU-0046"
+  },
+  {
+   "name": "Товар стенда 0047",
+   "price": 759.99,
+   "sku": "SKU-0047"
+  },
+  {
+   "name": "Товар стенда 0048",
+   "price": 796.99,
+   "sku": "SKU-0048"
+  },
+  {
+   "name": "Товар стенда 0049",
+   "price": 833.99,
+   "sku": "SKU-0049"
+  },
+  {
+   "name": "Товар стенда 0050",
+   "price": 870.99,
+   "sku": "SKU-0050"
+  },
+  {
+   "name": "Товар стенда 0051",
+   "price": 907.99,
+   "sku": "SKU-0051"
+  },
+  {
+   "name": "Товар стенда 0052",
+   "price": 944.99,
+   "sku": "SKU-0052"
+  },
+  {
+   "name": "Товар стенда 0053",
+   "price": 981.99,
+   "sku": "SKU-0053"
+  },
+  {
+   "name": "Товар стенда 0054",
+   "price": 28.99,
+   "sku": "SKU-0054"
+  },
+  {
+   "name": "Товар стенда 0055",
+   "price": 65.99,
+   "sku": "SKU-0055"
+  },
+  {
+   "name": "Товар стенда 0056",
+   "price": 102.99,
+   "sku": "SKU-0056"
+  },
+  {
+   "name": "Товар стенда 0057",
+   "price": 139.99,
+   "sku": "SKU-0057"
+  },
+  {
+   "name": "Товар стенда 0058",
+   "price": 176.99,
+   "sku": "SKU-0058"
+  },
+  {
+   "name": "Товар стенда 0059",
+   "price": 213.99,
+   "sku": "SKU-0059"
+  },
+  {
+   "name": "Товар стенда 0060",
+   "price": 250.99,
+   "sku": "SKU-0060"
+  },
+  {
+   "name": "Товар стенда 0061",
+   "price": 287.99,
+   "sku": "SKU-0061"
+  },
+  {
+   "name": "Товар стенда 0062",
+   "price": 324.99,
+   "sku": "SKU-0062"
+  },
+  {
+   "name": "Товар стенда 0063",
+   "price": 361.99,
+   "sku": "SKU-0063"
+  },
+  {
+   "name": "Товар стенда 0064",
+   "price": 398.99,
+   "sku": "SKU-0064"
+  },
+  {
+   "name": "Товар стенда 0065",
+   "price": 435.99,
+   "sku": "SKU-0065"
+  },
+  {
+   "name": "Товар стенда 0066",
+   "price": 472.99,
+   "sku": "SKU-0066"
+  },
+  {
+   "name": "Товар стенда 0067",
+   "price": 509.99,
+   "sku": "SKU-0067"
+  },
+  {
+   "name": "Товар стенда 0068",
+   "price": 546.99,
+   "sku": "SKU-0068"
+  },
+  {
+   "name": "Товар стенда 0069",
+   "price": 583.99,
+   "sku": "SKU-0069"
+  },
+  {
+   "name": "Товар стенда 0070",
+   "price": 620.99,
+   "sku": "SKU-0070"
+  },
+  {
+   "name": "Товар стенда 0071",
+   "price": 657.99,
+   "sku": "SKU-0071"
+  },
+  {
+   "name": "Товар стенда 0072",
+   "price": 694.99,
+   "sku": "SKU-0072"
+  },
+  {
+   "name": "Товар стенда 0073",
+   "price": 731.99,
+   "sku": "SKU-0073"
+  },
+  {
+   "name": "Товар стенда 0074",
+   "price": 768.99,
+   "sku": "SKU-0074"
+  },
+  {
+   "name": "Товар стенда 0075",
+   "price": 805.99,
+   "sku": "SKU-0075"
+  },
+  {
+   "name": "Товар стенда 0076",
+   "price": 842.99,
+   "sku": "SKU-0076"
+  },
+  {
+   "name": "Товар стенда 0077",
+   "price": 879.99,
+   "sku": "SKU-0077"
+  },
+  {
+   "name": "Товар стенда 0078",
+   "price": 916.99,
+   "sku": "SKU-0078"
+  },
+  {
+   "name": "Товар стенда 0079",
+   "price": 953.99,
+   "sku": "SKU-0079"
+  },
+  {
+   "name": "Товар стенда 0080",
+   "price": 990.99,
+   "sku": "SKU-0080"
+  },
+  {
+   "name": "Товар стенда 0081",
+   "price": 37.99,
+   "sku": "SKU-0081"
+  },
+  {
+   "name": "Товар стенда 0082",
+   "price": 74.99,
+   "sku": "SKU-0082"
+  },
+  {
+   "name": "Товар стенда 0083",
+   "price": 111.99,
+   "sku": "SKU-0083"
+  },
+  {
+   "name": "Товар стенда 0084",
+   "price": 148.99,
+   "sku": "SKU-0084"
+  },
+  {
+   "name": "Товар стенда 0085",
+   "price": 185.99,
+   "sku": "SKU-0085"
+  },
+  {
+   "name": "Товар стенда 0086",
+   "price": 222.99,
+   "sku": "SKU-0086"
+  },
+  {
+   "name": "Товар стенда 0087",
+   "price": 259.99,
+   "sku": "SKU-0087"
+  },
+  {
+   "name": "Товар стенда 0088",
+   "price": 296.99,
+   "sku": "SKU-0088"
+  },
+  {
+   "name": "Товар стенда 0089",
+   "price": 333.99,
+   "sku": "SKU-0089"
+  },
+  {
+   "name": "Товар стенда 0090",
+   "price": 370.99,
+   "sku": "SKU-0090"
+  },
+  {
+   "name": "Товар стенда 0091",
+   "price": 407.99,
+   "sku": "SKU-0091"
+  },
+  {
+   "name": "Товар стенда 0092",
+   "price": 444.99,
+   "sku": "SKU-0092"
+  },
+  {
+   "name": "Товар стенда 0093",
+   "price": 481.99,
+   "sku": "SKU-0093"
+  },
+  {
+   "name": "Товар стенда 0094",
+   "price": 518.99,
+   "sku": "SKU-0094"
+  },
+  {
+   "name": "Товар стенда 0095",
+   "price": 555.99,
+   "sku": "SKU-0095"
+  },
+  {
+   "name": "Товар стенда 0096",
+   "price": 592.99,
+   "sku": "SKU-0096"
+  },
+  {
+   "name": "Товар стенда 0097",
+   "price": 629.99,
+   "sku": "SKU-0097"
+  },
+  {
+   "name": "Товар стенда 0098",
+   "price": 666.99,
+   "sku": "SKU-0098"
+  },
+  {
+   "name": "Товар стенда 0099",
+   "price": 703.99,
+   "sku": "SKU-0099"
+  },
+  {
+   "name": "Товар стенда 0100",
+   "price": 740.99,
+   "sku": "SKU-0100"
+  },
+  {
+   "name": "Товар стенда 0101",
+   "price": 777.99,
+   "sku": "SKU-0101"
+  },
+  {
+   "name": "Товар стенда 0102",
+   "price": 814.99,
+   "sku": "SKU-0102"
+  },
+  {
+   "name": "Товар стенда 0103",
+   "price": 851.99,
+   "sku": "SKU-0103"
+  },
+  {
+   "name": "Товар стенда 0104",
+   "price": 888.99,
+   "sku": "SKU-0104"
+  },
+  {
+   "name": "Товар стенда 0105",
+   "price": 925.99,
+   "sku": "SKU-0105"
+  },
+  {
+   "name": "Товар стенда 0106",
+   "price": 962.99,
+   "sku": "SKU-0106"
+  },
+  {
+   "name": "Товар стенда 0107",
+   "price": 999.99,
+   "sku": "SKU-0107"
+  },
+  {
+   "name": "Товар стенда 0108",
+   "price": 46.99,
+   "sku": "SKU-0108"
+  },
+  {
+   "name": "Товар стенда 0109",
+   "price": 83.99,
+   "sku": "SKU-0109"
+  },
+  {
+   "name": "Товар стенда 0110",
+   "price": 120.99,
+   "sku": "SKU-0110"
+  },
+  {
+   "name": "Товар стенда 0111",
+   "price": 157.99,
+   "sku": "SKU-0111"
+  },
+  {
+   "name": "Товар стенда 0112",
+   "price": 194.99,
+   "sku": "SKU-0112"
+  },
+  {
+   "name": "Товар стенда 0113",
+   "price": 231.99,
+   "sku": "SKU-0113"
+  },
+  {
+   "name": "Товар стенда 0114",
+   "price": 268.99,
+   "sku": "SKU-0114"
+  },
+  {
+   "name": "Товар стенда 0115",
+   "price": 305.99,
+   "sku": "SKU-0115"
+  },
+  {
+   "name": "Товар стенда 0116",
+   "price": 342.99,
+   "sku": "SKU-0116"
+  },
+  {
+   "name": "Товар стенда 0117",
+   "price": 379.99,
+   "sku": "SKU-0117"
+  },
+  {
+   "name": "Товар стенда 0118",
+   "price": 416.99,
+   "sku": "SKU-0118"
+  },
+  {
+   "name": "Товар стенда 0119",
+   "price": 453.99,
+   "sku": "SKU-0119"
+  },
+  {
+   "name": "Товар стенда 0120",
+   "price": 490.99,
+   "sku": "SKU-0120"
+  },
+  {
+   "name": "Товар стенда 0121",
+   "price": 527.99,
+   "sku": "SKU-0121"
+  },
+  {
+   "name": "Товар стенда 0122",
+   "price": 564.99,
+   "sku": "SKU-0122"
+  },
+  {
+   "name": "Товар стенда 0123",
+   "price": 601.99,
+   "sku": "SKU-0123"
+  },
+  {
+   "name": "Товар стенда 0124",
+   "price": 638.99,
+   "sku": "SKU-0124"
+  },
+  {
+   "name": "Товар стенда 0125",
+   "price": 675.99,
+   "sku": "SKU-0125"
+  },
+  {
+   "name": "Товар стенда 0126",
+   "price": 712.99,
+   "sku": "SKU-0126"
+  },
+  {
+   "name": "Товар стенда 0127",
+   "price": 749.99,
+   "sku": "SKU-0127"
+  },
+  {
+   "name": "Товар стенда 0128",
+   "price": 786.99,
+   "sku": "SKU-0128"
+  },
+  {
+   "name": "Товар стенда 0129",
+   "price": 823.99,
+   "sku": "SKU-0129"
+  },
+  {
+   "name": "Товар стенда 0130",
+   "price": 860.99,
+   "sku": "SKU-0130"
+  },
+  {
+   "name": "Товар стенда 0131",
+   "price": 897.99,
+   "sku": "SKU-0131"
+  },
+  {
+   "name": "Товар стенда 0132",
+   "price": 934.99,
+   "sku": "SKU-0132"
+  },
+  {
+   "name": "Товар стенда 0133",
+   "price": 971.99,
+   "sku": "SKU-0133"
+  },
+  {
+   "name": "Товар стенда 0134",
+   "price": 18.99,
+   "sku": "SKU-0134"
+  },
+  {
+   "name": "Товар стенда 0135",
+   "price": 55.99,
+   "sku": "SKU-0135"
+  },
+  {
+   "name": "Товар стенда 0136",
+   "price": 92.99,
+   "sku": "SKU-0136"
+  },
+  {
+   "name": "Товар стенда 0137",
+   "price": 129.99,
+   "sku": "SKU-0137"
+  },
+  {
+   "name": "Товар стенда 0138",
+   "price": 166.99,
+   "sku": "SKU-0138"
+  },
+  {
+   "name": "Товар стенда 0139",
+   "price": 203.99,
+   "sku": "SKU-0139"
+  },
+  {
+   "name": "Товар стенда 0140",
+   "price": 240.99,
+   "sku": "SKU-0140"
+  },
+  {
+   "name": "Товар стенда 0141",
+   "price": 277.99,
+   "sku": "SKU-0141"
+  },
+  {
+   "name": "Товар стенда 0142",
+   "price": 314.99,
+   "sku": "SKU-0142"
+  },
+  {
+   "name": "Товар стенда 0143",
+   "price": 351.99,
+   "sku": "SKU-0143"
+  },
+  {
+   "name": "Товар стенда 0144",
+   "price": 388.99,
+   "sku": "SKU-0144"
+  },
+  {
+   "name": "Товар стенда 0145",
+   "price": 425.99,
+   "sku": "SKU-0145"
+  },
+  {
+   "name": "Товар стенда 0146",
+   "price": 462.99,
+   "sku": "SKU-0146"
+  },
+  {
+   "name": "Товар стенда 0147",
+   "price": 499.99,
+   "sku": "SKU-0147"
+  },
+  {
+   "name": "Товар стенда 0148",
+   "price": 536.99,
+   "sku": "SKU-0148"
+  },
+  {
+   "name": "Товар стенда 0149",
+   "price": 573.99,
+   "sku": "SKU-0149"
+  },
+  {
+   "name": "Товар стенда 0150",
+   "price": 610.99,
+   "sku": "SKU-0150"
+  },
+  {
+   "name": "Товар стенда 0151",
+   "price": 647.99,
+   "sku": "SKU-0151"
+  },
+  {
+   "name": "Товар стенда 0152",
+   "price": 684.99,
+   "sku": "SKU-0152"
+  },
+  {
+   "name": "Товар стенда 0153",
+   "price": 721.99,
+   "sku": "SKU-0153"
+  },
+  {
+   "name": "Товар стенда 0154",
+   "price": 758.99,
+   "sku": "SKU-0154"
+  },
+  {
+   "name": "Товар стенда 0155",
+   "price": 795.99,
+   "sku": "SKU-0155"
+  },
+  {
+   "name": "Товар стенда 0156",
+   "price": 832.99,
+   "sku": "SKU-0156"
+  },
+  {
+   "name": "Товар стенда 0157",
+   "price": 869.99,
+   "sku": "SKU-0157"
+  },
+  {
+   "name": "Товар стенда 0158",
+   "price": 906.99,
+   "sku": "SKU-0158"
+  },
+  {
+   "name": "Товар стенда 0159",
+   "price": 943.99,
+   "sku": "SKU-0159"
+  },
+  {
+   "name": "Товар стенда 0160",
+   "price": 980.99,
+   "sku": "SKU-0160"
+  },
+  {
+   "name": "Товар стенда 0161",
+   "price": 27.99,
+   "sku": "SKU-0161"
+  },
+  {
+   "name": "Товар стенда 0162",
+   "price": 64.99,
+   "sku": "SKU-0162"
+  },
+  {
+   "name": "Товар стенда 0163",
+   "price": 101.99,
+   "sku": "SKU-0163"
+  },
+  {
+   "name": "Товар стенда 0164",
+   "price": 138.99,
+   "sku": "SKU-0164"
+  },
+  {
+   "name": "Товар стенда 0165",
+   "price": 175.99,
+   "sku": "SKU-0165"
+  },
+  {
+   "name": "Товар стенда 0166",
+   "price": 212.99,
+   "sku": "SKU-0166"
+  },
+  {
+   "name": "Товар стенда 0167",
+   "price": 249.99,
+   "sku": "SKU-0167"
+  },
+  {
+   "name": "Товар стенда 0168",
+   "price": 286.99,
+   "sku": "SKU-0168"
+  },
+  {
+   "name": "Товар стенда 0169",
+   "price": 323.99,
+   "sku": "SKU-0169"
+  },
+  {
+   "name": "Товар стенда 0170",
+   "price": 360.99,
+   "sku": "SKU-0170"
+  },
+  {
+   "name": "Товар стенда 0171",
+   "price": 397.99,
+   "sku": "SKU-0171"
+  },
+  {
+   "name": "Товар стенда 0172",
+   "price": 434.99,
+   "sku": "SKU-0172"
+  },
+  {
+   "name": "Товар стенда 0173",
+   "price": 471.99,
+   "sku": "SKU-0173"
+  },
+  {
+   "name": "Товар стенда 0174",
+   "price": 508.99,
+   "sku": "SKU-0174"
+  },
+  {
+   "name": "Товар стенда 0175",
+   "price": 545.99,
+   "sku": "SKU-0175"
+  },
+  {
+   "name": "Товар стенда 0176",
+   "price": 582.99,
+   "sku": "SKU-0176"
+  },
+  {
+   "name": "Товар стенда 0177",
+   "price": 619.99,
+   "sku": "SKU-0177"
+  },
+  {
+   "name": "Товар стенда 0178",
+   "price": 656.99,
+   "sku": "SKU-0178"
+  },
+  {
+   "name": "Товар стенда 0179",
+   "price": 693.99,
+   "sku": "SKU-0179"
+  },
+  {
+   "name": "Товар стенда 0180",
+   "price": 730.99,
+   "sku": "SKU-0180"
+  },
+  {
+   "name": "Товар стенда 0181",
+   "price": 767.99,
+   "sku": "SKU-0181"
+  },
+  {
+   "name": "Товар стенда 0182",
+   "price": 804.99,
+   "sku": "SKU-0182"
+  },
+  {
+   "name": "Товар стенда 0183",
+   "price": 841.99,
+   "sku": "SKU-0183"
+  },
+  {
+   "name": "Товар стенда 0184",
+   "price": 878.99,
+   "sku": "SKU-0184"
+  },
+  {
+   "name": "Товар стенда 0185",
+   "price": 915.99,
+   "sku": "SKU-0185"
+  },
+  {
+   "name": "Товар стенда 0186",
+   "price": 952.99,
+   "sku": "SKU-0186"
+  },
+  {
+   "name": "Товар стенда 0187",
+   "price": 989.99,
+   "sku": "SKU-0187"
+  },
+  {
+   "name": "Товар стенда 0188",
+   "price": 36.99,
+   "sku": "SKU-0188"
+  },
+  {
+   "name": "Товар стенда 0189",
+   "price": 73.99,
+   "sku": "SKU-0189"
+  },
+  {
+   "name": "Товар стенда 0190",
+   "price": 110.99,
+   "sku": "SKU-0190"
+  },
+  {
+   "name": "Товар стенда 0191",
+   "price": 147.99,
+   "sku": "SKU-0191"
+  },
+  {
+   "name": "Товар стенда 0192",
+   "price": 184.99,
+   "sku": "SKU-0192"
+  },
+  {
+   "name": "Товар стенда 0193",
+   "price": 221.99,
+   "sku": "SKU-0193"
+  },
+  {
+   "name": "Товар стенда 0194",
+   "price": 258.99,
+   "sku": "SKU-0194"
+  },
+  {
+   "name": "Товар стенда 0195",
+   "price": 295.99,
+   "sku": "SKU-0195"
+  },
+  {
+   "name": "Товар стенда 0196",
+   "price": 332.99,
+   "sku": "SKU-0196"
+  },
+  {
+   "name": "Товар стенда 0197",
+   "price": 369.99,
+   "sku": "SKU-0197"
+  },
+  {
+   "name": "Товар стенда 0198",
+   "price": 406.99,
+   "sku": "SKU-0198"
+  },
+  {
+   "name": "Товар стенда 0199",
+   "price": 443.99,
+   "sku": "SKU-0199"
+  },
+  {
+   "name": "Товар стенда 0200",
+   "price": 480.99,
+   "sku": "SKU-0200"
+  },
+  {
+   "name": "Товар стенда 0201",
+   "price": 517.99,
+   "sku": "SKU-0201"
+  },
+  {
+   "name": "Товар стенда 0202",
+   "price": 554.99,
+   "sku": "SKU-0202"
+  },
+  {
+   "name": "Товар стенда 0203",
+   "price": 591.99,
+   "sku": "SKU-0203"
+  },
+  {
+   "name": "Товар стенда 0204",
+   "price": 628.99,
+   "sku": "SKU-0204"
+  },
+  {
+   "name": "Товар стенда 0205",
+   "price": 665.99,
+   "sku": "SKU-0205"
+  },
+  {
+   "name": "Товар стенда 0206",
+   "price": 702.99,
+   "sku": "SKU-0206"
+  },
+  {
+   "name": "Товар стенда 0207",
+   "price": 739.99,
+   "sku": "SKU-0207"
+  },
+  {
+   "name": "Товар стенда 0208",
+   "price": 776.99,
+   "sku": "SKU-0208"
+  },
+  {
+   "name": "Товар стенда 0209",
+   "price": 813.99,
+   "sku": "SKU-0209"
+  },
+  {
+   "name": "Товар стенда 0210",
+   "price": 850.99,
+   "sku": "SKU-0210"
+  },
+  {
+   "name": "Товар стенда 0211",
+   "price": 887.99,
+   "sku": "SKU-0211"
+  },
+  {
+   "name": "Товар стенда 0212",
+   "price": 924.99,
+   "sku": "SKU-0212"
+  },
+  {
+   "name": "Товар стенда 0213",
+   "price": 961.99,
+   "sku": "SKU-0213"
+  },
+  {
+   "name": "Товар стенда 0214",
+   "price": 998.99,
+   "sku": "SKU-0214"
+  },
+  {
+   "name": "Товар стенда 0215",
+   "price": 45.99,
+   "sku": "SKU-0215"
+  },
+  {
+   "name": "Товар стенда 0216",
+   "price": 82.99,
+   "sku": "SKU-0216"
+  },
+  {
+   "name": "Товар стенда 0217",
+   "price": 119.99,
+   "sku": "SKU-0217"
+  },
+  {
+   "name": "Товар стенда 0218",
+   "price": 156.99,
+   "sku": "SKU-0218"
+  },
+  {
+   "name": "Товар стенда 0219",
+   "price": 193.99,
+   "sku": "SKU-0219"
+  },
+  {
+   "name": "Товар стенда 0220",
+   "price": 230.99,
+   "sku": "SKU-0220"
+  },
+  {
+   "name": "Товар стенда 0221",
+   "price": 267.99,
+   "sku": "SKU-0221"
+  },
+  {
+   "name": "Товар стенда 0222",
+   "price": 304.99,
+   "sku": "SKU-0222"
+  },
+  {
+   "name": "Товар стенда 0223",
+   "price": 341.99,
+   "sku": "SKU-0223"
+  },
+  {
+   "name": "Товар стенда 0224",
+   "price": 378.99,
+   "sku": "SKU-0224"
+  },
+  {
+   "name": "Товар стенда 0225",
+   "price": 415.99,
+   "sku": "SKU-0225"
+  },
+  {
+   "name": "Товар стенда 0226",
+   "price": 452.99,
+   "sku": "SKU-0226"
+  },
+  {
+   "name": "Товар стенда 0227",
+   "price": 489.99,
+   "sku": "SKU-0227"
+  },
+  {
+   "name": "Товар стенда 0228",
+   "price": 526.99,
+   "sku": "SKU-0228"
+  },
+  {
+   "name": "Товар стенда 0229",
+   "price": 563.99,
+   "sku": "SKU-0229"
+  },
+  {
+   "name": "Товар стенда 0230",
+   "price": 600.99,
+   "sku": "SKU-0230"
+  },
+  {
+   "name": "Товар стенда 0231",
+   "price": 637.99,
+   "sku": "SKU-0231"
+  },
+  {
+   "name": "Товар стенда 0232",
+   "price": 674.99,
+   "sku": "SKU-0232"
+  },
+  {
+   "name": "Товар стенда 0233",
+   "price": 711.99,
+   "sku": "SKU-0233"
+  },
+  {
+   "name": "Товар стенда 0234",
+   "price": 748.99,
+   "sku": "SKU-0234"
+  },
+  {
+   "name": "Товар стенда 0235",
+   "price": 785.99,
+   "sku": "SKU-0235"
+  },
+  {
+   "name": "Товар стенда 0236",
+   "price": 822.99,
+   "sku": "SKU-0236"
+  },
+  {
+   "name": "Товар стенда 0237",
+   "price": 859.99,
+   "sku": "SKU-0237"
+  },
+  {
+   "name": "Товар стенда 0238",
+   "price": 896.99,
+   "sku": "SKU-0238"
+  },
+  {
+   "name": "Товар стенда 0239",
+   "price": 933.99,
+   "sku": "SKU-0239"
+  },
+  {
+   "name": "Товар стенда 0240",
+   "price": 970.99,
+   "sku": "SKU-0240"
+  },
+  {
+   "name": "Товар стенда 0241",
+   "price": 17.99,
+   "sku": "SKU-0241"
+  },
+  {
+   "name": "Товар стенда 0242",
+   "price": 54.99,
+   "sku": "SKU-0242"
+  },
+  {
+   "name": "Товар стенда 0243",
+   "price": 91.99,
+   "sku": "SKU-0243"
+  },
+  {
+   "name": "Товар стенда 0244",
+   "price": 128.99,
+   "sku": "SKU-0244"
+  },
+  {
+   "name": "Товар стенда 0245",
+   "price": 165.99,
+   "sku": "SKU-0245"
+  },
+  {
+   "name": "Товар стенда 0246",
+   "price": 202.99,
+   "sku": "SKU-0246"
+  },
+  {
+   "name": "Товар стенда 0247",
+   "price": 239.99,
+   "sku": "SKU-0247"
+  },
+  {
+   "name": "Товар стенда 0248",
+   "price": 276.99,
+   "sku": "SKU-0248"
+  },
+  {
+   "name": "Товар стенда 0249",
+   "price": 313.99,
+   "sku": "SKU-0249"
+  },
+  {
+   "name": "Товар стенда 0250",
+   "price": 350.99,
+   "sku": "SKU-0250"
+  },
+  {
+   "name": "Товар стенда 0251",
+   "price": 387.99,
+   "sku": "SKU-0251"
+  },
+  {
+   "name": "Товар стенда 0252",
+   "price": 424.99,
+   "sku": "SKU-0252"
+  },
+  {
+   "name": "Товар стенда 0253",
+   "price": 461.99,
+   "sku": "SKU-0253"
+  },
+  {
+   "name": "Товар стенда 0254",
+   "price": 498.99,
+   "sku": "SKU-0254"
+  },
+  {
+   "name": "Товар стенда 0255",
+   "price": 535.99,
+   "sku": "SKU-0255"
+  },
+  {
+   "name": "Товар стенда 0256",
+   "price": 572.99,
+   "sku": "SKU-0256"
+  },
+  {
+   "name": "Товар стенда 0257",
+   "price": 609.99,
+   "sku": "SKU-0257"
+  },
+  {
+   "name": "Товар стенда 0258",
+   "price": 646.99,
+   "sku": "SKU-0258"
+  },
+  {
+   "name": "Товар стенда 0259",
+   "price": 683.99,
+   "sku": "SKU-0259"
+  },
+  {
+   "name": "Товар стенда 0260",
+   "price": 720.99,
+   "sku": "SKU-0260"
+  },
+  {
+   "name": "Товар стенда 0261",
+   "price": 757.99,
+   "sku": "SKU-0261"
+  },
+  {
+   "name": "Товар стенда 0262",
+   "price": 794.99,
+   "sku": "SKU-0262"
+  },
+  {
+   "name": "Товар стенда 0263",
+   "price": 831.99,
+   "sku": "SKU-0263"
+  },
+  {
+   "name": "Товар стенда 0264",
+   "price": 868.99,
+   "sku": "SKU-0264"
+  },
+  {
+   "name": "Товар стенда 0265",
+   "price": 905.99,
+   "sku": "SKU-0265"
+  },
+  {
+   "name": "Товар стенда 0266",
+   "price": 942.99,
+   "sku": "SKU-0266"
+  },
+  {
+   "name": "Товар стенда 0267",
+   "price": 979.99,
+   "sku": "SKU-0267"
+  },
+  {
+   "name": "Товар стенда 0268",
+   "price": 26.99,
+   "sku": "SKU-0268"
+  },
+  {
+   "name": "Товар стенда 0269",
+   "price": 63.99,
+   "sku": "SKU-0269"
+  },
+  {
+   "name": "Товар стенда 0270",
+   "price": 100.99,
+   "sku": "SKU-0270"
+  },
+  {
+   "name": "Товар стенда 0271",
+   "price": 137.99,
+   "sku": "SKU-0271"
+  },
+  {
+   "name": "Товар стенда 0272",
+   "price": 174.99,
+   "sku": "SKU-0272"
+  },
+  {
+   "name": "Товар стенда 0273",
+   "price": 211.99,
+   "sku": "SKU-0273"
+  },
+  {
+   "name": "Товар стенда 0274",
+   "price": 248.99,
+   "sku": "SKU-0274"
+  },
+  {
+   "name": "Товар стенда 0275",
+   "price": 285.99,
+   "sku": "SKU-0275"
+  },
+  {
+   "name": "Товар стенда 0276",
+   "price": 322.99,
+   "sku": "SKU-0276"
+  },
+  {
+   "name": "Товар стенда 0277",
+   "price": 359.99,
+   "sku": "SKU-0277"
+  },
+  {
+   "name": "Товар стенда 0278",
+   "price": 396.99,
+   "sku": "SKU-0278"
+  },
+  {
+   "name": "Товар стенда 0279",
+   "price": 433.99,
+   "sku": "SKU-0279"
+  },
+  {
+   "name": "Товар стенда 0280",
+   "price": 470.99,
+   "sku": "SKU-0280"
+  },
+  {
+   "name": "Товар стенда 0281",
+   "price": 507.99,
+   "sku": "SKU-0281"
+  },
+  {
+   "name": "Товар стенда 0282",
+   "price": 544.99,
+   "sku": "SKU-0282"
+  },
+  {
+   "name": "Товар стенда 0283",
+   "price": 581.99,
+   "sku": "SKU-0283"
+  },
+  {
+   "name": "Товар стенда 0284",
+   "price": 618.99,
+   "sku": "SKU-0284"
+  },
+  {
+   "name": "Товар стенда 0285",
+   "price": 655.99,
+   "sku": "SKU-0285"
+  },
+  {
+   "name": "Товар стенда 0286",
+   "price": 692.99,
+   "sku": "SKU-0286"
+  },
+  {
+   "name": "Товар стенда 0287",
+   "price": 729.99,
+   "sku": "SKU-0287"
+  },
+  {
+   "name": "Товар стенда 0288",
+   "price": 766.99,
+   "sku": "SKU-0288"
+  },
+  {
+   "name": "Товар стенда 0289",
+   "price": 803.99,
+   "sku": "SKU-0289"
+  },
+  {
+   "name": "Товар стенда 0290",
+   "price": 840.99,
+   "sku": "SKU-0290"
+  },
+  {
+   "name": "Товар стенда 0291",
+   "price": 877.99,
+   "sku": "SKU-0291"
+  },
+  {
+   "name": "Товар стенда 0292",
+   "price": 914.99,
+   "sku": "SKU-0292"
+  },
+  {
+   "name": "Товар стенда 0293",
+   "price": 951.99,
+   "sku": "SKU-0293"
+  },
+  {
+   "name": "Товар стенда 0294",
+   "price": 988.99,
+   "sku": "SKU-0294"
+  },
+  {
+   "name": "Товар стенда 0295",
+   "price": 35.99,
+   "sku": "SKU-0295"
+  },
+  {
+   "name": "Товар стенда 0296",
+   "price": 72.99,
+   "sku": "SKU-0296"
+  },
+  {
+   "name": "Товар стенда 0297",
+   "price": 109.99,
+   "sku": "SKU-0297"
+  },
+  {
+   "name": "Товар стенда 0298",
+   "price": 146.99,
+   "sku": "SKU-0298"
+  },
+  {
+   "name": "Товар стенда 0299",
+   "price": 183.99,
+   "sku": "SKU-0299"
+  },
+  {
+   "name": "Товар стенда 0300",
+   "price": 220.99,
+   "sku": "SKU-0300"
+  },
+  {
+   "name": "Товар стенда 0301",
+   "price": 257.99,
+   "sku": "SKU-0301"
+  },
+  {
+   "name": "Товар стенда 0302",
+   "price": 294.99,
+   "sku": "SKU-0302"
+  },
+  {
+   "name": "Товар стенда 0303",
+   "price": 331.99,
+   "sku": "SKU-0303"
+  },
+  {
+   "name": "Товар стенда 0304",
+   "price": 368.99,
+   "sku": "SKU-0304"
+  },
+  {
+   "name": "Товар стенда 0305",
+   "price": 405.99,
+   "sku": "SKU-0305"
+  },
+  {
+   "name": "Товар стенда 0306",
+   "price": 442.99,
+   "sku": "SKU-0306"
+  },
+  {
+   "name": "Товар стенда 0307",
+   "price": 479.99,
+   "sku": "SKU-0307"
+  },
+  {
+   "name": "Товар стенда 0308",
+   "price": 516.99,
+   "sku": "SKU-0308"
+  },
+  {
+   "name": "Товар стенда 0309",
+   "price": 553.99,
+   "sku": "SKU-0309"
+  },
+  {
+   "name": "Товар стенда 0310",
+   "price": 590.99,
+   "sku": "SKU-0310"
+  },
+  {
+   "name": "Товар стенда 0311",
+   "price": 627.99,
+   "sku": "SKU-0311"
+  },
+  {
+   "name": "Товар стенда 0312",
+   "price": 664.99,
+   "sku": "SKU-0312"
+  },
+  {
+   "name": "Товар стенда 0313",
+   "price": 701.99,
+   "sku": "SKU-0313"
+  },
+  {
+   "name": "Товар стенда 0314",
+   "price": 738.99,
+   "sku": "SKU-0314"
+  },
+  {
+   "name": "Товар стенда 0315",
+   "price": 775.99,
+   "sku": "SKU-0315"
+  },
+  {
+   "name": "Товар стенда 0316",
+   "price": 812.99,
+   "sku": "SKU-0316"
+  },
+  {
+   "name": "Товар стенда 0317",
+   "price": 849.99,
+   "sku": "SKU-0317"
+  },
+  {
+   "name": "Товар стенда 0318",
+   "price": 886.99,
+   "sku": "SKU-0318"
+  },
+  {
+   "name": "Товар стенда 0319",
+   "price": 923.99,
+   "sku": "SKU-0319"
+  },
+  {
+   "name": "Товар стенда 0320",
+   "price": 960.99,
+   "sku": "SKU-0320"
+  },
+  {
+   "name": "Товар стенда 0321",
+   "price": 997.99,
+   "sku": "SKU-0321"
+  },
+  {
+   "name": "Товар стенда 0322",
+   "price": 44.99,
+   "sku": "SKU-0322"
+  },
+  {
+   "name": "Товар стенда 0323",
+   "price": 81.99,
+   "sku": "SKU-0323"
+  },
+  {
+   "name": "Товар стенда 0324",
+   "price": 118.99,
+   "sku": "SKU-0324"
+  },
+  {
+   "name": "Товар стенда 0325",
+   "price": 155.99,
+   "sku": "SKU-0325"
+  },
+  {
+   "name": "Товар стенда 0326",
+   "price": 192.99,
+   "sku": "SKU-0326"
+  },
+  {
+   "name": "Товар стенда 0327",
+   "price": 229.99,
+   "sku": "SKU-0327"
+  },
+  {
+   "name": "Товар стенда 0328",
+   "price": 266.99,
+   "sku": "SKU-0328"
+  },
+  {
+   "name": "Товар стенда 0329",
+   "price": 303.99,
+   "sku": "SKU-0329"
+  },
+  {
+   "name": "Товар стенда 0330",
+   "price": 340.99,
+   "sku": "SKU-0330"
+  },
+  {
+   "name": "Товар стенда 0331",
+   "price": 377.99,
+   "sku": "SKU-0331"
+  },
+  {
+   "name": "Товар стенда 0332",
+   "price": 414.99,
+   "sku": "SKU-0332"
+  },
+  {
+   "name": "Товар стенда 0333",
+   "price": 451.99,
+   "sku": "SKU-0333"
+  },
+  {
+   "name": "Товар стенда 0334",
+   "price": 488.99,
+   "sku": "SKU-0334"
+  },
+  {
+   "name": "Товар стенда 0335",
+   "price": 525.99,
+   "sku": "SKU-0335"
+  },
+  {
+   "name": "Товар стенда 0336",
+   "price": 562.99,
+   "sku": "SKU-0336"
+  },
+  {
+   "name": "Товар стенда 0337",
+   "price": 599.99,
+   "sku": "SKU-0337"
+  },
+  {
+   "name": "Товар стенда 0338",
+   "price": 636.99,
+   "sku": "SKU-0338"
+  },
+  {
+   "name": "Товар стенда 0339",
+   "price": 673.99,
+   "sku": "SKU-0339"
+  },
+  {
+   "name": "Товар стенда 0340",
+   "price": 710.99,
+   "sku": "SKU-0340"
+  },
+  {
+   "name": "Товар стенда 0341",
+   "price": 747.99,
+   "sku": "SKU-0341"
+  },
+  {
+   "name": "Товар стенда 0342",
+   "price": 784.99,
+   "sku": "SKU-0342"
+  },
+  {
+   "name": "Товар стенда 0343",
+   "price": 821.99,
+   "sku": "SKU-0343"
+  },
+  {
+   "name": "Товар стенда 0344",
+   "price": 858.99,
+   "sku": "SKU-0344"
+  },
+  {
+   "name": "Товар стенда 0345",
+   "price": 895.99,
+   "sku": "SKU-0345"
+  },
+  {
+   "name": "Товар стенда 0346",
+   "price": 932.99,
+   "sku": "SKU-0346"
+  },
+  {
+   "name": "Товар стенда 0347",
+   "price": 969.99,
+   "sku": "SKU-0347"
+  },
+  {
+   "name": "Товар стенда 0348",
+   "price": 16.99,
+   "sku": "SKU-0348"
+  },
+  {
+   "name": "Товар стенда 0349",
+   "price": 53.99,
+   "sku": "SKU-0349"
+  },
+  {
+   "name": "Товар стенда 0350",
+   "price": 90.99,
+   "sku": "SKU-0350"
+  },
+  {
+   "name": "Товар стенда 0351",
+   "price": 127.99,
+   "sku": "SKU-0351"
+  },
+  {
+   "name": "Товар стенда 0352",
+   "price": 164.99,
+   "sku": "SKU-0352"
+  },
+  {
+   "name": "Товар стенда 0353",
+   "price": 201.99,
+   "sku": "SKU-0353"
+  },
+  {
+   "name": "Товар стенда 0354",
+   "price": 238.99,
+   "sku": "SKU-0354"
+  },
+  {
+   "name": "Товар стенда 0355",
+   "price": 275.99,
+   "sku": "SKU-0355"
+  },
+  {
+   "name": "Товар стенда 0356",
+   "price": 312.99,
+   "sku": "SKU-0356"
+  },
+  {
+   "name": "Товар стенда 0357",
+   "price": 349.99,
+   "sku": "SKU-0357"
+  },
+  {
+   "name": "Товар стенда 0358",
+   "price": 386.99,
+   "sku": "SKU-0358"
+  },
+  {
+   "name": "Товар стенда 0359",
+   "price": 423.99,
+   "sku": "SKU-0359"
+  },
+  {
+   "name": "Товар стенда 0360",
+   "price": 460.99,
+   "sku": "SKU-0360"
+  },
+  {
+   "name": "Товар стенда 0361",
+   "price": 497.99,
+   "sku": "SKU-0361"
+  },
+  {
+   "name": "Товар стенда 0362",
+   "price": 534.99,
+   "sku": "SKU-0362"
+  },
+  {
+   "name": "Товар стенда 0363",
+   "price": 571.99,
+   "sku": "SKU-0363"
+  },
+  {
+   "name": "Товар стенда 0364",
+   "price": 608.99,
+   "sku": "SKU-0364"
+  },
+  {
+   "name": "Товар стенда 0365",
+   "price": 645.99,
+   "sku": "SKU-0365"
+  },
+  {
+   "name": "Товар стенда 0366",
+   "price": 682.99,
+   "sku": "SKU-0366"
+  },
+  {
+   "name": "Товар стенда 0367",
+   "price": 719.99,
+   "sku": "SKU-0367"
+  },
+  {
+   "name": "Товар стенда 0368",
+   "price": 756.99,
+   "sku": "SKU-0368"
+  },
+  {
+   "name": "Товар стенда 0369",
+   "price": 793.99,
+   "sku": "SKU-0369"
+  },
+  {
+   "name": "Товар стенда 0370",
+   "price": 830.99,
+   "sku": "SKU-0370"
+  },
+  {
+   "name": "Товар стенда 0371",
+   "price": 867.99,
+   "sku": "SKU-0371"
+  },
+  {
+   "name": "Товар стенда 0372",
+   "price": 904.99,
+   "sku": "SKU-0372"
+  },
+  {
+   "name": "Товар стенда 0373",
+   "price": 941.99,
+   "sku": "SKU-0373"
+  },
+  {
+   "name": "Товар стенда 0374",
+   "price": 978.99,
+   "sku": "SKU-0374"
+  },
+  {
+   "name": "Товар стенда 0375",
+   "price": 25.99,
+   "sku": "SKU-0375"
+  },
+  {
+   "name": "Товар стенда 0376",
+   "price": 62.99,
+   "sku": "SKU-0376"
+  },
+  {
+   "name": "Товар стенда 0377",
+   "price": 99.99,
+   "sku": "SKU-0377"
+  },
+  {
+   "name": "Товар стенда 0378",
+   "price": 136.99,
+   "sku": "SKU-0378"
+  },
+  {
+   "name": "Товар стенда 0379",
+   "price": 173.99,
+   "sku": "SKU-0379"
+  },
+  {
+   "name": "Товар стенда 0380",
+   "price": 210.99,
+   "sku": "SKU-0380"
+  },
+  {
+   "name": "Товар стенда 0381",
+   "price": 247.99,
+   "sku": "SKU-0381"
+  },
+  {
+   "name": "Товар стенда 0382",
+   "price": 284.99,
+   "sku": "SKU-0382"
+  },
+  {
+   "name": "Товар стенда 0383",
+   "price": 321.99,
+   "sku": "SKU-0383"
+  },
+  {
+   "name": "Товар стенда 0384",
+   "price": 358.99,
+   "sku": "SKU-0384"
+  },
+  {
+   "name": "Товар стенда 0385",
+   "price": 395.99,
+   "sku": "SKU-0385"
+  },
+  {
+   "name": "Товар стенда 0386",
+   "price": 432.99,
+   "sku": "SKU-0386"
+  },
+  {
+   "name": "Товар стенда 0387",
+   "price": 469.99,
+   "sku": "SKU-0387"
+  },
+  {
+   "name": "Товар стенда 0388",
+   "price": 506.99,
+   "sku": "SKU-0388"
+  },
+  {
+   "name": "Товар стенда 0389",
+   "price": 543.99,
+   "sku": "SKU-0389"
+  },
+  {
+   "name": "Товар стенда 0390",
+   "price": 580.99,
+   "sku": "SKU-0390"
+  },
+  {
+   "name": "Товар стенда 0391",
+   "price": 617.99,
+   "sku": "SKU-0391"
+  },
+  {
+   "name": "Товар стенда 0392",
+   "price": 654.99,
+   "sku": "SKU-0392"
+  },
+  {
+   "name": "Товар стенда 0393",
+   "price": 691.99,
+   "sku": "SKU-0393"
+  },
+  {
+   "name": "Товар стенда 0394",
+   "price": 728.99,
+   "sku": "SKU-0394"
+  },
+  {
+   "name": "Товар стенда 0395",
+   "price": 765.99,
+   "sku": "SKU-0395"
+  },
+  {
+   "name": "Товар стенда 0396",
+   "price": 802.99,
+   "sku": "SKU-0396"
+  },
+  {
+   "name": "Товар стенда 0397",
+   "price": 839.99,
+   "sku": "SKU-0397"
+  },
+  {
+   "name": "Товар стенда 0398",
+   "price": 876.99,
+   "sku": "SKU-0398"
+  },
+  {
+   "name": "Товар стенда 0399",
+   "price": 913.99,
+   "sku": "SKU-0399"
+  },
+  {
+   "name": "Товар стенда 0400",
+   "price": 950.99,
+   "sku": "SKU-0400"
+  },
+  {
+   "name": "Товар стенда 0401",
+   "price": 987.99,
+   "sku": "SKU-0401"
+  },
+  {
+   "name": "Товар стенда 0402",
+   "price": 34.99,
+   "sku": "SKU-0402"
+  },
+  {
+   "name": "Товар стенда 0403",
+   "price": 71.99,
+   "sku": "SKU-0403"
+  },
+  {
+   "name": "Товар стенда 0404",
+   "price": 108.99,
+   "sku": "SKU-0404"
+  },
+  {
+   "name": "Товар стенда 0405",
+   "price": 145.99,
+   "sku": "SKU-0405"
+  },
+  {
+   "name": "Товар стенда 0406",
+   "price": 182.99,
+   "sku": "SKU-0406"
+  },
+  {
+   "name": "Товар стенда 0407",
+   "price": 219.99,
+   "sku": "SKU-0407"
+  },
+  {
+   "name": "Товар стенда 0408",
+   "price": 256.99,
+   "sku": "SKU-0408"
+  },
+  {
+   "name": "Товар стенда 0409",
+   "price": 293.99,
+   "sku": "SKU-0409"
+  },
+  {
+   "name": "Товар стенда 0410",
+   "price": 330.99,
+   "sku": "SKU-0410"
+  },
+  {
+   "name": "Товар стенда 0411",
+   "price": 367.99,
+   "sku": "SKU-0411"
+  },
+  {
+   "name": "Товар стенда 0412",
+   "price": 404.99,
+   "sku": "SKU-0412"
+  },
+  {
+   "name": "Товар стенда 0413",
+   "price": 441.99,
+   "sku": "SKU-0413"
+  },
+  {
+   "name": "Товар стенда 0414",
+   "price": 478.99,
+   "sku": "SKU-0414"
+  },
+  {
+   "name": "Товар стенда 0415",
+   "price": 515.99,
+   "sku": "SKU-0415"
+  },
+  {
+   "name": "Товар стенда 0416",
+   "price": 552.99,
+   "sku": "SKU-0416"
+  },
+  {
+   "name": "Товар стенда 0417",
+   "price": 589.99,
+   "sku": "SKU-0417"
+  },
+  {
+   "name": "Товар стенда 0418",
+   "price": 626.99,
+   "sku": "SKU-0418"
+  },
+  {
+   "name": "Товар стенда 0419",
+   "price": 663.99,
+   "sku": "SKU-0419"
+  },
+  {
+   "name": "Товар стенда 0420",
+   "price": 700.99,
+   "sku": "SKU-0420"
+  },
+  {
+   "name": "Товар стенда 0421",
+   "price": 737.99,
+   "sku": "SKU-0421"
+  },
+  {
+   "name": "Товар стенда 0422",
+   "price": 774.99,
+   "sku": "SKU-0422"
+  },
+  {
+   "name": "Товар стенда 0423",
+   "price": 811.99,
+   "sku": "SKU-0423"
+  },
+  {
+   "name": "Товар стенда 0424",
+   "price": 848.99,
+   "sku": "SKU-0424"
+  },
+  {
+   "name": "Товар стенда 0425",
+   "price": 885.99,
+   "sku": "SKU-0425"
+  },
+  {
+   "name": "Товар стенда 0426",
+   "price": 922.99,
+   "sku": "SKU-0426"
+  },
+  {
+   "name": "Товар стенда 0427",
+   "price": 959.99,
+   "sku": "SKU-0427"
+  },
+  {
+   "name": "Товар стенда 0428",
+   "price": 996.99,
+   "sku": "SKU-0428"
+  },
+  {
+   "name": "Товар стенда 0429",
+   "price": 43.99,
+   "sku": "SKU-0429"
+  },
+  {
+   "name": "Товар стенда 0430",
+   "price": 80.99,
+   "sku": "SKU-0430"
+  },
+  {
+   "name": "Товар стенда 0431",
+   "price": 117.99,
+   "sku": "SKU-0431"
+  },
+  {
+   "name": "Товар стенда 0432",
+   "price": 154.99,
+   "sku": "SKU-0432"
+  },
+  {
+   "name": "Товар стенда 0433",
+   "price": 191.99,
+   "sku": "SKU-0433"
+  },
+  {
+   "name": "Товар стенда 0434",
+   "price": 228.99,
+   "sku": "SKU-0434"
+  },
+  {
+   "name": "Товар стенда 0435",
+   "price": 265.99,
+   "sku": "SKU-0435"
+  },
+  {
+   "name": "Товар стенда 0436",
+   "price": 302.99,
+   "sku": "SKU-0436"
+  },
+  {
+   "name": "Товар стенда 0437",
+   "price": 339.99,
+   "sku": "SKU-0437"
+  },
+  {
+   "name": "Товар стенда 0438",
+   "price": 376.99,
+   "sku": "SKU-0438"
+  },
+  {
+   "name": "Товар стенда 0439",
+   "price": 413.99,
+   "sku": "SKU-0439"
+  },
+  {
+   "name": "Товар стенда 0440",
+   "price": 450.99,
+   "sku": "SKU-0440"
+  },
+  {
+   "name": "Товар стенда 0441",
+   "price": 487.99,
+   "sku": "SKU-0441"
+  },
+  {
+   "name": "Товар стенда 0442",
+   "price": 524.99,
+   "sku": "SKU-0442"
+  },
+  {
+   "name": "Товар стенда 0443",
+   "price": 561.99,
+   "sku": "SKU-0443"
+  },
+  {
+   "name": "Товар стенда 0444",
+   "price": 598.99,
+   "sku": "SKU-0444"
+  },
+  {
+   "name": "Товар стенда 0445",
+   "price": 635.99,
+   "sku": "SKU-0445"
+  },
+  {
+   "name": "Товар стенда 0446",
+   "price": 672.99,
+   "sku": "SKU-0446"
+  },
+  {
+   "name": "Товар стенда 0447",
+   "price": 709.99,
+   "sku": "SKU-0447"
+  },
+  {
+   "name": "Товар стенда 0448",
+   "price": 746.99,
+   "sku": "SKU-0448"
+  },
+  {
+   "name": "Товар стенда 0449",
+   "price": 783.99,
+   "sku": "SKU-0449"
+  },
+  {
+   "name": "Товар стенда 0450",
+   "price": 820.99,
+   "sku": "SKU-0450"
+  },
+  {
+   "name": "Товар стенда 0451",
+   "price": 857.99,
+   "sku": "SKU-0451"
+  },
+  {
+   "name": "Товар стенда 0452",
+   "price": 894.99,
+   "sku": "SKU-0452"
+  },
+  {
+   "name": "Товар стенда 0453",
+   "price": 931.99,
+   "sku": "SKU-0453"
+  },
+  {
+   "name": "Товар стенда 0454",
+   "price": 968.99,
+   "sku": "SKU-0454"
+  },
+  {
+   "name": "Товар стенда 0455",
+   "price": 15.99,
+   "sku": "SKU-0455"
+  },
+  {
+   "name": "Товар стенда 0456",
+   "price": 52.99,
+   "sku": "SKU-0456"
+  },
+  {
+   "name": "Товар стенда 0457",
+   "price": 89.99,
+   "sku": "SKU-0457"
+  },
+  {
+   "name": "Товар стенда 0458",
+   "price": 126.99,
+   "sku": "SKU-0458"
+  },
+  {
+   "name": "Товар стенда 0459",
+   "price": 163.99,
+   "sku": "SKU-0459"
+  },
+  {
+   "name": "Товар стенда 0460",
+   "price": 200.99,
+   "sku": "SKU-0460"
+  },
+  {
+   "name": "Товар стенда 0461",
+   "price": 237.99,
+   "sku": "SKU-0461"
+  },
+  {
+   "name": "Товар стенда 0462",
+   "price": 274.99,
+   "sku": "SKU-0462"
+  },
+  {
+   "name": "Товар стенда 0463",
+   "price": 311.99,
+   "sku": "SKU-0463"
+  },
+  {
+   "name": "Товар стенда 0464",
+   "price": 348.99,
+   "sku": "SKU-0464"
+  },
+  {
+   "name": "Товар стенда 0465",
+   "price": 385.99,
+   "sku": "SKU-0465"
+  },
+  {
+   "name": "Товар стенда 0466",
+   "price": 422.99,
+   "sku": "SKU-0466"
+  },
+  {
+   "name": "Товар стенда 0467",
+   "price": 459.99,
+   "sku": "SKU-0467"
+  },
+  {
+   "name": "Товар стенда 0468",
+   "price": 496.99,
+   "sku": "SKU-0468"
+  },
+  {
+   "name": "Товар стенда 0469",
+   "price": 533.99,
+   "sku": "SKU-0469"
+  },
+  {
+   "name": "Товар стенда 0470",
+   "price": 570.99,
+   "sku": "SKU-0470"
+  },
+  {
+   "name": "Товар стенда 0471",
+   "price": 607.99,
+   "sku": "SKU-0471"
+  },
+  {
+   "name": "Товар стенда 0472",
+   "price": 644.99,
+   "sku": "SKU-0472"
+  },
+  {
+   "name": "Товар стенда 0473",
+   "price": 681.99,
+   "sku": "SKU-0473"
+  },
+  {
+   "name": "Товар стенда 0474",
+   "price": 718.99,
+   "sku": "SKU-0474"
+  },
+  {
+   "name": "Товар стенда 0475",
+   "price": 755.99,
+   "sku": "SKU-0475"
+  },
+  {
+   "name": "Товар стенда 0476",
+   "price": 792.99,
+   "sku": "SKU-0476"
+  },
+  {
+   "name": "Товар стенда 0477",
+   "price": 829.99,
+   "sku": "SKU-0477"
+  },
+  {
+   "name": "Товар стенда 0478",
+   "price": 866.99,
+   "sku": "SKU-0478"
+  },
+  {
+   "name": "Товар стенда 0479",
+   "price": 903.99,
+   "sku": "SKU-0479"
+  },
+  {
+   "name": "Товар стенда 0480",
+   "price": 940.99,
+   "sku": "SKU-0480"
+  },
+  {
+   "name": "Товар стенда 0481",
+   "price": 977.99,
+   "sku": "SKU-0481"
+  },
+  {
+   "name": "Товар стенда 0482",
+   "price": 24.99,
+   "sku": "SKU-0482"
+  },
+  {
+   "name": "Товар стенда 0483",
+   "price": 61.99,
+   "sku": "SKU-0483"
+  },
+  {
+   "name": "Товар стенда 0484",
+   "price": 98.99,
+   "sku": "SKU-0484"
+  },
+  {
+   "name": "Товар стенда 0485",
+   "price": 135.99,
+   "sku": "SKU-0485"
+  },
+  {
+   "name": "Товар стенда 0486",
+   "price": 172.99,
+   "sku": "SKU-0486"
+  },
+  {
+   "name": "Товар стенда 0487",
+   "price": 209.99,
+   "sku": "SKU-0487"
+  },
+  {
+   "name": "Товар стенда 0488",
+   "price": 246.99,
+   "sku": "SKU-0488"
+  },
+  {
+   "name": "Товар стенда 0489",
+   "price": 283.99,
+   "sku": "SKU-0489"
+  },
+  {
+   "name": "Товар стенда 0490",
+   "price": 320.99,
+   "sku": "SKU-0490"
+  },
+  {
+   "name": "Товар стенда 0491",
+   "price": 357.99,
+   "sku": "SKU-0491"
+  },
+  {
+   "name": "Товар стенда 0492",
+   "price": 394.99,
+   "sku": "SKU-0492"
+  },
+  {
+   "name": "Товар стенда 0493",
+   "price": 431.99,
+   "sku": "SKU-0493"
+  },
+  {
+   "name": "Товар стенда 0494",
+   "price": 468.99,
+   "sku": "SKU-0494"
+  },
+  {
+   "name": "Товар стенда 0495",
+   "price": 505.99,
+   "sku": "SKU-0495"
+  },
+  {
+   "name": "Товар стенда 0496",
+   "price": 542.99,
+   "sku": "SKU-0496"
+  },
+  {
+   "name": "Товар стенда 0497",
+   "price": 579.99,
+   "sku": "SKU-0497"
+  },
+  {
+   "name": "Товар стенда 0498",
+   "price": 616.99,
+   "sku": "SKU-0498"
+  },
+  {
+   "name": "Товар стенда 0499",
+   "price": 653.99,
+   "sku": "SKU-0499"
+  },
+  {
+   "name": "Товар стенда 0500",
+   "price": 690.99,
+   "sku": "SKU-0500"
+  }
+ ],
+ "profile": "small",
+ "stock": [
+  {
+   "quantity": 0,
+   "sku": "SKU-0001",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 13,
+   "sku": "SKU-0002",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 26,
+   "sku": "SKU-0003",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 39,
+   "sku": "SKU-0004",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 52,
+   "sku": "SKU-0005",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 65,
+   "sku": "SKU-0006",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 78,
+   "sku": "SKU-0007",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 91,
+   "sku": "SKU-0008",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 104,
+   "sku": "SKU-0009",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 117,
+   "sku": "SKU-0010",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 130,
+   "sku": "SKU-0011",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 143,
+   "sku": "SKU-0012",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 156,
+   "sku": "SKU-0013",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 169,
+   "sku": "SKU-0014",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 182,
+   "sku": "SKU-0015",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 195,
+   "sku": "SKU-0016",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 8,
+   "sku": "SKU-0017",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 21,
+   "sku": "SKU-0018",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 34,
+   "sku": "SKU-0019",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 47,
+   "sku": "SKU-0020",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 60,
+   "sku": "SKU-0021",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 73,
+   "sku": "SKU-0022",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 86,
+   "sku": "SKU-0023",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 99,
+   "sku": "SKU-0024",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 112,
+   "sku": "SKU-0025",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 125,
+   "sku": "SKU-0026",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 138,
+   "sku": "SKU-0027",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 151,
+   "sku": "SKU-0028",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 164,
+   "sku": "SKU-0029",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 177,
+   "sku": "SKU-0030",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 190,
+   "sku": "SKU-0031",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 3,
+   "sku": "SKU-0032",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 16,
+   "sku": "SKU-0033",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 29,
+   "sku": "SKU-0034",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 42,
+   "sku": "SKU-0035",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 55,
+   "sku": "SKU-0036",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 68,
+   "sku": "SKU-0037",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 81,
+   "sku": "SKU-0038",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 94,
+   "sku": "SKU-0039",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 107,
+   "sku": "SKU-0040",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 120,
+   "sku": "SKU-0041",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 133,
+   "sku": "SKU-0042",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 146,
+   "sku": "SKU-0043",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 159,
+   "sku": "SKU-0044",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 172,
+   "sku": "SKU-0045",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 185,
+   "sku": "SKU-0046",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 198,
+   "sku": "SKU-0047",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 11,
+   "sku": "SKU-0048",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 24,
+   "sku": "SKU-0049",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 37,
+   "sku": "SKU-0050",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 50,
+   "sku": "SKU-0051",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 63,
+   "sku": "SKU-0052",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 76,
+   "sku": "SKU-0053",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 89,
+   "sku": "SKU-0054",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 102,
+   "sku": "SKU-0055",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 115,
+   "sku": "SKU-0056",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 128,
+   "sku": "SKU-0057",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 141,
+   "sku": "SKU-0058",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 154,
+   "sku": "SKU-0059",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 167,
+   "sku": "SKU-0060",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 180,
+   "sku": "SKU-0061",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 193,
+   "sku": "SKU-0062",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 6,
+   "sku": "SKU-0063",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 19,
+   "sku": "SKU-0064",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 32,
+   "sku": "SKU-0065",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 45,
+   "sku": "SKU-0066",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 58,
+   "sku": "SKU-0067",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 71,
+   "sku": "SKU-0068",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 84,
+   "sku": "SKU-0069",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 97,
+   "sku": "SKU-0070",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 110,
+   "sku": "SKU-0071",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 123,
+   "sku": "SKU-0072",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 136,
+   "sku": "SKU-0073",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 149,
+   "sku": "SKU-0074",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 162,
+   "sku": "SKU-0075",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 175,
+   "sku": "SKU-0076",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 188,
+   "sku": "SKU-0077",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 1,
+   "sku": "SKU-0078",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 14,
+   "sku": "SKU-0079",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 27,
+   "sku": "SKU-0080",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 40,
+   "sku": "SKU-0081",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 53,
+   "sku": "SKU-0082",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 66,
+   "sku": "SKU-0083",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 79,
+   "sku": "SKU-0084",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 92,
+   "sku": "SKU-0085",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 105,
+   "sku": "SKU-0086",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 118,
+   "sku": "SKU-0087",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 131,
+   "sku": "SKU-0088",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 144,
+   "sku": "SKU-0089",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 157,
+   "sku": "SKU-0090",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 170,
+   "sku": "SKU-0091",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 183,
+   "sku": "SKU-0092",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 196,
+   "sku": "SKU-0093",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 9,
+   "sku": "SKU-0094",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 22,
+   "sku": "SKU-0095",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 35,
+   "sku": "SKU-0096",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 48,
+   "sku": "SKU-0097",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 61,
+   "sku": "SKU-0098",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 74,
+   "sku": "SKU-0099",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 87,
+   "sku": "SKU-0100",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 100,
+   "sku": "SKU-0101",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 113,
+   "sku": "SKU-0102",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 126,
+   "sku": "SKU-0103",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 139,
+   "sku": "SKU-0104",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 152,
+   "sku": "SKU-0105",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 165,
+   "sku": "SKU-0106",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 178,
+   "sku": "SKU-0107",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 191,
+   "sku": "SKU-0108",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 4,
+   "sku": "SKU-0109",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 17,
+   "sku": "SKU-0110",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 30,
+   "sku": "SKU-0111",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 43,
+   "sku": "SKU-0112",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 56,
+   "sku": "SKU-0113",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 69,
+   "sku": "SKU-0114",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 82,
+   "sku": "SKU-0115",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 95,
+   "sku": "SKU-0116",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 108,
+   "sku": "SKU-0117",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 121,
+   "sku": "SKU-0118",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 134,
+   "sku": "SKU-0119",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 147,
+   "sku": "SKU-0120",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 160,
+   "sku": "SKU-0121",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 173,
+   "sku": "SKU-0122",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 186,
+   "sku": "SKU-0123",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 199,
+   "sku": "SKU-0124",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 12,
+   "sku": "SKU-0125",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 25,
+   "sku": "SKU-0126",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 38,
+   "sku": "SKU-0127",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 51,
+   "sku": "SKU-0128",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 64,
+   "sku": "SKU-0129",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 77,
+   "sku": "SKU-0130",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 90,
+   "sku": "SKU-0131",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 103,
+   "sku": "SKU-0132",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 116,
+   "sku": "SKU-0133",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 129,
+   "sku": "SKU-0134",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 142,
+   "sku": "SKU-0135",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 155,
+   "sku": "SKU-0136",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 168,
+   "sku": "SKU-0137",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 181,
+   "sku": "SKU-0138",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 194,
+   "sku": "SKU-0139",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 7,
+   "sku": "SKU-0140",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 20,
+   "sku": "SKU-0141",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 33,
+   "sku": "SKU-0142",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 46,
+   "sku": "SKU-0143",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 59,
+   "sku": "SKU-0144",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 72,
+   "sku": "SKU-0145",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 85,
+   "sku": "SKU-0146",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 98,
+   "sku": "SKU-0147",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 111,
+   "sku": "SKU-0148",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 124,
+   "sku": "SKU-0149",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 137,
+   "sku": "SKU-0150",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 150,
+   "sku": "SKU-0151",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 163,
+   "sku": "SKU-0152",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 176,
+   "sku": "SKU-0153",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 189,
+   "sku": "SKU-0154",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 2,
+   "sku": "SKU-0155",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 15,
+   "sku": "SKU-0156",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 28,
+   "sku": "SKU-0157",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 41,
+   "sku": "SKU-0158",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 54,
+   "sku": "SKU-0159",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 67,
+   "sku": "SKU-0160",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 80,
+   "sku": "SKU-0161",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 93,
+   "sku": "SKU-0162",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 106,
+   "sku": "SKU-0163",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 119,
+   "sku": "SKU-0164",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 132,
+   "sku": "SKU-0165",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 145,
+   "sku": "SKU-0166",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 158,
+   "sku": "SKU-0167",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 171,
+   "sku": "SKU-0168",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 184,
+   "sku": "SKU-0169",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 197,
+   "sku": "SKU-0170",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 10,
+   "sku": "SKU-0171",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 23,
+   "sku": "SKU-0172",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 36,
+   "sku": "SKU-0173",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 49,
+   "sku": "SKU-0174",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 62,
+   "sku": "SKU-0175",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 75,
+   "sku": "SKU-0176",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 88,
+   "sku": "SKU-0177",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 101,
+   "sku": "SKU-0178",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 114,
+   "sku": "SKU-0179",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 127,
+   "sku": "SKU-0180",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 140,
+   "sku": "SKU-0181",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 153,
+   "sku": "SKU-0182",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 166,
+   "sku": "SKU-0183",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 179,
+   "sku": "SKU-0184",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 192,
+   "sku": "SKU-0185",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 5,
+   "sku": "SKU-0186",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 18,
+   "sku": "SKU-0187",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 31,
+   "sku": "SKU-0188",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 44,
+   "sku": "SKU-0189",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 57,
+   "sku": "SKU-0190",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 70,
+   "sku": "SKU-0191",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 83,
+   "sku": "SKU-0192",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 96,
+   "sku": "SKU-0193",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 109,
+   "sku": "SKU-0194",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 122,
+   "sku": "SKU-0195",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 135,
+   "sku": "SKU-0196",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 148,
+   "sku": "SKU-0197",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 161,
+   "sku": "SKU-0198",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 174,
+   "sku": "SKU-0199",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 187,
+   "sku": "SKU-0200",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 0,
+   "sku": "SKU-0201",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 13,
+   "sku": "SKU-0202",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 26,
+   "sku": "SKU-0203",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 39,
+   "sku": "SKU-0204",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 52,
+   "sku": "SKU-0205",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 65,
+   "sku": "SKU-0206",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 78,
+   "sku": "SKU-0207",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 91,
+   "sku": "SKU-0208",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 104,
+   "sku": "SKU-0209",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 117,
+   "sku": "SKU-0210",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 130,
+   "sku": "SKU-0211",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 143,
+   "sku": "SKU-0212",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 156,
+   "sku": "SKU-0213",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 169,
+   "sku": "SKU-0214",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 182,
+   "sku": "SKU-0215",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 195,
+   "sku": "SKU-0216",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 8,
+   "sku": "SKU-0217",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 21,
+   "sku": "SKU-0218",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 34,
+   "sku": "SKU-0219",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 47,
+   "sku": "SKU-0220",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 60,
+   "sku": "SKU-0221",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 73,
+   "sku": "SKU-0222",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 86,
+   "sku": "SKU-0223",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 99,
+   "sku": "SKU-0224",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 112,
+   "sku": "SKU-0225",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 125,
+   "sku": "SKU-0226",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 138,
+   "sku": "SKU-0227",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 151,
+   "sku": "SKU-0228",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 164,
+   "sku": "SKU-0229",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 177,
+   "sku": "SKU-0230",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 190,
+   "sku": "SKU-0231",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 3,
+   "sku": "SKU-0232",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 16,
+   "sku": "SKU-0233",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 29,
+   "sku": "SKU-0234",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 42,
+   "sku": "SKU-0235",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 55,
+   "sku": "SKU-0236",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 68,
+   "sku": "SKU-0237",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 81,
+   "sku": "SKU-0238",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 94,
+   "sku": "SKU-0239",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 107,
+   "sku": "SKU-0240",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 120,
+   "sku": "SKU-0241",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 133,
+   "sku": "SKU-0242",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 146,
+   "sku": "SKU-0243",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 159,
+   "sku": "SKU-0244",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 172,
+   "sku": "SKU-0245",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 185,
+   "sku": "SKU-0246",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 198,
+   "sku": "SKU-0247",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 11,
+   "sku": "SKU-0248",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 24,
+   "sku": "SKU-0249",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 37,
+   "sku": "SKU-0250",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 50,
+   "sku": "SKU-0251",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 63,
+   "sku": "SKU-0252",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 76,
+   "sku": "SKU-0253",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 89,
+   "sku": "SKU-0254",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 102,
+   "sku": "SKU-0255",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 115,
+   "sku": "SKU-0256",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 128,
+   "sku": "SKU-0257",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 141,
+   "sku": "SKU-0258",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 154,
+   "sku": "SKU-0259",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 167,
+   "sku": "SKU-0260",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 180,
+   "sku": "SKU-0261",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 193,
+   "sku": "SKU-0262",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 6,
+   "sku": "SKU-0263",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 19,
+   "sku": "SKU-0264",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 32,
+   "sku": "SKU-0265",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 45,
+   "sku": "SKU-0266",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 58,
+   "sku": "SKU-0267",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 71,
+   "sku": "SKU-0268",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 84,
+   "sku": "SKU-0269",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 97,
+   "sku": "SKU-0270",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 110,
+   "sku": "SKU-0271",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 123,
+   "sku": "SKU-0272",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 136,
+   "sku": "SKU-0273",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 149,
+   "sku": "SKU-0274",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 162,
+   "sku": "SKU-0275",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 175,
+   "sku": "SKU-0276",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 188,
+   "sku": "SKU-0277",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 1,
+   "sku": "SKU-0278",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 14,
+   "sku": "SKU-0279",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 27,
+   "sku": "SKU-0280",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 40,
+   "sku": "SKU-0281",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 53,
+   "sku": "SKU-0282",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 66,
+   "sku": "SKU-0283",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 79,
+   "sku": "SKU-0284",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 92,
+   "sku": "SKU-0285",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 105,
+   "sku": "SKU-0286",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 118,
+   "sku": "SKU-0287",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 131,
+   "sku": "SKU-0288",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 144,
+   "sku": "SKU-0289",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 157,
+   "sku": "SKU-0290",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 170,
+   "sku": "SKU-0291",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 183,
+   "sku": "SKU-0292",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 196,
+   "sku": "SKU-0293",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 9,
+   "sku": "SKU-0294",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 22,
+   "sku": "SKU-0295",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 35,
+   "sku": "SKU-0296",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 48,
+   "sku": "SKU-0297",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 61,
+   "sku": "SKU-0298",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 74,
+   "sku": "SKU-0299",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 87,
+   "sku": "SKU-0300",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 100,
+   "sku": "SKU-0301",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 113,
+   "sku": "SKU-0302",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 126,
+   "sku": "SKU-0303",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 139,
+   "sku": "SKU-0304",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 152,
+   "sku": "SKU-0305",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 165,
+   "sku": "SKU-0306",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 178,
+   "sku": "SKU-0307",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 191,
+   "sku": "SKU-0308",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 4,
+   "sku": "SKU-0309",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 17,
+   "sku": "SKU-0310",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 30,
+   "sku": "SKU-0311",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 43,
+   "sku": "SKU-0312",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 56,
+   "sku": "SKU-0313",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 69,
+   "sku": "SKU-0314",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 82,
+   "sku": "SKU-0315",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 95,
+   "sku": "SKU-0316",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 108,
+   "sku": "SKU-0317",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 121,
+   "sku": "SKU-0318",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 134,
+   "sku": "SKU-0319",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 147,
+   "sku": "SKU-0320",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 160,
+   "sku": "SKU-0321",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 173,
+   "sku": "SKU-0322",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 186,
+   "sku": "SKU-0323",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 199,
+   "sku": "SKU-0324",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 12,
+   "sku": "SKU-0325",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 25,
+   "sku": "SKU-0326",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 38,
+   "sku": "SKU-0327",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 51,
+   "sku": "SKU-0328",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 64,
+   "sku": "SKU-0329",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 77,
+   "sku": "SKU-0330",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 90,
+   "sku": "SKU-0331",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 103,
+   "sku": "SKU-0332",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 116,
+   "sku": "SKU-0333",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 129,
+   "sku": "SKU-0334",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 142,
+   "sku": "SKU-0335",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 155,
+   "sku": "SKU-0336",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 168,
+   "sku": "SKU-0337",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 181,
+   "sku": "SKU-0338",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 194,
+   "sku": "SKU-0339",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 7,
+   "sku": "SKU-0340",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 20,
+   "sku": "SKU-0341",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 33,
+   "sku": "SKU-0342",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 46,
+   "sku": "SKU-0343",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 59,
+   "sku": "SKU-0344",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 72,
+   "sku": "SKU-0345",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 85,
+   "sku": "SKU-0346",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 98,
+   "sku": "SKU-0347",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 111,
+   "sku": "SKU-0348",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 124,
+   "sku": "SKU-0349",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 137,
+   "sku": "SKU-0350",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 150,
+   "sku": "SKU-0351",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 163,
+   "sku": "SKU-0352",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 176,
+   "sku": "SKU-0353",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 189,
+   "sku": "SKU-0354",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 2,
+   "sku": "SKU-0355",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 15,
+   "sku": "SKU-0356",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 28,
+   "sku": "SKU-0357",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 41,
+   "sku": "SKU-0358",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 54,
+   "sku": "SKU-0359",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 67,
+   "sku": "SKU-0360",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 80,
+   "sku": "SKU-0361",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 93,
+   "sku": "SKU-0362",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 106,
+   "sku": "SKU-0363",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 119,
+   "sku": "SKU-0364",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 132,
+   "sku": "SKU-0365",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 145,
+   "sku": "SKU-0366",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 158,
+   "sku": "SKU-0367",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 171,
+   "sku": "SKU-0368",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 184,
+   "sku": "SKU-0369",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 197,
+   "sku": "SKU-0370",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 10,
+   "sku": "SKU-0371",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 23,
+   "sku": "SKU-0372",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 36,
+   "sku": "SKU-0373",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 49,
+   "sku": "SKU-0374",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 62,
+   "sku": "SKU-0375",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 75,
+   "sku": "SKU-0376",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 88,
+   "sku": "SKU-0377",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 101,
+   "sku": "SKU-0378",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 114,
+   "sku": "SKU-0379",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 127,
+   "sku": "SKU-0380",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 140,
+   "sku": "SKU-0381",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 153,
+   "sku": "SKU-0382",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 166,
+   "sku": "SKU-0383",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 179,
+   "sku": "SKU-0384",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 192,
+   "sku": "SKU-0385",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 5,
+   "sku": "SKU-0386",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 18,
+   "sku": "SKU-0387",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 31,
+   "sku": "SKU-0388",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 44,
+   "sku": "SKU-0389",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 57,
+   "sku": "SKU-0390",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 70,
+   "sku": "SKU-0391",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 83,
+   "sku": "SKU-0392",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 96,
+   "sku": "SKU-0393",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 109,
+   "sku": "SKU-0394",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 122,
+   "sku": "SKU-0395",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 135,
+   "sku": "SKU-0396",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 148,
+   "sku": "SKU-0397",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 161,
+   "sku": "SKU-0398",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 174,
+   "sku": "SKU-0399",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 187,
+   "sku": "SKU-0400",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 0,
+   "sku": "SKU-0401",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 13,
+   "sku": "SKU-0402",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 26,
+   "sku": "SKU-0403",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 39,
+   "sku": "SKU-0404",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 52,
+   "sku": "SKU-0405",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 65,
+   "sku": "SKU-0406",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 78,
+   "sku": "SKU-0407",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 91,
+   "sku": "SKU-0408",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 104,
+   "sku": "SKU-0409",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 117,
+   "sku": "SKU-0410",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 130,
+   "sku": "SKU-0411",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 143,
+   "sku": "SKU-0412",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 156,
+   "sku": "SKU-0413",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 169,
+   "sku": "SKU-0414",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 182,
+   "sku": "SKU-0415",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 195,
+   "sku": "SKU-0416",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 8,
+   "sku": "SKU-0417",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 21,
+   "sku": "SKU-0418",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 34,
+   "sku": "SKU-0419",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 47,
+   "sku": "SKU-0420",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 60,
+   "sku": "SKU-0421",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 73,
+   "sku": "SKU-0422",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 86,
+   "sku": "SKU-0423",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 99,
+   "sku": "SKU-0424",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 112,
+   "sku": "SKU-0425",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 125,
+   "sku": "SKU-0426",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 138,
+   "sku": "SKU-0427",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 151,
+   "sku": "SKU-0428",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 164,
+   "sku": "SKU-0429",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 177,
+   "sku": "SKU-0430",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 190,
+   "sku": "SKU-0431",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 3,
+   "sku": "SKU-0432",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 16,
+   "sku": "SKU-0433",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 29,
+   "sku": "SKU-0434",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 42,
+   "sku": "SKU-0435",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 55,
+   "sku": "SKU-0436",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 68,
+   "sku": "SKU-0437",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 81,
+   "sku": "SKU-0438",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 94,
+   "sku": "SKU-0439",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 107,
+   "sku": "SKU-0440",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 120,
+   "sku": "SKU-0441",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 133,
+   "sku": "SKU-0442",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 146,
+   "sku": "SKU-0443",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 159,
+   "sku": "SKU-0444",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 172,
+   "sku": "SKU-0445",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 185,
+   "sku": "SKU-0446",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 198,
+   "sku": "SKU-0447",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 11,
+   "sku": "SKU-0448",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 24,
+   "sku": "SKU-0449",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 37,
+   "sku": "SKU-0450",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 50,
+   "sku": "SKU-0451",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 63,
+   "sku": "SKU-0452",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 76,
+   "sku": "SKU-0453",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 89,
+   "sku": "SKU-0454",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 102,
+   "sku": "SKU-0455",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 115,
+   "sku": "SKU-0456",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 128,
+   "sku": "SKU-0457",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 141,
+   "sku": "SKU-0458",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 154,
+   "sku": "SKU-0459",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 167,
+   "sku": "SKU-0460",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 180,
+   "sku": "SKU-0461",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 193,
+   "sku": "SKU-0462",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 6,
+   "sku": "SKU-0463",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 19,
+   "sku": "SKU-0464",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 32,
+   "sku": "SKU-0465",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 45,
+   "sku": "SKU-0466",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 58,
+   "sku": "SKU-0467",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 71,
+   "sku": "SKU-0468",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 84,
+   "sku": "SKU-0469",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 97,
+   "sku": "SKU-0470",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 110,
+   "sku": "SKU-0471",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 123,
+   "sku": "SKU-0472",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 136,
+   "sku": "SKU-0473",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 149,
+   "sku": "SKU-0474",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 162,
+   "sku": "SKU-0475",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 175,
+   "sku": "SKU-0476",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 188,
+   "sku": "SKU-0477",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 1,
+   "sku": "SKU-0478",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 14,
+   "sku": "SKU-0479",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 27,
+   "sku": "SKU-0480",
+   "warehouse": "WH-20"
+  },
+  {
+   "quantity": 40,
+   "sku": "SKU-0481",
+   "warehouse": "WH-01"
+  },
+  {
+   "quantity": 53,
+   "sku": "SKU-0482",
+   "warehouse": "WH-02"
+  },
+  {
+   "quantity": 66,
+   "sku": "SKU-0483",
+   "warehouse": "WH-03"
+  },
+  {
+   "quantity": 79,
+   "sku": "SKU-0484",
+   "warehouse": "WH-04"
+  },
+  {
+   "quantity": 92,
+   "sku": "SKU-0485",
+   "warehouse": "WH-05"
+  },
+  {
+   "quantity": 105,
+   "sku": "SKU-0486",
+   "warehouse": "WH-06"
+  },
+  {
+   "quantity": 118,
+   "sku": "SKU-0487",
+   "warehouse": "WH-07"
+  },
+  {
+   "quantity": 131,
+   "sku": "SKU-0488",
+   "warehouse": "WH-08"
+  },
+  {
+   "quantity": 144,
+   "sku": "SKU-0489",
+   "warehouse": "WH-09"
+  },
+  {
+   "quantity": 157,
+   "sku": "SKU-0490",
+   "warehouse": "WH-10"
+  },
+  {
+   "quantity": 170,
+   "sku": "SKU-0491",
+   "warehouse": "WH-11"
+  },
+  {
+   "quantity": 183,
+   "sku": "SKU-0492",
+   "warehouse": "WH-12"
+  },
+  {
+   "quantity": 196,
+   "sku": "SKU-0493",
+   "warehouse": "WH-13"
+  },
+  {
+   "quantity": 9,
+   "sku": "SKU-0494",
+   "warehouse": "WH-14"
+  },
+  {
+   "quantity": 22,
+   "sku": "SKU-0495",
+   "warehouse": "WH-15"
+  },
+  {
+   "quantity": 35,
+   "sku": "SKU-0496",
+   "warehouse": "WH-16"
+  },
+  {
+   "quantity": 48,
+   "sku": "SKU-0497",
+   "warehouse": "WH-17"
+  },
+  {
+   "quantity": 61,
+   "sku": "SKU-0498",
+   "warehouse": "WH-18"
+  },
+  {
+   "quantity": 74,
+   "sku": "SKU-0499",
+   "warehouse": "WH-19"
+  },
+  {
+   "quantity": 87,
+   "sku": "SKU-0500",
+   "warehouse": "WH-20"
+  }
+ ],
+ "warehouses": [
+  {
+   "city": "Гомель",
+   "code": "WH-01",
+   "name": "Склад стенда 01"
+  },
+  {
+   "city": "Витебск",
+   "code": "WH-02",
+   "name": "Склад стенда 02"
+  },
+  {
+   "city": "Гродно",
+   "code": "WH-03",
+   "name": "Склад стенда 03"
+  },
+  {
+   "city": "Минск",
+   "code": "WH-04",
+   "name": "Склад стенда 04"
+  },
+  {
+   "city": "Гомель",
+   "code": "WH-05",
+   "name": "Склад стенда 05"
+  },
+  {
+   "city": "Витебск",
+   "code": "WH-06",
+   "name": "Склад стенда 06"
+  },
+  {
+   "city": "Гродно",
+   "code": "WH-07",
+   "name": "Склад стенда 07"
+  },
+  {
+   "city": "Минск",
+   "code": "WH-08",
+   "name": "Склад стенда 08"
+  },
+  {
+   "city": "Гомель",
+   "code": "WH-09",
+   "name": "Склад стенда 09"
+  },
+  {
+   "city": "Витебск",
+   "code": "WH-10",
+   "name": "Склад стенда 10"
+  },
+  {
+   "city": "Гродно",
+   "code": "WH-11",
+   "name": "Склад стенда 11"
+  },
+  {
+   "city": "Минск",
+   "code": "WH-12",
+   "name": "Склад стенда 12"
+  },
+  {
+   "city": "Гомель",
+   "code": "WH-13",
+   "name": "Склад стенда 13"
+  },
+  {
+   "city": "Витебск",
+   "code": "WH-14",
+   "name": "Склад стенда 14"
+  },
+  {
+   "city": "Гродно",
+   "code": "WH-15",
+   "name": "Склад стенда 15"
+  },
+  {
+   "city": "Минск",
+   "code": "WH-16",
+   "name": "Склад стенда 16"
+  },
+  {
+   "city": "Гомель",
+   "code": "WH-17",
+   "name": "Склад стенда 17"
+  },
+  {
+   "city": "Витебск",
+   "code": "WH-18",
+   "name": "Склад стенда 18"
+  },
+  {
+   "city": "Гродно",
+   "code": "WH-19",
+   "name": "Склад стенда 19"
+  },
+  {
+   "city": "Минск",
+   "code": "WH-20",
+   "name": "Склад стенда 20"
+  }
+ ]
+}

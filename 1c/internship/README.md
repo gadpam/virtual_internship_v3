@@ -97,3 +97,22 @@
 | Что сломано и когда починим | `backlog/tech_debt_register.md` |
 | Как оформить отчёт о задании | `documentation/templates/` |
 | Что делает легаси-модуль | `legacy/NOTES.md` |
+
+## Прохождение программы как студент (Q1 выполнен)
+
+Эта папка ведётся как рабочий проект стажёра: каждое задание — описание
+`documentation/task_NNN_description.txt`, рефлексия
+`documentation/reflections/`, код — по одному коммиту `task_NNN: …`.
+
+Как проверить результат Q1 без платформы 1С:
+
+```bash
+cd 1c/internship
+src/scripts/.venv/bin/python src/scripts/lint_bsl.py Configuration/src
+src/scripts/.venv/bin/python src/scripts/run_all_checks.py
+```
+
+Линтер: 25 файлов, 0 замечаний. Зеркальные проверки: 16 файлов одним
+запуском, 0 падений. Индекс всей документации квартала:
+`documentation/index.md`; честные границы среды (что выполнено
+аналогами вместо платформы) — `documentation/retro/q1.md`.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000057"
+                      name="ЗагрузкаНоменклатурыИзФайла">
+  <name>ЗагрузкаНоменклатурыИзФайла</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка номенклатуры из файла</value>
+  </synonym>
+  <comment>task_44: сценарий явной транзакции — массовая загрузка + протокол
+одним целым: либо загрузилось всё и протокол записан, либо ничего.
+Явная транзакция здесь уместна (несколько объектов одним атомарным
+действием вне проведения документа); правило — CodingStandard §4.</comment>
+</mdclass:DataProcessor>

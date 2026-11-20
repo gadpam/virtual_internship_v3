@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000056"
+                      name="РИХ_УчётТоваровДвижения">
+  <name>РИХ_УчётТоваровДвижения</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ учёт товаров: движения</value>
+  </synonym>
+  <comment>task_43: бизнес-логика проведения складских документов живёт здесь,
+а не в модулях объектов и не в формах: один и тот же код проводят форма,
+обмен и регламентное задание. Движения формируются массивом и пишутся
+одним набором (пакетно, стандарт §6).</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

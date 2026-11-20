@@ -1,0 +1,13 @@
+{
+  "source_file": "sales_plan_sample.csv",
+  "rows": 18,
+  "stores": 5,
+  "total_planned_quantity": 17300,
+  "total_planned_amount": "66854.50",
+  "health": {
+    "url": "http://localhost:8020/health",
+    "status": 200,
+    "content_type": "application/json",
+    "body_prefix": "{\"status\":\"ok\",\"service\":\"mock_shop_api\",\"products\":50,\"orders\":0}"
+  }
+}

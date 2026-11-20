@@ -54,6 +54,16 @@ coverage.xml
 !1c/internship/data/supplier_price/errors/.gitkeep
 !1c/internship/data/supplier_price/quarantine/.gitkeep
 
+### Трек 1С: бинарные артефакты и локальные настройки (task_3) ###
+# Бинарники 1С нельзя осмысленно диффить и ревьюить: источник истины —
+# исходники EDT. Сборки живут в 1c/internship/build/ вне репозитория.
+*.cf
+*.cfu
+*.dt
+# Локальные настройки Конфигуратора/сервера 1С
+Service/
+*.log
+
 ### Трек 1С: локальные секреты ###
 .env
 1c/internship/tools/nginx/certs/*.pem

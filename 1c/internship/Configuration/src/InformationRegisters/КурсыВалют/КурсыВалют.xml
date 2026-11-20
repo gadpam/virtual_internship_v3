@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000094"
+                             name="КурсыВалют">
+  <name>КурсыВалют</name>
+  <synonym>
+    <key>ru</key>
+    <value>Курсы валют (локальные)</value>
+  </synonym>
+  <comment>task_94: курсы хранятся локально и датируются: документ
+пересчитывается курсом на свою дату из этого регистра, а не живым
+вызовом API в момент проведения. Аномальный скачок (больше 30%)
+не применяется молча: запись получает статус «аномалия» и ждёт
+подтверждения человека.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Валюта">
+      <type>CatalogRef.Валюты</type>
+    </dimension>
+    <dimension name="ДатаКурса">
+      <type>Date</type>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Курс">
+      <type>Number(15,4)</type>
+      <comment>Сколько базовой валюты за Номинал единиц этой</comment>
+    </resource>
+    <resource name="Номинал">
+      <type>Number(10,0)</type>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="Источник">
+      <type>String(32)</type>
+      <comment>bank, manual, fallback-перенос</comment>
+    </attribute>
+    <attribute name="СтатусКурса">
+      <type>String(16)</type>
+      <comment>применён или аномалия</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

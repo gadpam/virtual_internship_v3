@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000085"
+                      name="РИХ_CommerceML">
+  <name>РИХ_CommerceML</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ обмен CommerceML</value>
+  </synonym>
+  <comment>task_89: упрощённый CommerceML-подобный формат стенда (классификатор,
+каталог, пакет предложений). Разбор — через РИХ_Форматы.XMLВСтруктуру не
+делается: формат фиксированный, читаем DOM-дерево напрямую, чтобы
+структура файла проверялась по секциям, а не «как легло».</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

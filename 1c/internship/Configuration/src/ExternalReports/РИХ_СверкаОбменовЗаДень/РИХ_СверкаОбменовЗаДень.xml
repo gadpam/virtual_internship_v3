@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalReport xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                        uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000198"
+                        name="РИХ_СверкаОбменовЗаДень">
+  <name>РИХ_СверкаОбменовЗаДень</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сверка обменов за день (внешний, версия 1.0)</value>
+  </synonym>
+  <comment>task_178: внешний отчёт по журналу интеграций: отправлено,
+принято, ошибки по системам за день — рука дежурного на пульсе
+обменов без релиза конфигурации. Считает теми же цифрами, что
+мониторинг task_114: внешний отчёт со своей арифметикой запрещён.</comment>
+</mdclass:ExternalReport>

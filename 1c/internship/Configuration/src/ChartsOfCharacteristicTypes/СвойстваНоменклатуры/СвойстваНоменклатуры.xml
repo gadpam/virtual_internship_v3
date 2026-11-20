@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCharacteristicTypes xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000039"
+                 name="СвойстваНоменклатуры">
+  <name>СвойстваНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Свойства номенклатуры</value>
+  </synonym>
+  <comment>task_24, ADR-4: характеристики (цвет, размер) — данные, не метаданные:
+новое свойство заводится элементом ПВХ без перекомпиляции. Значения свойств —
+подчинённый справочник ЗначенияСвойствНоменклатуры.</comment>
+  <characteristicExtValues>Catalog.ЗначенияСвойствНоменклатуры</characteristicExtValues>
+  <type>CatalogRef.ЗначенияСвойствНоменклатуры</type>
+</mdclass:ChartOfCharacteristicTypes>

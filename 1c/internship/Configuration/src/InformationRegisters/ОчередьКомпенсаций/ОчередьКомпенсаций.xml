@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000154"
+                             name="ОчередьКомпенсаций">
+  <name>ОчередьКомпенсаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь ручного разбора компенсаций</value>
+  </synonym>
+  <comment>task_130: неудавшаяся компенсация опаснее неудавшейся
+операции — данные разошлись молча. Сюда падает пара «сага/шаг» с
+причиной; разбор — оператор в тот же день, а не «попробуем ночью».</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ИдСаги">
+      <type>String(64)</type>
+    </dimension>
+    <dimension name="Шаг">
+      <type>String(32)</type>
+      <comment>reserve / payment / delivery</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Причина">
+      <type>String(255)</type>
+    </resource>
+    <resource name="Момент">
+      <type>Date</type>
+    </resource>
+    <resource name="Разобрано">
+      <type>Boolean</type>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>

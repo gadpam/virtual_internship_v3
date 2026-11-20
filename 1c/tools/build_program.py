@@ -95,7 +95,7 @@ TASK_TEMPLATE = """ЗАДАНИЕ task_{num} · спринт {sprint} · {quarte
 - Запишите фактические часы в рефлексию: план {time} против факта. Расхождение
   больше чем в полтора раза — это данные для плана, а не повод себя ругать.
 - После выполнения обязательно заполнить internship/documentation/task_{num}_description.txt
-  (шаблон: project/documentation/task_0_description_template.txt).
+  (шаблон: internship/documentation/templates/task_N_description.txt).
 - Общие критерии готовности: project/acceptance/DefinitionOfDone.txt
 {footer}"""
 

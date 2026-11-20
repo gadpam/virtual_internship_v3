@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000105"
+                      name="РИХ_ОбменДанными">
+  <name>РИХ_ОбменДанными</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ обмен данными (универсальный XML)</value>
+  </synonym>
+  <comment>task_98/99: универсальный обмен XML вручную — то, что правила
+КД 2.0 делали бы декларативно (ПКО/ПВД), здесь написано кодом и потому
+видимо в ревью. Сопоставление приёмника: сначала уникальный
+идентификатор источника, затем артикул; создание — последний шаг,
+а не первый порыв.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

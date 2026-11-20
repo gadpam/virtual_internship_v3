@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000162"
+                             name="АудитДоступа">
+  <name>АудитДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аудит доступа и изменений</value>
+  </synonym>
+  <comment>task_137: кто смотрел ПДн, кто менял настройки интеграций,
+кто останавливал обмены, кто менял права. Записи append-only:
+прикладной роли запись и чтение ограничены, удаление запрещено —
+аудит, который можно подчистить, не аудит. Дополняет
+ЖурналИнтеграций: тот про данные обменов, этот — про людей.</comment>
+  <periodicity>Second</periodicity>
+  <dimensions>
+    <dimension name="Пользователь">
+      <type>String(100)</type>
+    </dimension>
+    <dimension name="Событие">
+      <type>String(32)</type>
+      <comment>pdn_view | pdn_erasure | settings_change | exchange_start | exchange_stop | rights_change | secret_rotate</comment>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Объект">
+      <type>String(128)</type>
+      <comment>клиент лояльности, настройка, обмен, роль — без самих ПДн</comment>
+    </attribute>
+    <attribute name="Детали">
+      <type>String(512)</type>
+      <comment>основание: номер задачи, причина остановки; секретов и ПДн здесь нет</comment>
+    </attribute>
+    <attribute name="Было">
+      <type>String(256)</type>
+      <comment>для settings_change: значение до (для секретов — только факт и маска)</comment>
+    </attribute>
+    <attribute name="Стало">
+      <type>String(256)</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

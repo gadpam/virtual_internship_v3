@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000155"
+                      name="РИХ_Деградация">
+  <name>РИХ_Деградация</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ деградация сервисов</value>
+  </synonym>
+  <comment>task_131: режимы деградации — продажа без бонусов с
+отложенным начислением в ОчередьОбмена, доставка по тарифной сетке,
+цены по последним курсам с датой. Каждый режим возвращает баннер
+пользователю: молчаливой деградации не бывает.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+              uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000023"
+              name="РИХ_Кладовщик">
+  <name>РИХ_Кладовщик</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кладовщик (RIH)</value>
+  </synonym>
+  <comment>task_9: наименьшие привилегии кладовщика. Склады — только свои
+(RLS по регистру закрепления). Без прав запуска клиента и вывода роль
+бесполезна: пользователь просто не войдёт в базу — они включены явно.</comment>
+  <rights>
+    <!-- Запуск тонкого/веб-клиента и интерактивный вывод: без них пользователь
+         не войдёт в базу и не напечатает документ (требование задания). -->
+    <right object="Configuration.RetailIntegrationHub" name="ThinClient" value="true"/>
+    <right object="Configuration.RetailIntegrationHub" name="WebClient" value="true"/>
+    <right object="Configuration.RetailIntegrationHub" name="Output" value="true"/>
+    <right object="Catalog.Склады" name="Read" value="true">
+      <!-- RLS: элемент виден, если его ссылка закреплена за текущим
+           пользователем (&ИмяПользователяИБ из модуля сеанса) в регистре
+           СкладыПользователей. Проверять только реальным пользователем
+           с этой ролью: у администратора список всегда полный. -->
+      <restriction>
+        ГДЕ
+        Склады.Ссылка В
+            (ВЫБРАТЬ
+                Закрепление.Склад
+            ИЗ
+                РегистрСведений.СкладыПользователей КАК Закрепление
+            ГДЕ
+                Закрепление.Пользователь = &amp;ИмяПользователяИБ)
+      </restriction>
+    </right>
+    <right object="Catalog.Склады" name="View" value="true"/>
+    <!-- Просмотр истории номенклатуры товароведом — не кладовщиком:
+         право на регистр истории этой роли не выдаётся. -->
+  </rights>
+</mdclass:Role>

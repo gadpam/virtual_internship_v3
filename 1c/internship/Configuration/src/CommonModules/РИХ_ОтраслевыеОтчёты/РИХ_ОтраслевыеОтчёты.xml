@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000136"
+                      name="РИХ_ОтраслевыеОтчёты">
+  <name>РИХ_ОтраслевыеОтчёты</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ отраслевые отчёты оператору</value>
+  </synonym>
+  <comment>task_119: форма ПРОД-25 из данных учёта, контрольные
+соотношения отдельным модулем (не в модуле формы), выгрузка файла,
+отправка с квитанцией и корректирующие версии. Проверки здесь —
+те же, что применит оператор: ошибка находится до отправки.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000158"
+                      name="РИХ_Токены">
+  <name>РИХ_Токены</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ токены интеграций</value>
+  </synonym>
+  <comment>task_133: выдача токенов client_credentials, проверка
+единой точкой, отзыв, ротация секретов с окном grace. В базе и
+логах — только хеши токенов и секретов.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

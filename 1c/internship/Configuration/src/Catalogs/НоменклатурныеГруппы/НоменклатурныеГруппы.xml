@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000031"
+                 name="НоменклатурныеГруппы">
+  <name>НоменклатурныеГруппы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номенклатурные группы</value>
+  </synonym>
+  <comment>task_20, ADR-3: иерархия живёт здесь (группа → подгруппа),
+а Номенклатура ссылается реквизитом Группа. Товар не может случайно
+оказаться папкой, отбор по группе — простая ссылка.</comment>
+  <hierarchical>true</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+</mdclass:Catalog>

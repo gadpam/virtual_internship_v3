@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000197"
+                name="KPIПанель">
+  <name>KPIПанель</name>
+  <synonym>
+    <key>ru</key>
+    <value>KPI-панель холдинга</value>
+  </synonym>
+  <comment>task_177: шесть KPI словаря метрик из витрины (не живой
+пересчёт оперативной базы): выручка, маржа, оборачиваемость,
+доля критичных позиций, SLA процессов, инциденты интеграций.
+План отсутствует — прочерк и исключение из процента, а не 0%.
+Drill-down двумя уровнями до причинных разрезов.</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

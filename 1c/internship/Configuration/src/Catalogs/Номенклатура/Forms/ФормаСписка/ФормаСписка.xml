@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CatalogForm xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                     uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000045"
+                     name="ФормаСписка">
+  <name>ФормаСписка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Список номенклатуры</value>
+  </synonym>
+  <comment>task_20: динамический список с отбором по группе (параметр формы
+ОтборГруппа, включая вложенные группы) и быстрым поиском при вводе
+по Артикулу и Наименованию. Индекс по Артикулу — в метаданных справочника.</comment>
+  <formType>Managed</formType>
+  <attributes>
+    <attribute name="Список" type="DynamicList" mainAttribute="true"/>
+    <attribute name="ОтборГруппа" type="CatalogRef.НоменклатурныеГруппы"/>
+  </attributes>
+  <items>
+    <item name="ОтборГруппа" dataPath="ОтборГруппа" type="FormField"/>
+    <item name="Список" dataPath="Список" type="FormTable"/>
+  </items>
+</mdclass:CatalogForm>

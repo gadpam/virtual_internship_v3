@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000043"
+                 name="УпаковкиНоменклатуры">
+  <name>УпаковкиНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Упаковки номенклатуры</value>
+  </synonym>
+  <comment>task_24: подчинён номенклатуре — упаковка не живёт без товара,
+платформа контролирует удаление владельца. Коэффициент — сколько базовых
+единиц в упаковке (коробка = 12 шт). Движения регистра — всегда в базовых.</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <owners>
+    <value>Catalog.Номенклатура</value>
+  </owners>
+  <attributes>
+    <attribute name="Единица">
+      <type>CatalogRef.ЕдиницыИзмерения</type>
+    </attribute>
+    <attribute name="Коэффициент">
+      <type>Number(15,3)</type>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>

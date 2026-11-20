@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000060"
+                             name="ЖурналОбменов">
+  <name>ЖурналОбменов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал обменов</value>
+  </synonym>
+  <comment>task_47 (заготовка под Q2): каждая загрузка/обмен пишет сюда
+старт, прогресс, итог и ошибку. Администратор смотрит сюда, а не гадает
+по журналу регистрации; алерт — по записям со статусом Ошибка.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Момент">
+      <type>Date</type>
+    </dimension>
+    <dimension name="Источник">
+      <type>String(50)</type>
+      <comment>Например: ПрайсПоставщика, ПланПродаж</comment>
+    </dimension>
+    <dimension name="Файл">
+      <type>String(250)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Статус">
+      <type>String(20)</type>
+      <comment>Старт / Успех / Ошибка</comment>
+    </attribute>
+    <attribute name="СтрокЗагружено">
+      <type>Number(10,0)</type>
+    </attribute>
+    <attribute name="ТекстОшибки">
+      <type>String(1000)</type>
+    </attribute>
+    <attribute name="Попытка">
+      <type>Number(2,0)</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>
