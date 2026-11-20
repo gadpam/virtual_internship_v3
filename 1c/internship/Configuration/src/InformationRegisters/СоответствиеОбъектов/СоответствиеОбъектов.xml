@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000084"
+                             name="СоответствиеОбъектов">
+  <name>СоответствиеОбъектов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Соответствие объектов обменов</value>
+  </synonym>
+  <comment>task_89: пары «внешний код партнёра — наш объект» для всех
+файловых и пакетных обменов. Соответствие ставится один раз (при первой
+загрузке или вручную) и дальше используется в обе стороны: повторная
+выгрузка не рождает у партнёра второй товар с тем же смыслом.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Источник">
+      <type>String(32)</type>
+      <comment>Код внешней системы: commerceml, shop, edo...</comment>
+    </dimension>
+    <dimension name="ВнешнийКод">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Объект">
+      <type>CatalogRef.Номенклатура</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>
