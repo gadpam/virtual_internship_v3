@@ -11,7 +11,9 @@
 сейчас как первый носитель ролей и RLS. Расширения (характеристики, режимы
 работы) — task_24, не удалять. Префикса РИХ_ у справочника нет сознательно:
 это типовой объект складского контура холдинга (см. модель task_19).</comment>
-  <hierarchical>false</hierarchical>
+  <hierarchical>true</hierarchical>
+  <!-- task_13: включена иерархия (группы и элементы) — тестовая группа
+       «ТестПроизводительности» для генерации объёма живёт группой. -->
   <codeLength>9</codeLength>
   <descriptionLength>100</descriptionLength>
   <codeType>String</codeType>
