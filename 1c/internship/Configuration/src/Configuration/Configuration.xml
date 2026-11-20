@@ -50,6 +50,7 @@
     <value>CommonModule.РИХ_ОчередьОбмена</value>
     <value>CommonModule.РИХ_ОбменДанными</value>
     <value>CommonModule.РИХ_СобытияБрокера</value>
+    <value>CommonModule.РИХ_МетрикиИнтеграций</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -125,6 +126,7 @@
     <value>InformationRegister.НомераСообщенийОбмена</value>
     <value>InformationRegister.ПринятыеСообщения</value>
     <value>InformationRegister.СостояниеОстатковСобытий</value>
+    <value>InformationRegister.МетрикиИнтеграций</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
@@ -142,6 +144,7 @@
   <httpServices>
     <value>HTTPService.РИХ_Обмен</value>
     <value>HTTPService.РИХ_ЭДО</value>
+    <value>HTTPService.РИХ_Метрики</value>
   </httpServices>
   <xdtoPackages>
     <value>XDTOPackage.РИХ_Обмен_1</value>

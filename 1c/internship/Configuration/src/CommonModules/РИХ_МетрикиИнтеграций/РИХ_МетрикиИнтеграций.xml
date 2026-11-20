@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000117"
+                      name="РИХ_МетрикиИнтеграций">
+  <name>РИХ_МетрикиИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ метрики интеграций и алерты</value>
+  </synonym>
+  <comment>task_114: сбор метрик из журнала и очереди, снимок в РС
+МетрикиИнтеграций, алерт-правила контура. Алерт — запись журнала
+событий уровня Ошибка и строка в результате проверки: канал доставки
+(почта) подключается в task_176, правило и порог живут здесь.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

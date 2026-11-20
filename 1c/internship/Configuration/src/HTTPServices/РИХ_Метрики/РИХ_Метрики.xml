@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                     uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000118"
+                     name="РИХ_Метрики">
+  <name>РИХ_Метрики</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ метрики для Prometheus</value>
+  </synonym>
+  <comment>task_114: JSON снимка метрик для внешнего экспортёра
+Prometheus (src/metrics_exporter стенда): 1С не говорит на протоколе
+Prometheus, поэтому отдаёт данные JSON, а экспортёр переводит их
+в текстовый формат /metrics. Доступ — технический пользователь
+мониторинга, только чтение.</comment>
+  <rootURL>rih-metrics</rootURL>
+  <reuseSessions>DontUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates>
+    <urlTemplate name="Снимок">
+      <methods>
+        <method name="GET" handler="СнимокGET"/>
+      </methods>
+    </urlTemplate>
+  </urlTemplates>
+</mdclass:HTTPService>

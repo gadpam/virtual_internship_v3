@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000116"
+                             name="МетрикиИнтеграций">
+  <name>МетрикиИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Метрики интеграций (снимки)</value>
+  </synonym>
+  <comment>task_114: последний снимок метрик контура по системам:
+сообщений по типам, доля ошибок, средняя и p95 задержки, размер
+очереди, последняя успешная обработка. Источники — ЖурналИнтеграций
+и ОчередьОбмена; регистр хранит снимок, а не сырьё, поэтому дашборд
+не гоняет тяжёлые запросы по журналу на каждое открытие.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Система">
+      <type>String(32)</type>
+    </dimension>
+    <dimension name="Метрика">
+      <type>String(48)</type>
+      <comment>requests_total, error_share, latency_avg_ms, latency_p95_ms, queue_size, last_success_age_min</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Значение">
+      <type>Number(15,2)</type>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="МоментСнимка">
+      <type>Date</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>
