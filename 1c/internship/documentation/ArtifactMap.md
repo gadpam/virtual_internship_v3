@@ -156,8 +156,8 @@
 | task_140. Контрактные тесты: ловим изменения формата до прода | `internship/tests/contract/` [есть]<br>`internship/docs/api/openapi.yaml` [есть] |
 | task_141. Интеграционные тесты: реальные вызовы против mock | `internship/tests/integration/` [есть] |
 | task_142. Сквозной сценарий: от заказа до отчёта и витрины | `internship/tests/e2e/` [есть] |
-| task_143. Нагрузочное тестирование интеграций | `internship/tests/load/` [есть]<br>`internship/documentation/performance/load_q2.md` [создаётся] |
-| task_144. Тестовая пирамида интеграций и стратегия качества | `internship/documentation/testing_strategy.md` [создаётся] |
+| task_143. Нагрузочное тестирование интеграций | `internship/tests/load/` [есть]<br>`internship/documentation/performance/load_q2.md` [есть] |
+| task_144. Тестовая пирамида интеграций и стратегия качества | `internship/documentation/testing_strategy.md` [есть] |
 | task_145. Code review интеграционного контура | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_146. Демо интеграций: живой обмен и управляемый сбой | `project/acceptance/DemoAndDefense.txt` [есть] |
 | task_147. Защита интеграционной архитектуры: контракты, SLA, надёжность | `internship/documentation/architecture/` [есть] |
