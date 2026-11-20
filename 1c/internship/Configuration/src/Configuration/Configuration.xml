@@ -29,6 +29,7 @@
     <value>CommonModule.РИХ_Дата</value>
     <value>CommonModule.РИХ_HTTP1_Ответы</value>
     <value>CommonModule.РИХ_Версионирование</value>
+    <value>CommonModule.РИХ_Валидация</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
