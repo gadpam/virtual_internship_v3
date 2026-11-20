@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000129"
+                             name="ШаблоныНазначенийПлатежей">
+  <name>ШаблоныНазначенийПлатежей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Шаблоны назначений платежей</value>
+  </synonym>
+  <comment>task_118: правила разбора назначения платежа живут данными,
+а не регулярными выражениями по коду: банк поменял строку — бухгалтер
+правит маркер в этом регистре, а не заказывает доработку программы.
+Шаблон: маркер («по счету», «заказ», «договор», «по акту») и тип
+основания, номер которого стоит после маркера.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ИмяШаблона">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="ТипОснования">
+      <type>String(16)</type>
+      <comment>Счёт, Заказ, Договор или Акт</comment>
+    </attribute>
+    <attribute name="Маркер">
+      <type>String(64)</type>
+      <comment>Подстрока назначения, после которой идёт номер основания</comment>
+    </attribute>
+    <attribute name="Приоритет">
+      <type>Number(5,0)</type>
+      <comment>Меньше — раньше применяется</comment>
+    </attribute>
+    <attribute name="Активен">
+      <type>Boolean</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

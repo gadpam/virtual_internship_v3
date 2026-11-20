@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000132"
+                      name="РИХ_Банк">
+  <name>РИХ_Банк</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ банк: выписки и поручения</value>
+  </synonym>
+  <comment>task_118: загрузка выписки 1CClientBankExchange одной
+транзакцией на пакет, сопоставление по настраиваемым шаблонам
+назначений, ручной разбор остатка, выгрузка поручений в шлюз и опрос
+статусов конечным автоматом. Итоги файла сверяются до разметки:
+выписка применилась целиком или никак.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

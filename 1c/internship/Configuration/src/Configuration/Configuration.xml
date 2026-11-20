@@ -53,6 +53,7 @@
     <value>CommonModule.РИХ_МетрикиИнтеграций</value>
     <value>CommonModule.РИХ_Маркировка</value>
     <value>CommonModule.РИХ_Чеки</value>
+    <value>CommonModule.РИХ_Банк</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -92,6 +93,7 @@
     <value>Document.УстановкаЦен</value>
     <value>Document.ЗаказКлиента</value>
     <value>Document.Чек</value>
+    <value>Document.ПлатёжноеПоручение</value>
   </documents>
   <enums>
     <value>Enum.ТипыЦен</value>
@@ -107,6 +109,7 @@
     <value>Report.ЧтоНеОбменено</value>
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>
+    <value>Report.ВзаиморасчётыПослеЗагрузки</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
@@ -136,6 +139,8 @@
     <value>InformationRegister.КарантинЭДО</value>
     <value>InformationRegister.КодыМаркировки</value>
     <value>InformationRegister.КарантинЧеков</value>
+    <value>InformationRegister.ШаблоныНазначенийПлатежей</value>
+    <value>InformationRegister.ПлатежиВыписки</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
