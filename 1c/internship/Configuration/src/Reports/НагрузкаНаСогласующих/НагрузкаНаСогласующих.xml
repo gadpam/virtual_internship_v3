@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000184"
+                name="НагрузкаНаСогласующих">
+  <name>НагрузкаНаСогласующих</name>
+  <synonym>
+    <key>ru</key>
+    <value>Нагрузка на согласующих (с учётом отпусков)</value>
+  </synonym>
+  <comment>task_168: задачи и среднее время по согласующим с учётом
+отпусков и делегирования — иначе «самый медленный» окажется тем,
+кто был в отпуске, отчёт соврёт и им перестанут пользоваться.
+Назначение — балансировка маршрутов, а не рейтинг людей.</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

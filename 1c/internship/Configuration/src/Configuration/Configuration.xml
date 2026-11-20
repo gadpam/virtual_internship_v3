@@ -138,6 +138,8 @@
     <value>Report.АнализСчёта</value>
     <value>Report.КарточкаСчёта</value>
     <value>Report.ОборотыПоАналитике</value>
+    <value>Report.КонтрольИсполненияПроцессов</value>
+    <value>Report.НагрузкаНаСогласующих</value>
     <value>Report.ЧтоНеОбменено</value>
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>
