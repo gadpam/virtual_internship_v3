@@ -15,6 +15,15 @@
   [пакет 1000](adr/ADR-0005-batch-size-1000.md) ·
   [кэш порогов](adr/ADR-0006-session-cache-thresholds.md)
 
+## Обмены и интеграции
+
+- [Топология обменов](architecture/exchange_topology.md) ·
+  [Регламент обмена с магазином](exchange/reglament_shop_exchange.md) ·
+  [Версионирование обменов](exchange/versioning.md) ·
+  [RIH ↔ БП](exchange/rih_bp.md) · [РИБ](exchange/rib.md)
+- Диагностика: [проблемы обменов](troubleshooting/exchange.md) ·
+  [мониторинг и инциденты](troubleshooting/exchange_monitoring.md)
+
 ## Пользователям и администраторам
 
 - [Поступление и перемещение: инструкция товароведа](user_guides/goods_flow_instruction.md)
