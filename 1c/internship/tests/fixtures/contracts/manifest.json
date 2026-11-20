@@ -1,0 +1,20 @@
+{
+  "comment": "Библиотека эталонов контрактов (task_140): данные, не код. expect=invalid обязан падать на валидации; эталон не «чинят под поломку» — падение эталона это сигнал обсуждать контракт.",
+  "cases": [
+    {"file": "01_order_valid_min.json", "schema": "OrderIn", "direction": "in", "expect": "valid", "note": "минимальный корректный заказ"},
+    {"file": "02_order_valid_multi.json", "schema": "OrderIn", "direction": "in", "expect": "valid", "note": "несколько строк"},
+    {"file": "03_order_invalid_no_external.json", "schema": "OrderIn", "direction": "in", "expect": "invalid", "note": "нет обязательного external_id"},
+    {"file": "04_order_invalid_empty_lines.json", "schema": "OrderIn", "direction": "in", "expect": "invalid", "note": "пустой массив строк (minItems=1)"},
+    {"file": "05_order_invalid_line_no_price.json", "schema": "OrderIn", "direction": "in", "expect": "invalid", "note": "строка без цены"},
+    {"file": "06_order_invalid_quantity_zero.json", "schema": "OrderIn", "direction": "in", "expect": "invalid", "note": "количество 0 (exclusiveMinimum)"},
+    {"file": "07_order_invalid_quantity_string.json", "schema": "OrderIn", "direction": "in", "expect": "invalid", "note": "количество строкой — тип важнее значения"},
+    {"file": "08_order_edge_long_external.json", "schema": "OrderIn", "direction": "in", "expect": "valid", "note": "край: длинный внешний идентификатор"},
+    {"file": "09_order_edge_price_zero.json", "schema": "OrderIn", "direction": "in", "expect": "valid", "note": "край: бесплатная строка допустима схемой"},
+    {"file": "10_order_edge_quantity_fraction.json", "schema": "OrderIn", "direction": "in", "expect": "valid", "note": "край: дробное количество (весовой товар)"},
+    {"file": "11_product_valid.json", "schema": "Product", "direction": "out", "expect": "valid", "note": "исходящий каталог: товар по контракту"},
+    {"file": "12_product_invalid_no_price.json", "schema": "Product", "direction": "out", "expect": "invalid", "note": "исходящий товар без цены — наш дефект, не партнёра"},
+    {"file": "13_order_accepted_valid.json", "schema": "OrderAccepted", "direction": "out", "expect": "valid", "note": "ответ о приёме заказа"},
+    {"file": "14_order_accepted_invalid_status.json", "schema": "OrderAccepted", "direction": "out", "expect": "invalid", "note": "статус вне enum — семантика тоже контракт"},
+    {"file": "15_health_valid.json", "schema": "Health", "direction": "out", "expect": "valid", "note": "ответ health для canary"}
+  ]
+}

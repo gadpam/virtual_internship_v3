@@ -30,6 +30,25 @@ jobs:
       - name: Линтер модулей 1С стартовой конфигурации
         run: python3 1c/internship/src/scripts/lint_bsl.py 1c/internship/Configuration/src --fail-on warning
 
+  contracts:
+    name: "Контрактные тесты: эталоны против OpenAPI (task_140)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Зависимости валидации контрактов
+        run: pip install jsonschema pyyaml
+
+      - name: Эталоны контрактов в обе стороны + эксперимент поломки
+        working-directory: 1c/internship
+        run: python3 src/scripts/checks_contracts.py --offline
+
   ai-service:
     name: "AI-сервис: pytest"
     runs-on: ubuntu-latest
