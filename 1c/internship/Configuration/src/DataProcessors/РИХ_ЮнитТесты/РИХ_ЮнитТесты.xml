@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000064"
+                      name="РИХ_ЮнитТесты">
+  <name>РИХ_ЮнитТесты</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ юнит-тесты</value>
+  </synonym>
+  <comment>task_52: собственный каркас юнит-тестов (готовых xUnit в стенде нет).
+Реестр тестовых процедур, Assert, запуск одной кнопкой или с параметром
+«ВыполнитьТесты», отчёт о прогоне (всего/упало) в журнал регистрации.
+Тесты не зависят от состояния ИБ: данные создают в памяти и не записывают.</comment>
+</mdclass:DataProcessor>
