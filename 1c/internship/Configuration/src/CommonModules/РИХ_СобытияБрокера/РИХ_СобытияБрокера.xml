@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000111"
+                      name="РИХ_СобытияБрокера">
+  <name>РИХ_СобытияБрокера</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ события брокера сообщений</value>
+  </synonym>
+  <comment>task_111: публикация событий RIH в брокер через HTTP-шлюз.
+Событие рождается в транзакции проведения (outbox task_95), шлюз лишь
+передаёт его брокеру: публикация не может «успеть», а событие — нет.
+Потребитель подтверждает (ack) только после обработки; временная
+ошибка — nack и повтор, постоянная — мёртвая очередь брокера.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

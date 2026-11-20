@@ -49,6 +49,7 @@
     <value>CommonModule.РИХ_КурсыВалют</value>
     <value>CommonModule.РИХ_ОчередьОбмена</value>
     <value>CommonModule.РИХ_ОбменДанными</value>
+    <value>CommonModule.РИХ_СобытияБрокера</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
