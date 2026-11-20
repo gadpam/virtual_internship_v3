@@ -44,5 +44,17 @@
     <attribute name="ПоследняяОшибка">
       <type>String(255)</type>
     </attribute>
+    <attribute name="Приоритет">
+      <type>Number(2,0)</type>
+      <comment>task_110: 0 — обычный, 1 — высокий (деньги и заказы выше каталога)</comment>
+    </attribute>
+    <attribute name="ТипСообщения">
+      <type>String(32)</type>
+      <comment>task_110: тип определяет обработчик: order, loyalty, catalog...</comment>
+    </attribute>
+    <attribute name="ПлановаяДата">
+      <type>Date</type>
+      <comment>task_110: не отправлять раньше этого момента (ночные пакеты)</comment>
+    </attribute>
   </attributes>
 </mdclass:InformationRegister>
