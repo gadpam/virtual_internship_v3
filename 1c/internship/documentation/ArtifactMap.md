@@ -189,9 +189,9 @@
 | task_168. Права, маршруты и контроль исполнения в ДО | `internship/Configuration/src/Reports/` [есть] |
 | task_169. Зачем свои процессы, если есть ДО: границы и ADR | `internship/documentation/adr/` [есть] |
 | task_170. Бизнес-процессы и задачи: карта маршрута и экземпляры | `internship/Configuration/src/BusinessProcesses/` [есть] |
-| task_171. Сроки, напоминания, эскалация и делегирование | `internship/Configuration/src/Catalogs/ПравилаSLA/` [создаётся] |
-| task_172. Рабочее место исполнителя процессов RIH | `internship/Configuration/src/DataProcessors/РИХ_МоиЗадачи/` [создаётся] |
-| task_173. Аналитика процессов: сроки, узкие места, загрузка | `internship/documentation/analytics/process_metrics.md` [создаётся] |
+| task_171. Сроки, напоминания, эскалация и делегирование | `internship/Configuration/src/Catalogs/ПравилаSLA/` [есть] |
+| task_172. Рабочее место исполнителя процессов RIH | `internship/Configuration/src/DataProcessors/РИХ_МоиЗадачи/` [есть] |
+| task_173. Аналитика процессов: сроки, узкие места, загрузка | `internship/documentation/analytics/process_metrics.md` [есть] |
 | task_174. Интеграция процессов RIH с ДО и внешними трекерами | `internship/src/mock_tracker_api/` [есть] |
 | task_175. Кросс-системный отчёт: данные из RIH, БП и ДО | `internship/Configuration/src/Reports/ПортфельКонтрагента/` [создаётся] |
 | task_176. Регламентная отчётность по расписанию и рассылка | `internship/documentation/reports/scheduling.md` [создаётся] |
