@@ -49,6 +49,19 @@ jobs:
         working-directory: 1c/internship
         run: python3 src/scripts/checks_contracts.py --offline
 
+  integration-stand-note:
+    name: "Интеграционные тесты: контур стенда (task_141)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Честный пропуск по контуру task_64
+        run: |
+          echo "Интеграционные тесты (checks_integration.py) требуют поднятых mock"
+          echo "и опубликованной ИБ: в PR-CI их нет (платформа 1С по лицензиям —"
+          echo "контур task_64). Прогон: локальный/ночной стенд одной командой"
+          echo "task_139 (stand_up.py), отчёт — documentation/testing/integration_tests.md."
+          echo "Здесь, в CI, выполнимы контракты (job contracts) и сканер секретов."
+
   ai-service:
     name: "AI-сервис: pytest"
     runs-on: ubuntu-latest
