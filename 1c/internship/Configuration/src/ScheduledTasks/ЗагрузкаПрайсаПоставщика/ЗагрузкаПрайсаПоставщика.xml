@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledTask xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000061"
+                       name="ЗагрузкаПрайсаПоставщика">
+  <name>ЗагрузкаПрайсаПоставщика</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка прайса поставщика из CSV</value>
+  </synonym>
+  <comment>task_47: каждые 30 минут обрабатывает каталог incoming/ прайсов
+поставщиков. Параллельные запуски запрещены блокировкой по ключу в методе;
+ошибка файла — до 3 попыток с паузой, итог каждой попытки — в ЖурналОбменов.</comment>
+  <methodName>РИХ_ОбщегоНазначения.ЗагрузитьПрайсыПоставщиков</methodName>
+  <schedule>каждые 30 минут</schedule>
+</mdclass:ScheduledTask>

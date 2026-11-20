@@ -54,6 +54,7 @@
   </sequences>
   <scheduledTasks>
     <value>ScheduledTask.ДвижениеГраницыУчётаТоваров</value>
+    <value>ScheduledTask.ЗагрузкаПрайсаПоставщика</value>
   </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
@@ -80,6 +81,7 @@
     <value>InformationRegister.МинимальныеОстатки</value>
     <value>InformationRegister.ПланПродаж</value>
     <value>InformationRegister.НаименованияНоменклатуры</value>
+    <value>InformationRegister.ЖурналОбменов</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
