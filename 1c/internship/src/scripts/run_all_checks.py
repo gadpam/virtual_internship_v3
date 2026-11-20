@@ -27,6 +27,9 @@ CHECKS = [
     "checks_locks.py",
     "checks_report_xlsx.py",
     "checks_plan_fact.py",
+    "checks_batches.py",
+    "checks_parallel.py",
+    "checks_cache.py",
 ]
 
 

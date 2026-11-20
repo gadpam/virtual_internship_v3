@@ -36,6 +36,7 @@
     <value>CommonModule.РИХ_Профилирование</value>
     <value>CommonModule.РИХ_ПакетнаяОбработка</value>
     <value>CommonModule.РИХ_Многопоточность</value>
+    <value>CommonModule.РИХ_Кэш</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>

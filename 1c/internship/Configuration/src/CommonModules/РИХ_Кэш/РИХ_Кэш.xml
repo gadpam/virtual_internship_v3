@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000070"
+                      name="РИХ_Кэш">
+  <name>РИХ_Кэш</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ кэш справочных данных</value>
+  </synonym>
+  <comment>task_60: кэш часто читаемых и редко меняющихся данных (минимальные
+остатки, пороги отчётов) на время сеанса. Сброс — ОбновитьПовторноИспользуемые
+Значения() из мест записи этих данных и автоматически при старте сеанса
+(новая сессия = новый кэш). Остатки и цены сюда нельзя: они транзакционны.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>ForSession</returnValuesReuse>
+</mdclass:CommonModule>
