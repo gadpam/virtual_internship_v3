@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                  uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000124"
+                  name="Чек">
+  <name>Чек</name>
+  <synonym>
+    <key>ru</key>
+    <value>Чек ККМ</value>
+  </synonym>
+  <comment>task_117: чек с кассы — первичный документ потока продаж.
+Ключ идемпотентности приёма — пара (ФН, НомерЧека): номер без ФН
+не уникален, у разных касс нумерация совпадает. Возврат — отдельный
+чек вида «Возврат» со ссылкой на исходный, а не правка исходного:
+фискальная история не переписывается. Проведение пишет оборотный
+регистр Продажи и расход/приход ТоварыНаСкладах.</comment>
+  <attributes>
+    <attribute name="Магазин">
+      <type>CatalogRef.Склады</type>
+      <comment>Склад с типом «Магазин»</comment>
+    </attribute>
+    <attribute name="Касса">
+      <type>String(32)</type>
+      <comment>Идентификатор кассы в магазине</comment>
+    </attribute>
+    <attribute name="ФН">
+      <type>String(16)</type>
+      <index>true</index>
+      <comment>Номер фискального накопителя; вместе с номером чека — ключ идемпотентности</comment>
+    </attribute>
+    <attribute name="НомерЧека">
+      <type>Number(10,0)</type>
+      <index>true</index>
+      <comment>Номер чека в ФН; уникален только внутри своего ФН</comment>
+    </attribute>
+    <attribute name="ВидЧека">
+      <type>String(16)</type>
+      <comment>Продажа или Возврат</comment>
+    </attribute>
+    <attribute name="ИсходныйЧек">
+      <type>DocumentRef.Чек</type>
+      <comment>Для возврата — чек продажи, к которому возврат относится</comment>
+    </attribute>
+    <attribute name="СуммаЧека">
+      <type>Number(15,2)</type>
+      <comment>Итог по фискальному документу; сверяется с суммой строк при приёме</comment>
+    </attribute>
+  </attributes>
+  <tabularSections>
+    <tabularSection name="Товары">
+      <attribute name="Номенклатура">
+        <type>CatalogRef.Номенклатура</type>
+      </attribute>
+      <attribute name="Количество">
+        <type>Number(15,3)</type>
+      </attribute>
+      <attribute name="Цена">
+        <type>Number(15,2)</type>
+      </attribute>
+      <attribute name="Сумма">
+        <type>Number(15,2)</type>
+      </attribute>
+    </tabularSection>
+  </tabularSections>
+</mdclass:Document>

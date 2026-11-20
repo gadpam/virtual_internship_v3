@@ -52,6 +52,7 @@
     <value>CommonModule.РИХ_СобытияБрокера</value>
     <value>CommonModule.РИХ_МетрикиИнтеграций</value>
     <value>CommonModule.РИХ_Маркировка</value>
+    <value>CommonModule.РИХ_Чеки</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -90,6 +91,7 @@
     <value>Document.ПеремещениеТоваров</value>
     <value>Document.УстановкаЦен</value>
     <value>Document.ЗаказКлиента</value>
+    <value>Document.Чек</value>
   </documents>
   <enums>
     <value>Enum.ТипыЦен</value>
@@ -108,6 +110,7 @@
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
+    <value>AccumulationRegister.Продажи</value>
   </accumulationRegisters>
   <informationRegisters>
     <value>InformationRegister.РИХ_ИсторияИзменений</value>
@@ -132,6 +135,7 @@
     <value>InformationRegister.МетрикиИнтеграций</value>
     <value>InformationRegister.КарантинЭДО</value>
     <value>InformationRegister.КодыМаркировки</value>
+    <value>InformationRegister.КарантинЧеков</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
@@ -150,6 +154,7 @@
     <value>HTTPService.РИХ_Обмен</value>
     <value>HTTPService.РИХ_ЭДО</value>
     <value>HTTPService.РИХ_Метрики</value>
+    <value>HTTPService.РИХ_Кассы</value>
   </httpServices>
   <xdtoPackages>
     <value>XDTOPackage.РИХ_Обмен_1</value>
