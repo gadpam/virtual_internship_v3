@@ -1,0 +1,285 @@
+openapi: 3.0.3
+info:
+  title: RIH — Заказы онлайн-магазина (контракт приёма)
+  version: 1.0.0
+  description: |
+    Контракт обмена RIH с онлайн-магазином: каталог, остатки, заказы.
+    Версия 1.0.0 зафиксирована task_77; изменения — только новой версией
+    пути или поля без ломания старых клиентов (task_82).
+    Стенд (mock_shop_api) авторизуется учебным X-Api-Key; боевой контур
+    использует Bearer-токен — обе схемы описаны, операции помечены стендовой.
+servers:
+  - url: http://127.0.0.1:8020
+    description: Учебный стенд (mock_shop_api)
+security:
+  - ApiKeyAuth: []
+paths:
+  /health:
+    get:
+      summary: Живость сервиса
+      security: []
+      responses:
+        '200':
+          description: Сервис жив
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+  /api/v1/products:
+    get:
+      summary: Каталог товаров магазина
+      responses:
+        '200':
+          description: Страница каталога
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductList'
+        '401':
+          $ref: '#/components/responses/NoKey'
+        '403':
+          $ref: '#/components/responses/BadKey'
+  /api/v1/stock:
+    get:
+      summary: Остатки по складам
+      parameters:
+        - name: warehouse
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Остатки
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StockList'
+        '401':
+          $ref: '#/components/responses/NoKey'
+  /api/v1/orders:
+    post:
+      summary: Принять заказ (идемпотентно по Idempotency-Key)
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+          description: Ключ идемпотентности приёма; повтор с тем же ключом возвращает тот же результат
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderIn'
+            example:
+              external_id: demo-order-1
+              lines:
+                - sku: SKU-00001
+                  quantity: 2
+                  price: 10.50
+      responses:
+        '201':
+          description: Заказ принят (или повтор того же приёма, duplicate=true)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderAccepted'
+        '401':
+          $ref: '#/components/responses/NoKey'
+        '409':
+          description: Тот же external_id с другим ключом — конфликт человеку на разбор
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '422':
+          description: Заказ не проходит валидацию (нет строк, битые цены)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      summary: Список принятых заказов
+      parameters:
+        - name: status
+          in: query
+          schema:
+            $ref: '#/components/schemas/OrderStatus'
+      responses:
+        '200':
+          description: Заказы
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/OrderAccepted'
+  /api/v1/orders/{external_id}/status:
+    patch:
+      summary: Сменить статус заказа
+      parameters:
+        - name: external_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: status
+          in: query
+          required: true
+          schema:
+            $ref: '#/components/schemas/OrderStatus'
+      responses:
+        '200':
+          description: Статус изменён
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderAccepted'
+        '404':
+          description: Заказ не найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: Учебный стенд; боевой ключ — только из секретов, не из репозитория
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: Боевой контур RIH (task_81/133)
+  responses:
+    NoKey:
+      description: Не указан ключ/токен
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    BadKey:
+      description: Ключ неверен или прав недостаточно
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    Health:
+      type: object
+      required: [status, service]
+      properties:
+        status:
+          type: string
+          example: ok
+        service:
+          type: string
+        products:
+          type: integer
+        orders:
+          type: integer
+    Product:
+      type: object
+      required: [externalId, sku, name, price]
+      properties:
+        externalId:
+          type: string
+        sku:
+          type: string
+        name:
+          type: string
+        group:
+          type: string
+        price:
+          type: number
+        currency:
+          type: string
+        changedAt:
+          type: string
+          format: date-time
+    ProductList:
+      type: object
+      required: [total, items]
+      properties:
+        total:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    StockItem:
+      type: object
+      required: [sku, warehouse, quantity]
+      properties:
+        sku:
+          type: string
+        warehouse:
+          type: string
+        quantity:
+          type: number
+    StockList:
+      type: object
+      required: [items]
+      properties:
+        took_ms:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/StockItem'
+    OrderLineIn:
+      type: object
+      required: [sku, quantity, price]
+      properties:
+        sku:
+          type: string
+        quantity:
+          type: number
+          exclusiveMinimum: 0
+        price:
+          type: number
+          minimum: 0
+    OrderIn:
+      type: object
+      required: [external_id, lines]
+      properties:
+        external_id:
+          type: string
+          minLength: 1
+        lines:
+          type: array
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/OrderLineIn'
+    OrderStatus:
+      type: string
+      enum: [new, reserved, shipped, delivered, cancelled]
+    OrderAccepted:
+      type: object
+      required: [externalId, status, total]
+      properties:
+        externalId:
+          type: string
+        status:
+          $ref: '#/components/schemas/OrderStatus'
+        total:
+          type: number
+        duplicate:
+          type: boolean
+    Error:
+      type: object
+      required: [detail]
+      properties:
+        detail:
+          type: string
