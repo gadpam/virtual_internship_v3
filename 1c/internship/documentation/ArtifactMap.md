@@ -136,9 +136,9 @@
 | task_120. Каталог интеграций: реестр, владельцы, статусы | `internship/documentation/integration_registry.md` [есть] |
 | task_121. OLTP vs OLAP: почему отчёт по оперативной базе — зло | `internship/documentation/adr/` [есть] |
 | task_122. Построение витрины: таблицы, измерения, факты | `internship/Configuration/src/AccumulationRegisters/` [есть] |
-| task_123. CDC: как получать только изменения | `internship/documentation/integrations/cdc.md` [создаётся] |
+| task_123. CDC: как получать только изменения | `internship/documentation/integrations/cdc.md` [есть] |
 | task_124. Выгрузка данных: файлы, таблицы СУБД, потоковая передача | `internship/tools/sql/export/` [есть] |
-| task_125. Согласованность витрины и «цифры не сходятся» | `internship/documentation/analytics/metrics_dictionary.md` [создаётся] |
+| task_125. Согласованность витрины и «цифры не сходятся» | `internship/documentation/analytics/metrics_dictionary.md` [есть] |
 | task_126. Подготовка BI-стенда: Superset в docker-compose | `internship/tools/docker-compose.yml` [есть]<br>`internship/tools/bi/README.md` [есть] |
 | task_127. Таймауты: как одно значение спасает (или топит) систему | `internship/documentation/integrations/timeouts.md` [создаётся] |
 | task_128. Повторные попытки: экспоненциальная задержка и джиттер | `internship/src/mock_shop_api/ (режим сбоев)` [создаётся] |
@@ -195,7 +195,7 @@
 | task_174. Интеграция процессов RIH с ДО и внешними трекерами | `internship/src/mock_tracker_api/` [есть] |
 | task_175. Кросс-системный отчёт: данные из RIH, БП и ДО | `internship/Configuration/src/Reports/ПортфельКонтрагента/` [создаётся] |
 | task_176. Регламентная отчётность по расписанию и рассылка | `internship/documentation/reports/scheduling.md` [создаётся] |
-| task_177. Управленческие отчёты: KPI, динамика, план-факт | `internship/documentation/analytics/metrics_dictionary.md` [создаётся] |
+| task_177. Управленческие отчёты: KPI, динамика, план-факт | `internship/documentation/analytics/metrics_dictionary.md` [есть] |
 | task_178. Внешние отчёты и обработки: поставка без снятия поддержки | `internship/Configuration/src/ExternalReports/` [есть]<br>`internship/tools/ci/` [есть] |
 | task_179. Универсальные механизмы: допреквизиты, динамические списки, настройки | `Документация БСП: «Дополнительные реквизиты и сведения»` [создаётся] |
 | task_180. Требования к отчётности: интервью, прототип, приёмка | `internship/documentation/requirements/functional/` [есть] |
@@ -224,7 +224,7 @@
 | task_203. Профили производительности: тонкая настройка платформы | `internship/documentation/operations/platform_params.md` [создаётся] |
 | task_204. Кейс «система легла»: расследование полного инцидента | `internship/documentation/operations/postmortems/` [есть] |
 | task_205. Витрины в СУБД: схема, наполнение, инкрементальность | `internship/tools/sql/marts/` [есть] |
-| task_206. Семантический слой: одно определение метрики для всех | `internship/documentation/analytics/metrics_dictionary.md` [создаётся] |
+| task_206. Семантический слой: одно определение метрики для всех | `internship/documentation/analytics/metrics_dictionary.md` [есть] |
 | task_207. Дашборды: три экрана для трёх ролей | `internship/tools/bi/dashboards/` [есть] |
 | task_208. Доступы к аналитике и чувствительные данные | `internship/documentation/security/bi_access.md` [создаётся] |
 | task_209. Самообслуживание аналитиков: границы и инструменты | `internship/documentation/analytics/self_service_guide.md` [создаётся] |
