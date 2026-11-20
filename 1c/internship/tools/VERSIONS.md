@@ -6,6 +6,7 @@
 | Компонент | Версия | Где зафиксировано |
 |---|---|---|
 | Платформа 1С:Предприятие 8.3 | не установлена: в текущем окружении нет дистрибутива; контрольная точка — task_3/task_13 | свойства проекта EDT |
+| Минимальная версия платформы проекта | 8.3.24 (compatibilityMode в `Configuration/src/Configuration/Configuration.xml`) | свойства проекта EDT (task_3) |
 | 1C:EDT | не установлен (аналогично платформе); работа по исходникам EDT в Git | Help → About |
 | PostgreSQL (в Docker) | 16.2 — локальный сервер вместо контейнера (демона Docker в окружении нет); образ стенда — pgvector/pgvector:pg16 | `docker compose images` |
 | Docker / Docker Compose | отсутствует в окружении; compose-файлы проверены статически (YAML) | `docker --version` |
