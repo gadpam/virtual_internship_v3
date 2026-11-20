@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+              uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000076"
+              name="СтатусыЗаказаКлиента">
+  <name>СтатусыЗаказаКлиента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы заказа клиента</value>
+  </synonym>
+  <comment>task_83: значения совпадают со статусами контракта магазина
+(new/reserved/shipped/delivered/cancelled): соответствие задаётся таблицей
+в РИХ_Интеграции.СменитьСтатусЗаказа, а не совпадением строк имён.</comment>
+  <enumValues>
+    <value name="Новый"/>
+    <value name="Зарезервирован"/>
+    <value name="Отгружен"/>
+    <value name="Доставлен"/>
+    <value name="Отменён"/>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                  uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000074"
+                  name="ЗаказКлиента">
+  <name>ЗаказКлиента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заказ клиента</value>
+  </synonym>
+  <comment>task_83: заказ, принятый от онлайн-магазина через HTTP-сервис.
+ВнешнийИдентификатор — ключ идемпотентности приёма и связь с заказом
+магазина; повторный POST того же идентификатора документ не дублирует.
+Проведение по складу не делает: резерв и отгрузка — следующие задачи
+контура; здесь заказ фиксируется как принятое обязательство.</comment>
+  <attributes>
+    <attribute name="Контрагент">
+      <type>CatalogRef.Контрагенты</type>
+    </attribute>
+    <attribute name="Статус">
+      <type>EnumRef.СтатусыЗаказаКлиента</type>
+    </attribute>
+    <attribute name="ВнешнийИдентификатор">
+      <type>String(64)</type>
+      <index>true</index>
+      <comment>Идентификатор заказа на стороне магазина; уникальность приёма обеспечивает РИХ_Интеграции</comment>
+    </attribute>
+  </attributes>
+  <tabularSections>
+    <tabularSection name="Товары">
+      <attribute name="Номенклатура">
+        <type>CatalogRef.Номенклатура</type>
+      </attribute>
+      <attribute name="Количество">
+        <type>Number(15,3)</type>
+      </attribute>
+      <attribute name="Цена">
+        <type>Number(15,2)</type>
+      </attribute>
+      <attribute name="Сумма">
+        <type>Number(15,2)</type>
+      </attribute>
+    </tabularSection>
+  </tabularSections>
+</mdclass:Document>
