@@ -41,6 +41,7 @@
     <value>CommonModule.РИХ_Интеграции</value>
     <value>CommonModule.РИХ_XDTO</value>
     <value>CommonModule.РИХ_ВнешниеСервисы</value>
+    <value>CommonModule.РИХ_ФайловыйОбмен</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
