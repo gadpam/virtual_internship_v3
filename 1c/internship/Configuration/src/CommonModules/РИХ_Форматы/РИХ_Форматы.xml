@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000071"
+                      name="РИХ_Форматы">
+  <name>РИХ_Форматы</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ форматы JSON и XML</value>
+  </synonym>
+  <comment>task_75: сериализация структур в JSON/XML и обратно штатными
+средствами. Даты — ISO 8601 (РИХ_ОбщегоНазначения), Null — как есть
+(Неопределено в JSON = null). Правило выбора формата — CodingStandard §15.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
