@@ -26,6 +26,12 @@
       <comment>ДОЛГ МОДЕЛИ: строкой до task_152 (справочник Организации
       и план счетов); заменить тип на ссылку там же</comment>
     </attribute>
+    <attribute name="Валюта">
+      <type>CatalogRef.Валюты</type>
+      <comment>task_94: валюта документа. Сумма в базовой валюте считается
+      по РС КурсыВалют на дату документа (РИХ_КурсыВалют), а не живым
+      вызовом банка при проведении</comment>
+    </attribute>
   </attributes>
   <tabularSections>
     <tabularSection name="Товары">

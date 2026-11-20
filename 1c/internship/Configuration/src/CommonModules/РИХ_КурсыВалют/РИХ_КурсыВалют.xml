@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000096"
+                      name="РИХ_КурсыВалют">
+  <name>РИХ_КурсыВалют</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ курсы валют (локальные)</value>
+  </synonym>
+  <comment>task_94: загрузка курсов банка в РС КурсыВалют по расписанию,
+fallback на последний известный курс с предупреждением и сторож аномалий
+30%. Документы читают курс из регистра на свою дату — проведение
+не зависит от доступности банка.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

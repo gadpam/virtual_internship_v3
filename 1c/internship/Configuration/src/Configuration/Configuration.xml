@@ -46,10 +46,12 @@
     <value>CommonModule.РИХ_МагазинКлиент</value>
     <value>CommonModule.РИХ_ЛояльностьКлиент</value>
     <value>CommonModule.РИХ_ТККлиент</value>
+    <value>CommonModule.РИХ_КурсыВалют</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
     <value>Catalog.Склады</value>
+    <value>Catalog.Валюты</value>
     <value>Catalog.НоменклатурныеГруппы</value>
     <value>Catalog.Контрагенты</value>
     <value>Catalog.ЕдиницыИзмерения</value>
@@ -108,6 +110,7 @@
     <value>InformationRegister.СоответствиеОбъектов</value>
     <value>InformationRegister.МеткиСинхронизации</value>
     <value>InformationRegister.АудитОперацийЛояльности</value>
+    <value>InformationRegister.КурсыВалют</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
