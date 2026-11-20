@@ -30,6 +30,7 @@ CHECKS = [
     "checks_batches.py",
     "checks_parallel.py",
     "checks_cache.py",
+    "checks_formats.py",
 ]
 
 
