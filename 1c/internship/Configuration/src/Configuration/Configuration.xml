@@ -55,6 +55,7 @@
     <value>CommonModule.РИХ_Чеки</value>
     <value>CommonModule.РИХ_Банк</value>
     <value>CommonModule.РИХ_ОтраслевыеОтчёты</value>
+    <value>CommonModule.РИХ_РеестрИнтеграций</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -65,6 +66,7 @@
     <value>Catalog.ЕдиницыИзмерения</value>
     <value>Catalog.УпаковкиНоменклатуры</value>
     <value>Catalog.ЗначенияСвойствНоменклатуры</value>
+    <value>Catalog.Интеграции</value>
   </catalogs>
   <chartsOfCharacteristicTypes>
     <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>
@@ -112,6 +114,7 @@
     <value>Report.ДвижениеКодовМаркировки</value>
     <value>Report.КонтрольКодовМаркировки</value>
     <value>Report.ВзаиморасчётыПослеЗагрузки</value>
+    <value>Report.ИнтеграцииПодУгрозой</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
@@ -144,6 +147,7 @@
     <value>InformationRegister.ШаблоныНазначенийПлатежей</value>
     <value>InformationRegister.ПлатежиВыписки</value>
     <value>InformationRegister.КвитанцииОператора</value>
+    <value>InformationRegister.ИсторияРеестраИнтеграций</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>

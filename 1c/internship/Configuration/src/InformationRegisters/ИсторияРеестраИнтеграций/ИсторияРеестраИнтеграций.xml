@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000140"
+                             name="ИсторияРеестраИнтеграций">
+  <name>ИсторияРеестраИнтеграций</name>
+  <synonym>
+    <key>ru</key>
+    <value>История изменений реестра интеграций</value>
+  </synonym>
+  <comment>task_120: кто, когда и что менял в записи интеграции (способ,
+расписание, владелец, статус жизненного цикла). Реестр без истории
+превращается в «так было всегда» уже через квартал.</comment>
+  <periodicity>Second</periodicity>
+  <dimensions>
+    <dimension name="Интеграция">
+      <type>CatalogRef.Интеграции</type>
+    </dimension>
+    <dimension name="Поле">
+      <type>String(48)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="СтароеЗначение">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="НовоеЗначение">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="Автор">
+      <type>String(100)</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

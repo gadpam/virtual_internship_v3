@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000137"
+                 name="Интеграции">
+  <name>Интеграции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реестр интеграций</value>
+  </synonym>
+  <comment>task_120: каталог потоков данных холдинга. Запись отвечает
+на вопросы инцидента за минуту: что с чем обменивается, кто владелец
+(роль/человек, не отдел), что упадёт следом и где смотреть. Поток без
+записи для организации не существует: правило «нет реестра — нет
+релиза». Зеркальная копия таблицы — documentation/integration_registry.md.</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>16</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="СистемаПартнёр">
+      <type>String(100)</type>
+    </attribute>
+    <attribute name="Поток">
+      <type>String(150)</type>
+      <comment>Какие данные и в какую сторону</comment>
+    </attribute>
+    <attribute name="Способ">
+      <type>String(32)</type>
+      <comment>HTTP, SOAP, файлы, очередь, план обмена</comment>
+    </attribute>
+    <attribute name="Расписание">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="Владелец">
+      <type>String(100)</type>
+      <comment>Роль или человек; «ИТ-отдел» владельцем не является</comment>
+    </attribute>
+    <attribute name="Критичность">
+      <type>String(16)</type>
+      <comment>высокая, средняя или низкая — не всем высокая</comment>
+    </attribute>
+    <attribute name="SLA">
+      <type>String(100)</type>
+    </attribute>
+    <attribute name="Документация">
+      <type>String(255)</type>
+      <comment>Ссылка на контракт и регламент потока</comment>
+    </attribute>
+    <attribute name="Контакты">
+      <type>String(150)</type>
+      <comment>Канал эскалации партнёра и дежурного</comment>
+    </attribute>
+    <attribute name="СтатусЖизненногоЦикла">
+      <type>String(24)</type>
+      <comment>действует, заморожена или выведена из эксплуатации</comment>
+    </attribute>
+    <attribute name="Мониторинг">
+      <type>String(255)</type>
+      <comment>Ссылка на дашборд/метрики task_114; статус тянется оттуда, не руками</comment>
+    </attribute>
+    <attribute name="ДатаВывода">
+      <type>Date</type>
+      <comment>Для замороженных и выведенных: плановая дата решения</comment>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>
