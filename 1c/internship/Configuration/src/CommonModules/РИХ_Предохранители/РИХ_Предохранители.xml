@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000151"
+                      name="РИХ_Предохранители">
+  <name>РИХ_Предохранители</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ предохранители (circuit breaker)</value>
+  </synonym>
+  <comment>task_129: circuit breaker внешних контуров — Closed/Open/
+Half-Open, порог серии ошибок, остывание, одна проба. Состояние в
+регистре СостоянияПредохранителей, переходы — в ЖурналИнтеграций и
+метрики task_114. Слой снаружи повторных попыток task_128.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

@@ -58,6 +58,7 @@
     <value>CommonModule.РИХ_РеестрИнтеграций</value>
     <value>CommonModule.РИХ_Витрины</value>
     <value>CommonModule.РИХ_ПовторныеПопытки</value>
+    <value>CommonModule.РИХ_Предохранители</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -156,6 +157,7 @@
     <value>InformationRegister.ИсторияРеестраИнтеграций</value>
     <value>InformationRegister.ПродажиПоДням</value>
     <value>InformationRegister.ОчередьПересчётаВитрины</value>
+    <value>InformationRegister.СостоянияПредохранителей</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
