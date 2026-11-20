@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccountingRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                            uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000168"
+                            name="РИХ_Учёт">
+  <name>РИХ_Учёт</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ учёт (регистр бухгалтерии)</value>
+  </synonym>
+  <comment>task_152: записи проводок модели task_151: счёт Дт/Кт,
+сумма, количество (товарные счета), субконто обеих сторон.
+Остатки считаются виртуальными таблицами, а не циклами по записям.</comment>
+  <chartOfAccounts>РИХ_ПланСчетов</chartOfAccounts>
+  <chartOfCharacteristicTypes>РИХ_ВидыСубконто</chartOfCharacteristicTypes>
+  <periodicity>Day</periodicity>
+  <dimensions>
+    <dimension name="Организация">
+      <type>CatalogRef.Организации</type>
+      <comment>учёт по организациям разделим с первого дня: отчёт по двум
+организациям — вопрос настройки, а не переделки</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Сумма">
+      <type>Number(15,2)</type>
+    </resource>
+    <resource name="КоличествоДт">
+      <type>Number(15,3)</type>
+    </resource>
+    <resource name="КоличествоКт">
+      <type>Number(15,3)</type>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="Документ">
+      <type>String(64)</type>
+      <comment>ссылка текстом в учебной модели: документ -> проводка -> отчёт</comment>
+    </attribute>
+    <attribute name="Содержание">
+      <type>String(128)</type>
+    </attribute>
+  </attributes>
+</mdclass:AccountingRegister>

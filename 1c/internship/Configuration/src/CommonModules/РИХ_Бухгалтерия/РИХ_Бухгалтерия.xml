@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000169"
+                      name="РИХ_Бухгалтерия">
+  <name>РИХ_Бухгалтерия</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ бухгалтерия: запросы к регистру учёта</value>
+  </synonym>
+  <comment>task_152: три запроса к виртуальным таблицам регистра
+РИХ_Учёт (остатки, обороты, обороты по субконто). Сальдо дают
+виртуальные таблицы на границы периода; циклы по записям
+запрещены идеей механизма.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfAccounts xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                         uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000166"
+                         name="РИХ_ПланСчетов">
+  <name>РИХ_ПланСчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ план счетов</value>
+  </synonym>
+  <comment>task_152: учебный план счетов модели task_151 (12 счетов).
+Признаки по счетам: 41 — количественный учёт (товары без количества
+не существуют), 60/62 — аналитика контрагентов, количественный
+признак «везде» запрещён: обороты раздуваются без пользы отчётам.</comment>
+  <maxSubcontoCount>3</maxSubcontoCount>
+  <chartOfCharacteristicTypes>РИХ_ВидыСубконто</chartOfCharacteristicTypes>
+  <codeLength>8</codeLength>
+  <descriptionLength>64</descriptionLength>
+  <accounts>
+    <account code="10" name="Материалы" kind="Active"/>
+    <account code="41" name="Товары" kind="Active" quantity="true"/>
+    <account code="44" name="Расходы на продажу" kind="Active"/>
+    <account code="51" name="Расчётный счёт" kind="Active"/>
+    <account code="60" name="Расчёты с поставщиками" kind="ActivePassive"/>
+    <account code="62" name="Расчёты с покупателями" kind="ActivePassive"/>
+    <account code="68" name="Расчёты по налогам" kind="Passive"/>
+    <account code="80" name="Уставный капитал" kind="Passive"/>
+    <account code="90.1" name="Выручка" kind="Passive" parent="90"/>
+    <account code="90.2" name="Себестоимость" kind="Active" parent="90"/>
+    <account code="90.9" name="Прибыль/убыток продаж" kind="ActivePassive" parent="90"/>
+    <account code="99" name="Прибыли и убытки" kind="ActivePassive"/>
+  </accounts>
+</mdclass:ChartOfAccounts>

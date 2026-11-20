@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000165"
+                 name="Организации">
+  <name>Организации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Организации</value>
+  </synonym>
+  <comment>task_152: минимальный справочник (Наименование, ИНН) — долг
+модели task_21: без организации бухгалтерский учёт не существует
+даже учебный. Организация — субконто счетов и разрез отчётности.</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="ИНН">
+      <type>String(12)</type>
+      <index>true</index>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>

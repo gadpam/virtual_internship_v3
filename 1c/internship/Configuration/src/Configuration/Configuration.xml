@@ -64,6 +64,7 @@
     <value>CommonModule.РИХ_Токены</value>
     <value>CommonModule.РИХ_ПерсональныеДанные</value>
     <value>CommonModule.РИХ_Аудит</value>
+    <value>CommonModule.РИХ_Бухгалтерия</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -75,10 +76,18 @@
     <value>Catalog.УпаковкиНоменклатуры</value>
     <value>Catalog.ЗначенияСвойствНоменклатуры</value>
     <value>Catalog.Интеграции</value>
+    <value>Catalog.Организации</value>
   </catalogs>
   <chartsOfCharacteristicTypes>
     <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>
+    <value>ChartOfCharacteristicTypes.РИХ_ВидыСубконто</value>
   </chartsOfCharacteristicTypes>
+  <chartsOfAccounts>
+    <value>ChartOfAccounts.РИХ_ПланСчетов</value>
+  </chartsOfAccounts>
+  <accountingRegisters>
+    <value>AccountingRegister.РИХ_Учёт</value>
+  </accountingRegisters>
   <dataProcessors>
     <value>DataProcessor.ПодборНоменклатурыПоСвойствам</value>
     <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
