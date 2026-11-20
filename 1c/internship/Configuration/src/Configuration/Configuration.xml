@@ -38,6 +38,8 @@
     <value>CommonModule.РИХ_Многопоточность</value>
     <value>CommonModule.РИХ_Кэш</value>
     <value>CommonModule.РИХ_Форматы</value>
+    <value>CommonModule.РИХ_Интеграции</value>
+    <value>CommonModule.РИХ_XDTO</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -63,20 +65,24 @@
   <scheduledTasks>
     <value>ScheduledTask.ДвижениеГраницыУчётаТоваров</value>
     <value>ScheduledTask.ЗагрузкаПрайсаПоставщика</value>
+    <value>ScheduledTask.ОчисткаЖурналаИнтеграций</value>
   </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
     <value>Document.ПеремещениеТоваров</value>
     <value>Document.УстановкаЦен</value>
+    <value>Document.ЗаказКлиента</value>
   </documents>
   <enums>
     <value>Enum.ТипыЦен</value>
     <value>Enum.ТипыСкладов</value>
+    <value>Enum.СтатусыЗаказаКлиента</value>
   </enums>
   <reports>
     <value>Report.ИсторияИзмененияЦен</value>
     <value>Report.ОстаткиТоваровПоСкладам</value>
     <value>Report.ПланФактПоТоварам</value>
+    <value>Report.ЖурналИнтеграцийОтчёт</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
@@ -91,6 +97,8 @@
     <value>InformationRegister.НаименованияНоменклатуры</value>
     <value>InformationRegister.ЖурналОбменов</value>
     <value>InformationRegister.ЗамерыПроизводительности</value>
+    <value>InformationRegister.ЖурналИнтеграций</value>
+    <value>InformationRegister.КлючиДоступаИнтеграций</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
@@ -102,4 +110,10 @@
     <value>Role.РИХ_Кладовщик</value>
     <value>Role.РИХ_ИнтеграционныйСервис</value>
   </roles>
+  <httpServices>
+    <value>HTTPService.РИХ_Обмен</value>
+  </httpServices>
+  <xdtoPackages>
+    <value>XDTOPackage.РИХ_Обмен_1</value>
+  </xdtoPackages>
 </mdclass:Configuration>

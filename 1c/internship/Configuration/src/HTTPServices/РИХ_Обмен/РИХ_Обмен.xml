@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                     uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000072"
+                     name="РИХ_Обмен">
+  <name>РИХ_Обмен</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ обмен (HTTP-сервис)</value>
+  </synonym>
+  <comment>task_79/83: HTTP-сервис интеграций RIH. Корень публикации —
+/hs/rih (штатная публикация 1С на Apache/IIS, перед ней nginx стенда как
+обратный прокси). Маршруты версионируются URL: /api/v1/... (task_82).
+Авторизация — ключ в X-Api-Key (task_81), ошибки — единый формат (task_82).</comment>
+  <rootURL>rih</rootURL>
+  <urlTemplates>
+    <urlTemplate name="health">
+      <template>/api/v1/health</template>
+      <methods>
+        <method name="GET">
+          <handler>ПолучитьЗдоровье</handler>
+        </method>
+      </methods>
+    </urlTemplate>
+    <urlTemplate name="products">
+      <template>/api/v1/products</template>
+      <methods>
+        <method name="GET">
+          <handler>ПолучитьТовары</handler>
+        </method>
+      </methods>
+    </urlTemplate>
+    <urlTemplate name="orders">
+      <template>/api/v1/orders</template>
+      <methods>
+        <method name="POST">
+          <handler>ПринятьЗаказ</handler>
+        </method>
+        <method name="GET">
+          <handler>ПолучитьЗаказы</handler>
+        </method>
+      </methods>
+    </urlTemplate>
+    <urlTemplate name="ordersBatch">
+      <template>/api/v1/orders/batch</template>
+      <methods>
+        <method name="POST">
+          <handler>ПринятьПакетЗаказов</handler>
+        </method>
+      </methods>
+    </urlTemplate>
+    <urlTemplate name="orderById">
+      <template>/api/v1/orders/{externalId}</template>
+      <methods>
+        <method name="PUT">
+          <handler>ИзменитьСтатусЗаказа</handler>
+        </method>
+        <method name="DELETE">
+          <handler>ОтменитьЗаказ</handler>
+        </method>
+      </methods>
+    </urlTemplate>
+  </urlTemplates>
+</mdclass:HTTPService>
