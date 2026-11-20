@@ -34,6 +34,7 @@
     <value>CommonModule.РИХ_УчётТоваровДвижения</value>
     <value>CommonModule.РИХ_Логирование</value>
     <value>CommonModule.РИХ_Профилирование</value>
+    <value>CommonModule.РИХ_ПакетнаяОбработка</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
