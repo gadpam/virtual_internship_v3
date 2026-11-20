@@ -40,6 +40,7 @@
     <value>CommonModule.РИХ_Форматы</value>
     <value>CommonModule.РИХ_Интеграции</value>
     <value>CommonModule.РИХ_XDTO</value>
+    <value>CommonModule.РИХ_ВнешниеСервисы</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -116,4 +117,7 @@
   <xdtoPackages>
     <value>XDTOPackage.РИХ_Обмен_1</value>
   </xdtoPackages>
+  <webServices>
+    <value>WebService.РИХ_ОбменSOAP</value>
+  </webServices>
 </mdclass:Configuration>

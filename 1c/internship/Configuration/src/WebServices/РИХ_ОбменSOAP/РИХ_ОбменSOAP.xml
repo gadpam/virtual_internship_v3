@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                    uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000086"
+                    name="РИХ_ОбменSOAP">
+  <name>РИХ_ОбменSOAP</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ обмен SOAP</value>
+  </synonym>
+  <comment>task_85: SOAP-контур для партнёров, которые иначе не умеют (банк,
+типовые базы). Операция ПолучитьОстатки отдаёт XDTO из пакета РИХ_Обмен_1.
+Ошибки — только SOAP Fault с кодом RIH-*: HTTP 500 без Fault клиенту
+не показываем (правило из разбора mock_bank_ws).</comment>
+  <namespace>http://rih.example/soap/1</namespace>
+  <operations>
+    <operation name="ПолучитьОстатки">
+      <parameter name="Склад" direction="In" xdtoType="Строка"/>
+      <parameter name="Дата" direction="In" xdtoType="ДатаВремя"/>
+      <returns xdtoType="ОстаткиОтвета"/>
+    </operation>
+  </operations>
+</mdclass:WebService>
