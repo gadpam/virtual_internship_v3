@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000108"
+                             name="ПринятыеСообщения">
+  <name>ПринятыеСообщения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Принятые сообщения обмена (дедупликация)</value>
+  </synonym>
+  <comment>task_105: каждое принятое сообщение хранится с результатом.
+Повтор того же ИдСообщения возвращает записанный результат без
+повторной обработки; тот же внешний ид объекта под другим сообщением
+ловится детектором дублей бизнес-объектов. Выполненные шаги пишутся
+здесь же: повтор после частичной обработки продолжает с места обрыва.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="ИдСообщения">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="УзелИсточник">
+      <type>String(32)</type>
+    </attribute>
+    <attribute name="ВнешнийИдОбъекта">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="СтатусОбработки">
+      <type>String(16)</type>
+      <comment>принято, обрабатывается, готово, дубль, ошибка</comment>
+    </attribute>
+    <attribute name="ВыполненныеШаги">
+      <type>String(255)</type>
+      <comment>валидация;создание;проведение — что уже сделано</comment>
+    </attribute>
+    <attribute name="Результат">
+      <type>String(255)</type>
+    </attribute>
+    <attribute name="ДатаПриёма">
+      <type>Date</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

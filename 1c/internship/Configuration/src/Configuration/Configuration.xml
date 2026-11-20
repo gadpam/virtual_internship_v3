@@ -116,6 +116,7 @@
     <value>InformationRegister.КурсыВалют</value>
     <value>InformationRegister.ОчередьОбмена</value>
     <value>InformationRegister.НомераСообщенийОбмена</value>
+    <value>InformationRegister.ПринятыеСообщения</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
