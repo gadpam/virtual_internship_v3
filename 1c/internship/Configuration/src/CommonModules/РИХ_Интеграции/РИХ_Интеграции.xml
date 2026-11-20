@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000073"
+                      name="РИХ_Интеграции">
+  <name>РИХ_Интеграции</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ интеграции (ядро HTTP-сервиса)</value>
+  </synonym>
+  <comment>task_81/83/84: аутентификация по X-Api-Key (в базе — только SHA-256
+хеш ключа), защита от перебора по журналу, приём заказов с идемпотентностью,
+единая запись ЖурналаИнтеграций для всех маршрутов. Ключи в коде и логах
+не живут: в журнал пишется сервис и результат, не заголовки.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
