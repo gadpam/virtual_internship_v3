@@ -43,6 +43,7 @@
     <value>CommonModule.РИХ_ВнешниеСервисы</value>
     <value>CommonModule.РИХ_ФайловыйОбмен</value>
     <value>CommonModule.РИХ_CommerceML</value>
+    <value>CommonModule.РИХ_МагазинКлиент</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -103,6 +104,7 @@
     <value>InformationRegister.ЖурналИнтеграций</value>
     <value>InformationRegister.КлючиДоступаИнтеграций</value>
     <value>InformationRegister.СоответствиеОбъектов</value>
+    <value>InformationRegister.МеткиСинхронизации</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
@@ -124,5 +126,6 @@
   <webServices>
     <value>WebService.РИХ_ОбменSOAP</value>
     <value>Constant.РИХ_КаталогДокументовЭДО</value>
+    <value>Constant.РИХ_КлючМагазина</value>
   </webServices>
 </mdclass:Configuration>
