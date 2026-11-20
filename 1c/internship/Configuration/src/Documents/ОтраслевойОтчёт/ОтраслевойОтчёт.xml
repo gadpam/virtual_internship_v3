@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                  uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000134"
+                  name="ОтраслевойОтчёт">
+  <name>ОтраслевойОтчёт</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отраслевой отчёт оператору</value>
+  </synonym>
+  <comment>task_119: одна версия регламентного отчёта (форма ПРОД-25).
+Отправленная версия неизменяема: корректировка — новый документ
+с номером версии +1, ссылкой на предыдущую и причиной. Снимок формы
+и хеш выгруженного файла хранятся в документе: пара «файл + квитанция»
+— доказательство сдачи при споре о штрафе.</comment>
+  <attributes>
+    <attribute name="КодФормы">
+      <type>String(16)</type>
+      <comment>Например, ПРОД-25</comment>
+    </attribute>
+    <attribute name="ПериодНачало">
+      <type>Date</type>
+    </attribute>
+    <attribute name="ПериодКонец">
+      <type>Date</type>
+    </attribute>
+    <attribute name="НомерВерсии">
+      <type>Number(5,0)</type>
+    </attribute>
+    <attribute name="ПредыдущаяВерсия">
+      <type>DocumentRef.ОтраслевойОтчёт</type>
+      <comment>Заполняется у корректировок; у первой версии пусто</comment>
+    </attribute>
+    <attribute name="ПричинаКорректировки">
+      <type>String(255)</type>
+      <comment>Обязательна при наличии предыдущей версии</comment>
+    </attribute>
+    <attribute name="Статус">
+      <type>String(24)</type>
+      <comment>Черновик, Отправлен, Принят, Отклонён, ТребуетсяКорректировка</comment>
+    </attribute>
+    <attribute name="ДанныеФормы">
+      <type>String</type>
+      <comment>Снимок формы JSON на момент отправки; после отправки не меняется</comment>
+    </attribute>
+    <attribute name="ХешФайла">
+      <type>String(64)</type>
+      <comment>SHA-256 выгруженного файла отчёта</comment>
+    </attribute>
+    <attribute name="НомерКвитанции">
+      <type>String(32)</type>
+    </attribute>
+  </attributes>
+</mdclass:Document>

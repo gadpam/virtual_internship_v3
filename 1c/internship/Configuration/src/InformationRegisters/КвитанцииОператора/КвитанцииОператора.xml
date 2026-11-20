@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000135"
+                             name="КвитанцииОператора">
+  <name>КвитанцииОператора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Квитанции оператора отчётности</value>
+  </synonym>
+  <comment>task_119: квитанции и протоколы оператора по каждой версии
+отчёта. «Мы отправляли» без квитанции при споре ничего не значит,
+поэтому квитанция хранится структурированно рядом с отчётом и хешем
+файла, а не скриншотом в папке ответственного.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="НомерКвитанции">
+      <type>String(32)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Отчёт">
+      <type>DocumentRef.ОтраслевойОтчёт</type>
+    </attribute>
+    <attribute name="СтатусПриёма">
+      <type>String(16)</type>
+      <comment>Принят или Отклонён</comment>
+    </attribute>
+    <attribute name="ДатаПолучения">
+      <type>Date</type>
+    </attribute>
+    <attribute name="ХешФайла">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="ТекстПротокола">
+      <type>String(500)</type>
+      <comment>При отклонении — коды контрольных соотношений оператора</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

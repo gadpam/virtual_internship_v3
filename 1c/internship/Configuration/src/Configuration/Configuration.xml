@@ -54,6 +54,7 @@
     <value>CommonModule.РИХ_Маркировка</value>
     <value>CommonModule.РИХ_Чеки</value>
     <value>CommonModule.РИХ_Банк</value>
+    <value>CommonModule.РИХ_ОтраслевыеОтчёты</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -94,6 +95,7 @@
     <value>Document.ЗаказКлиента</value>
     <value>Document.Чек</value>
     <value>Document.ПлатёжноеПоручение</value>
+    <value>Document.ОтраслевойОтчёт</value>
   </documents>
   <enums>
     <value>Enum.ТипыЦен</value>
@@ -141,6 +143,7 @@
     <value>InformationRegister.КарантинЧеков</value>
     <value>InformationRegister.ШаблоныНазначенийПлатежей</value>
     <value>InformationRegister.ПлатежиВыписки</value>
+    <value>InformationRegister.КвитанцииОператора</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
