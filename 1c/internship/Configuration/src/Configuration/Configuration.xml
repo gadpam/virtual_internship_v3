@@ -50,6 +50,7 @@
     <value>DataProcessor.ПодборНоменклатурыПоСвойствам</value>
     <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
     <value>DataProcessor.РИХ_ЮнитТесты</value>
+    <value>DataProcessor.РИХ_ГенераторДанных</value>
   </dataProcessors>
   <sequences>
     <value>Sequence.УчётТоваров</value>
