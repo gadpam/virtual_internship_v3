@@ -140,11 +140,11 @@
 | task_124. Выгрузка данных: файлы, таблицы СУБД, потоковая передача | `internship/tools/sql/export/` [есть] |
 | task_125. Согласованность витрины и «цифры не сходятся» | `internship/documentation/analytics/metrics_dictionary.md` [есть] |
 | task_126. Подготовка BI-стенда: Superset в docker-compose | `internship/tools/docker-compose.yml` [есть]<br>`internship/tools/bi/README.md` [есть] |
-| task_127. Таймауты: как одно значение спасает (или топит) систему | `internship/documentation/integrations/timeouts.md` [создаётся] |
+| task_127. Таймауты: как одно значение спасает (или топит) систему | `internship/documentation/integrations/timeouts.md` [есть] |
 | task_128. Повторные попытки: экспоненциальная задержка и джиттер | `internship/src/mock_shop_api/ (режим сбоев)` [создаётся] |
-| task_129. Circuit breaker: не даём падающему партнёру убить нас | `internship/documentation/integrations/resilience.md` [создаётся] |
-| task_130. Компенсации и сторно: когда «отменить» нельзя | `internship/documentation/architecture/saga.md` [создаётся] |
-| task_131. Деградация: как работать, когда половина систем лежит | `internship/documentation/operations/degradation_matrix.md` [создаётся] |
+| task_129. Circuit breaker: не даём падающему партнёру убить нас | `internship/documentation/integrations/resilience.md` [есть] |
+| task_130. Компенсации и сторно: когда «отменить» нельзя | `internship/documentation/architecture/saga.md` [есть] |
+| task_131. Деградация: как работать, когда половина систем лежит | `internship/documentation/operations/degradation_matrix.md` [есть] |
 | task_132. Учение по сбою: ломаем стенд по сценарию и чиним | `internship/documentation/operations/postmortems/` [есть] |
 | task_133. Аутентификация сервисов: API-ключи, токены, OAuth2-подобный поток | `internship/docs/api/rih_http_services.md` [есть] |
 | task_134. Управление секретами: где хранить пароли и ключи | `internship/tools/ci/github-actions/security.yml` [есть] |
