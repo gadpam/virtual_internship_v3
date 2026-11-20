@@ -116,11 +116,13 @@
   </roles>
   <httpServices>
     <value>HTTPService.РИХ_Обмен</value>
+    <value>HTTPService.РИХ_ЭДО</value>
   </httpServices>
   <xdtoPackages>
     <value>XDTOPackage.РИХ_Обмен_1</value>
   </xdtoPackages>
   <webServices>
     <value>WebService.РИХ_ОбменSOAP</value>
+    <value>Constant.РИХ_КаталогДокументовЭДО</value>
   </webServices>
 </mdclass:Configuration>
