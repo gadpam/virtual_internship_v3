@@ -45,6 +45,7 @@
     <value>CommonModule.РИХ_CommerceML</value>
     <value>CommonModule.РИХ_МагазинКлиент</value>
     <value>CommonModule.РИХ_ЛояльностьКлиент</value>
+    <value>CommonModule.РИХ_ТККлиент</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -130,5 +131,6 @@
     <value>Constant.РИХ_КаталогДокументовЭДО</value>
     <value>Constant.РИХ_КлючМагазина</value>
     <value>Constant.РИХ_КлючЛояльности</value>
+    <value>Constant.РИХ_КлючТК</value>
   </webServices>
 </mdclass:Configuration>
