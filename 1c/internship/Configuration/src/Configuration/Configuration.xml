@@ -39,13 +39,21 @@
   <documents>
     <value>Document.ПоступлениеТоваров</value>
     <value>Document.ПеремещениеТоваров</value>
+    <value>Document.УстановкаЦен</value>
   </documents>
+  <enums>
+    <value>Enum.ТипыЦен</value>
+  </enums>
+  <reports>
+    <value>Report.ИсторияИзмененияЦен</value>
+  </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
   </accumulationRegisters>
   <informationRegisters>
     <value>InformationRegister.РИХ_ИсторияИзменений</value>
     <value>InformationRegister.СкладыПользователей</value>
+    <value>InformationRegister.ЦеныНоменклатуры</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
