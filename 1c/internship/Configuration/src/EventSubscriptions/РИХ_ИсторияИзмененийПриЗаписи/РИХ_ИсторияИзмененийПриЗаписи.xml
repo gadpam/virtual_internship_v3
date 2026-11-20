@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                           uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000013"
+                           name="РИХ_ИсторияИзмененийПриЗаписи">
+  <name>РИХ_ИсторияИзмененийПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>История изменений при записи номенклатуры</value>
+  </synonym>
+  <comment>task_8: каждая запись справочника Номенклатура создаёт новую версию
+в регистре РИХ_ИсторияИзменений. Загрузка из обменов версии не плодит
+(проверка ОбменДанными.Загрузка в обработчике).</comment>
+  <source>Catalog.Номенклатура</source>
+  <event>ПриЗаписи</event>
+  <handler>CommonModule.РИХ_Версионирование.ЗафиксироватьВерсиюНоменклатуры</handler>
+</mdclass:EventSubscription>

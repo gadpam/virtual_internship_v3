@@ -27,5 +27,15 @@
     <value>CommonModule.РИХ_ОбщегоНазначения</value>
     <value>CommonModule.РИХ_Дата</value>
     <value>CommonModule.РИХ_HTTP1_Ответы</value>
+    <value>CommonModule.РИХ_Версионирование</value>
   </commonModules>
+  <catalogs>
+    <value>Catalog.Номенклатура</value>
+  </catalogs>
+  <informationRegisters>
+    <value>InformationRegister.РИХ_ИсторияИзменений</value>
+  </informationRegisters>
+  <eventSubscriptions>
+    <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
+  </eventSubscriptions>
 </mdclass:Configuration>

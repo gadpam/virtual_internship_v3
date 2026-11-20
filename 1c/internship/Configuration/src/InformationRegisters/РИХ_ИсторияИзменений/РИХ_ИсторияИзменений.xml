@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000011"
+                             name="РИХ_ИсторияИзменений">
+  <name>РИХ_ИсторияИзменений</name>
+  <synonym>
+    <key>ru</key>
+    <value>История изменений (RIH)</value>
+  </synonym>
+  <comment>task_8: учебный аналог версионирования БСП. Одна запись = одна версия
+объекта: снимок реквизитов в XML неизменен после записи (история — журнал фактов,
+а не «текущее значение плюс дата»). Номер версии порядковый внутри объекта.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Объект">
+      <type>CatalogRef.Номенклатура</type>
+      <comment>Версионируемый объект; позже — составной тип (task_290)</comment>
+    </dimension>
+    <dimension name="НомерВерсии">
+      <type>Number(10,0)</type>
+      <comment>Порядковый номер внутри объекта: максимум существующих + 1</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="ДатаИзменения">
+      <type>DateTime</type>
+    </resource>
+    <resource name="Автор">
+      <type>String(100)</type>
+      <comment>Имя пользователя информационной базы</comment>
+    </resource>
+    <resource name="СнимокXML">
+      <type>String(unlimited)</type>
+      <comment>Сериализованные реквизиты версии, например:
+      &lt;Элемент Код="000000001" Наименование="Молоко 3,2% 1л"/&gt;</comment>
+    </resource>
+  </resources>
+</mdclass:InformationRegister>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000012"
+                      name="РИХ_Версионирование">
+  <name>РИХ_Версионирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Версионирование объектов RIH</value>
+  </synonym>
+  <comment>task_8: учебный аналог версионирования БСП для своей конфигурации
+(в RIH БСП нет). Серверный модуль: обработчик подписки ПриЗаписи и чтение
+истории для форм. Клиентских флагов нет — история показывается клиентским
+кодом форм из возвращаемой строки.</comment>
+  <server>true</server>
+  <serverCall>true</serverCall>
+  <privileged>false</privileged>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
