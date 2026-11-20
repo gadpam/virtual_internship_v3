@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000164"
+                name="АудитДоступа">
+  <name>АудитДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аудит доступа и изменений</value>
+  </synonym>
+  <comment>task_137: два вопроса за пять минут — «Действия пользователя
+за период» и «Доступы к чувствительным данным». Источник —
+РИХ_Аудит по РС АудитДоступа; чтение отчёта — роль безопасности,
+аудит сам является чувствительными данными (учётки и доступы).</comment>
+  <mainDataCompositionSchema>СхемаКомпоновкиДанных</mainDataCompositionSchema>
+</mdclass:Report>

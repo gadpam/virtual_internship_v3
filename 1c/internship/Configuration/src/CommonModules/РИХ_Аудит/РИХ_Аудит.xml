@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000163"
+                      name="РИХ_Аудит">
+  <name>РИХ_Аудит</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ аудит доступа и изменений</value>
+  </synonym>
+  <comment>task_137: единственная точка записи аудита людей и доступов.
+События пишут вызывающие механизмы (показ ПДн, ротация секрета,
+остановка обмена), читают — отчёты аудита за пять минут, а не
+фильтр вручную по миллиону записей во время инцидента.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
