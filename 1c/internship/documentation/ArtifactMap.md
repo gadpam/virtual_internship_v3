@@ -169,10 +169,10 @@
 
 | Задание | Артефакты (путь от `1c/`) |
 |---|---|
-| task_151. Учётная модель: что такое счёт, проводка, субконто | `internship/documentation/accounting/model.md` [создаётся] |
+| task_151. Учётная модель: что такое счёт, проводка, субконто | `internship/documentation/accounting/model.md` [есть] |
 | task_152. Регистр бухгалтерии в 1С: план счетов и аналитика | `internship/Configuration/src/ChartsOfAccounts/` [есть] |
-| task_153. Трансляция проводок: документ → движения по бухгалтерии | `internship/Configuration/src/Catalogs/ПравилаТрансляции/` [создаётся] |
-| task_154. НДС, себестоимость и расчёты: где живут настоящие сложности | `internship/documentation/accounting/vat_and_cost.md` [создаётся] |
+| task_153. Трансляция проводок: документ → движения по бухгалтерии | `internship/Configuration/src/Catalogs/ПравилаТрансляции/` [есть] |
+| task_154. НДС, себестоимость и расчёты: где живут настоящие сложности | `internship/documentation/accounting/vat_and_cost.md` [есть] |
 | task_155. Закрытие периода: регламентная операция и её идемпотентность | `internship/Configuration/src/DataProcessors/РИХ_ЗакрытиеПериода/` [создаётся] |
 | task_156. Сверка RIH и бухгалтерской базы: расхождения и их причины | `internship/Configuration/src/Reports/СверкаУчёта/` [создаётся] |
 | task_157. Оборотно-сальдовая ведомость на СКД | `internship/Configuration/src/Reports/ОборотноСальдоваяВедомость/` [создаётся] |
