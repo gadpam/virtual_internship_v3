@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000053"
+                      name="РИХ_Валидация">
+  <name>РИХ_Валидация</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ валидация ввода</value>
+  </synonym>
+  <comment>task_38: серверные проверки входных данных, общие для форм,
+обменов и HTTP. Первый объект настоящего покрытия тестами в task_52.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>true</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
