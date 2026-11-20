@@ -49,6 +49,12 @@
     <value>DataProcessor.ПодборНоменклатурыПоСвойствам</value>
     <value>DataProcessor.ЗагрузкаНоменклатурыИзФайла</value>
   </dataProcessors>
+  <sequences>
+    <value>Sequence.УчётТоваров</value>
+  </sequences>
+  <scheduledTasks>
+    <value>ScheduledTask.ДвижениеГраницыУчётаТоваров</value>
+  </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
     <value>Document.ПеремещениеТоваров</value>

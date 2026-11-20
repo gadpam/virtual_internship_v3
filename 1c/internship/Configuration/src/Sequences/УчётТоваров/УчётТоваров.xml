@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Sequence xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                  uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000058"
+                  name="УчётТоваров">
+  <name>УчётТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Последовательность учёта товаров</value>
+  </synonym>
+  <comment>task_46: граница последовательности = момент, до которого остатки
+гарантированно не изменятся задним числом. Документы поступления и перемещения
+входят в последовательность; границу двигает регламентное задание
+ДвижениеГраницыУчётаТоваров. Поведение при нарушении — documentation/
+architecture/task_46_sequence.md.</comment>
+  <registerRecords>
+    <value>AccumulationRegister.ТоварыНаСкладах</value>
+  </registerRecords>
+  <documents>
+    <value>Document.ПоступлениеТоваров</value>
+    <value>Document.ПеремещениеТоваров</value>
+  </documents>
+</mdclass:Sequence>
