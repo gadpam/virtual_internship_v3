@@ -114,6 +114,9 @@
     <value>InformationRegister.КурсыВалют</value>
     <value>InformationRegister.ОчередьОбмена</value>
   </informationRegisters>
+  <exchangePlans>
+    <value>ExchangePlan.РИХ_Обмены</value>
+  </exchangePlans>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
   </eventSubscriptions>
