@@ -110,10 +110,10 @@
 | task_94. Курсы валют, справочники и кеширование внешних данных | `internship/Configuration/src/InformationRegisters/КурсыВалют/` [есть] |
 | task_95. Ошибки партнёра: деградация, очередь, компенсация | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [есть] |
 | task_96. Контрактные тесты и документация для партнёра | `internship/docs/api/rih_http_services.md` [есть]<br>`internship/docs/api/error_format.md` [есть]<br>`internship/tests/fixtures/` [есть] |
-| task_97. Топология обменов: узлы, направления, фильтры | `internship/documentation/architecture/exchange_topology.md` [создаётся] |
+| task_97. Топология обменов: узлы, направления, фильтры | `internship/documentation/architecture/exchange_topology.md` [есть] |
 | task_98. Конвертация данных 2.0: правила обмена и ПКО | `Документация: «Конвертация данных 2.0»` [создаётся] |
-| task_99. КД 2.0: документы, регистры и сложные соответствия | `internship/documentation/troubleshooting/exchange.md` [создаётся] |
-| task_100. Миграция НСИ: 100 000 позиций без остановки работы | `internship/documentation/release/migration_plan.md` [создаётся] |
+| task_99. КД 2.0: документы, регистры и сложные соответствия | `internship/documentation/troubleshooting/exchange.md` [есть] |
+| task_100. Миграция НСИ: 100 000 позиций без остановки работы | `internship/documentation/release/migration_plan.md` [есть] |
 | task_101. Регистрация изменений, подписки и контроль целостности обмена | `internship/Configuration/src/Reports/РасхожденияОбмена/` [создаётся] |
 | task_102. Конвертация данных 3.0: новый подход к правилам обмена | `Документация: «Конвертация данных 3.0»` [создаётся] |
 | task_103. КД 3.0: документы, регистры и обмен с типовой конфигурацией | `internship/documentation/exchange/rih_bp.md` [создаётся] |
