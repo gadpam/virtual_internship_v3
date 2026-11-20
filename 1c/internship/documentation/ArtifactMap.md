@@ -78,7 +78,7 @@
 | task_67. Code review квартала: полный разбор вашего кода | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_68. Демо подсистемы: сценарий, данные, рассказ | `project/acceptance/DemoAndDefense.txt` [есть] |
 | task_69. Защита архитектуры Q1: схемы, ADR, неудобные вопросы | `internship/documentation/architecture/` [есть] |
-| task_70. Ретроспектива квартала: честный разбор | `internship/documentation/retro/` [создаётся] |
+| task_70. Ретроспектива квартала: честный разбор | `internship/documentation/retro/` [есть] |
 | task_71. Портфолио: статья и публичный артефакт по итогам Q1 | `project/ideas/architecture/POST_Ideas.txt` [есть] |
 | task_72. План Q2: интеграции, контракты и подготовка стенда | `internship/src/mock_shop_api/` [есть]<br>`project/sprint_13/SprintOverview.txt` [есть] |
 
@@ -245,7 +245,7 @@
 | task_224. Демо учётного и аналитического контура | `project/acceptance/DemoAndDefense.txt` [есть] |
 | task_225. Защита данных и производительности: разговор на языке цифр | `internship/documentation/architecture/` [есть] |
 | task_226. Деловое общение: разговор с бухгалтерией и ИТ-службой | `internship/documentation/communication/templates.md` [создаётся] |
-| task_227. Ретроспектива Q3 и сравнение трёх кварталов | `internship/documentation/retro/` [создаётся] |
+| task_227. Ретроспектива Q3 и сравнение трёх кварталов | `internship/documentation/retro/` [есть] |
 | task_228. План Q4: AI-контур, мобильность, эксплуатация и финал | `project/tools/Environment.md` [есть]<br>`project/sprint_39/SprintOverview.txt` [есть] |
 
 ## Q4
