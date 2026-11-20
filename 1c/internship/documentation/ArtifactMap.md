@@ -107,8 +107,8 @@
 | task_91. Клиент онлайн-магазина: выгрузка каталога и остатков | `internship/docs/api/partner_shop.md` [есть] |
 | task_92. Клиент программы лояльности: баланс, начисление, списание | `internship/src/mock_loyalty_api/` [есть] |
 | task_93. Клиент транспортной компании и rate limiting | `internship/src/mock_tk_api/` [есть] |
-| task_94. Курсы валют, справочники и кеширование внешних данных | `internship/Configuration/src/InformationRegisters/КурсыВалют/` [создаётся] |
-| task_95. Ошибки партнёра: деградация, очередь, компенсация | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [создаётся] |
+| task_94. Курсы валют, справочники и кеширование внешних данных | `internship/Configuration/src/InformationRegisters/КурсыВалют/` [есть] |
+| task_95. Ошибки партнёра: деградация, очередь, компенсация | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [есть] |
 | task_96. Контрактные тесты и документация для партнёра | `internship/docs/api/rih_http_services.md` [есть]<br>`internship/docs/api/error_format.md` [есть]<br>`internship/tests/fixtures/` [есть] |
 | task_97. Топология обменов: узлы, направления, фильтры | `internship/documentation/architecture/exchange_topology.md` [создаётся] |
 | task_98. Конвертация данных 2.0: правила обмена и ПКО | `Документация: «Конвертация данных 2.0»` [создаётся] |
@@ -123,7 +123,7 @@
 | task_107. Отладка обменов: журнал, сообщения, типичные ошибки | `internship/Configuration/src/DataProcessors/РИХ_МониторингОбменов/` [создаётся] |
 | task_108. Документация обмена: регламент, SLA, ответственные | `internship/documentation/exchange/` [есть] |
 | task_109. Синхронно или асинхронно: как выбрать и не ошибиться | `internship/documentation/adr/` [есть] |
-| task_110. Очередь сообщений в 1С: надёжная отложенная обработка | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [создаётся] |
+| task_110. Очередь сообщений в 1С: надёжная отложенная обработка | `internship/Configuration/src/InformationRegisters/ОчередьОбмена/` [есть] |
 | task_111. Брокер сообщений: RabbitMQ и обмен событиями | `internship/src/queue_consumer/` [есть]<br>`internship/tools/docker-compose.yml` [есть] |
 | task_112. Порядок сообщений, дубли и согласованность | `internship/Configuration/src/Reports/РасхожденияОбмена/` [создаётся] |
 | task_113. Регламентные задания обмена: расписания, окна, приоритеты | `internship/documentation/operations/schedule_map.md` [создаётся] |
