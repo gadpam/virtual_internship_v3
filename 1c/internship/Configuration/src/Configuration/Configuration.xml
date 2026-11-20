@@ -57,6 +57,7 @@
     <value>CommonModule.РИХ_ОтраслевыеОтчёты</value>
     <value>CommonModule.РИХ_РеестрИнтеграций</value>
     <value>CommonModule.РИХ_Витрины</value>
+    <value>CommonModule.РИХ_ПовторныеПопытки</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000150"
+                      name="РИХ_ПовторныеПопытки">
+  <name>РИХ_ПовторныеПопытки</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ повторные попытки внешних вызовов</value>
+  </synonym>
+  <comment>task_128: политика повторов одним местом — классификация
+ошибок (повторяемые/нет), экспоненциальная задержка с джиттером,
+лимит попыток и бюджета. Применена клиентами лояльности, ТК, магазина
+и курсов банка. Повторы внутри транзакций запрещены (task_44).</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
