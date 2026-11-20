@@ -161,7 +161,7 @@
 | task_145. Code review интеграционного контура | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_146. Демо интеграций: живой обмен и управляемый сбой | `project/acceptance/DemoAndDefense.txt` [есть] |
 | task_147. Защита интеграционной архитектуры: контракты, SLA, надёжность | `internship/documentation/architecture/` [есть] |
-| task_148. Деловое общение: письмо партнёру, согласование контракта, эскалация | `internship/documentation/communication/templates.md` [создаётся] |
+| task_148. Деловое общение: письмо партнёру, согласование контракта, эскалация | `internship/documentation/communication/templates.md` [есть] |
 | task_149. Ретроспектива Q2 и статья об интеграциях | `project/ideas/architecture/POST_Ideas.txt` [есть] |
 | task_150. План Q3: учёт, данные, СУБД, BI и тяжёлые запросы | `project/tools/Environment.md` [есть]<br>`project/sprint_26/SprintOverview.txt` [есть] |
 
@@ -244,7 +244,7 @@
 | task_223. Code review квартала: учёт, данные, производительность | `project/acceptance/CodeReviewChecklist.txt` [есть] |
 | task_224. Демо учётного и аналитического контура | `project/acceptance/DemoAndDefense.txt` [есть] |
 | task_225. Защита данных и производительности: разговор на языке цифр | `internship/documentation/architecture/` [есть] |
-| task_226. Деловое общение: разговор с бухгалтерией и ИТ-службой | `internship/documentation/communication/templates.md` [создаётся] |
+| task_226. Деловое общение: разговор с бухгалтерией и ИТ-службой | `internship/documentation/communication/templates.md` [есть] |
 | task_227. Ретроспектива Q3 и сравнение трёх кварталов | `internship/documentation/retro/` [есть] |
 | task_228. План Q4: AI-контур, мобильность, эксплуатация и финал | `project/tools/Environment.md` [есть]<br>`project/sprint_39/SprintOverview.txt` [есть] |
 
