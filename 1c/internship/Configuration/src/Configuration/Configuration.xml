@@ -94,6 +94,7 @@
     <value>Report.ПланФактПоТоварам</value>
     <value>Report.ЖурналИнтеграцийОтчёт</value>
     <value>Report.РасхожденияМеждуУзлами</value>
+    <value>Report.ЧтоНеОбменено</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
@@ -145,6 +146,7 @@
     <value>Constant.РИХ_КлючЛояльности</value>
     <value>Constant.РИХ_КлючТК</value>
     <value>DataProcessor.РИХ_ОператорОчередиОбмена</value>
+    <value>DataProcessor.РИХ_МониторингОбменов</value>
     <value>ScheduledTask.ОтправкаОчередиОбмена</value>
   </webServices>
 </mdclass:Configuration>
