@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledTask xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000149"
+                       name="СверкаВитриныПродаж">
+  <name>СверкаВитриныПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сверка витрины продаж с учётом (ночь, после обновления)</value>
+  </synonym>
+  <comment>task_125: ночная автосверка месяца к 06:30, после обновления
+витрины 02:00. Расхождение периода больше порога 0.5% — уведомление
+владельцу метрики M-001 (финансы), а не строка в журнале ради журнала.</comment>
+  <methodName>РИХ_Витрины.СверитьВитринуЗаВчера</methodName>
+  <schedule>ежедневно в 06:30</schedule>
+</mdclass:ScheduledTask>

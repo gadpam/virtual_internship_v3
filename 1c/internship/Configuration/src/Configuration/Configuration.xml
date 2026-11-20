@@ -92,6 +92,7 @@
     <value>ScheduledTask.ВыгрузкаМагазинаДельта</value>
     <value>ScheduledTask.ОбновлениеВитриныПродаж</value>
     <value>ScheduledTask.ДельтаВитриныПродаж</value>
+    <value>ScheduledTask.СверкаВитриныПродаж</value>
   </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
@@ -118,6 +119,7 @@
     <value>Report.КонтрольКодовМаркировки</value>
     <value>Report.ВзаиморасчётыПослеЗагрузки</value>
     <value>Report.ИнтеграцииПодУгрозой</value>
+    <value>Report.РасхожденияВитрины</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
