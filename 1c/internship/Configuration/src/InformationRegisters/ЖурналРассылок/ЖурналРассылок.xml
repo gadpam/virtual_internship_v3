@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000194"
+                             name="ЖурналРассылок">
+  <name>ЖурналРассылок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал рассылок отчётов</value>
+  </synonym>
+  <comment>task_176: статус по каждому получателю: сформирован,
+отправлен, ошибка. Повтор отправки шлёт только неполучившим:
+запись «отправлен» в журнале — то, что предотвращает дубль после
+ошибки, и она же доказательство при разборе «мне не пришло».</comment>
+  <periodicity>Second</periodicity>
+  <dimensions>
+    <dimension name="Рассылка">
+      <type>String(64)</type>
+    </dimension>
+    <dimension name="Получатель">
+      <type>String(64)</type>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="Статус">
+      <type>String(16)</type>
+      <comment>сформирован | отправлен | ошибка</comment>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="Детали">
+      <type>String(256)</type>
+      <comment>ошибка формирования/отправки или ссылка на файл большого отчёта</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

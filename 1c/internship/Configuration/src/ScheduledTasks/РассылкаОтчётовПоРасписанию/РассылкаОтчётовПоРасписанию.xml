@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledTask xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                       uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000195"
+                       name="РассылкаОтчётовПоРасписанию">
+  <name>РассылкаОтчётовПоРасписанию</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рассылка отчётов по расписанию</value>
+  </synonym>
+  <comment>task_176: формирует и отправляет рассылки из справочника
+по расписанию; ошибка формирования — уведомление администратору
+сразу, а не звонок руководителя в 9:00. Прогон стенда — короткий
+интервал вместо недели ожидания.</comment>
+  <methodName>РИХ_РассылкаОтчётов.ВыполнитьРассылки</methodName>
+  <schedule>по расписанию каждой рассылки</schedule>
+</mdclass:ScheduledTask>

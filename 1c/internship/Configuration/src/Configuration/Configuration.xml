@@ -68,6 +68,7 @@
     <value>CommonModule.РИХ_БухгалтерскиеДвижения</value>
     <value>CommonModule.РИХ_ДокументооборотИнтеграция</value>
     <value>CommonModule.РИХ_Процессы</value>
+    <value>CommonModule.РИХ_РассылкаОтчётов</value>
   </commonModules>
   <businessProcesses>
     <value>BusinessProcess.РИХ_РазборОшибкиИнтеграции</value>
@@ -88,6 +89,7 @@
     <value>Catalog.Организации</value>
     <value>Catalog.ПравилаТрансляции</value>
     <value>Catalog.ПравилаSLA</value>
+    <value>Catalog.РассылкиОтчётов</value>
   </catalogs>
   <chartsOfCharacteristicTypes>
     <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>
@@ -119,6 +121,7 @@
     <value>ScheduledTask.ЗагрузкаКурсовВалют</value>
     <value>ScheduledTask.ВыгрузкаМагазинаДельта</value>
     <value>ScheduledTask.ОбновлениеВитриныПродаж</value>
+    <value>ScheduledTask.РассылкаОтчётовПоРасписанию</value>
     <value>ScheduledTask.ДельтаВитриныПродаж</value>
     <value>ScheduledTask.СверкаВитриныПродаж</value>
   </scheduledTasks>
@@ -198,6 +201,7 @@
     <value>InformationRegister.АудитДоступа</value>
     <value>InformationRegister.СостоянияДоговоров</value>
     <value>InformationRegister.МетрикиЭтаповПроцессов</value>
+    <value>InformationRegister.ЖурналРассылок</value>
     <value>InformationRegister.КлиентыИнтеграций</value>
   </informationRegisters>
   <exchangePlans>

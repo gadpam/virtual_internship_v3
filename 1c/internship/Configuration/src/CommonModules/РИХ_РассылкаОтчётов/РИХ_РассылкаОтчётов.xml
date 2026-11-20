@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000196"
+                      name="РИХ_РассылкаОтчётов">
+  <name>РИХ_РассылкаОтчётов</name>
+  <synonym>
+    <key>ru</key>
+    <value>RIH рассылка отчётов: формирование, отправка, журнал</value>
+  </synonym>
+  <comment>task_176: цикл рассылки с журналом по получателям;
+повтор после ошибки не шлёт дубль получившим; большой отчёт
+отправляется ссылкой на файл, а не вложением сверх лимита почты.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>

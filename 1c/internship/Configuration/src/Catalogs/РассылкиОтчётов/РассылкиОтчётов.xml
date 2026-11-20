@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000193"
+                 name="РассылкиОтчётов">
+  <name>РассылкиОтчётов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рассылки отчётов (аналог БСП для RIH)</value>
+  </synonym>
+  <comment>task_176: в RIH БСП нет — аналог рассылки той же структуры:
+отчёт и вариант, расписание, получатели ролями, формат. Персонализация
+параметрами варианта по подразделению пользователя, а не копиями
+рассылок по филиалам (12 рассылок вместо одной — не настройка).</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="Отчёт">
+      <type>String(64)</type>
+    </attribute>
+    <attribute name="Расписание">
+      <type>String(64)</type>
+      <comment>например: понедельник 08:00; стенд — каждые 10 минут</comment>
+    </attribute>
+    <attribute name="РольПолучателей">
+      <type>String(32)</type>
+      <comment>получатели ролью: уволенный не остаётся в списке адресов</comment>
+    </attribute>
+    <attribute name="Формат">
+      <type>String(8)</type>
+      <comment>XLSX | PDF; большой отчёт — ссылкой, не вложением</comment>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>
