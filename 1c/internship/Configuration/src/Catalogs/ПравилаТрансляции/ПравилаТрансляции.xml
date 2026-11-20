@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000170"
+                 name="ПравилаТрансляции">
+  <name>ПравилаТрансляции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила трансляции проводок</value>
+  </synonym>
+  <comment>task_153: правила «документ -> проводка» данными, а не кодом:
+бухгалтер меняет счёт в справочнике и перепроводит документ —
+проводка перестраивается без релиза конфигурации. Отсутствие
+правила — понятная ошибка RIH-ACC-001, а не тишина.</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="ВидДокумента">
+      <type>String(64)</type>
+      <comment>Поступление | Перемещение | Продажа | Возврат | Списание</comment>
+    </attribute>
+    <attribute name="СчётДт">
+      <type>String(8)</type>
+    </attribute>
+    <attribute name="СчётКт">
+      <type>String(8)</type>
+    </attribute>
+    <attribute name="ИсточникСубконто">
+      <type>String(128)</type>
+      <comment>откуда брать аналитику: КонтрагентДокумента | СкладДокумента | НоменклатураСтрок</comment>
+    </attribute>
+    <attribute name="Активно">
+      <type>Boolean</type>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>

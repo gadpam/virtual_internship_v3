@@ -65,6 +65,7 @@
     <value>CommonModule.РИХ_ПерсональныеДанные</value>
     <value>CommonModule.РИХ_Аудит</value>
     <value>CommonModule.РИХ_Бухгалтерия</value>
+    <value>CommonModule.РИХ_БухгалтерскиеДвижения</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -77,6 +78,7 @@
     <value>Catalog.ЗначенияСвойствНоменклатуры</value>
     <value>Catalog.Интеграции</value>
     <value>Catalog.Организации</value>
+    <value>Catalog.ПравилаТрансляции</value>
   </catalogs>
   <chartsOfCharacteristicTypes>
     <value>ChartOfCharacteristicTypes.СвойстваНоменклатуры</value>

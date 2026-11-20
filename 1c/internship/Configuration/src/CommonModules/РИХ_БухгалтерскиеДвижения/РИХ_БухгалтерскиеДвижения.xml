@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                      uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000171"
+                      name="РИХ_БухгалтерскиеДвижения">
+  <name>РИХ_БухгалтерскиеДвижения</name>
+  <synonym>
+    <key>ru</key>
+    <value>РИХ трансляция документов в проводки</value>
+  </synonym>
+  <comment>task_153: документ не знает счетов, бухгалтерия не знает
+документов — модуль знает отображение по правилам из справочника.
+Трансляция идемпотентна: старые движения документа заменяются.</comment>
+  <server>true</server>
+  <clientManagedApplication>false</clientManagedApplication>
+  <serverCall>false</serverCall>
+  <returnValuesReuse>DontUse</returnValuesReuse>
+</mdclass:CommonModule>
