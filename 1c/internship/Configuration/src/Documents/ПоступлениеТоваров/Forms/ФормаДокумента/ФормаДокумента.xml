@@ -13,9 +13,13 @@
   <attributes>
     <attribute name="Объект" type="DocumentObject.ПоступлениеТоваров" mainAttribute="true"/>
   </attributes>
+  <commands>
+    <command name="ЗаполнитьТестовымиДанными" action="ЗаполнитьТестовымиДанными"/>
+  </commands>
   <items>
     <item name="Склад" dataPath="Объект.Склад" type="FormField"/>
     <item name="Поставщик" dataPath="Объект.Поставщик" type="FormField"/>
     <item name="Товары" dataPath="Объект.Товары" type="FormTable"/>
+    <item name="КнопкаЗаполнить" type="FormButton" command="ЗаполнитьТестовымиДанными"/>
   </items>
 </mdclass:DocumentForm>
