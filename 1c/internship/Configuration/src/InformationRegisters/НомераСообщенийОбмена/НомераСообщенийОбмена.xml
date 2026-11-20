@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000106"
+                             name="НомераСообщенийОбмена">
+  <name>НомераСообщенийОбмена</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номера сообщений обмена по узлам</value>
+  </synonym>
+  <comment>task_101: счётчики контура обменов. Сообщения нумеруются
+последовательно по узлу; дырка в принятых номерах — потеря, которую
+система обязана увидеть сама, а расхождение счётчиков после
+подтверждений — сигнал сверки, а не «подождём, само рассосётся».</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Узел">
+      <type>String(32)</type>
+      <comment>Код узла плана обмена: BP, DO, BRANCH...</comment>
+    </dimension>
+  </dimensions>
+  <resources>
+    <resource name="ПоследнийОтправленный">
+      <type>Number(10,0)</type>
+    </resource>
+    <resource name="ПоследнийПринятый">
+      <type>Number(10,0)</type>
+    </resource>
+  </resources>
+  <attributes>
+    <attribute name="ОтправленоВсего">
+      <type>Number(10,0)</type>
+    </attribute>
+    <attribute name="ПринятоВсего">
+      <type>Number(10,0)</type>
+    </attribute>
+    <attribute name="ПоследняяСверка">
+      <type>Date</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>
