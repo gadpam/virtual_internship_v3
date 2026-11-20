@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                 uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000020"
+                 name="Склады">
+  <name>Склады</name>
+  <synonym>
+    <key>ru</key>
+    <value>Склады</value>
+  </synonym>
+  <comment>task_9: минимальная структура (Наименование + ТипСклада) — объект нужен
+сейчас как первый носитель ролей и RLS. Расширения (характеристики, режимы
+работы) — task_24, не удалять. Префикса РИХ_ у справочника нет сознательно:
+это типовой объект складского контура холдинга (см. модель task_19).</comment>
+  <hierarchical>false</hierarchical>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <attributes>
+    <attribute name="ТипСклада">
+      <type>String(20)</type>
+      <comment>РЦ / Магазин / Транзит (строкой — сознательно до модели task_19)</comment>
+    </attribute>
+  </attributes>
+</mdclass:Catalog>

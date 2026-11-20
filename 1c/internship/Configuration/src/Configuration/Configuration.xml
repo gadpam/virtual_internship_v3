@@ -31,11 +31,20 @@
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
+    <value>Catalog.Склады</value>
   </catalogs>
   <informationRegisters>
     <value>InformationRegister.РИХ_ИсторияИзменений</value>
+    <value>InformationRegister.СкладыПользователей</value>
   </informationRegisters>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
   </eventSubscriptions>
+  <sessionParameters>
+    <value>SessionParameter.ИмяПользователяИБ</value>
+  </sessionParameters>
+  <roles>
+    <value>Role.РИХ_Кладовщик</value>
+    <value>Role.РИХ_ИнтеграционныйСервис</value>
+  </roles>
 </mdclass:Configuration>
