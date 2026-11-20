@@ -22,6 +22,7 @@
   <compatibilityMode>8.3.24</compatibilityMode>
   <subsystems>
     <value>Subsystem.РИХ_ИнтеграционныйХаб</value>
+    <value>Subsystem.РИХ_ТоварыИСклад</value>
   </subsystems>
   <commonModules>
     <value>CommonModule.РИХ_ОбщегоНазначения</value>
