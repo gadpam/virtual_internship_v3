@@ -59,5 +59,13 @@
         </method>
       </methods>
     </urlTemplate>
+    <urlTemplate name="changes">
+      <template>/api/v1/changes</template>
+      <methods>
+        <method name="GET">
+          <handler>ПолучитьИзмененияВитрины</handler>
+        </method>
+      </methods>
+    </urlTemplate>
   </urlTemplates>
 </mdclass:HTTPService>

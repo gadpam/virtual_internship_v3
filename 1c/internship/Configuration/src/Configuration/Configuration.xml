@@ -91,6 +91,7 @@
     <value>ScheduledTask.ЗагрузкаКурсовВалют</value>
     <value>ScheduledTask.ВыгрузкаМагазинаДельта</value>
     <value>ScheduledTask.ОбновлениеВитриныПродаж</value>
+    <value>ScheduledTask.ДельтаВитриныПродаж</value>
   </scheduledTasks>
   <documents>
     <value>Document.ПоступлениеТоваров</value>
@@ -151,12 +152,15 @@
     <value>InformationRegister.КвитанцииОператора</value>
     <value>InformationRegister.ИсторияРеестраИнтеграций</value>
     <value>InformationRegister.ПродажиПоДням</value>
+    <value>InformationRegister.ОчередьПересчётаВитрины</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
   </exchangePlans>
   <eventSubscriptions>
     <value>EventSubscription.РИХ_ИсторияИзмененийПриЗаписи</value>
+    <value>EventSubscription.ВитринаПриЗаписиЧека</value>
+    <value>EventSubscription.ВитринаПриУдаленииЧека</value>
   </eventSubscriptions>
   <sessionParameters>
     <value>SessionParameter.ИмяПользователяИБ</value>

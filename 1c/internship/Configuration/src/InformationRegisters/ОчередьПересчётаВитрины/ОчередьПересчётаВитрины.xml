@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000144"
+                             name="ОчередьПересчётаВитрины">
+  <name>ОчередьПересчётаВитрины</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь пересчёта витрины (CDC)</value>
+  </synonym>
+  <comment>task_123: журнал затронутых дней витрины. Подписки на запись
+и удаление чека кладут сюда бизнес-день чека (не день изменения!),
+часовая обработка пересчитывает эти дни полной перезаписью — так
+дельта переживает изменения задним числом и физические удаления.
+Запись удаляется после успешного пересчёта дня.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="День">
+      <type>Date</type>
+      <comment>Бизнес-день чека, который надо пересчитать</comment>
+    </dimension>
+    <dimension name="Магазин">
+      <type>CatalogRef.Склады</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="МоментИзменения">
+      <type>Date</type>
+      <comment>Когда изменение случилось на самом деле</comment>
+    </attribute>
+    <attribute name="Причина">
+      <type>String(16)</type>
+      <comment>запись или удаление</comment>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

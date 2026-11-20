@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                           uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000145"
+                           name="ВитринаПриЗаписиЧека">
+  <name>ВитринаПриЗаписиЧека</name>
+  <synonym>
+    <key>ru</key>
+    <value>Витрина: изменение чека в очередь пересчёта</value>
+  </synonym>
+  <comment>task_123: источник CDC витрины — подписка, а не дата изменения:
+день чека попадает в очередь пересчёта в той же транзакции, что и сам
+чек, поэтому изменение не бывает без журнала и наоборот.</comment>
+  <source>Document.Чек</source>
+  <event>ПриЗаписи</event>
+  <handler>CommonModule.РИХ_Витрины.ЗафиксироватьИзменениеЧека</handler>
+</mdclass:EventSubscription>
