@@ -62,6 +62,7 @@
     <value>CommonModule.РИХ_Саги</value>
     <value>CommonModule.РИХ_Деградация</value>
     <value>CommonModule.РИХ_Токены</value>
+    <value>CommonModule.РИХ_ПерсональныеДанные</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
