@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass"
+                             uuid="b7f0c1a2-1c1e-4a2e-9c0e-rih000000112"
+                             name="СостояниеОстатковСобытий">
+  <name>СостояниеОстатковСобытий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние остатков из событий (версии)</value>
+  </synonym>
+  <comment>task_112: последнее применённое состояние остатка по артикулу
+и момент события, его породившего. Сравнение моментов — защита от
+порядка доставки: брокер не обещает порядок между очередями, поэтому
+устаревшее событие обязано проигрывать уже применённому состоянию.</comment>
+  <periodicity>Nonperiodical</periodicity>
+  <dimensions>
+    <dimension name="Артикул">
+      <type>String(32)</type>
+    </dimension>
+  </dimensions>
+  <attributes>
+    <attribute name="Количество">
+      <type>Number(15,3)</type>
+    </attribute>
+    <attribute name="МоментСостояния">
+      <type>Date</type>
+    </attribute>
+  </attributes>
+</mdclass:InformationRegister>

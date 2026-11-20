@@ -119,6 +119,7 @@
     <value>InformationRegister.ОчередьОбмена</value>
     <value>InformationRegister.НомераСообщенийОбмена</value>
     <value>InformationRegister.ПринятыеСообщения</value>
+    <value>InformationRegister.СостояниеОстатковСобытий</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
