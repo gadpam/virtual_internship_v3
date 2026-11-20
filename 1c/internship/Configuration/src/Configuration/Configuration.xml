@@ -51,6 +51,7 @@
     <value>CommonModule.РИХ_ОбменДанными</value>
     <value>CommonModule.РИХ_СобытияБрокера</value>
     <value>CommonModule.РИХ_МетрикиИнтеграций</value>
+    <value>CommonModule.РИХ_Маркировка</value>
   </commonModules>
   <catalogs>
     <value>Catalog.Номенклатура</value>
@@ -102,6 +103,8 @@
     <value>Report.ЖурналИнтеграцийОтчёт</value>
     <value>Report.РасхожденияМеждуУзлами</value>
     <value>Report.ЧтоНеОбменено</value>
+    <value>Report.ДвижениеКодовМаркировки</value>
+    <value>Report.КонтрольКодовМаркировки</value>
   </reports>
   <accumulationRegisters>
     <value>AccumulationRegister.ТоварыНаСкладах</value>
@@ -128,6 +131,7 @@
     <value>InformationRegister.СостояниеОстатковСобытий</value>
     <value>InformationRegister.МетрикиИнтеграций</value>
     <value>InformationRegister.КарантинЭДО</value>
+    <value>InformationRegister.КодыМаркировки</value>
   </informationRegisters>
   <exchangePlans>
     <value>ExchangePlan.РИХ_Обмены</value>
